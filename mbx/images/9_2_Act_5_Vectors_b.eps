@@ -1,0 +1,489 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 59 249 361 552
+%%Title: C:\Users\schlicks\Dropbox\AC3 Test\figures\9_2_Act_10_Vectors_b.ps
+%%Creator: GSview from C:\Users\schlicks\Dropbox\AC3 Test\figures\9_2_Act_10_Vectors_b.ps
+%%CreationDate: Fri Aug 21 13:50:16 2015
+%%Pages: 1
+%%EndComments
+%%Page: 1 1
+%%BeginDocument: C:\Users\schlicks\Dropbox\AC3 Test\figures\9_2_Act_10_Vectors_b.ps
+
+210 400 translate
+
+0 0 0 setrgbcolor
+
+%Arrowhead dimensions
+/ah 10 def %arrow height
+/aw 3.5 def %arrow width
+
+/DrawArrow{ %need x1,y1,x2,y2 - points, ah - arrowheight, aw - arrowwidth
+%Segment from (x1,y1) to (x2,y2), leaving room for arrowhead
+/l x2 x1 sub x2 x1 sub mul y2 y1 sub y2 y1 sub mul add sqrt def %vector length
+/A y2 y1 sub x2 x1 sub atan def %angle
+/xf x2 x1 sub l div l ah sub mul x1 add def %x final coord to leave room for arrowhead
+/yf y2 y1 sub l div l ah sub mul y1 add def
+
+x1 y1 moveto
+xf yf lineto
+stroke
+
+%arrowhead
+newpath
+xf A cos ah mul add yf A sin ah mul add moveto
+xf A 90 add cos aw mul add yf A 90 add sin aw mul add lineto
+xf A 90 sub cos aw mul add yf A 90 sub sin aw mul add lineto
+closepath
+fill
+} def
+
+
+/scale 15 def
+/axeslength 10 scale mul def
+
+
+
+%vector initial components
+/vix 0 scale mul def
+/viy 0 scale mul def
+%vector terminal components
+/vfx 1 scale mul def
+/vfy 4 scale mul def
+
+0 0 0 setrgbcolor
+
+%Draw axes
+%negative x
+axeslength -1 mul 0 moveto
+0 0 lineto
+stroke
+
+%positive x
+/x1 0 def
+/y1 0 def
+/x2 axeslength def
+/y2 0 def
+50 0 DrawArrow stroke
+
+%negative y
+0 axeslength -1 mul moveto
+0 0 lineto
+stroke
+
+%positive y
+/x1 0 def
+/y1 0 def
+/x2 0 def
+/y2 axeslength def
+0 0 DrawArrow stroke
+
+%Draw vector 1
+/x1 vix def
+/y1 viy def
+/x2 vfx def
+/y2 vfy def
+%0 0 1 setrgbcolor
+0 0 DrawArrow stroke
+
+%Vector 2
+%vector initial components
+/vix2 0 scale mul def
+/viy2 0 scale mul def
+%vector terminal components
+/vfx2 2 scale mul def
+/vfy2 1 scale mul def
+
+%Draw vector 1
+/x1 vix2 def
+/y1 viy2 def
+/x2 vfx2 def
+/y2 vfy2 def
+%0 0 1 setrgbcolor
+0 0 DrawArrow stroke
+
+
+%Vector 2
+%vector initial components
+/vix2 0 scale mul def
+/viy2 0 scale mul def
+%vector terminal components
+/vfx2 2 scale mul def
+/vfy2 1 scale mul def
+
+%Draw vector 2
+/x1 vix2 def
+/y1 viy2 def
+/x2 vfx2 def
+/y2 vfy2 def
+%0 0 1 setrgbcolor
+0 0 DrawArrow stroke
+
+
+%Vector u-3v
+%vector initial components
+/vix3 0 scale mul def
+/viy3 0 scale mul def
+%vector terminal components
+/vfx3 vfx vfx2 3 mul sub def
+/vfy3 vfy vfy2 3 mul sub def
+
+%Draw vector u-3v2
+/x1 vix3 def
+/y1 viy3 def
+/x2 vfx3 def
+/y2 vfy3 def
+%0 0 1 setrgbcolor
+0 0 DrawArrow stroke
+
+%Vector u-2v
+%vector initial components
+/vix4 0 scale mul def
+/viy4 0 scale mul def
+%vector terminal components
+/vfx4 vfx vfx2 2 mul sub def
+/vfy4 vfy vfy2 2 mul sub def
+
+%Draw vector u-2v2
+/x1 vix4 def
+/y1 viy4 def
+/x2 vfx4 def
+/y2 vfy4 def
+%0 0 1 setrgbcolor
+0 0 DrawArrow stroke
+
+%Vector u-v
+%vector initial components
+/vix5 0 scale mul def
+/viy5 0 scale mul def
+%vector terminal components
+/vfx5 vfx vfx2 1 mul sub def
+/vfy5 vfy vfy2 1 mul sub def
+
+%Draw vector u-v
+/x1 vix5 def
+/y1 viy5 def
+/x2 vfx5 def
+/y2 vfy5 def
+%0 0 1 setrgbcolor
+0 0 DrawArrow stroke
+
+%Vector u+v
+%vector initial components
+/vix6 0 scale mul def
+/viy6 0 scale mul def
+%vector terminal components
+/vfx6 vfx vfx2 1 mul add def
+/vfy6 vfy vfy2 1 mul add def
+
+%Draw vector u-3v2
+/x1 vix6 def
+/y1 viy6 def
+/x2 vfx6 def
+/y2 vfy6 def
+%0 0 1 setrgbcolor
+0 0 DrawArrow stroke
+
+
+%Vector u+2v
+%vector initial components
+/vix7 0 scale mul def
+/viy7 0 scale mul def
+%vector terminal components
+/vfx7 vfx vfx2 2 mul add def
+/vfy7 vfy vfy2 2 mul add def
+
+%Draw vector u+2v
+/x1 vix7 def
+/y1 viy7 def
+/x2 vfx7 def
+/y2 vfy7 def
+%0 0 1 setrgbcolor
+0 0 DrawArrow stroke
+
+
+
+
+%Tick marks
+%/th 4 def %tick height
+%vix th -1 mul moveto
+%vix th lineto
+%stroke
+
+%th -1 mul viy moveto
+%th viy lineto
+%stroke
+
+%vfx th -1 mul moveto
+%vfx th lineto
+%stroke
+
+%th -1 mul vfy moveto
+%th vfy lineto
+%stroke
+
+%Axes labels
+/fs 14 def
+
+/Times-Bold findfont
+fs scalefont
+setfont
+
+vfx 12 sub vfy 2 sub moveto
+(u) show
+
+vfx2 0 add vfy2 10 sub moveto
+(v) show
+
+/Times-Bold findfont
+fs scalefont
+setfont
+vfx3 35 sub vfy3 2 sub moveto
+(u) show
+/Symbol findfont
+fs scalefont
+setfont
+(-3) show
+/Times-Bold findfont
+fs scalefont
+setfont
+(v) show
+
+/Times-Bold findfont
+fs scalefont
+setfont
+vfx4 35 sub vfy4 2 sub moveto
+(u) show
+/Symbol findfont
+fs scalefont
+setfont
+(-2) show
+/Times-Bold findfont
+fs scalefont
+setfont
+(v) show
+
+/Times-Bold findfont
+fs scalefont
+setfont
+vfx5 30 sub vfy5 2 sub moveto
+(u) show
+/Symbol findfont
+fs scalefont
+setfont
+(-) show
+/Times-Bold findfont
+fs scalefont
+setfont
+(v) show
+
+/Times-Bold findfont
+fs scalefont
+setfont
+vfx6 30 sub vfy6 2 sub moveto
+(u) show
+/Symbol findfont
+fs scalefont
+setfont
+(+) show
+/Times-Bold findfont
+fs scalefont
+setfont
+(v) show
+
+/Times-Bold findfont
+fs scalefont
+setfont
+vfx7 35 sub vfy7 2 sub moveto
+(u) show
+/Symbol findfont
+fs scalefont
+setfont
+(+2) show
+/Times-Bold findfont
+fs scalefont
+setfont
+(v) show
+
+%axeslength -10 moveto
+%(x) show
+
+%5 axeslength moveto
+%(y) show
+
+%/Times findfont
+%fs scalefont
+%setfont
+
+%vix 3 sub th -1 mul 15 sub moveto
+%(1) show
+
+%th -1 mul 12 sub viy 3 sub moveto
+%(1) show
+
+
+%vfx 3 sub th -1 mul 15 sub moveto
+%(4) show
+
+%th -1 mul 12 sub vfy 3 sub moveto
+%(5) show
+
+
+%Vector -3v
+%vector initial components
+/vix8 0 scale mul def
+/viy8 0 scale mul def
+%vector terminal components
+/vfx8 vfx2 -3 mul def
+/vfy8 vfy2 -3 mul def
+
+%Draw vector -3v
+/x1 vix8 def
+/y1 viy8 def
+/x2 vfx8 def
+/y2 vfy8 def
+%0 0 1 setrgbcolor
+0 0 DrawArrow stroke
+
+/Symbol findfont
+fs scalefont
+setfont
+vfx8 4 add vfy8 6 sub moveto
+(-) show
+/Times findfont
+fs scalefont
+setfont
+(3) show
+/Times-Bold findfont
+fs scalefont
+setfont
+(v) show
+
+
+%Vector -2v
+%vector initial components
+/vix9 0 scale mul def
+/viy9 0 scale mul def
+%vector terminal components
+/vfx9 vfx2 -2 mul def
+/vfy9 vfy2 -2 mul def
+
+%Draw vector -2v
+/x1 vix9 def
+/y1 viy9 def
+/x2 vfx9 def
+/y2 vfy9 def
+%0 0 1 setrgbcolor
+0 0 DrawArrow stroke
+
+/Symbol findfont
+fs scalefont
+setfont
+vfx9 4 add vfy9 6 sub moveto
+(-) show
+/Times findfont
+fs scalefont
+setfont
+(2) show
+/Times-Bold findfont
+fs scalefont
+setfont
+(v) show
+
+
+%Vector -v
+%vector initial components
+/vix10 0 scale mul def
+/viy10 0 scale mul def
+%vector terminal components
+/vfx10 vfx2 -1 mul def
+/vfy10 vfy2 -1 mul def
+
+%Draw vector -v
+/x1 vix10 def
+/y1 viy10 def
+/x2 vfx10 def
+/y2 vfy10 def
+%0 0 1 setrgbcolor
+0 0 DrawArrow stroke
+
+/Symbol findfont
+fs scalefont
+setfont
+vfx10 4 add vfy10 6 sub moveto
+(-) show
+/Times-Bold findfont
+fs scalefont
+setfont
+(v) show
+
+
+%Vector 2v
+%vector initial components
+/vix11 0 scale mul def
+/viy11 0 scale mul def
+%vector terminal components
+/vfx11 vfx2 2 mul def
+/vfy11 vfy2 2 mul def
+
+%Draw vector 2v
+/x1 vix11 def
+/y1 viy11 def
+/x2 vfx11 def
+/y2 vfy11 def
+%0 0 1 setrgbcolor
+0 0 DrawArrow stroke
+
+
+/Times findfont
+fs scalefont
+setfont
+vfx11 0 add vfy11 10 sub moveto
+(2) show
+/Times-Bold findfont
+fs scalefont
+setfont
+(v) show
+
+
+%Vector 3v
+%vector initial components
+/vix12 0 scale mul def
+/viy12 0 scale mul def
+%vector terminal components
+/vfx12 vfx2 3 mul def
+/vfy12 vfy2 3 mul def
+
+%Draw vector 3v
+/x1 vix12 def
+/y1 viy12 def
+/x2 vfx12 def
+/y2 vfy12 def
+%0 0 1 setrgbcolor
+0 0 DrawArrow stroke
+
+
+/Times findfont
+fs scalefont
+setfont
+vfx12 0 add vfy12 10 sub moveto
+(3) show
+/Times-Bold findfont
+fs scalefont
+setfont
+(v) show
+
+
+
+[2 2] 0 setdash
+
+/l1x vfx vfx2 4 mul sub def
+/l1y vfy vfy2 4 mul sub def
+
+/l2x vfx vfx2 3 mul add def
+/l2y vfy vfy2 3 mul add def
+
+l1x l1y moveto
+l2x l2y lineto 
+stroke
+
+%%EndDocument
+%%Trailer

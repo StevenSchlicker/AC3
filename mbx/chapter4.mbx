@@ -1,0 +1,12 @@
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="C_11">
+<title>Multiple Integrals</title> <xi:include  href="section4-1.mbx" />
+ <xi:include  href="section4-2.mbx" />
+ <xi:include  href="section4-3.mbx" />
+ <xi:include  href="section4-4.mbx" />
+ <xi:include  href="section4-5.mbx" />
+ <xi:include  href="section4-6.mbx" />
+ <xi:include  href="section4-7.mbx" />
+ <xi:include  href="section4-8.mbx" />
+ <xi:include  href="section4-9.mbx" />
+ </chapter>

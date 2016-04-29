@@ -1,0 +1,31 @@
+
+<section>
+<title>A free and open-source calculus  \scalebox{0.5}{\includegraphics{figures/CClicense.eps}}</title>  
+<p>
+As we have noted in the single-variable edition of <em>Active Calculus</em>, several fundamental ideas in calculus are more than 2000 years old, and calculus as a formal subdiscipline of mathematics was first introduced and developed in the late 1600s. Mathematicians agree that the subject has been understood &#x2013; rigorously and by experts &#x2013; since the mid 1800s. The discipline is one of our great human intellectual achievements.
+</p>
+  
+<p>
+While each author of a calculus textbook certainly offers her own creative perspective on the subject, it is hardly the case that many of the ideas she presents are new. Indeed, the mathematics community broadly agrees on what the main ideas of calculus are, as well as their justification and their importance; the core parts of nearly all calculus textbooks are very similar. As such, it is our opinion that in the 21st century &#x2013; an age where the internet permits seamless and immediate transmission of information &#x2013; no one should be required to purchase a calculus text to read, to use for a class, or to find a coherent collection of problems to solve. Calculus belongs to humankind, not any individual author or publishing company. Thus, a main purpose of this work is to present a new multivariable calculus text that is <em>free</em>. In addition, instructors who are looking for a multivariable calculus text should have the opportunity to download the source files and make modifications that they see fit; thus this text is <em>open-source</em>.
+</p>
+  
+<p>
+Any professor or student may use an electronic version of the text for no charge. A .pdf copy of the text may be obtained by download from the \href{http://faculty.gvsu.edu/boelkinm/Home/Active_Calculus.html}{Active Calculus home page}, or directly from
+</p>
+  \href{http://gvsu.edu/s/Wb}{<tt>http://gvsu.edu/s/Wb</tt>}. 
+<p>
+Because the text is open-source, any instructor may acquire the full set of source files, by request via email to Matt Boelkins.
+</p>
+  
+<p>
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. The graphic
+</p>
+  <image source="images/CClicense.png" /> 
+<p>
+that appears throughout the text shows that the work is licensed with the Creative Commons, that the work may be used for free by any party so long as attribution is given to the author(s), that the work and its derivatives are used in the spirit of "share and share alike," and that no party may sell this work or any of its derivatives for profit. Full details may be found by visiting
+</p>
+  \href{http://creativecommons.org/licenses/by-nc-sa/3.0/}{<tt>http://creativecommons.org/licenses/by-nc-sa/3.0/</tt>} 
+<p>
+or sending a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+</p>
+ </section>
