@@ -1,0 +1,11 @@
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="C_9">
+<title>Multivariable and Vector Functions</title> <xi:include  href="section2-1.mbx" />
+ <xi:include  href="section2-2.mbx" />
+ <xi:include  href="section2-3.mbx" />
+ <xi:include  href="section2-4.mbx" />
+ <xi:include  href="section2-5.mbx" />
+ <xi:include  href="section2-6.mbx" />
+ <xi:include  href="section2-7.mbx" />
+ <xi:include  href="section2-8.mbx" />
+ </chapter>

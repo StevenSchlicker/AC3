@@ -1,0 +1,11 @@
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="C_10">
+<title>Derivatives of Multivariable Functions</title> <xi:include  href="section3-1.mbx" />
+ <xi:include  href="section3-2.mbx" />
+ <xi:include  href="section3-3.mbx" />
+ <xi:include  href="section3-4.mbx" />
+ <xi:include  href="section3-5.mbx" />
+ <xi:include  href="section3-6.mbx" />
+ <xi:include  href="section3-7.mbx" />
+ <xi:include  href="section3-8.mbx" />
+ </chapter>
