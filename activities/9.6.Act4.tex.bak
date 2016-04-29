@@ -1,0 +1,27 @@
+\begin{activity} \label{A:1.6.4} Consider the paraboloid defined by $f(x,y) = x^2+y^2$.
+    \ba
+    \item Find a parameterization for the $x=2$ trace of $f$. What type of curve does this trace describe? (Hint: A trace of $f$ lies on the surface defined by $f$, so the function $f$ describes the $z$-coordinate of a point on a trace.)
+
+
+
+    \item Find a parameterization for the $y=-1$ trace of $f$. What type of curve does this trace describe?
+
+
+
+    \item Find a parameterization for the level curve $f(x,y) = 25$. What type of curve does this trace describe?
+
+
+
+    \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

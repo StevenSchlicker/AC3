@@ -1,0 +1,59 @@
+\begin{activity} \label{A:2.6.3} In this activity we determine the direction of greatest increase of a function. 
+\ba
+    \item Explain why
+\begin{equation}
+D_{\vu} f(a,b) = |\langle f_x(a,b), f_y(a,b) \rangle| \cos(\theta), \label{eq:DD_grad}
+\end{equation}
+where $\theta$ is the angle between $\langle f_x(a,b), f_y(a,b) \rangle$ and $\vu$. (Hint: Use the dot product.)
+
+
+
+\begin{comment}
+
+Using the dot product we can see that
+\[D_{\vu} f(a,b) = \langle f_x(a,b), f_y(a,b) \rangle \cdot \vu = |\langle f_x(a,b), f_y(a,b) \rangle| \cos(\theta),\]
+where $\theta$ is the angle between $\langle f_x(a,b), f_y(a,b) \rangle$ and $\vu$.
+
+
+
+\end{comment}
+
+    \item At the point $(a,b)$, the only quantity in (\ref{eq:DD_grad}) that can change is $\theta$ (which determines the direction $\vu$ of travel). Explain why $\theta = 0$ makes $|\langle f_x(a,b), f_y(a,b) \rangle| \cos(\theta)$ as large as possible.
+
+
+
+\begin{comment}
+
+The maximum value of $D_{\vu} f(a,b)$ will occur when $\cos(\theta)$ is as large as possible. This happens when $\cos(\theta) = 1$ or $\theta = 0$.
+
+
+
+\end{comment}
+
+    \item When $\theta = 0$, in what direction does the vector $\vu$ point? Why? What does this tell us about the direction of greatest increase of $f$ at the point $(a,b)$? Why?
+
+
+
+\begin{comment}
+
+When $\theta = 0$, the angle between the vector $\vu$ and the vector $\langle f_x(a,b), f_y(a,b) \rangle$ is 0, so the vector $\vu$ must have the same direction as $\langle f_x(a,b), f_y(a,b) \rangle$. In other words, the direction of greatest increase of $f$ at the point $(a,b)$ is the direction of the vector $\langle f_x(a,b), f_y(a,b) \rangle$.
+
+
+
+\end{comment}
+
+    \ea
+
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

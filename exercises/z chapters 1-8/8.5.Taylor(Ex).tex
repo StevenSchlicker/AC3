@@ -1,0 +1,54 @@
+\begin{exercises}
+\item In this exercise we investigation the Taylor series of polynomial functions.
+    \ba
+    \item Find the 3rd order Taylor polynomial centered at $a = 0$ for $f(x) = x^3-2x^2+3x-1$. Does your answer surprise you? Explain.
+
+    \item Without doing any additional computation, find the 4th, 12th, and 100th order Taylor polynomials (centered at $a = 0$) for $f(x) = x^3-2x^2+3x-1$. Why should you expect this?
+
+    \item Now suppose $f(x)$ is a degree $m$ polynomial. Completely describe the $n$th order Taylor polynomial (centered at $a = 0$) for each $n$.
+
+    \ea
+
+
+\item The examples we have considered in this section have all been for Taylor polynomials and series centered at 0, but Taylor polynomials and series can be centered at any value of $a$. We look at examples of such Taylor polynomials in this exercise.
+    \ba
+    \item Let $f(x) = \sin(x)$. Find the Taylor polynomials up through order four of $f$ centered at $x = \frac{\pi}{2}$. Then find the Taylor series for $f(x)$ centered at $x = \frac{\pi}{2}$. Why should you have expected the result?
+
+    \item Let $f(x) = \ln(x)$. Find the Taylor polynomials up through order four of $f$ centered at $x = 1$. Then find the Taylor series for $f(x)$ centered at $x = 1$.
+
+    \item Use your result from (b) to determine which Taylor polynomial will approximate $\ln(2)$ to two decimal places. Explain in detail how you know you have the desired accuracy.
+
+    \ea
+
+
+\item We can use known Taylor series to obtain other Taylor series, and we explore that idea in this exercise, as a preview of work in the following section.
+    \ba
+    \item Calculate the first four derivatives of $\sin(x^2)$ and hence find the fourth order Taylor polynomial for $f(x)$ centered at $a=0$.
+
+    \item Part (a) demonstrates the brute force approach to computing Taylor polynomials and series. Now we find an easier method that utilizes a known Taylor series. Recall that the Taylor series centered at 0 for $f(x) = \sin(x)$ is
+    \begin{equation} \label{eq:8.5_Exercise3}
+    \sum_{k=0}^{\infty} (-1)^{k+1} \frac{x^{2k+1}}{(2k+1)!}.
+    \end{equation}
+        \begin{itemize}
+        \item[(i)] Substitute $x^2$ for $x$ in the Taylor series (\ref{eq:8.5_Exercise3}). Write out the first several terms and compare to your work in part (a). Explain why the substitution in this problem should give the Taylor series for $\sin(x^2)$ centered at 0.
+
+        \item[(ii)] What should we expect the interval of convergence of the series for $\sin(x^2)$ to be? Explain in detail.
+
+        \end{itemize}
+    \ea
+    
+    \item Based on the examples we have seen, we might expect that the Taylor series for a function $f$ always converges to the values $f(x)$ on its interval of convergence. We explore that idea in more detail in this exercise. Let $f(x) =
+    \begin{cases}
+    e^{-1/x^2} &\text{ if } x \neq 0, \\
+    0   &\text{ if } x = 0.
+    \end{cases}$
+    \ba
+    \item Show, using the definition of the derivative, that $f'(0) = 0$.
+    \item It can be shown that $f^{(n)}(0) = 0$ for all $n \geq 2$. Assuming that this is true, find the Taylor series for $f$ centered at 0.
+    \item What is the interval of convergence of the Taylor series centered at 0 for $f$? Explain. For which values of $x$ the interval of convergence of the Taylor series does the Taylor series converge to $f(x)$?
+    \ea
+
+\end{exercises}
+
+
+\afterexercises

@@ -1,0 +1,91 @@
+\begin{exercises} 
+
+\item \label{Ez:10.1.1}    Consider the function $f$ defined by $\ds f(x,y) = \frac{xy}{x^2 + y^2 + 1}.$
+				
+    \ba
+   	\item What is the domain of $f$?
+	\item Evaluate limit of $f$ at $(0,0)$ along the following paths:  $x = 0$, $y = 0$, $y = x$, and $y = x^2$.
+	\item What do you conjecture is the value of $\ds \lim_{(x,y) \to (0,0)} f(x,y)$?
+	\item Is $f$ continuous at $(0,0)$?  Why or why not?
+	\item Use appropriate technology to sketch both surface and contour plots of $f$ near $(0,0)$.  Write several sentences to say how your plots affirm your findings in (a) - (d).
+    \ea
+
+\begin{exerciseSolution}
+    \ba
+   	\item As a rational function, $f$ is defined everywhere except at the points where the denominator is 0. Since $x^2 + y^2 + 1 \geq 1$ for every $x$ and $y$, the domain of $f$ is all ordered pairs $(x,y)$, or the entire $x$-$y$ plane. 
+	\item Along the path $x=0$ we have 
+\[\lim_{(x,y) \to (0,0)} f(0,y) = \lim_{y \to 0} \frac{0}{y^2+1} = 0.\]
+Along the path $y=0$ we have 
+\[\lim_{(x,y) \to (0,0)} f(x,0) = \lim_{x \to 0} \frac{0}{x^2+1} = 0.\]
+Along the path $y=x$ we have 
+\[\lim_{(x,y) \to (0,0)} f(x,x) = \lim_{x \to 0} \frac{x^2}{2x^2+1} = 0.\]
+Along the path $y=x^2$ we have 
+\[\lim_{(x,y) \to (0,0)} f(x,x^2) = \lim_{x \to 0} \frac{x^3}{x^4+x^2+1} = 0.\]
+	\item The results of the previous part of this problem indicate that $f$ may have a limit at $(0,0)$ and that limit is 0.
+	\item If $\lim_{(x,y) \to (0,0)} f(x,y) = 0$, then $\lim_{(x,y) \to (0,0)} f(x,y) = f(0,0)$ and $f$ is continuous at $(0,0)$. 
+	\item The surface defined by $f$ has a saddle shape around $(0,0)$ and appears to be in one piece around $(0,0)$, which indicates that $f$ is continuous at $(0,0)$. 
+    \ea
+\end{exerciseSolution}
+
+\item \label{Ez:10.1.2}    Consider the function $g$ defined by $\ds g(x,y) = \frac{xy}{x^2 + y^2}.$
+				
+    \ba
+   	\item What is the domain of $g$?
+	\item Evaluate limit of $g$ at $(0,0)$ along the following paths:  $x = 0$, $y = x$, and $y = 2x$.
+	\item What can you now say about the value of $\ds \lim_{(x,y) \to (0,0)} g(x,y)$?
+	\item Is $g$ continuous at $(0,0)$?  Why or why not?
+	\item Use appropriate technology to sketch both surface and contour plots of $g$ near $(0,0)$.  Write several sentences to say how your plots affirm your findings in (a) - (d).
+    \ea
+
+\begin{exerciseSolution}
+    \ba
+   	\item As a rational function, $g$ is defined everywhere except at the points where the denominator is 0. Since $x^2 + y^2  = 0$ only when $x=y=0$, the domain of $g$ is all ordered pairs $(x,y)$ not equal to $(0,0)$, or the $x$-$y$ plane with the origin removed. 
+	\item Along the path $x=0$ we have 
+\[\lim_{(x,y) \to (0,0)} g(0,y) = \lim_{y \to 0} \frac{0}{y^2} = 0.\]
+Along the path $y=x$ we have 
+\[\lim_{(x,y) \to (0,0)} g(x,x) = \lim_{x \to 0} \frac{x^2}{2x^2} = \frac{1}{2}.\]
+Along the path $y=2x$ we have 
+\[\lim_{(x,y) \to (0,0)} f(x,2x) = \lim_{x \to 0} \frac{2x^2}{5x^2} = \frac{2}{5}.\]
+	\item The results of the previous part of this problem show that $g$ has different limits at $(0,0)$ along different paths, so $g$ does not have a limit at $(0,0)$.
+	\item Either of the conditions: $g$ is not defined at $(0,0)$, $g$ does not have a limit at $(0,0)$, show that $g$ is not continuous at $(0,0)$. 
+	\item The surface defined by $g$ appears to have a tear in it at the origin, indicating that $g$ is not continuous at $(0,0)$. 
+    \ea
+\end{exerciseSolution}
+
+
+\item \label{Ez:10.1.3}  For each of the following prompts, provide an example of a function of two variables with the desired properties (with justification), or explain why such a function does not exist.
+				
+    \ba
+   	\item A function $p$ that is defined at $(0,0)$, but $\ds \lim_{(x,y) \to (0,0)} p(x,y)$ does not exist.
+	\item A function $q$ that does not have a limit at $(0,0)$, but that has the same limiting value along any line $y = mx$ as $x \to 0$.
+	\item A function $r$ that is continuous at $(0,0)$, but $\ds \lim_{(x,y) \to (0,0)} r(x,y)$ does not exist.
+	\item A function $s$ such that 
+	$$\lim_{(x,x) \to (0,0)} s(x,x) = 3 \ \ \ \mbox{and} \ \ \ \lim_{(x,2x) \to (0,0)} s(x,2x) = 6,$$
+	for which  $\ds \lim_{(x,y) \to (0,0)} s(x,y)$ exists.
+	\item A function $t$ that is not defined at $(1,1)$ but $\ds \lim_{(x,y) \to (1,1)} t(x,y)$ does exist.
+    \ea
+
+\begin{exerciseSolution}
+    \ba
+   	\item Let $p(x,y) = \frac{2x+y}{x+y}$ if $(x,y) \neq (0,0)$ and $p(0,0) = 0$. So $p$ is defined at $(0,0)$ by definition. Note that 
+\[\lim_{(x,y) \to (0,0)} p(0,y) = \lim_{y \to 0} \frac{y}{y} = 1\]
+but
+\[\lim_{(x,y) \to (0,0)} p(x,0) = \lim_{x \to 0} \frac{2x}{x} = 2,\]
+so $p$ does not have a limit at $(0,0)$. 
+	\item Let $q(x,y) = \frac{x^2y}{x^4+y^2}$as in Activity \ref{A:10.1.2}. Along the line $y=mx$ we have 
+\[\lim_{(x,y) \to (0,0)} q(x,mx) = \lim_{x \to 0} \frac{mx^3}{x^2(x^2+m^2)} = \lim_{x \to 0} \frac{mx}{x^2+m^2} = 0,\] 
+so $q$ has the same limiting value along any line $y = mx$ as $x \to 0$. However,
+\[\lim_{(x,y) \to (0,0)} q(x,x^2) = \lim_{x \to 0} \frac{x^4}{2x^4} = \frac{1}{2},\]
+	\item By definition, if $r$ is continuous at $(0,0)$, then $\ds \lim_{(x,y) \to (0,0)} r(x,y)$ exists and is equal to $r(0,0)$. So there is no such function.
+	\item The first limit is the same as $\ds \lim_{(x,y) \to (0,0)} s(x,y) = 3$ along the path $y=x$ and the second is $\ds \lim_{(x,y) \to (0,0)} s(x,y) = 6$ along the path $y=2x$. So $s$ has different limits at $(0,0)$ along different paths. Therefore, there is no such function for which $\ds \lim_{(x,y) \to (0,0)} s(x,y)$ exists.
+	\item In this section we showed that the function $f$ defined by 
+\[f(x,y) = \frac{x^2y^2}{x^2+y^2}\]
+is not defined at $(0,0)$ but has a limit at $(0,0)$. We can translate this function to 
+\[t(x,y) = \frac{(x-1)^2(y-1)^2}{(x-1)^2+(y-1)^2},\]
+that is not defined at $(1,1)$ but for which $\ds \lim_{(x,y) \to (1,1)} t(x,y)$ does exist (and is $0$).
+    \ea
+\end{exerciseSolution}
+
+
+\end{exercises}
+\afterexercises

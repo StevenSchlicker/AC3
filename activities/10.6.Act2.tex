@@ -1,0 +1,44 @@
+\begin{activity} \label{A:10.6.2} Let $f(x,y) = 3xy-x^2y^3$.
+	\ba
+	
+	\item Determine $f_x(x,y)$ and $f_y(x,y)$.
+		
+	\item Use Equation~\eqref{eq:10.6.DD} to determine $D_{\vi} f(x,y)$ and $D_{\vj} f(x,y)$. What familiar function is $D_{\vi} f(x,y)$? What familiar function is $D_{\vj} f(x,y)$?
+	
+	\item Use Equation~\eqref{eq:10.6.DD} to find the derivative of $f$ in the direction of the vector $\vv = \langle 2, 3 \rangle$ at the point $(1,-1)$.  Remember that a unit direction vector is needed.
+	
+%	\item Can you find a unit vector $\vw$ such that $D_{\vw} (1,-1) = 0$?
+	
+	
+	\ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+\ba 
+\item We have 
+\[\frac{\partial f}{\partial x} = 3y-2xy^3 \ \ \text{ and } \ \ \frac{\partial f}{\partial y} = 3x - 3x^2y^2.\]
+
+\item Since $\vi = \langle 1, 0 \rangle$, we have 
+\[D_{\vi}f(x,y) = f_x(x,y)(1) + f_y(x,y)(0) = f_x(x,y).\]
+So the derivative of $f$ in the direction of the vector $\vi$ is just the partial derivative of $f$ with respect to $x$.
+
+Similarly,
+\[D_{\vj}f(x,y) = f_x(x,y)(0) + f_y(x,y)(1) = f_y(x,y).\]
+So the derivative of $f$ in the direction of the vector $\vj$ is just the partial derivative of $f$ with respect to $y$.
+
+\item At the point $(1,-1)$ we have 
+\[f_x(1,-1) = -1 \ \ \text{ and } \ \ f_y(1,-1) = 0.\]
+So the derivative of $f$ in the direction of the unit vector $\frac{1}{|\vv|} \vv = \frac{1}{\sqrt{13}}\langle 2, 3 \rangle$ at the point $(1,-1)$ is
+\[D_{\vv}f(1,-1) = f_x(1,-1) \left(\frac{2}{\sqrt{13}}\right) + f_y(1,-1) \left(\frac{3}{\sqrt{13}}\right) = -\frac{2}{\sqrt{13}}.\]
+
+\ea
+ 
+\end{activitySolution}
+\aftera

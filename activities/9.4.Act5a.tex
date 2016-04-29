@@ -1,0 +1,38 @@
+\begin{activity} \label{A:9.4.5}  Suppose 
+  $\vu = \langle 2, -1, 0\rangle$ and $\vv = \langle 0, 1, 3\rangle$.
+  Use the formula (\ref{E:9.4.cross.def}) for the following.
+  \ba
+  \item Find the cross product $\vu\times\vv$.  
+
+  \item Find the cross product $\vu\times \vi$.
+
+  \item Find the cross product $\vu\times\vu$.
+
+  \item Evaluate the dot products $\vu\cdot(\vu\times\vv)$ and
+    $\vv\cdot(\vu\times\vv)$.  What does this tell you about the
+    geometric relationship among $\vu$, $\vv$, and $\vu\times\vv$?
+
+    \ea
+\end{activity}
+
+\begin{activitySolution}
+\ba
+	\item By the formula we have
+\[\langle 2, -1, 0\rangle \times \langle 0, 1, 3\rangle = ((-1)(3)-0) \vi - ((2)(3)-0)\vj + ((2)(1)-0)\vk = -3 \vi - 6\vj + 2\vk.\]
+
+	\item By the formula we have
+\[\langle 2, -1, 0\rangle \times \langle 1, 0, 0\rangle = (0) \vi - (0)\vj + (0-(-1)(1))\vk = \vk.\] 
+
+	\item By the formula we have
+\[\langle 2, -1, 0\rangle \times \langle 2, -1, 0\rangle = (0) \vi - (0)\vj + (-2-(-2))\vk = \vzero.\] 
+
+	\item Using the definition of the dot product we have
+	\begin{align*}
+	\vu\cdot(\vu\times\vv) &= \langle 2, -1, 0\rangle \cdot \langle -3, -6, 2 \rangle = 0 \\
+	\vv\cdot(\vu\times\vv) &= \langle 0, 1, 3\rangle \cdot \langle -3, -6, 2 \rangle = 0.
+	\end{align*}
+So both $\vu$ and $\vv$ are perpendicular to $\vu\times\vv$. 
+	\ea
+\end{activitySolution}
+
+\aftera

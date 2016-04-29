@@ -1,0 +1,259 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 32 616 252 752
+%%Title: \\office\dfs\Math-Private\schlicks\MyData\My Documents\MTH203\Activities\CR_Circuit.ps
+%%Creator: GSview from \\office\dfs\Math-Private\schlicks\MyData\My Documents\MTH203\Activities\CR_Circuit.ps
+%%CreationDate: Mon Mar 03 14:35:14 2014
+%%Pages: 1
+%%EndComments
+%%Page: 1 1
+%%BeginDocument: \\office\dfs\Math-Private\schlicks\MyData\My Documents\MTH203\Activities\CR_Circuit.ps
+
+250 750 translate
+
+0 0 0 setrgbcolor
+
+/CCArrow {
+/r 20 def %radius
+/h 5 def %length of arrowhead
+/l 1.5 def %width of arrowhead
+
+0 0 r 90 360 arc
+stroke
+
+newpath
+r l add 0 moveto
+r h lineto
+r l sub 0 lineto
+closepath
+fill
+} def
+
+/CCReverseArrow {
+/r 20 def %radius
+/h 5 def %length of arrowhead
+/l 1.5 def %width of arrowhead
+
+0 0 r 90 360 arc
+stroke
+
+newpath
+h r moveto
+0 r l add lineto
+0 r l sub lineto
+closepath
+fill
+} def
+
+/VArrowUp {%length 25
+/s 20 def %length of circuit
+/h 5 def %length of arrowhead
+/l 1.5 def %width of arrowhead
+
+0 0 moveto
+0 s lineto
+stroke
+
+newpath
+l -1 mul s moveto
+0 s h add lineto
+l s lineto
+closepath
+fill
+} def
+
+/VArrowDown {%length 25
+/s -20 def %length of circuit
+/h 5 def %length of arrowhead
+/l 1.5 def %width of arrowhead
+
+0 0 moveto
+0 s lineto
+stroke
+
+newpath
+l -1 mul s moveto
+0 s h sub lineto
+l s lineto
+closepath
+fill
+} def
+
+/HArrowRight {%length 25
+/s 20 def %length of circuit
+/h 5 def %length of arrowhead
+/l 1.5 def %width of arrowhead
+
+0 0 moveto
+s 0 lineto
+stroke
+
+newpath
+s l -1 mul moveto
+s h add 0 lineto
+s l lineto
+closepath
+fill
+} def
+
+/HArrowLeft {%length 25
+/s -20 def %length of circuit
+/h 5 def %length of arrowhead
+/l 1.5 def %width of arrowhead
+
+0 0 moveto
+s 0 lineto
+stroke
+
+newpath
+s l -1 mul moveto
+s h sub 0 lineto
+s l lineto
+closepath
+fill
+} def
+
+/HResistor {%length 65
+/s 20 def %length of circuit
+/h 5 def %max
+/nh h -1 mul def %min
+/d 2.083 def %half horizontal distance between crit. pts.
+newpath
+0 0 moveto
+s 0 lineto
+s d add nh lineto
+s d 3 mul add h lineto
+s d 5 mul add nh lineto
+s d 7 mul add h lineto
+s d 9 mul add nh lineto
+s d 11 mul add h lineto
+s d 12 mul add 0 lineto
+s d 12 mul add s add 0 lineto
+stroke
+} def
+
+
+/VResistor {%length 65
+/s 20 def %length of circuit
+/h 5 def %max
+/nh h -1 mul def %min
+/d 2.083 def %half horizontal distance between crit. pts.
+newpath
+0 0 moveto
+0 s lineto
+nh s d add lineto
+h s d 3 mul add lineto
+nh s d 5 mul add lineto
+h s d 7 mul add lineto
+nh s d 9 mul add lineto
+h s d 11 mul add lineto
+0 s d 12 mul add lineto
+0 s d 12 mul add s add lineto
+stroke
+} def
+
+/Source {%length 65
+/s 30 def %length of circuit
+/p 8 def %length of positive pole
+/n 4 def %length of negative pole
+/d 5 def %distance between poles
+
+0 0 moveto
+s 0 lineto
+stroke
+
+s d add 0 moveto
+s d add s add 0 lineto
+stroke
+
+s p -1 mul moveto
+s p lineto
+stroke
+
+s d add n -1 mul moveto
+s d add n lineto
+stroke
+
+/Symbol findfont
+10 scalefont
+setfont
+s 10 sub 4 moveto
+(+) show
+s d add 4 add 4 moveto
+(-) show
+
+} def
+
+%START
+
+0 0 moveto
+-165 0 lineto
+stroke %top horizontal line
+
+%right to bottom -
+newpath
+0 0 moveto
+0 -125 lineto
+-50 -125 lineto
+stroke  
+
+-50 65 sub -125 translate
+
+0 0 Source stroke
+
+newpath %from bottom +
+0 0 moveto
+-50 0 lineto
+-50 30 lineto
+stroke
+
+/dx 30 def
+
+-50 dx sub 30 moveto
+-50 dx add 30 lineto
+stroke
+
+-50 dx sub 30 translate
+
+0 0 VResistor stroke
+
+/Times-Italic findfont
+12 scalefont
+setfont
+-22 32 moveto
+(R) show
+/Times findfont
+8 scalefont
+setfont
+0 -6 rmoveto
+(1) show
+
+dx 2 mul 0 translate
+
+0 0 VResistor stroke
+
+/Times-Italic findfont
+12 scalefont
+setfont
+10 32 moveto
+(R) show
+/Times findfont
+8 scalefont
+setfont
+0 -6 rmoveto
+(2) show
+
+
+0 65 moveto
+2 dx mul sub 65 lineto
+stroke
+
+dx -1 mul 65 moveto
+dx -1 mul 95 lineto
+stroke
+
+
+
+
+
+%%EndDocument
+%%Trailer

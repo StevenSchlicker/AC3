@@ -1,0 +1,246 @@
+\section{Directional Derivatives and the Gradient} \label{S:10.6.Directional_Derivative} 
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+  \item The partial derivatives of a function $f$ tell us the rate of change of
+    $f$ in the direction of the coordinate axes.  How can we measure
+    the rate of change of $f$ in other directions?
+  \item What is the gradient of a function and what does it tell us?
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+The partial derivatives of a function tell us the instantaneous rate at which the function changes as we hold all but one independent variable constant and allow the remaining independent variable to change.   It is natural to wonder how we can measure the rate at which a function changes in directions other than parallel to a coordinate axes.  In what follows, we investigate this question, and see how the rate of change in any given direction is connected to the rates of change given by the standard partial derivatives.
+
+\input{previews/10.6.PA3}
+
+\subsection*{Directional Derivatives}
+
+Given a function $z = f(x,y)$, the partial derivative $f_x(x_0,y_0)$ measures the instantaneous rate of change of $f$ as only the $x$ variable changes; likewise, $f_y(x_0,y_0)$ measures the rate of change of $f$ at $(x_0,y_0)$ as only $y$ changes.  Note particularly that $f_x(x_0,y_0)$ is measured in ``units of $f$ per unit of change in $x$,'' and that the units on $f_y(x_0,y_0)$ are similar.  
+
+In Preview Activity \ref{PA:10.6}, we saw how we could measure the rate of change of $f$ in a situation where both $x$ and $y$ were changing; in that activity, however, we found that this rate of change was measured in ``units of $f$ per unit of \emph{time}.'' In a given unit of time, we may move more than one unit of distance. In fact, in Preview Activity \ref{PA:10.6}, in each unit increase in time we move a distance of $| \vv | = 5$ feet. To generalize the notion of partial derivatives to any direction of our choice, we instead want to have a rate of change whose units are ``units of $f$ per unit of distance in the given direction.'' 
+
+In this light, in order to formally define the derivative in a particular direction of motion, we want to represent the change in $f$ for a given \emph{unit} change in the direction of motion. We can represent this unit change in direction with a unit vector, say $\vu = \langle u_1, u_2 \rangle$.  If we move a distance $h$ in the direction of $\vu$ from a fixed point $(x_0,y_0)$, we then arrive at the new point $(x_0+u_1h, y_0+u_2h)$.  It now follows that the slope of the secant line to the curve on the surface through $(x_0,y_0)$ in the direction of $\vu$ through the points $(x_0,y_0)$ and $(x_0+u_1h, y_0+u_2h)$ is
+\begin{equation}
+m_{\mbox{sec}} = \frac{f(x_0+u_1h, y_0+u_2h) - f(x_0,y_0)}{h}. \label{eq:10.6.diff_quot}
+\end{equation}
+
+To get the instantaneous rate of change of $f$ in the direction $\vu = \langle u_1, u_2 \rangle$, we must take the limit of the quantity in Equation~\eqref{eq:10.6.diff_quot} as $h \to 0$.  Doing so results in the formal definition of the directional derivative.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{definition} Let $f = f(x,y)$ be given.  The \textbf{derivative of $f$ at the point $(x,y)$ in the direction of the unit vector $\vu = \langle u_1, u_2 \rangle$}\index{directional derivative} is denoted $D_{\vu}f(x,y)$ and is given by
+\begin{equation} \label{E:DirDerDef}
+D_{\vu}f(x,y) = \lim_{h \to 0} \frac{f(x+u_1h, y+u_2h) - f(x,y)}{h}
+\end{equation}
+for those values of $x$ and $y$ for which the limit exists. \end{definition}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+The quantity $D_{\vu} f(x,y)$ is called a \emph{directional derivative}. When we evaluate the directional derivative $D_{\vu} f(x,y)$ at a point $(x_0, y_0)$, the result $D_{\vu} f(x_0,y_0)$ tells us the instantaneous rate at which $f$ changes at $(x_0, y_0)$ per unit increase in the direction of the vector $\vu$. In addition, the quantity $D_{\vu} f(x_0,y_0)$  tells us the slope of the line tangent to the surface in the direction of $\vu$ at the point $(x_0,y_0,f(x_0,y_0))$.
+
+\subsection*{Computing the Directional Derivative}
+
+In a similar way to how we developed shortcut rules for standard derivatives in single variable calculus, and for partial derivatives in multivariable calculus, we can also find a way to evaluate directional derivatives without resorting to the limit definition found in Equation~\eqref{E:DirDerDef}.  We do so using a very similar approach to our work in Preview Activity~\ref{PA:10.6}.
+
+Suppose we consider the situation where we are interested in the instantaneous rate of change of $f$ at a point $(x_0,y_0)$ in the direction $\vu = \langle u_1, u_2 \rangle$, where $\vu$ is a unit vector.   The variables $x$ and $y$ are therefore changing according to the parameterization
+\[x = a + u_1t \ \ \ \ \ \text{ and } \ \ \ \ \  y = b + u_2t.\]
+Observe that $\frac{dx}{dt} = u_1$ and $\frac{dy}{dt} = u_2$ for all values of $t$.  Since $\vu$ is a unit vector, it follows that a point moving along this line moves one unit of distance per one unit of time; that is, each single unit of time corresponds to movement of a single unit of distance in that direction.  This observation allows us to use the Chain Rule to calculate the directional derivative, which measures the instantaneous rate of change of $f$ with respect to change in the direction $\vu$.
+
+In particular, by the Chain Rule, it follows that 
+\[D_{\vu}f(x_0,y_0) = f_x(x_0,y_0)\frac{dx}{dt}\biggm|_{(x_0,y_0)} + f_y(x_0,y_0)\frac{dy}{dt}\biggm|_{(x_0,y_0)} = f_x(x_0,y_0)u_1 + f_y(x_0,y_0)u_2.\]
+This now allows us to compute the directional derivative at an arbitrary point according to the following formula.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{Given a differentiable function $f = f(x,y)$ and a unit vector $\vu = \langle u_1, u_2 \rangle$, we may compute $D_{\vu}f(x,y)$  by
+\begin{equation}
+D_{\vu}f(x,y) = f_x(x,y)u_1 + f_y(x,y)u_2.\label{eq:10.6.DD}
+\end{equation}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+\noindent \textbf{Note well:} To use Equation (\ref{eq:10.6.DD}), we must have a \emph{unit} vector $\vu = \langle u_1, u_2 \rangle$ in the direction of motion.  In the event that we have a direction prescribed by a non-unit vector, we must first scale the vector to have length 1.
+
+\input{activities/10.6.Act2}
+
+\subsection*{The Gradient}
+
+Via the Chain Rule, we have seen that for a given function $f = f(x,y)$, its instantaneous rate of change in the direction of a unit vector $\vu = \langle u_1, u_2 \rangle$ is given by 
+\begin{equation} \label{E:DDrevisited}
+D_{\vu}f(x_0,y_0) = f_x(x_0,y_0)u_1 + f_y(x_0,y_0)u_2.
+\end{equation}
+Recalling that the dot product of two vectors $\vv = \langle v_1, v_2 \rangle$ and $\vu = \langle u_1, u_2 \rangle$ is computed by 
+$$\vv \cdot \vu = v_1 u_1 + v_2 u_2,$$
+we see that we may recast Equation~\eqref{E:DDrevisited} in a way
+  that has geometric meaning.  In particular, we see that $D_{\vu}f(x_0,y_0)$ is the dot product of the vector $\left\langle f_x(x_0,y_0), f_y(x_0,y_0) \right\rangle$ and the vector $\vu$.
+  
+ We call this
+  vector formed by the partial derivatives of $f$ the {\em gradient} of $f$ and denote it
+  $$
+  \nabla f(x_0,y_0) = \left\langle f_x(x_0,y_0), f_y(x_0,y_0) \right\rangle.
+  $$
+We read $\nabla f$ as ``the gradient of $f$,'' ``grad $f$" or ``del $f$".\footnote{The symbol
+  $\nabla$ is called \emph{nabla}, which comes from a Greek word for a
+  certain type of harp that has a similar shape.}  
+Notice that $\nabla f$ varies from point to point.  In the following activity, we investigate some of what the gradient tells us about the behavior of a function $f$.
+
+\newpage
+
+\input{activities/10.6.Act10.tex}
+
+As a vector, $\nabla f(x_0,y_0)$ defines a direction and a length.  As we will soon see, both
+of these convey important information about the behavior of $f$ near
+$(x_0,y_0)$.  
+
+\subsection*{The Direction of the Gradient}
+
+Remember that the dot product also conveys information about the angle
+between the two vectors.  If $\theta$ is the angle between $\nabla
+f(x_0,y_0)$ and $\vu$ (where $\vu$ is a unit vector), %as shown in Figure \ref{F:10.6.gradient.1},
+then we also have that
+$$
+D_{\vu}f(x_0,y_0) = \nabla f(x_0,y_0)\cdot\vu = |\nabla f(x_0,y_0)||\vu|
+\cos\theta.
+$$
+
+%  \begin{figure}[ht]
+%    \begin{center}
+ %     \includegraphics{figures/fig_10_6_gradient_angle.eps}
+ %   \end{center}	
+ %   \caption{The angle between $\nabla f(x_0,y_0)$ and $\vv$. }
+ %   \label{F:10.6.gradient.1}
+%  \end{figure}
+
+In particular, when $\theta$ is a right angle, as shown on the left of
+Figure \ref{F:10.6.gradient.sign}, then $D_{\vu}f(x_0,y_0) = 0$, because $\cos(\theta) = 0$.  Since the value of the directional derivative is 0, this means that $f$ is unchanging in this direction, and hence $\vu$ must be tangent to the contour of $f$ that passes through $(x_0,y_0)$.  In other words, $\nabla f(x_0,y_0)$ is orthogonal to the
+contour through $(x_0,y_0)$.  This shows that the gradient vector at a given point is always perpendicular to the contour passing through the point, confirming that what we saw in part (c) of Activity~\ref{A:10.6.10} holds in general.
+
+  \begin{figure}[ht]
+    \begin{center}
+      \includegraphics{figures/fig_10_6_gradient_angle_1.eps}
+      \hspace*{20pt}
+      \includegraphics{figures/fig_10_6_gradient_angle_2.eps}
+      \hspace*{20pt}
+      \includegraphics{figures/fig_10_6_gradient_angle_3.eps}
+    \end{center}	
+    \caption{The sign of $D_{\vu} f(x_0,y_0)$ is determined by $\theta$.}
+    \label{F:10.6.gradient.sign}
+  \end{figure}
+
+Moreover, when $\theta$ is an acute angle, it follows that $\cos\theta > 0$ so since $$
+D_{\vu}f(x_0,y_0) = |\nabla f(x_0,y_0)||\vu|
+\cos\theta,
+$$
+and therefore $D_{\vu}f(x_0,y_0) > 0$, as shown in the middle image in Figure
+\ref{F:10.6.gradient.sign}.  This means that $f$ is increasing in any direction where
+$\theta$ is acute.  In a similar way, when $\theta$ is an obtuse angle, then $\cos\theta < 0$ so $D_{\vu}f(x_0,y_0) < 0$, as seen on the right in Figure \ref{F:10.6.gradient.sign}.  This
+means that $f$ is decreasing in any direction for which $\theta$ is obtuse.
+
+Finally, as we can see in the following activity, we may also use the gradient to determine the directions in which the function is increasing and decreasing most rapidly.
+
+\input{activities/10.6.Act3}
+
+%\input{activities/10.6.Act12}
+
+\subsection*{The Length of the Gradient}
+
+Having established in Activity~\ref{A:10.6.3} that the direction in which a function increases most rapidly at a point $(x_0,y_0)$ is the unit vector $\vu$ in the direction of the gradient, (that is, $\vu = \frac{1}{|\nabla f(x_0,y_0)|} \nabla f(x_0,y_0)$, provided that $\nabla f(x_0,y_0) \ne \vzero$), it is also natural to ask, ``in the direction of greatest increase for $f$ at $(x_0,y_0)$, what is the \emph{value} of the rate of increase?''  In this situation, we are asking for the value of $D_{\vu} f(x_0,y_0)$ where $\vu = \frac{1}{|\nabla f(x_0,y_0)|} \nabla f(x_0,y_0)$.
+
+Using the now familiar way to compute the directional derivative, we see that
+$$D_{\vu} f(x_0,y_0) = \nabla f(x_0,y_0) \cdot \left(\frac{1}{|\nabla f(x_0,y_0)|} \nabla f(x_0,y_0) \right).$$
+Next, we recall two important facts about the dot product:  (i) $\vw\cdot (c \vv) = c (\vw \cdot \vv)$ for any scalar $c$, and (ii) $\vw \cdot \vw = |\vw|^2$.  Applying these properties to the most recent equation involving the directional derivative, we find that 
+$$D_{\vu} f(x_0,y_0) = \frac{1}{|\nabla f(x_0,y_0)|}  (\nabla f(x_0,y_0) \cdot \nabla f(x_0,y_0)) = \frac{1}{|\nabla f(x_0,y_0)|} |\nabla f(x_0,y_0)|^2. $$
+Finally, since $\nabla f(x_0,y_0)$ is a nonzero vector, its length $|\nabla f(x_0,y_0)|$ is a nonzero scalar, and thus we can simplify the preceding equation to establish that
+$$D_{\vu} f(x_0,y_0) = |\nabla f(x_0,y_0)|.$$
+We summarize our most recent work by stating two important facts about the gradient.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{
+Let $f$ be a differentiable function and $(x_0,y_0)$ a point for which $\nabla f(x_0,y_0) \ne \vzero$.  Then $\nabla f(x_0,y_0)$ points in the direction of greatest increase of $f$ at $(x_0,y_0)$, and the instantaneous rate of change of $f$ in that direction is the length of the gradient vector.  That is, if $\vu = \frac{1}{|\nabla f(x_0,y_0)|} \nabla f(x_0,y_0)$, then $\vu$ is a unit vector in the direction of greatest increase of $f$ at $(x_0,y_0)$, and $D_{\vu} f(x_0,y_0) = |\nabla f(x_0,y_0)|$.
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+%\newpage
+
+\input{activities/10.6.Act11.tex}
+
+  
+%\input{activities/10.6.Act14}
+
+\subsection*{Applications}
+
+The gradient finds many natural applications.  For example, situations often arise -- for instance, constructing a road through the mountains or planning the flow of water across a landscape -- where we are
+interested in knowing the direction in which a function is increasing
+or decreasing most rapidly. 
+
+For example, consider a two-dimensional version of how a heat-seeking
+missile might work.\footnote{This application is borrowed from United
+  States Air Force Academy Department of Mathematical Sciences at
+  \url{http://www.nku.edu/~longa/classes/mat320/mathematica/multcalc.htm}.}
+Suppose that the temperature surrounding a fighter jet can be
+modeled by the function $T$ defined by
+\[T(x,y) = \frac{100}{1+(x-5)^2 + 4(y-2.5)^2},\] where $(x,y)$ is a
+point in the plane of the fighter jet and $T(x,y)$ is measured in
+degrees 
+Celsius.  Some contours and gradients $\nabla T$ are shown on
+the left in Figure \ref{F:10.6.missile}.
+
+  \begin{figure}[ht]
+    \begin{center}
+      \includegraphics{figures/fig_10_6_missile_grad.eps}
+      \hspace*{20pt}
+      \includegraphics{figures/fig_10_6_missile_path.eps}
+    \end{center}	
+    \caption{Contours and gradient for $T(x,y)$ and the missile's path.}
+    \label{F:10.6.missile}
+  \end{figure}
+
+A heat-seeking missile will always travel in the direction in which
+the temperature increases most rapidly;  that is, it will always
+travel in the direction of the gradient $\nabla T$.  If a missile is
+fired from the point $(2,4)$, then its path will be that shown on the
+right in Figure \ref{F:10.6.missile}.
+
+In the final activity of this section, we consider several questions related to this context of a heat-seeking missile, and foreshadow some upcoming work in Section~\ref{S:10.7.Optimization}.
+
+\input{activities/10.6.Act13}
+
+\begin{summary}
+
+\item The directional derivative of $f$ at the point $(x,y)$ in the direction of the unit vector $\vu = \langle u_1, u_2 \rangle$ is 
+\begin{equation*}
+D_{\vu}f(x,y) = \lim_{h \to 0} \frac{f(x+u_1h, y+u_2h) - f(x,y)}{h}
+\end{equation*}
+for those values of $x$ and $y$ for which the limit exists.  In addition, $D_{\vu}f(x,y)$ measures the slope of the graph of $f$ when we move in the direction
+  $\vu$.   Alternatively, $D_{\vu} f(x_0,y_0)$ measures the instantaneous rate of change of $f$ in the direction $\vu$ at $(x_0,y_0)$.
+
+\item The gradient of a function $f(x,y)$ at a point $(x_0,y_0)$ is
+  the vector
+  $$
+  \nabla f(x_0,y_0) = \left\langle f_x(x_0,y_0),
+    f_y(x_0,y_0)\right\rangle.
+  $$
+
+\item The directional derivative in the direction $\vu$ may be computed by
+  $$D_{\vu}f(x_0,y_0) = \nabla f(x_0,y_0)\cdot \vu.
+  $$
+  
+
+\item At any point where the gradient is nonzero,  gradient is orthogonal to the contour through
+  that point and points in the direction in which $f$ increases most
+  rapidly; moreover, the slope of $f$ in this direction equals the length of the
+  gradient $|\nabla f(x_0,y_0)|$.  Similarly, the opposite of the gradient points in the direction of greatest decrease, and that rate of decrease is the opposite of the length of the gradient.
+\end{summary}
+
+
+
+
+
+\nin \hrulefill
+
+\input{exercises/10.6.Directional_Derivative(Ex)}
+
+\clearpage

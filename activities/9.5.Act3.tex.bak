@@ -1,0 +1,24 @@
+\begin{activity} \label{A:1.5.3}  	Let $P_1 = (1,2,-1)$ and $P_2 = (-2,1,-2)$, and let $\mathcal{L}$ be the line in $\R^3$ through $P_1$ and $P_2$ as in Activity \ref{A:1.5.2}.
+	\ba
+	\item Find the parametric equations of the line $\mathcal{L}$.
+	
+	
+	
+	\item Does the point $(1, 2, 1)$ lie on $\mathcal{L}$? Explain.
+	
+	
+	
+	\ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

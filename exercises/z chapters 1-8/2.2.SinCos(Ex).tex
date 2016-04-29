@@ -1,0 +1,27 @@
+\begin{exercises} 
+\item Suppose that $V(t) = 24 \cdot 1.07^t + 6 \sin(t)$ represents the value of a person's investment portfolio in thousands of dollars in year $t$, where $t = 0$ corresponds to January 1, 2010.
+\ba
+	\item At what instantaneous rate is the portfolio's value changing on January 1, 2012?  Include units on your answer.
+	\item Determine the value of $V''(2)$.  What are the units on this quantity and what does it tell you about how the portfolio's value is changing?
+	\item On the interval $0 \le t \le 20$, graph the function $V(t) = 24 \cdot 1.07^t + 6 \sin(t)$ and describe its behavior in the context of the problem.  Then, compare the graphs of the functions $A(t) = 24 \cdot 1.07^t$ and $V(t) = 24 \cdot 1.07^t + 6 \sin(t)$, as well as the graphs of their derivatives $A'(t)$ and $V'(t)$.  What is the impact of the term $6 \sin(t)$ on the behavior of the function $V(t)$?
+\ea
+\item Let $f(x) = 3\cos(x) - 2\sin(x) + 6$.
+	\ba
+		\item Determine the exact slope of the tangent line to $y = f(x)$ at the point where $a = \frac{\pi}{4}$.
+		\item Determine the tangent line approximation to $y = f(x)$ at the point where $a = \pi$.
+		\item At the point where $a = \frac{\pi}{2}$, is $f$ increasing, decreasing, or neither?
+		\item At the point where $a = \frac{3\pi}{2}$, does the tangent line to $y = f(x)$ lie above the curve, below the curve, or neither?  How can  you answer this question without even graphing the function or the tangent line?
+	\ea
+\item In this exercise, we explore how the limit definition of the derivative more formally shows that $\frac{d}{dx}[\sin(x)] = \cos(x)$.   Letting $f(x) = \sin(x)$, note that the limit definition of the derivative tells us that
+	$$f'(x) = \lim_{h \to 0} \frac{\sin(x+h) - \sin(x)}{h}.$$
+\ba
+	\item Recall the trigonometric identity for the sine of a sum of angles $\alpha$ and $\beta$: \\ $\sin(\alpha + \beta) = \sin(\alpha)\cos(\beta) + \cos(\alpha)\sin(\beta)$.  Use this identity and some algebra to show that
+	$$f'(x) = \lim_{h \to 0} \frac{\sin(x)(\cos(h)-1) + \cos(x)\sin(h)}{h}.$$
+	\item Next, note that as $h$ changes, $x$ remains constant. Explain why it therefore makes sense to say that
+	$$f'(x) = \sin(x) \cdot \lim_{h \to 0} \frac{\cos(h) -1 }{h} + \cos(x) \cdot \lim_{h \to 0} \frac{\sin(h)}{h}.$$
+	\item Finally, use small values of $h$ to estimate the values of the two limits in (c):
+	$$\lim_{h \to 0} \frac{\cos(h) - 1}{h} \ \ \mbox{and} \ \ \lim_{h \to 0} \frac{\sin(h)}{h}.$$
+	\item What do your results in (c) thus tell you about $f'(x)$?
+\ea 
+\end{exercises}
+\afterexercises

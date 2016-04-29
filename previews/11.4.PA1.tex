@@ -1,0 +1,64 @@
+\begin{pa} \label{PA:11.4} Suppose that we have a flat, thin object (called a \emph{lamina}) whose density varies across the object. We can think of the density on a lamina as a measure of mass per unit area. As an example, consider a circular plate $D$ of radius 1 cm centered at the origin whose density $\delta$ varies depending on the distance from its center so that  the density in grams per square centimeter at point $(x, y)$ is
+\[\delta(x,y) = 10-2(x^2+y^2).\]
+
+    \ba
+    \item %Assume the density is 0 at any point outside of the disk.  
+    Suppose that we partition the plate into subrectangles $R_{ij}$, where $1 \leq i \leq m$ and $1 \leq j \leq n$, of equal area $\Delta A$, and select a point $(x_{ij}^*,y_{ij}^*)$ in $R_{ij}$ for each $i$ and $j$.
+    
+    What is the meaning of the quantity $\delta(x_{ij}^*,y_{ij}^*) \Delta A$?
+    
+%        \begin{enumerate}[i.]
+ %       \item Find a reasonable approximation of the mass of the plate on the subrectangle $R_{ij}$. Explain why you have a reasonable approximation. (Hint: mass is density times area if density is constant.)
+
+        \item State a double Riemann sum that provides an approximation of the mass of the plate.
+
+
+        \item Explain why the double integral
+    \[\iint_D \delta(x,y) \, dA\]
+    tells us the exact mass of the plate.
+
+
+        \item Determine an iterated integral which, if evaluated, would give the exact mass of the plate.  Do not actually evaluate the integral.\footnote{This integral is considerably easier to evaluate in polar coordinates, which we will learn more about in Section~\ref{S:11.5.Double_Integrals_Polar}.}
+
+
+    %\end{enumerate}
+\ea
+
+\end{pa}
+
+\begin{activitySolution} 
+
+    \ba
+    \item If we assume the density is the constant $\delta(x_{ij}^*,y_{ij}^*)$ on $R_{ij}$, then the quantity
+\[\delta(x_{ij}^*,y_{ij}^*) \Delta A\]
+is a density times area and $\delta(x_{ij}^*,y_{ij}^*) \Delta A$ approximates the mass of the chunk of the plate over $R_{ij}$.
+
+        \item To approximate the mass of the plate, we add the approximations on each subrectangle to obtain
+\[\sum_{i=1}^m \sum_{j=1}^n \delta(x_{ij}^*,y_{ij}^*) \Delta A,\]
+which approximates the total mass of the plate.
+
+
+        \item If we take the limit of the sum in part (b) as the number of subrectangles goes to infinity, we are adding masses over smaller and smaller subrectangles, so in the limit 
+\[\lim_{\Delta A \to 0} \sum_{i=1}^m \sum_{j=1}^n \delta(x_{ij}^*,y_{ij}^*) \Delta A = \iint_D \delta(x,y) \, dA,\]
+the double integral gives the total mass of the plate.
+
+        \item The mass of our plate in this example is
+\[\iint_D \delta(x,y) \, dA = \iint_D 10-2(x^2+y^2) \, dA.\]
+%This integral is probably easier to integrate in polar coordinates. The density $\delta$ is represented in polar coordinates as
+%\[\delta(r,\theta) = 10 - 2r^2\]
+%and the domain $D$ is described by
+%\[0 \leq r \leq 1 \ \ \ \ \ \text{ and } \ \ \ \ \ 0 \leq \theta \leq 2\pi.\]
+%Therefore, the mass of the plate is
+%\begin{align*}
+%\iint_D 10-2(x^2+y^2) \, dA &= \int_{0}^{2\pi} \int_{0}^{1} \delta(r,\theta) \, r \, dr \, d\theta \\
+%	&= \int_{0}^{2\pi} \int_{0}^{1} 10r - 2r^3 \, dr \, d\theta \\
+%	&= \int_{0}^{2\pi} \left[5r^2 - \frac{1}{4}r^4\right]\biggm|_{0}^{1} \, d\theta \\
+%	&= \int_{0}^{2\pi} \frac{9}{2} \, d\theta \\
+%	&= \frac{9}{2}\theta \bigm|_0^{2\pi}  \\
+%	&= 9 \pi.
+%\end{align*}
+
+
+\ea
+\end{activitySolution}
+ \afterpa 

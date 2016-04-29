@@ -1,0 +1,84 @@
+\begin{activity} \label{A:11.4.6} A firm manufactures smoke detectors. Two components for the detectors come from different suppliers -- one in Michigan and one in Ohio. The company studies these components for their reliability and their data suggests that if $x$ is the life span (in years) of a randomly chosen component from the Michigan supplier and $y$ the life span (in years) of a randomly chosen component from the Ohio supplier, then the joint probability density function $f$ might be given by
+\[f(x,y) = e^{-x} e^{-y}.\]
+    \ba
+    \item Theoretically, the components might last forever, so the domain $D$ of the function $f$ is the set $D$ of all $(x,y)$ such that $x \ge 0$ and $y \ge 0$. To show that $f$ is a probability density function on $D$ we need to demonstrate that
+        \[\int \int_D f(x,y) \, dA = 1,\]
+        or that
+        \[\int_0^{\infty} \int_0^{\infty} f(x,y) \, dy \, dx = 1.\]
+        Use your knowledge of improper integrals to verify that $f$ is indeed a probability density function.
+
+    \item Assume that the smoke detector fails only if both of the supplied components fail. To determine the probability that a randomly selected detector will fail within one year, we will need to determine the probability that the life span of each component is between 0 and 1 years. Set up an appropriate iterated integral, and evaluate the integral to determine the probability.
+    
+    \item What is the probability that a randomly chosen smoke detector will fail between years 3 and 7?
+    
+    \item Suppose that the manufacturer determines that one of the components is more likely to fail than the other, and hence conjectures that the probability density function is instead $f(x,y) = K e^{-x} e^{-2y}.$  What is the value of $K$?
+
+    \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+\ba
+\item We evaluate the double integral to determine if $f$ is a probability density function:
+\begin{align*}
+\int_0^{\infty} \int_0^{\infty} f(x,y) \, dy \, dx &= \int_0^{\infty} \int_0^{\infty} e^{-x} e^{-y} \, dy \, dx \\
+	&= \int_0^{\infty} e^{-x} \left( \int_0^{\infty}  e^{-y} \, dy \right) \, dx \\
+	&= \int_0^{\infty} e^{-x} \left(\lim_{b \to \infty} \int_0^{b}  e^{-y} \, dy \right) \, dx \\
+	&= \int_0^{\infty} e^{-x} \left(\lim_{b \to \infty} \left. -e^{-y} \right|_0^{b} \right) \, dx \\
+	&= \int_0^{\infty} e^{-x} \left(\lim_{b \to \infty} -e^{-b}+1 \right) \, dx \\
+	&= \int_0^{\infty} e^{-x} (1) \, dx \\
+	&= \lim_{b \to \infty} \int_0^{b}  e^{-x} \, dx \\
+	&= \lim_{b \to \infty} \left. -e^{-x} \right|_0^{b} \\
+	&= \lim_{b \to \infty} -e^{-b}+1 \\
+	&= 1.
+\end{align*}
+So $f$ is a probability density function.
+	
+
+\item We need both components to have a life span of 1 year or less, so the probability that a randomly selected detector will fail within one year is
+\begin{align*}
+\int_0^1 \int_0^1 f(x,y) \, dy \, dx &= \int_0^1 \int_0^1 e^{-x} e^{-y} \, dy \, dx \\
+	&= \int_0^1  -e^{-x} e^{-y} \bigm|_{y=0}^1 \, dx \\
+	&= \int_0^1  e^{-x} \left(1-\frac{1}{e}\right) \, dx \\
+	&= \left(1-\frac{1}{e}\right) (-e^{-x})\bigm|_{x=0}^1 \\
+	&= \left(1-\frac{1}{e}\right)^2.
+\end{align*}
+So the probability that a randomly selected detector will fail within one year is approximately 40\%.
+
+\item We need both components to have a life span of between 3 and 7 years, so the probability that a randomly selected detector will fail within 3 to 7 years is
+\begin{align*}
+\int_3^7 \int_3^7 f(x,y) \, dy \, dx &= \int_3^7 \int_3^7 e^{-x} e^{-y} \, dy \, dx \\
+	&= \int_3^7  -e^{-x} e^{-y} \bigm|_{y=3}^7 \, dx \\
+	&= \int_3^7  e^{-x} \left(\frac{1}{e^3}-\frac{1}{e^7}\right) \, dx \\
+	&= \left(\frac{1}{e^3}-\frac{1}{e^7}\right) (-e^{-x})\bigm|_{x=3}^7 \\
+	&= \left(\frac{1}{e^3}-\frac{1}{e^7}\right)^2.
+\end{align*}
+This amounts to approximately 0.24\%. 
+
+\item To find $K$ we need to determine when 
+\[\int_0^{\infty} \int_0^{\infty} f(x,y) \, dy \, dx = 1.\]
+We evaluate the iterated integral to determine the value of $K$:
+\begin{align*}
+\int_0^{\infty} \int_0^{\infty} f(x,y) \, dy \, dx &= \int_0^{\infty} \int_0^{\infty} Ke^{-x} e^{-2y} \, dy \, dx \\
+	&= K\int_0^{\infty} e^{-x} \left( \int_0^{\infty}  e^{-2y} \, dy \right) \, dx \\
+	&= K\int_0^{\infty} e^{-x} \left(\lim_{b \to \infty} \int_0^{b}  e^{-2y} \, dy \right) \, dx \\
+	&= K\int_0^{\infty} e^{-x} \left(\lim_{b \to \infty} \left. -\frac{1}{2}e^{-2y} \right|_0^{b} \right) \, dx \\
+	&= K\int_0^{\infty} e^{-x} \left(\lim_{b \to \infty} -\frac{1}{2}(e^{-2b}-1) \right) \, dx \\
+	&= \frac{K}{2}\int_0^{\infty} e^{-x}  \, dx \\
+	&= \frac{K}{2}\lim_{b \to \infty} \int_0^{b}  e^{-x} \, dx \\
+	&= \frac{K}{2}\lim_{b \to \infty} \left. -e^{-x} \right|_0^{b} \\
+	&= \frac{K}{2}\lim_{b \to \infty} -e^{-b}+1 \\
+	&= \frac{K}{2}.
+\end{align*}
+So we need to have $K = 2$ for $f$ to be a probability density function.
+
+\ea
+\end{activitySolution}
+\aftera
+
+

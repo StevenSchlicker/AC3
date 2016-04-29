@@ -1,0 +1,57 @@
+\begin{activity} \label{A:10.8.2} Use the method of Lagrange
+  multipliers to find the dimensions of the least
+  expensive packing crate with a volume of 240 cubic feet when the
+  material for the top costs \$2 per square foot, the bottom is \$3
+  per square foot and the sides are \$1.50 per square foot.  
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+We want to minimize the cost $C$ of the crate. Let $x$ be the length, $y$ the width, and $z$ the height of the crate. The volume $V = xyz$ of the crate is to be 240 cubic feet, so $x>0$, $y>0$, and $z>0$. The area of the top and bottom of the crate is $2xy$, so the cost of the top of the crate is $2xy$ and the cost of the bottom is $3xy$. The area of the sides of the crate is $2xz + 2yz$ and so the cost of the sides is $1.5(2xz+2yz)$. Thus, the total cost of the crate is
+\[C(x,y,z) = 5xy + 3(xz+yz).\]
+The volume of the crate is to be 240 cubic feet, so our constraint is
+\[240 = V(x,y,z) = xyz.\]
+Now
+\[\nabla C = \lambda \nabla V\]
+implies
+\[\nabla C = \langle 5y+3z, 5x+3z, 3(x+y) \rangle = \lambda \langle yz, xz, xy \rangle.\]
+So we need to solve the system of equations
+\begin{align*}
+xyz &= 240 \\
+5y+3z &= \lambda(yz) \\
+5x+3z &= \lambda(xz) \\
+3(x+y) &= \lambda(xy).
+\end{align*}
+The last three equations give us
+\[\lambda = \frac{5}{z} + \frac{3}{y} = \frac{5}{z}+\frac{3}{x} = \frac{3}{x}+\frac{3}{y}.\]
+Using the fact that $z = \frac{240}{xy}$ we have
+\[\frac{xy}{48}+\frac{3}{y} = \frac{xy}{248}+\frac{3}{x} = \frac{3}{y}+\frac{3}{x}.\]
+Using the equation
+\[\frac{xy}{48}+\frac{3}{y} =  \frac{3}{y}+\frac{3}{x}\]
+gives us
+\[y = \frac{144}{x^2}.\]
+Then we substitute into the equation
+\begin{align*}
+\frac{xy}{48}+\frac{3}{x} &= \frac{3}{y}+\frac{3}{x} \\
+\frac{xy}{48} &= \frac{3}{y} \\
+\frac{3}{x} &= \frac{x^2}{48} \\
+x^3 &= 144 \\
+x &= \sqrt[3]{144} \\
+x &\approx 5.24 \text{ ft}.
+\end{align*}
+Then
+\[y = \frac{144}{x^2} = \sqrt[3]{144} \approx 5.24 \text{ ft}\]
+and
+\[z = \frac{240}{xy} = \approx 8.74 \text{ ft}.\]
+Also,
+\[\lambda = \frac{3}{x}+\frac{3}{y} \approx 1.15.\]
+So to minimize the cost of this crate, the crate should be a box of approximate dimensions $5.24 \times 5.24 \times 8.74$ feet.
+
+\end{activitySolution}
+\aftera
+

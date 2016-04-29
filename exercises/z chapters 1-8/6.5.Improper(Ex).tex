@@ -1,0 +1,29 @@
+\begin{exercises} 
+  \item Determine, with justification, whether each of the following improper integrals converges or diverges.
+  \ba
+  	\item $\ds \int_e^{\infty} \frac{\ln(x)}{x} \, dx$
+  	\item $\ds \int_e^{\infty} \frac{1}{x\ln(x)} \, dx$
+  	\item $\ds \int_e^{\infty} \frac{1}{x(\ln(x))^2} \, dx$	
+  	\item $\ds \int_e^{\infty} \frac{1}{x(\ln(x))^p} \, dx$, where $p$ is a positive real number	
+	\item $\ds \int_0^1 \frac{\ln(x)}{x} \, dx$
+	\item $\ds \int_0^1 \ln(x) \, dx$
+  \ea
+  
+  \item Sometimes we may encounter an improper integral for which we cannot easily evaluate the limit of the corresponding proper integrals.  For instance, consider $\ds \int_1^{\infty} \frac{1}{1+x^3} \, dx$.  While it is hard (or perhaps impossible) to find an antiderivative for $\frac{1}{1+x^3}$, we can still determine whether or not the improper integral converges or diverges by comparison to a simpler one.  Observe that for all $x > 0$, $1 + x^3 > x^3$, and therefore
+  $$\frac{1}{1+x^3} < \frac{1}{x^3}.$$
+  It therefore follows that 
+  $$\int_1^b \frac{1}{1+x^3} \, dx < \int_1^b \frac{1}{x^3} \, dx$$
+  for every $b > 1$.  If we let $b \to \infty$ so as to consider the two improper integrals $\ds \int_1^\infty \frac{1}{1+x^3} \, dx$ and $\int_1^\infty \frac{1}{x^3} \, dx$, we know that the larger of the two improper integrals converges.  And thus, since the smaller one lies below a convergent integral, it follows that the smaller one must converge, too.  In particular, $\ds \int_1^\infty \frac{1}{1+x^3} \, dx$ must converge, even though we never explicitly evaluated the corresponding limit of proper integrals.  We use this idea and similar ones in the exercises that follow.
+  
+  \ba
+  	\item Explain why $x^2 + x + 1 > x^2$ for all $x \ge 1$, and hence show that $\ds \int_1^{\infty} \frac{1}{x^2 + x + 1} \, dx$ converges by comparison to $\ds \int_1^{\infty} \frac{1}{x^2} \, dx$.
+	\item Observe that for each $x > 1$, $\ln(x) < x$.  Explain why
+	$$\int_2^b \frac{1}{x} \, dx < \int_2^b \frac{1}{\ln(x)} \,dx$$
+	for each $b > 2$.	Why must it be true that $\ds \int_2^b \frac{1}{\ln(x)} \, dx$ diverges?
+	\item Explain why $\ds \sqrt{\frac{x^4+1}{x^4}} > 1$ for all $x > 1$.  Then, determine whether or not the improper integral
+	$$\int_1^{\infty} \frac{1}{x} \cdot \sqrt{\frac{x^4+1}{x^4}} \, dx$$
+	converges or diverges.
+  \ea
+  
+\end{exercises}
+\afterexercises

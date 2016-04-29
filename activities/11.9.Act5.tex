@@ -1,0 +1,25 @@
+\begin{activity} \label{A:11.9.5} Verify that the change of variables
+\[x(\rho, \theta, \phi) = \rho \sin(\phi) \cos(\theta), \ \ \ \ \ y(\rho, \theta, \phi) = \rho \sin(\phi) \sin(\theta), \ \ \ \ \ z(\rho, \theta, \phi) = \rho \cos(\phi)\]
+from spherical coordinates to rectangular coordinates has Jacobian $\rho^2 \sin(\phi)$.
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+\begin{align*}
+\left|\frac{\partial(x,y,z)}{\partial(\rho,\theta,\phi)}\right| &= \left|\frac{\partial x}{\partial \rho}\left[\frac{\partial y}{\partial \theta}\frac{\partial z}{\partial \phi} - \frac{\partial y}{\partial \phi}\frac{\partial z}{\partial \theta}\right] - \frac{\partial x}{\partial \theta}\left[\frac{\partial y}{\partial \rho}\frac{\partial z}{\partial \phi} - \frac{\partial y}{\partial \phi}\frac{\partial z}{\partial \rho}\right] + \frac{\partial x}{\partial \phi}\left[\frac{\partial y}{\partial \rho}\frac{\partial z}{\partial \theta} - \frac{\partial y}{\partial \theta}\frac{\partial z}{\partial \rho}\right]\right| \\
+	&= \left|\sin(\phi)\cos(\theta)[(\rho\sin(\phi)\cos(\theta))(-\rho \sin(\phi)) - (\rho \cos(\phi) \sin(\theta))(0)] \right. \\
+	& \qquad + \rho \sin(\phi) \sin(\theta)[(\sin(\phi)\sin(\theta))(-\rho \sin(\phi)) - (\rho \cos(\phi) \sin(\theta))(\cos(\phi))] \\
+	& \qquad + \left. \rho \cos(\phi) \cos(\theta)[(\sin(\phi)\sin(\theta))(0) - (\rho \sin(\phi) \cos(\theta))(\cos(\phi))]\right| \\
+	&= \left|-\rho^2 \sin^3(\phi) \cos^2(\theta) - \rho^2 \sin^3(\phi) \sin^2(\theta) \right.\\
+	& \qquad - \left. \rho^2 \sin(\phi)\cos^2(\phi) \sin^2(\theta) - \rho^2 \sin(\phi) \cos^2(\phi) \cos^2(\theta) \right| \\
+	&= \left| -\rho^2 [ \sin^3(\phi) + \sin(\phi) \cos^2(\phi)] \right| \\
+	&= \left|-\rho^2 [ \sin^3(\phi) + \sin(\phi) (1-\sin^2(\phi))] \right| \\
+	&= \rho^2 \sin(\phi).
+\end{align*}
+\end{activitySolution}
+\aftera

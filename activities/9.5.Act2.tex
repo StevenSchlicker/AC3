@@ -1,0 +1,37 @@
+	
+
+\begin{activity} \label{A:9.5.2}  Let $P_1 = (1,2,-1)$ and $P_2 = (-2,1,-2)$. Let $\mathcal{L}$ be the line in $\R^3$ through $P_1$ and $P_2$, and note that three snapshots of this line are shown in Figure \ref{F:9.5.Line_3D}.
+	\ba
+	\item Find a direction vector for the line $\mathcal{L}$.
+	
+	\item Find a vector equation of $\mathcal{L}$ in the form $\vr(t) = \vr_0 + t\vv$.
+	
+	\item Consider the vector equation $\vs(t) = \langle -5, 0, -3 \rangle + t \langle 6, 2, 2 \rangle.$  What is the direction of the line given by $\vs(t)$?  Is this new line parallel to line $\mathcal{L}$?
+	
+	\item Do $\vr(t)$ and $\vs(t)$ represent the same line, $\mathcal{L}$?  Explain.
+	
+	\ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+	\ba
+	\item Either $\overrightarrow{P_1P_2}$ or $\overrightarrow{P_1P_2}$ will give a direction vector for the line, so one direction vector for the line $\mathcal{L}$ is 
+\[\overrightarrow{P_2P_1} = \langle 3, 1, 1 \rangle.\]
+	\item We can use the vector $\overrightarrow{OP_1} = \langle 1,2,-1\rangle$ as $\vr_0$, so a vector equation of $\mathcal{L}$ is
+\[\vr(t) = \langle 1,2,-1\rangle + t\langle 3, 1, 1 \rangle.\]
+	\item The vector $\langle 6, 2, 2 \rangle$ gives the direction of the line determined by $\vs(t)$ Note that $\langle 6, 2, 2 \rangle = 2 \langle 3, 1, 1 \rangle$, so the new line is parallel to line $\mathcal{L}$.
+	\item The line $\mathcal{L}$ passes through the point $P_1$. To see if the point $P_1$ also lies on the line with vector representation $\vs(t)$, we need to know if there is a value of $t$ so that 
+\begin{equation} \label{eq:Act9.5.2_c_sol}
+\langle 1,2,-1\rangle = \langle -5, 0, -3 \rangle + t \langle 6, 2, 2 \rangle.
+\end{equation}
+If so, then equating the first components shows that $t$ must satisfy the equation $-5+6t=1$. So $t=1$. The second and third components of the  vectors on both sides of equation \ref{eq:Act9.5.2_c_sol} must also be equal when $t=1$. Since $0+2(1) = 2$ and $-3+2(1)=-1$, we see that the point $P_1$ lies on both lines. Since the two lines contain the same point and have the same direction, the lines are the same line. 	
+	\ea
+\end{activitySolution}
+\aftera

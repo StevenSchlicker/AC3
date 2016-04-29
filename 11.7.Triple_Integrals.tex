@@ -1,0 +1,185 @@
+\section{Triple Integrals} \label{S:11.7.Triple_Integrals}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+\item How are a triple Riemann sum and the corresponding triple integral of a continuous function $f = f(x,y,z)$ defined?
+\item What are two things the triple integral of a function can tell us?
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+We have now learned that we define the double integral of a continuous function $f = f(x,y)$ over a rectangle $R = [a,b] \times [c,d]$ as a limit of a double Riemann sum, and that these ideas parallel the single-variable integral of a function $g = g(x)$ on an interval $[a,b]$.   Moreover, this double integral has natural interpretations and applications, and can even be considered over non-rectangular regions, $D$.  For instance, given a continuous function $f$ over a region $D$, the average value of $f$, $f_{\mbox{\tiny{AVG}(D)}}$, is given by 
+$$f_{\mbox{\tiny{AVG}(R)}} = \frac{1}{A(D)} \iint_D f(x,y) \, dA,$$
+where $A(D)$ is the area of $D$.  Likewise, if $\delta(x,y)$ describes a mass density function on a lamina over $D$, the mass, $M$, of the lamina is given by 
+$$M = \iint_D \delta(x,y) \, dA.$$ 
+
+It is natural to wonder if it is possible to extend these ideas of double Riemann sums and double integrals for functions of two variables to triple Riemann sums and then triple integrals for functions of three variables. We begin investigating in Preview Activity \ref{PA:11.7}.
+
+\input{previews/11.7.PA1}
+
+\subsection*{Triple Riemann Sums and Triple Integrals}
+
+Through the application of a mass density distribution over a three-dimensional solid, Preview Activity \ref{PA:11.7} suggests that the generalization from double Riemann sums of functions of two variables to triple Riemann sums of functions of three variables is natural.  In the same way, so is the generalization from double integrals to triple integrals.  By simply adding a $z$-coordinate to our earlier work, we can define both a triple Riemann sum and the corresponding triple integral.
+
+%Consider a solid box $B$ (like a box-shaped piece of granite as in Preview Activity \ref{PA:11.7}). Let $\delta(x, y, z)$ represent the density of solid at point $(x,y,z)$. To find the mass of this solid we use the integration process as we did in our Preview Activity. Defining triple Riemann sums and triple integrals involves keeping track of a lot of different objects, and we further develop our abilities to deal with these objects in our next activity.
+
+%\input{activities/11.7.Act1}
+
+%This process of partitioning that we carried out in Activity \ref{A:11.7.1} is the idea behind the triple Riemann sum.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\textbf{The Triple Riemann Sum.} \begin{definition} Let $f = f(x,y,z)$ be a continuous function on a box $B = [a,b] \times [c,d] \times [r,s]$. The \textbf{triple Riemann sum of $f$ over $B$}\index{triple Riemann sum} is created as follows.
+\begin{itemize}
+\item Partition the interval $[a,b]$ into $m$ subintervals of equal length $\Delta x = \frac{b-a}{m}$. Let $x_0$, $x_1$, $\ldots$, $x_m$ be the endpoints of these subintervals, where $a = x_0<x_1<x_2 < \cdots < x_m = b$.
+Do likewise with the interval $[c,d]$ using $n$ subintervals of equal length $\Delta y = \frac{d-c}{n}$ to generate $c = y_0<y_1<y_2 < \cdots < y_n = d$, and with the interval $[r,s]$ using $\ell$ subintervals of equal length $\Delta z = \frac{s-r}{\ell}$ to have $r = z_0<z_1<z_2 < \cdots < z_l = s$.
+\item Let $B_{ijk}$ be the sub-box of $B$ with opposite vertices $(x_{i-1},y_{j-1},z_{k-1})$ and $(x_i, y_j, z_k)$ for $i$ between $1$ and $m$, $j$ between $1$ and $n$, and $k$ between 1 and $\ell$. The volume of each $B_{ijk}$ is $\Delta V = \Delta x \cdot \Delta y \cdot \Delta z$.
+\item Let $(x_{ijk}^*, y_{ijk}^*, z_{ijk}^*)$ be a point in box $B_{ijk}$ for each $i$, $j$, and $k$. The resulting triple Riemann sum for $f$ on $B$ is
+\[\sum_{i=1}^m \sum_{j=1}^n \sum_{k=1}^{\ell} f(x_{ijk}^*, y_{ijk}^*, z_{ijk}^*) \cdot \Delta V.\]
+\end{itemize}
+\end{definition}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+If $f(x,y,z)$ represents the mass density of the box $B$, then, as we saw in Preview Activity~\ref{PA:11.7}, the triple Riemann sum approximates the total mass of the box $B$. In order to find the exact mass of the box, we need to let the number of sub-boxes increase without bound (in other words, let $m$, $n$, and $\ell$ go to infinity); in this case, the finite sum of the mass approximations becomes the actual mass of the solid $B$.   More generally, we have the following definition of the triple integral.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\textbf{The Triple Integral Over a Box.} \begin{definition} With following notation defined as in a triple Riemann sum, the \textbf{triple integral of $f$ over $B$}\index{triple integral} is
+\[\iiint_B f(x,y,z) \, dV = \lim_{m,n,\ell \to \infty} \sum_{i=1}^m \sum_{j=1}^n \sum_{k=1}^{\ell} f(x_{ijk}^*, y_{ijk}^*, z_{ijk}^*) \cdot \Delta V. \]
+\end{definition}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+As we noted earlier, if $f(x, y, z)$ represents the density of the solid $B$ at each point $(x, y, z)$, then
+ \[M = \iiint_B f(x,y,z) \, dV\]
+ is the mass of $B$.\index{mass!of a solid}  Even more importantly, for any continuous function $f$ over the solid $B$, we can use a triple integral to determine the average value of $f$ over $B$, $f_{\mbox{\tiny{AVG}(B)}}$.  We note this generalization of our work with functions of two variables along with several others in the following important boxed information.  Note that each of these quantities may actually be considered over a general domain $S$ in $\R^3$, not simply a box, $B$.
+ % is given by 
+%$$f_{\mbox{\tiny{AVG}(B)}} = \frac{1}{V(B)} \iiint_B f(x,y,z) \, dV,$$
+%where $V(B)$ is the volume of the box $B$.
+
+%Also, as with double integrals, if we want to integrate over a region that is not a box, we enclose the region in a rectangular box and assume the density is 0 everywhere inside the box that is outside the region. Similarly, we can use triple integrals to find the volume of a solid, the average value of a function, and the center of mass of a solid with variable density:
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{itemize}
+\item The triple integral
+\[\displaystyle V(S) = \iiint_S 1 \, dV\]
+represents the \textbf{volume} of the solid $S$\index{volume of a solid}.
+\item The \textbf{average value} of the function $f = f(x,y,x)$ over a solid domain $S$\index{average value over a solid} is given by
+\[f_{\mbox{\tiny{AVG}(S)}} = \displaystyle \left(\frac{1}{V(S)} \right) \iiint_S f(x,y,z) \, dV,\]
+where $V(S)$ is the volume of the solid $S$.
+\item The \textbf{center of mass}\index{center of mass!of a solid} of the solid $S$ with density $\delta = \delta(x,y,z)$ is $(\overline{x}, \overline{y}, \overline{z})$, where
+\[ \overline{x} = \frac{\iiint_S x \ \delta(x,y,z) \, dV}{M}, \ \ \  \overline{y} = \frac{\iiint_S y \ \delta(x,y,z) \, dV}{M}, \ \ \  \overline{z} = \frac{\iiint_S z \ \delta(x,y,z) \, dV}{M},\]
+and $M = \displaystyle \iiint_S \delta(x,y,z) \, dV$ is the mass of the solid $S$.
+\end{itemize}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+
+In the Cartesian coordinate system, the volume element $dV$ is $dz \, dy \, dx$, and, as a consequence, a triple integral of a function $f$ over a box $B = [a,b] \times [c,d] \times [r,s]$ in Cartesian coordinates can be evaluated as an iterated integral of the form
+\[\iiint_B f(x,y,z) \, dV = \int_a^b \int_c^d \int_r^s f(x,y,z) \, dz \, dy \, dx.\]
+
+If we want to evaluate a triple integral as an iterated integral over a solid $S$ that is not a box, then we need to describe the solid in terms of variable limits.
+
+%\input{activities/11.7.Act2}
+
+\input{activities/11.7.Act3}
+
+
+\noindent \textbf{Note well: } When setting up iterated integrals, the limits on a given variable can be {\em only} in terms of the remaining variables.  In addition, there are multiple different ways we can choose to set up such an integral.  For example, two possibilities for iterated integrals that represent a triple integral $\ds \iiint_S f(x,y,z) \, dV$ over a solid $S$ are
+\begin{itemize}
+\item $\ds \int_a^b \int_{g_1(x)}^{g_2(x)} \int_{h_1(x,y)}^{h_2(x,y)} f(x,y,z) \, dz \, dy \, dx$
+%\item $\ds \int_c^d \int_{p_1(y)}^{p_2(y)} \int_{h_1(x,y)}^{h_2(x,y)} f(x,y,z) \, dz \, dx \, dy$
+%\item $\ds \int_a^b \int_{g_1(x)}^{g_2(x)} \int_{h_1(x,z)}^{h_2(x,z)} f(x,y,z) \, dy \, dz \, dx$
+\item $\ds \int_r^s \int_{p_1(z)}^{p_2(z)} \int_{q_1(x,z)}^{q_2(x,z)} f(x,y,z) \, dy \, dx \, dz$
+%\item $\ds \int_c^d \int_{g_1(y)}^{g_2(y)} \int_{h_1(y,z)}^{h_2(y,z)} f(x,y,z) \, dx \, dz \, dy$
+%\item $\ds \int_r^s \int_{g_1(z)}^{g_2(z)} \int_{h_1(y,z)}^{h_2(y,z)} f(x,y,z) \, dx \, dy \, dz$
+\end{itemize}
+where $g_1$, $g_2$, $h_1$, $h_2$, $p_1$, $p_2$, $q_1$, and $q_2$ are functions of the indicated variables.  There are four other options beyond the two stated here, since the variables $x$, $y$, and $z$ can (theoretically) be arranged in any order.   Of course, in many circumstances, an insightful choice of variable order will make it easier to set up an iterated integral, just as was the case when we worked with double integrals.
+
+\begin{example} \label{ex:11.7.Tetrahedron_mass} Find the mass of the tetrahedron in the first octant bounded by the coordinate planes and the plane $x + 2 y + 3 z = 6$ if the density at point $(x,y,z)$ is given by $\delta(x, y, z) = x + y + z$. A picture of the solid tetrahedron is shown at left in Figure \ref{F:11.7.Tetrahedron_ex}.
+\begin{figure}[ht]
+\begin{center}
+  \includegraphics{figures/fig_11_7_tetrahedron.eps}
+\hspace{1.0in}
+%\resizebox{!}{2.2in}{\includegraphics{11_7_Tetrahedron_proj}}
+  \includegraphics{figures/fig_11_7_tetrahedron_project.eps}
+\caption{The tetrahedron and its projection.}
+\label{F:11.7.Tetrahedron_ex}
+\end{center}
+\end{figure}
+%crop graphics in animate trim=<left> <bottom> <right> <top>, clip with includegraphics
+
+We find the mass, $M$, of the tetrahedron by the triple integral
+\[ M = \iiint_S \delta(x,y,z) \, dV,\]
+where $S$ is the solid tetrahedron described above. In this example, we choose to integrate with respect to $z$ first for the innermost integral. The top of the tetrahedron is given by the equation
+\[x + 2 y + 3 z = 6;\]
+ solving for $z$ then yields
+\[z = \frac{1}{3}(6 - x - 2y).\]
+The bottom of the tetrahedron is the $xy$-plane, so the limits on $z$ in the iterated integral will be $0 \leq z \leq \frac{1}{3}(6-x-2y)$.
+
+To find the bounds on $x$ and $y$ we project the tetrahedron onto the $xy$-plane; this corresponds to setting $z = 0$ in the equation $z = \frac{1}{3}(6 - x - 2y)$. The resulting relation between $x$ and $y$ is
+\[x + 2 y = 6.\]
+The right image in Figure \ref{F:11.7.Tetrahedron_ex} shows the projection of the tetrahedron onto the $xy$-plane.
+
+If we choose to integrate with respect to $y$ for the middle integral in the iterated integral, then the lower limit on $y$ is the $x$-axis and the upper limit is the hypotenuse of the triangle. Note that the hypotenuse joins the points $(6,0)$ and $(0,3)$ and so has equation $y = 3 - \frac{1}{2}x$. Thus, the bounds on $y$ are $0 \leq y \leq 3 - \frac{1}{2}x$. Finally, the $x$ values run from 0 to 6, so the iterated integral that gives the mass of the tetrahedron is
+\begin{equation}
+M = \int_{0}^{6} \int_{0}^{3-(1/2)x} \int_{0}^{(1/3)(6-x-2y)} x+y+z \, dz \, dy \, dx. \label{eq:11.7.Tetrahedron_mass}
+\end{equation}
+Evaluating the triple integral gives us
+\begin{align*}
+M & = \int_{0}^{6} \int_{0}^{3-(1/2)x} \int_{0}^{(1/3)(6-x-2y)} x+y+x \, dz \, dy \, dx  \\
+    &= \int_{0}^{6} \int_{0}^{3-(1/2)x} \left[xz+yz+\frac{z}{2}\right]\biggm|_{0}^{(1/3)(6-x-2y)} \, dy \, dx \\
+	&= \int_{0}^{6} \int_{0}^{3-(1/2)x} \frac{4}{3}x - \frac{5}{18}x^2 - \frac{}{9}xy + \frac{2}{3}y - \frac{4}{9}y^2 + 2 \, dy \, dx \\
+	&= \int_{0}^{6} \left[\frac{4}{3}xy - \frac{5}{18}x^2y - \frac{7}{18}xy^2 + \frac{1}{3}y^2 - \frac{4}{27}y^3 + 2y \right]\biggm|_{0}^{3-(1/2)x}  \, dx \\
+	&= \int_{0}^{6} 5 + \frac{1}{2}x - \frac{7}{12}x^2 + \frac{13}{216}x^3 \, dx \\
+	&=  \left[5x + \frac{1}{4}x^2 - \frac{7}{36}x^3 + \frac{13}{864}x^4 \right] \biggm|_{0}^{6} \\
+	&= \frac{33}{2}.
+\end{align*}
+\end{example}
+
+Setting up limits on iterated integrals can require considerable geometric intuition.  It is important to not only create carefully labeled figures, but also to think about how we wish to slice the solid.  Further, note that when we say ``we will integrate first with respect to $x$,'' by ``first'' we are referring to the innermost integral in the iterated integral.  The next activity explores several different ways we might set up the integral in the preceding example.
+
+\input{activities/11.7.Act4}
+
+%\input{activities/11.7.Act5}
+
+Now that we have begun to understand how to set up iterated triple integrals, we can apply them to determine important quantities, such as those found in the next activity.
+
+\input{activities/11.7.Act6}
+
+%\input{activities/11.7.Act7}
+
+
+
+\begin{summary}
+\item Let $f = f(x,y,z)$ be a continuous function on a box $B = [a,b] \times [c,d] \times [r,s]$. 
+%The triple Riemann sum of $f$ over $B$ is created as follows.
+%\begin{itemize}
+%\item Partition the interval $[a,b]$ into $m$ subintervals of equal length $\Delta x = \frac{b-a}{m}$. Let $x_0$, $x_1$, $\ldots$, $x_m$ be the endpoints of these subintervals, where $a = x_0<x_1<x_2 < \cdots < x_m = b$.
+%\item Partition the interval $[c,d]$ into $n$ subintervals of equal length $\Delta y = \frac{d-c}{n}$. Let $y_0$, $y_1$, $\ldots$, $y_n$ be the endpoints of these subintervals, where $c = y_0<y_1<y_2 < \cdots < y_n = d$.
+%\item Partition the interval $[r,s]$ into $l$ subintervals of equal length $\Delta z = \frac{s-r}{l}$. Let $z_0$, $z_1$, $\ldots$, $z_l$ be the endpoints of these subintervals, where $r = z_0<z_1<z_2 < \cdots < z_l = s$.
+%\item Let $B_{ijk}$ be the sub-box of $B$ with opposite vertices $(x_{i-1},y_{j-1},z_{l-1})$ and $(x_i, y_j, z_k)$ for $i$ between $1$ and $m$, $j$ between $1$ and $n$, and $k$ between 1 and $l$. The volume of $B_{ijk}$ is $\Delta V = \Delta x \cdot \Delta y \cdot \Delta z$.
+%\item Let $(x_{ijk}^*, y_{ijk}^*, z_{ijk}^*)$ be a point in box $B_{ijk}$ for each $i$, $j$, and $k$. Then a triple Riemann sum for $f$ on $B$ is
+%\[\sum_{i=1}^m \sum_{j=1}^n \sum_{k=1}^l f(x_{ijk}^*, y_{ijk}^*, z_{ijk}^*) \cdot \Delta V.\]
+%\end{itemize}
+ The triple integral of $f$ over $B$ is defined as
+\[\iiint_B f(x,y,z) \, dV = \lim_{\Delta V \to 0} \sum_{i=1}^m \sum_{j=1}^n \sum_{k=1}^l f(x_{ijk}^*, y_{ijk}^*, z_{ijk}^*) \cdot \Delta V,\]
+where the triple Riemann sum is defined in the usual way. %If $f$ is defined over some solid $S$, we enclose $S$ in a box $B$ and define $f$ to have the value 0 outside of $B$. In this case,
+%\[\iiint_S f(x,y,z) \, dV = \iiint_B f(x,y,z) \, dV.\]
+The definition of the triple integral naturally extends to non-rectangular solid regions $S$.
+\item The triple integral $\ds \iiint_S f(x,y,z) \, dV$ can tell us
+    \begin{itemize}
+    \item[-] the volume of the solid $S$ if $f(x,y,z) = 1$,
+    \item[-] the mass of the solid $S$ if $f$ represents the density of $S$ at the point $(x,y,z)$.
+    \end{itemize}
+Moreover,     \[f_{\mbox{\tiny{AVG}(S)}} = \displaystyle \frac{1}{V(S)} \iiint_S f(x,y,z) \, dV,\] is the average value of $f$ over $S$.
+\end{summary}
+
+\nin \hrulefill
+
+\input{exercises/11.7.Triple_Integrals(Ex)}
+
+\clearpage

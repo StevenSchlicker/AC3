@@ -1,0 +1,39 @@
+\begin{activity} \label{A:11.2.2} Let $f(x,y) = x+y^2$ on the rectangle $R = [0,2] \times [0,3]$.
+	\ba
+	\item Evaluate $\ds \iint_R f(x,y) \, dA$ using an iterated integral.  Choose an order for integration by deciding whether you want to integrate first with respect to $x$ or $y$.  
+	
+	\item Evaluate $\ds \iint_R f(x,y) \, dA$ using the iterated integral whose order of integration is the opposite of the order you chose in (a).	
+	
+	\ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+	\ba
+	\item We evaluate $\ds \iint_R f(x,y) \, dA$ as an iterated integral, integrating first with respect to $x$, then $y$:
+	\begin{align*}
+	 \iint_R f(x,y) \, dA &=  \int_{0}^{3} \int_{0}^{2} x+y^2 \, dx \, dy \\
+		&= \int_{0}^{3} \left. \left[ \frac{x^2}{2} + xy^2 \right] \right|_{0}^{2}  \, dy \\
+		&= \int_{0}^{3} \left[ 2 + 2y^2 \right]  \, dy \\
+		&= \left. \left[ 2y + \frac{2}{3}y^3 \right] \right|_{0}^{3} \\
+		&= 24.
+	\end{align*}
+	
+	
+	
+	\item We evaluate $\ds \iint_R f(x,y) \, dA$ as an iterated integral, integrating first with respect to $y$, then $x$:
+	\begin{align*}
+	 \iint_R f(x,y) \, dA &=  \int_{0}^{2} \int_{0}^{3} x+y^2 \, dy \, dx \\
+		&= \int_{0}^{2} \left. \left[ xy + \frac{y^3}{3} \right] \right|_{0}^{3}  \, dx \\
+		&= \int_{0}^{2} \left[ 3x + 9 \right]  \, dx \\
+		&= \left. \left[ \frac{3}{2}x^2 + 9x \right] \right|_{0}^{2} \\
+		&= 24.
+	\end{align*}
+	\ea
+\end{activitySolution}
+\aftera

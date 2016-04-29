@@ -1,0 +1,188 @@
+\begin{exercises} 
+
+\item In each of the following questions, set up an iterated integral expression whose value determines the desired result.  Then, evaluate the integral first by hand, and then using appropriate technology.
+	\ba
+	\item Find the volume of the ``cap'' cut from the solid sphere $x^2 + y^2 + z^2 = 4$ by the plane $z=1$, as well as the $z$-coordinate of its centroid.
+
+	\item Find the $x$-coordinate of the center of mass of the portion of the unit sphere that lies in the first octant (i.e., where $x$, $y$, and $z$ are all nonnegative).  Assume that the density of the solid given by $\delta(x,y,z) = \frac{1}{1+x^2+y^2+z^2}$.
+
+	\item Find the volume of the solid bounded below by the $x$-$y$ plane, on the sides by the sphere $\rho=2
+$, and above by the cone $\phi = \pi/3$.
+
+
+	\item Find the $z$ coordinate of the center of mass of the region that is bounded above by the surface $z = \sqrt{\sqrt{x^2 + y^2}}$, on the sides by the cylinder $x^2 + y^2 = 4$, and below by the $x$-$y$ plane.   Assume that the density of the solid is uniform and constant.
+
+	\item Find the volume of the solid that lies outside the sphere $x^2 + y^2 + z^2 = 1$ and inside the sphere $x^2 + y^2 + z^2 = 2z$.
+
+	\ea
+
+\begin{exerciseSolution}
+	\ba
+	\item In cylindrical coordinates the volume of the solid is  
+\begin{align*}
+V &= \int_0^{2\pi} \int_0^{2} \int_{1}^{\sqrt{4-r^2}} r \, dz \, dr \, d\theta \\
+	&= \int_0^{2\pi} \int_0^{2} rz\biggm|_{1}^{\sqrt{4-r^2}}  \, dr \, d\theta \\
+	&= \int_0^{2\pi} \int_0^{2} r\sqrt{4-r^2} - r  \, dr \, d\theta \\
+	&= \int_0^{2\pi} \left[-\frac{1}{3}(4-r^2)^{3/2}-\frac{1}{2}r^2\right]\biggm|_0^{2}  \, d\theta \\
+	&= \int_0^{2\pi}  \left[-2+\frac{8}{3}\right] \, d\theta \\
+	&= \frac{4}{3}\pi.
+\end{align*}
+The $z$-coordinate of the centroid of this region is 
+\begin{align*}
+\overline{z} &= \frac{1}{V} \int_0^{2\pi} \int_0^{2} \int_{1}^{\sqrt{4-r^2}} rz \, dz \, dr \, d\theta \\
+	&= \frac{3}{8\pi} \int_0^{2\pi} \int_0^{2} rz^2\biggm|_{1}^{\sqrt{4-r^2}}  \, dr \, d\theta \\
+	&= \frac{3}{8\pi} \int_0^{2\pi} \int_0^{2} r(4-r^2) - r  \, dr \, d\theta \\
+	&= \frac{3}{8\pi} \int_0^{2\pi} \left[\frac{3}{2}r^2- \frac{1}{4}r^4\right]\biggm|_0^{2}  \, d\theta \\
+	&= \frac{3}{8\pi} \int_0^{2\pi}  2 \, d\theta \\
+	&= \frac{3}{2}.
+\end{align*}
+
+
+	\item Using spherical coordinates we find that the mass of this solid is 
+\begin{align*}
+M &= \int_{0}^{\pi/2} \int_{0}^{\pi/2} \int_{0}^{1} \frac{\rho^2 \sin(\phi)}{1+\rho^2} \, d\rho \, d\phi \, d\theta \\
+	&= \int_{0}^{\pi/2} \int_{0}^{\pi/2} \int_{0}^{1} \sin(\phi)\left(1-\frac{1}{1+\rho^2}\right) \, d\rho \, d\phi \, d\theta \\
+	&= \int_{0}^{\pi/2} \int_{0}^{\pi/2}  \sin(\phi)\left(\rho - \arctan(\rho)\right) \biggm|_{0}^{1}  \, d\phi \, d\theta \\
+	&= \left(1-\frac{\pi}{4}\right) \int_{0}^{\pi/2} \int_{0}^{\pi/2}  \sin(\phi) \, d\phi \, d\theta \\
+	&= \left(1-\frac{\pi}{4}\right)  \int_{0}^{\pi/2} -\cos(\phi)\biggm|_{0}^{\pi/2} \, d\theta \\
+	&= \left(1-\frac{\pi}{4}\right)  \int_{0}^{\pi/2} 1 \, d\theta \\
+	&= \frac{\pi}{2}\left(1-\frac{\pi}{4}\right).
+\end{align*}
+Then the $x$-coordinate of the center of mass of this solid is 
+\begin{align*}
+\overline{x} &= \frac{1}{M} \int_{0}^{\pi/2} \int_{0}^{\pi/2} \int_{0}^{1} \frac{\rho^3 \sin^2(\phi) \cos(\theta)}{1+\rho^2} \, d\rho \, d\phi \, d\theta \\ 	
+	 &= \frac{1}{M} \int_{0}^{\pi/2} \int_{0}^{\pi/2} \int_{0}^{1} \sin^2(\phi) \cos(\theta)\left(\rho-\frac{\rho}{1+\rho^2}\right) \, d\rho \, d\phi \, d\theta \\ 	
+	 &= \frac{1}{M} \int_{0}^{\pi/2} \int_{0}^{\pi/2}  \sin^2(\phi) \cos(\theta)\left(\frac{1}{2}\rho^2-\frac{1}{2}\ln(1+\rho^2)\right)\biggm|_{0}^{1} \, d\phi \, d\theta \\ 
+	 &= \frac{1-\ln(2)}{2M} \int_{0}^{\pi/2} \int_{0}^{\pi/2}  \sin^2(\phi) \cos(\theta) \, d\phi \, d\theta \\ 
+	&= \frac{1-\ln(2)}{2M} \int_{0}^{\pi/2} \int_{0}^{\pi/2} \frac{1}{2}(1-\cos(2\phi)) \cos(\theta) \, d\phi \, d\theta \\
+	&= \frac{1-\ln(2)}{4M} \int_{0}^{\pi/2}  \left(\phi -\frac{1}{2}\sin(2\phi))\right) \cos(\theta)\biggm|_{0}^{\pi/2} \, d\theta \\
+	&= \frac{1-\ln(2)}{4M} \int_{0}^{\pi/2}  \left(\frac{\pi}{2}\right) \cos(\theta) \, d\theta \\
+	&= \frac{\pi(1-\ln(2))}{8M}  \sin(\theta)\biggm|_{0}^{\pi/2} \\
+	&= \frac{\pi(1-\ln(2))}{8M} \\
+	&= \frac{1-\ln(2)}{4-\pi}. 
+\end{align*}
+
+
+	\item Using spherical coordinates we have that the volume of the solid bounded below by the $x$-$y$ plane, on the sides by the sphere $\rho=2
+$, and above by the cone $\phi = \pi/3$ is
+\begin{align*}
+\int_{0}^{2\pi} \int_{0}^{\pi/3} \int_{0}^{2} \rho^2 \sin(\phi) \, d\rho \, d\phi \, d\theta &= \frac{1}{3} \int_{0}^{2\pi} \int_{0}^{\pi/3}  \rho^3 \sin(\phi) \biggm|_{0}^{2} \, d\phi \, d\theta  \\
+	&= \frac{8}{3} \int_{0}^{2\pi} \int_{0}^{\pi/3}  \sin(\phi)  \, d\phi \, d\theta  \\
+	&= \frac{8}{3} \int_{0}^{2\pi}   -\cos(\phi) \biggm|_{0}^{\pi/3}  \, d\theta  \\
+	&= \frac{8}{3} \int_{0}^{2\pi}  \frac{1}{2}  \, d\theta  \\
+	&= \frac{8\pi}{3}.
+\end{align*}
+
+	\item Let the density of the solid be $k$. Using cylindrical coordinates we have that the mass of the solid is
+\begin{align*}
+M &= \int_{0}^{2\pi} \int_{0}^{2} \int_{0}^{\sqrt{r}} kr \, dz \, dr \, d\theta \\
+	&= k\int_{0}^{2\pi} \int_{0}^{2} rz\biggm|_{0}^{\sqrt{r}} \, dr \, d\theta \\
+	&= k\int_{0}^{2\pi} \int_{0}^{2}  r^{3/2} \, dr \, d\theta \\
+	&= \frac{2k}{5} \int_{0}^{2\pi} r^{5/2}\biggm|_{0}^{2}  \, d\theta \\
+	&= \frac{8k\sqrt{2}}{5} \int_{0}^{2\pi} \, d\theta \\
+	&= \frac{16k\sqrt{2}\pi}{5}.
+\end{align*}
+Then the $z$ coordinate of the center of mass of the solid is 
+\begin{align*}
+\overline{z} &= \frac{1}{M}  \int_{0}^{2\pi} \int_{0}^{2} \int_{0}^{\sqrt{r}} krz \, dz \, dr \, d\theta \\
+	&= \frac{k}{2M} \int_{0}^{2\pi} \int_{0}^{2} rz^2\biggm|_{0}^{\sqrt{r}} \, dr \, d\theta \\
+	&= \frac{k}{2M}\int_{0}^{2\pi} \int_{0}^{2}  r^2 \, dr \, d\theta \\
+	&= \frac{k}{6M} \int_{0}^{2\pi} r^{3}\biggm|_{0}^{2}  \, d\theta \\
+	&= \frac{4k}{3M} \int_{0}^{2\pi} \, d\theta \\
+	&= \frac{5}{6\sqrt{2}}.
+\end{align*}
+
+
+	\item The sphere $x^2 + y^2 + z^2 = 2z$ has equation $\rho^2 = 2\rho \cos(\phi)$ or $\rho = 2\cos(\phi)$ in spherical coordinates.  The two spheres intersect when $1 = 2 z$ or when $z = \frac{1}{2}$. If $\rho = 1$ and $z = \frac{1}{2}$, then $\cos(\phi) = \frac{1}{2}$ and $\phi = \frac{\pi}{3}$. So the volume of this solid is  
+\begin{align*}
+\int_{0}^{2\pi} \int_{0}^{\pi/3} \int_{1}^{2\cos(\phi)} \rho^2 \sin(\phi) \, d\rho \, d\phi \, d\theta &= \frac{1}{3} \int_{0}^{2\pi} \int_{0}^{\pi/3} \rho^3 \sin(\phi)\biggm|_{1}^{2\cos(\phi)} \, d\phi \, d\theta \\
+	&= \frac{1}{3} \int_{0}^{2\pi} \int_{0}^{\pi/3} [8\cos^3(\phi) - 1]\sin(\phi) \, d\phi \, d\theta \\
+	&= \frac{1}{3} \int_{0}^{2\pi} [-2\cos^4(\phi) + \cos(\phi)]\biggm|_{0}^{\pi/3}   \, d\theta \\
+	&= \frac{11}{24} \int_{0}^{2\pi} \, d\theta \\
+	&= \frac{11\pi}{12}. 
+\end{align*}
+
+
+	\ea
+\end{exerciseSolution}
+%	\item Find the $z$-coordinate of the center of mass of the solid that lies between the hemisphere of radius 2 and the hemisphere of radius 1, each of which are bounded below by the plane $z=0$.  Assume that the density of the solid is given by the function $d(x,y,z)=x^2+y^2+z^2$.  Can you find $\overline{x}$ and $\overline{y}$ without integrating?
+
+	
+	\item For each of the following questions, (a) sketch the region of integration, (b) change the coordinate system in which the iterated integral is written to one of the remaining two, and (c) evaluate the iterated integral you deem easiest to evaluate by hand.
+	
+	\ba
+		\item $\ds \int_{0}^{1} \int_{0}^{\sqrt{1-x^2}} \int_{\sqrt{x^2 + y^2}}^{\sqrt{2-x^2-y^2}} xy\, dz \, dy \, dx$
+		\item $\ds \int_{0}^{\pi/2} \int_{0}^{\pi} \int_{0}^{1} \rho^2 \sin(\phi) \, d\rho \, d\phi \, d\theta$	
+		\item $\ds \int_{0}^{2\pi} \int_{0}^{1} \int_{r}^{1} r^2 \cos(\theta) \, dz \, dr \, d\theta$
+	\ea
+
+\begin{exerciseSolution}
+	\ba
+		\item In cylindrical coordinates, an equivalent iterated integral is 
+\[\int_{0}^{\pi/2} \int_{0}^{1} \int_{r}^{\sqrt{2-r^2}} r^3 \cos(\theta) \sin(\theta) \, dz \, dr \, d\theta.\]
+Evaluating the integral in cylindrical coordinates gives us 
+\begin{align*}
+\int_{0}^{\pi/2} \int_{0}^{1} \int_{r}^{\sqrt{2-r^2}} & r^3 \cos(\theta) \sin(\theta) \, dz \, dr \, d\theta = \int_{0}^{\pi}{2} \int_{0}^{1}  r^3 \cos(\theta) \sin(\theta)z\biggm|_{r}^{\sqrt{2-r^2}}  \, dr \, d\theta \\
+	&= \int_{0}^{\pi/2} \int_{0}^{1}  r^3 \cos(\theta) \sin(\theta)[\sqrt{2-r^2} - r]  \, dr \, d\theta \\
+	&= \int_{0}^{\pi/2} \int_{0}^{1}   \cos(\theta) \sin(\theta) r^3\sqrt{2-r^2} \, dr \, d\theta -  \int_{0}^{\pi/2} \int_{0}^{1}   \cos(\theta) \sin(\theta) r^4  \, dr \, d\theta \\
+	&= -\frac{1}{2}\int_{0}^{\pi/2} \int_{2}^{1}   \cos(\theta) \sin(\theta) (2-u)\sqrt{u} \, du \, d\theta -  \frac{1}{5} \int_{0}^{\pi/2} \cos(\theta) \sin(\theta) r^5\biggm|_{0}^{1}   \, d\theta \\
+	&= -\frac{1}{2}\int_{0}^{\pi/2}  \cos(\theta) \sin(\theta) \left(\frac{4}{3}u^{3/2}-\frac{2}{5}u^{5/2}\right)\biggm|_{2}^{1}  \, d\theta -  \frac{1}{5} \int_{0}^{\pi/2} \cos(\theta) \sin(\theta) r^5\biggm|_{0}^{1}   \, d\theta \\
+	&= \left(\frac{8}{15}\sqrt{2}-\frac{7}{15}\right)\int_{0}^{\pi/2}  \cos(\theta) \sin(\theta)   \, d\theta -  \frac{1}{5} \int_{0}^{\pi/2} \cos(\theta) \sin(\theta)  \, d\theta \\
+	&= \left(\frac{8}{15}\sqrt{2}-\frac{7}{15}\right) \frac{1}{2}\sin^2(\theta)\biggm|_{0}^{\pi/2}  -  \frac{1}{5}\left(\frac{1}{2}\sin^2(\theta)\biggm|_{0}^{\pi/2} \right) \\
+	&= \frac{1}{2} \left(\frac{8}{15}\sqrt{2}-\frac{7}{15}\right)  -  \frac{1}{10}  \\
+	&= \frac{4}{15}\sqrt{2}- \frac{1}{3}.
+\end{align*}
+
+		\item In rectangular coordinates an equivalent iterated integral is 
+\[\int_{0}^{1} \int_{0}^{\sqrt{1-x^2}} \int_{-\sqrt{1-x^2-y^2}}^{\sqrt{1-x^2-y^2}} \, dz \, dy \, dx.\]
+Evaluating the integral in spherical coordinates yields
+\begin{align*}
+\int_{0}^{\pi/2} \int_{0}^{\pi} \int_{0}^{1} \rho^2 \sin(\phi) \, d\rho \, d\phi \, d\theta &= \frac{1}{3} \int_{0}^{\pi/2} \int_{0}^{\pi}  \rho^3 \sin(\phi)\biggm|_{0}^{1} \, d\phi \, d\theta \\
+	&= \frac{1}{3} \int_{0}^{\pi/2} \int_{0}^{\pi}  \sin(\phi) \, d\phi \, d\theta \\
+	&= \frac{1}{3} \int_{0}^{\pi/2}   -\cos(\phi)\biggm|_{0}^{\pi} \, d\theta \\
+	&= \frac{2}{3} \int_{0}^{\pi/2}  \, d\theta \\
+	&= \frac{\pi}{3}. 
+\end{align*}
+	
+		\item In rectangular coordinates an equivalent iterated integral is 
+\[\int_{-1}^{1} \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}} \int_{\sqrt{x^2+y^2}}^{1} x \, dz \, dy \, dx.\]
+Evaluating the integral in cylindrical coordinates yields
+\begin{align*}
+\int_{0}^{2\pi} \int_{0}^{1} \int_{r}^{1} r^2 \cos(\theta) \, dz \, dr \, d\theta &= \int_{0}^{2\pi} \int_{0}^{1}  r^2 \cos(\theta)z\biggm|_{r}^{1} \, dr \, d\theta \\
+	&= \int_{0}^{2\pi} \int_{0}^{1}  r^2 \cos(\theta)(1-r) \, dr \, d\theta \\
+	&= \int_{0}^{2\pi}  \cos(\theta)\left(\frac{1}{3}r^3 - \frac{1}{4}r^4\right)\biggm|_{0}^{1} \, d\theta \\
+	&= \frac{1}{12} \int_{0}^{2\pi}  \cos(\theta) \, d\theta \\
+	&= \frac{1}{12}  \sin(\theta)\biggm|_{0}^{2\pi}  \\
+	&= 0.
+\end{align*}
+
+	\ea
+\end{exerciseSolution}
+
+	\item Consider the solid region $S$ bounded above by the paraboloid $z = 16 - x^2 - y^2$ and below by the paraboloid $z = 3x^2 + 3y^2$.
+		\ba
+			\item Describe parametrically the curve in $\R^3$ in which these two surfaces intersect.
+			\item In terms of $x$ and $y$, write an equation to describe the projection of the curve onto the $x$-$y$ plane.
+			\item What coordinate system do you think is most natural for an iterated integral that gives the volume of the solid?
+			\item Set up, but do not evaluate, an iterated integral expression whose value is average $z$-value of points in the solid region $S$.  
+			\item Use technology to plot the two surfaces and evaluate the integral in (c).  Write at least one sentence to discuss how your computations align with your intuition about where the average $z$-value of the solid should fall. 
+		\ea
+
+ 
+%\item What is the volume of the ice cream cone formed by intersecting the cone $z = \sqrt{x^2 + y^2}$ with the hemisphere of radius 1 centered at $(0,0,0)$?  What is the $z$-coordinate of its centroid?  What does the latter problem, which requires triple integrals, suggest? 
+
+
+\begin{exerciseSolution}
+		\ba
+			\item Setting $16-x^2-y^2$ equal to $3x^2+3y^2$ yields the equation $x^2+y^2=4$. When $x^2+y^2=4$, we have $z = 12$. This is the circle centered at $(0,0,12)$ with radius 2 in the $z=12$ plane, and has the parameterization $x(t) = 2\cos(t)$, $y(t) = 2\sin(t)$, and $z=12$ for $0 \leq t \leq 2\pi$. 
+			\item The projection of this intersection curve onto the $x$-$y$ plane is the circle centered at the origin of radius 2 and has parameterization $x(t) = 2\cos(t)$ and $y(t) = 2\sin(t)$ for $0 \leq t \leq 2\pi$. 
+			\item With the projection as a circle and the surfaces defined in terms of $x^2+y^2$, cylindrical coordinates seem a natural choice. 
+			\item An iterated integral expression whose value is average $z$-value of points in the solid region $S$. is
+\[\frac{\int_{0}^{2\pi} \int_{0}^{2} \int_{3r^2}^{16-r^2} z \, dz \, dr \, d\theta}{\int_{0}^{2\pi} \int_{0}^{2} \int_{3r^2}^{16-r^2} 1 \, dz \, dr \, d\theta}.\]
+			\item A computer algebra system says that the average $z$-value of points in the solid region $S$ is $\frac{44}{5} = 8.8$. The surface is a paraboloid with a rounded cap. Cross sections with constant $z$ values are generally larger as the $z$ values increase, with the exception of a rapid decrease in areas near the top. This suggests that the average $z$ value should be more than half-way up the solid. 
+		\ea
+\end{exerciseSolution}
+
+
+\end{exercises}
+\afterexercises

@@ -1,0 +1,23 @@
+\begin{activity} \label{A:2.2.5} Let $f(x,y) = \frac{1}{2}xy^2$ represent the kinetic energy in Joules of an object of mass $x$ in kilograms with velocity $y$ in meters per second. Let $(a,b)$ be the point $(4,5)$ in the domain of $f$.
+    \ba
+    \item Calculate $f_x(a,b)$.
+
+
+
+    \item Explain as best you can in the context of kinetic energy what the partial derivative
+\[f_x(a,b) = \lim_{h \to 0} \frac{f(a+h,b) - f(a,b)}{h}\]
+tells us about kinetic energy.
+
+    \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

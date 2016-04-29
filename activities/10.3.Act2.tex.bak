@@ -1,0 +1,28 @@
+\begin{activity} \label{A:2.3.2} Let $f = f(x,y)$ be a function of the independent variables $x$ and $y$.
+    \ba
+	\item Run the animation in Figure \ref{F:PD_xx}. Explain as best you can what the second order unmixed partial derivative Explain as best
+you can what the second order mixed partial derivative
+\[\frac{\partial^2 f}{\partial x^2} = \frac{\partial}{\partial x} \frac{\partial f}{\partial x}\]
+tells us about the graph of $f$ by first considering what the first order partial derivative $\frac{\partial f}{\partial x}$ represents, then
+describing what happens to this first order partial derivative as we increase $x$.
+
+
+
+    \item Run the animation in Figure \ref{F:PD_yy}. Explain as best you can what the second order unmixed partial derivative $\ds
+        \frac{\partial^2 f}{\partial y^2}$ tells us about the graph of $f$.
+
+
+
+  \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

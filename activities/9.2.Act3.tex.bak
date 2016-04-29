@@ -1,0 +1,21 @@
+\begin{activity} \label{A:1.2.3}
+Let $\vu = \langle 2, 3 \rangle$, $\vv = \langle -1, 4 \rangle$.
+    \ba
+    \item Would it seem reasonable to you to define a vector sum $\vu + \vv$? If yes, how do you think the sum should be defined? If no, explain why.
+
+    \item In general, how do you think a vector sum $\va + \vb$ of vectors $\va = \langle a_1, a_2 \rangle$ and $\vb = \langle b_1, b_2 \rangle$ in $\R^2$ should be defined? Write a formal definition of a vector sum based on your intuition.
+
+    \item In general, how do you think a vector sum $\va + \vb$ of vectors $\va = \langle a_1, a_2, a_3 \rangle$ and $\vb = \langle b_1, b_2, b_3 \rangle$ in $\R^3$ should be defined? Write a formal definition of a vector sum based on your intuition.
+
+    \ea
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

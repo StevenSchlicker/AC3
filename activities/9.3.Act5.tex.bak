@@ -1,0 +1,20 @@
+\begin{activity} \label{A:1.3.5}  We investigate the situation when two vectors in $\R^n$ are perpendicular in this activity.\footnote{There are situations (which we won't encounter in this class) where objects other than vectors in $\R^n$ can be considered to be perpendicular. We introduce the word \emph{orthogonal} in these cases to be a word that also means perpendicular.}
+    \ba
+    \item Suppose the angle between vectors $\vu$ and $\vv$ in $\R^n$ is $90^{\circ}$. What is $\vu \cdot \vv$? Explain.
+
+    \item Now suppose $\vu \cdot \vv = 0$. What, then, is the angle between $\vu$ and $\vv$? Explain.
+
+    \item Use the results from (a) and (b) to explain the following statement.
+
+    \ea
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

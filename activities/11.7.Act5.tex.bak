@@ -1,0 +1,74 @@
+\begin{activity} \label{A:11.7.5} Consider the solid $S$ that is bounded by the parabolic cylinder $y = x^2$ and the planes $z=0$ and $z=1-y$ as shown in Figure \ref{F:11.7.TI_Example_2}. Assume the density of $S$ is given by $\delta(x,y,z) = z$
+\begin{figure}[ht]
+\begin{center}
+\resizebox{!}{2.0in}{\includegraphics{11_7_TI_Example_2}}
+\end{center}
+\caption{The solid $S$ in Activity \ref{ex:11.7.TI_Example_2}.}
+\label{F:11.7.TI_Example_2}
+\end{figure}
+
+    \ba
+    \item Set up an iterated integral, integrating first with respect to $z$, then $y$, then $x$ that represents the mass of $S$. A picture of the projection of $S$ onto the $xy$-plane is shown in Figure \ref{F:11.7.TI_Example_2_xy}.
+
+
+
+\begin{comment}
+\[\int_{-1}^{1} \int_{x^2}^{1} \int_{0}^{1-y} z \, dz \, dy \, dx.\]
+\end{comment}
+
+    \item Set up an iterated integral, integrating first with respect to $y$, then $z$, then $x$ that represents the mass of $S$. A picture of the projection of $S$ onto the $xz$-plane is shown in Figure \ref{F:11.7.TI_Example_2_xz}.
+
+
+
+\begin{comment}
+\[\int_{0}^{1} \int_{0}^{1-x^2} \int_{x^2}^{1} z \, dy \, dz \, dx.\]
+\end{comment}
+
+	\item Set up an iterated integral, integrating first with respect to $x$, then $y$, then $z$ that represents the mass of $S$. A picture of the projection of $S$ onto the $yz$-plane is shown in Figure \ref{F:11.7.TI_Example_2_yz}.
+
+\begin{comment}
+\[\int_{0}^{1} \int_{0}^{z} \int_{-\sqrt{y}}^{\sqrt{y}} z \, dx \, dy \, dz.\]
+\end{comment}
+
+
+
+	\ea
+
+\begin{figure}[ht]
+\begin{center}
+\begin{minipage}{1.75in}
+\begin{center}
+\resizebox{!}{1.7in}{\includegraphics{11_7_TI_Example_2_xy}}
+\end{center}
+\caption{Projecting $S$ onto the $xy$-plane.}
+\label{F:11.7.TI_Example_2_xy}
+\end{minipage} \hspace{0.1in}
+\begin{minipage}{1.75in}
+\begin{center}
+\resizebox{!}{1.7in}{\includegraphics{11_7_TI_Example_2_xz}}
+\end{center}
+\caption{Projecting $S$ onto the $xz$-plane.}
+\label{F:11.7.TI_Example_2_xz}
+\end{minipage} \hspace{0.1in}
+\begin{minipage}{1.75in}
+\begin{center}
+\resizebox{!}{1.7in}{\includegraphics{11_7_TI_Example_2_yz}}
+\end{center}
+\caption{Projecting $S$ onto the $yz$-plane.}
+\label{F:11.7.TI_Example_2_yz}
+\end{minipage}
+\end{center}
+\end{figure}
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

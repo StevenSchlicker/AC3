@@ -1,0 +1,24 @@
+\begin{activity} \label{A:1.8.3} Let $y = f(x)$ define a smooth curve in 2-space. Parameterize this curve and use (\ref{eq:arclength_2}) to show that the length of the curve define by $f$ on an interval $[a,b]$ is
+\[\int_a^b \sqrt{1+[f'(t)]^2} \, dt.\]
+
+
+
+\begin{comment}
+
+We can parameterize $y=f(x)$ on $[a,b]$ by $\vr(t) = \langle t, f(t) \rangle$ for $t$ in $[a,b]$. Then the length of the curve defined by $y=f(x)$ on $[a,b]$ is
+\[\int_a^b \lvert \vr'(t) \rvert \, dt &=  \int_a^b \lvert \langle 1, f'(t) \rvert \, dt = \int_a^b \sqrt{1+[f'(t)]^2} \, dt.\]
+
+\end{comment}
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

@@ -1,0 +1,49 @@
+\begin{activity} \label{A:11.6.6} Let $z = f(x,y)$ define a smooth surface, and consider the corresponding parameterization $\vr(s,t) = \langle s, t, f(s,t) \rangle$.
+    \ba
+    \item Let $D$ be a region in the domain of $f$.  Using Equation~\ref{E:surface_area}, show that the area, $S$, of the surface defined by the graph of $f$ over $D$ is
+\[S = \iint_D \sqrt{\left(f_x(x,y)\right)^2 + \left(f_y(x,y)\right)^2 + 1} \ dA.\]
+
+    \item Use the formula developed in (a) to calculate the area of the surface defined by $f(x,y) = \sqrt{4-x^2}$ over the rectangle $D = [-2,2] \times [0,3]$. 
+
+    \item Observe that the surface of the solid describe in (b) is half of a circular cylinder.  Use the standard formula for the surface area of a cylinder to calculate the surface area in a different way, and compare your result from (b).
+
+\ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+    \ba 
+\item Recall that any surface defined by a function $f = f(x,y)$ in Cartesian coordinates can be thought of as a surface defined parametrically with parameters $s$ and $t$ by
+\[x(s,t)=s, \ \ \ \ y(s,t) = t, \ \ \ \ \text{ and } \ \ \ \ z = f(s,t).\]
+The surface is then given by the vector-valued function $\vr$ with $\vr(s,t) = \langle s, t, f(s,t) \rangle$. In this case we have
+\[\vr_s(s,t) = \langle 1,0,f_s(s,t)\rangle \ \ \ \ \text{ and } \ \ \ \ \vr_t(s,t) = \langle 0,1,f_t(s,t)\rangle.\]
+So
+\[\lvert \vr_s \times \vr_t \rvert = \lvert \langle -f_s(s,t), -f_t(s,t), 1 \rangle \rvert = \sqrt{f_s(s,t)^2 + f_t(s,t)^2+1},\]
+and the formula for surface area becomes
+\[\int \int_D \sqrt{\left(f_x(x,y)\right)^2 + \left(f_y(x,y)\right)^2 + 1} \ dA.\]
+
+
+    \item Using the formula from part (a) we have that the surface area is
+\begin{align*}
+\int_{-2}^2 \int_0^3 \sqrt{\left(-x(4-x^2)^{-1/2}\right)^2 + 0^2 + 1} \, dy \, dx &= \int_{-2}^2 \int_0^3 \sqrt{\frac{x^2}{4-x^2}+1} \, dy \, dx \\
+    &= \int_{-2}^2 \int_0^3 \frac{2}{\sqrt{4-x^2}} \, dy \, dx \\
+    &= \int_{-2}^2 \int_0^3  \frac{2}{\sqrt{4-x^2}}y\biggm|_0^3 \, dx \\
+    &= 6\int_{-2}^2 \frac{1}{\sqrt{4-x^2}} \, dx \\
+    &= 6 \arcsin{\frac{x}{2}}\biggm|_{-2}^2  \\
+    &= 6\left(\arcsin(1)-\arcsin(-1)\right) \\
+    &= 6\pi.
+\end{align*}
+
+\item The cross sections of the surface of this solid are semicircles with radius 2. So the surface area of this solid should be $2\pi \times 3 = 6\pi$.
+
+
+\ea
+
+\end{activitySolution}
+
+\aftera

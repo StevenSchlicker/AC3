@@ -1,0 +1,24 @@
+\begin{activity} \label{A:2.7.4} Return to our revenue function $f(p_1,p_2) = p_1(150 - 2p_1 - p_2) + p_2(200 - p_1 - 3p_2)$ from our Preview Activity. Recall that
+\[\frac{\partial f}{\partial p_1} = 150 - 2p_2 - 4p_1 \ \ \text{ and } \ \ \frac{\partial f}{\partial p_2} = 200 - 2p_1 - 6p_2,\]
+so the sole critical point of $f$ is $(25,25)$.
+	\ba
+	\item Find the discriminant of $f$ at its critical point.
+	
+	
+	
+	\item Use the Second Derivative Test to classify the critical point of $f$. Does the result confirm what we learned in the Preview Activity?
+	
+	
+	
+	\ea
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

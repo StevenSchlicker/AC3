@@ -1,0 +1,61 @@
+\begin{activity} \label{A:10.6.5} Suppose we parameterize a level curve $f(x, y) = c$ by
+\[x = x(t), \ \ \ \ \  y = y(t), \ \ \ \ \ z = c.\]
+    \ba
+    \item If we stay on the level curve, the $z$ value doesn't change. So if we change $t$ but stay on the level curve, what is $\ds \frac{df}{dt}$?
+
+
+
+\begin{comment}
+
+If we change $t$ and remain on the level curve we will have
+\[\frac{df}{dt} = \frac{dc}{dt} = 0.\]
+
+
+
+\end{comment}
+
+    \item Explain each step in the following string of equalities.
+\[0 = \frac{df}{dt} = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt} = \left\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right\rangle \cdot  \left\langle \frac{dx}{dt}, \frac{dy}{dt} \right\rangle = \nabla f \cdot \left\langle \frac{dx}{dt}, \frac{dy}{dt} \right\rangle.\]
+
+
+
+\begin{comment}
+
+On the level curve we have $\frac{df}{dt} = 0$. The Chain Rule then tells us that
+\[\frac{df}{dt} = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt}.\]
+By the definition of the dot product we have
+\[\frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt} = \left\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right\rangle \cdot  \left\langle \frac{dx}{dt}, \frac{dy}{dt} \right\rangle.\]
+Finally, the definition of $\nabla f$ gives us
+\[\left\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right\rangle \cdot  \left\langle \frac{dx}{dt}, \frac{dy}{dt} \right\rangle = \nabla f \cdot \left\langle \frac{dx}{dt}, \frac{dy}{dt} \right\rangle.\]
+
+
+
+\end{comment}
+
+    \item What does $\ds \nabla f \cdot \left\langle \frac{dx}{dt}, \frac{dy}{dt} \right\rangle = 0$ tell us about the relationship between $\nabla f$ and $\ds \left\langle \frac{dx}{dt}, \frac{dy}{dt} \right\rangle$? Why does this show that the gradient is always orthogonal to the level curve as indicated in Figure \ref{F:Grad_contours}?
+
+
+
+\begin{comment}
+
+Since $\nabla f \cdot \left\langle \frac{dx}{dt}, \frac{dy}{dt} \right\rangle = 0$, we know that $\nabla f$ is orthogonal to $\ds \left\langle \frac{dx}{dt}, \frac{dy}{dt} \right\rangle$. Now $\left\langle \frac{dx}{dt}, \frac{dy}{dt} \right\rangle$ is a tangent vector to the level curve, so we can conclude that the gradient is always orthogonal to the level curve as indicated in Figure \ref{F:Grad_contours}.
+
+
+
+\end{comment}
+
+    \ea
+
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

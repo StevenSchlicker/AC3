@@ -1,0 +1,19 @@
+\begin{activity} \label{A:1.8.1} Use (\ref{eq:arclength_2}) to calculate the circumference of a circle of radius $r$.
+
+\begin{comment} We can parameterize a circle of radius $r$ centered at the origin by $\vr(t) = \langle \cos(t), \sin(t) \rangle$ for $t$ in the interval $[0, 2\pi]$. The circumference of this circle is the length of curve defined by $r$, or
+\[\int_0^{2\pi} \lvert \vr'(t) \rvert \, dt = \int_0^{2\pi} \sqrt{(-r\sin(t))^2 + (r\cos(t))^2} \, dt = \int_0^{2\pi} r \, dt = 2 \pi r\]
+as expected.
+
+\end{comment}
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

@@ -1,0 +1,25 @@
+\begin{activity} \label{A:1.1.1}  Identify the domains of the following functions. Draw a picture of each domain in the plane.
+    \ba
+    \item $f(x,y) = x^2+y^2$
+
+    \item $f(x,y) = \sqrt{x^2+y^2}$
+
+    \item $Q(x,y) = \frac{x+y}{x^2-y^2}$
+
+    \item $s(x,y) = \frac{1}{\sqrt{1-xy^2}}$
+
+    \ea
+\end{activity}
+    
+\begin{smallhint}
+\end{smallhint}
+
+\begin{bighint}
+
+\end{bighint}
+
+\begin{activitySolution}
+
+\end{activitySolution}
+
+\aftera 

@@ -1,0 +1,34 @@
+\begin{activity} \label{A:10.6.13} 
+  \ba
+\item The temperature $T(x,y)$ has its maximum value at the fighter
+  jet's location.  State the fighter jet's location and explain
+  how Figure \ref{F:10.6.missile} tells you this.
+\item Determine $\nabla T$ at the fighter jet's location and give a
+  justification for your response.
+\item Suppose that a different function $f$ has a local maximum value at
+  $(x_0,y_0)$.  Sketch the behavior of some possible contours near this point. 
+  What is $\nabla f(x_0,y_0)$?
+\item Suppose that a function $g$ has a local minimum value at
+  $(x_0,y_0)$.  Sketch the behavior of some possible contours near this point.
+  What is $\nabla g(x_0,y_0)$?
+\item If a function $g$ has a local minimum at  $(x_0,y_0)$, what is the direction of greatest increase of $g$ at $(x_0,y_0)$?
+  \ea
+
+\end{activity}
+
+\begin{activitySolution}
+\ba 
+\item The gradient points toward the direction of greatest in $T$, and the gradient vectors are all directed toward the point $(5,2.5)$. So the fighter jet's location is $(5,2.5)$. 
+
+\item At the fighter jet's location, the temperature doesn't increase, so we should expect $\nabla T$ to be the zero vector there. Note that $T_x(x,y) = -\frac{200(x-5)}{[1+(x-5)^2+4(y-2.5)^2]^2}$ and $T_y(x,y) =  -\frac{800(y-2.5)}{[1+(x-5)^2+4(y-2.5)^2]^2}$, and so $\nabla T(5,2.5) = \langle 0, 0 \rangle$. 
+
+\item Contours of $f$ might look like the contours of $T$ near the point $(x_0,y_0)$. At the relative maximum point we would have $\nabla f(x_0,y_0) = \langle 0,0\rangle$, provided $\nabla f(x_0,y_0)$ exists.
+
+\item Contours of $g$ might look like the contours of $T$ near the point $(x_0,y_0)$ only with the gradients pointing outward instead of inward. At the relative maximum point we would have $\nabla g(x_0,y_0) = \langle 0,0\rangle$, provided $\nabla g(x_0,y_0)$ exists.
+
+\item If $g$ has a local minimum at $(x_0,y_0)$ and $\nabla g(x_0,y_0) = \langle 0,0 \rangle$, then any direction will provide the greatest increase in $g$ at the point $(x_0,y_0)$.  
+\ea
+
+\end{activitySolution}
+
+\aftera

@@ -1,0 +1,31 @@
+\begin{activity} \label{A:10.2.3} Let $f(x,y) = \sin(x)e^{-y}$. A graph of $f$ on the domain $[0,\pi] \times [-2,0]$ is shown in Figure \ref{F:10.2.PD_x}.
+    \ba
+	\item The animation in Figure \ref{F:10.2.PD_x} shows the difference quotients
+\[\frac{f(a+h,b) - f(a,b)}{h}\]
+for different values of $h$. Run the animation in Figure \ref{F:10.2.PD_x}. Pick a frame and identify the point $(a,b,f(a,b))$ and the point $(a+h,b,f(a+h,b))$. Then explain as best you can, and in as much detail as you can, what the difference quotient
+represents, geometrically, for some appropriate value of $h$. Your explanation should involve the use of the words ``secant" and slope.
+
+
+
+    \item Now explain in as much detail as you can what you think the partial derivative
+\[\lim_{h \to 0} \frac{f(a+h,b) - f(a,b)}{h}\]
+represents, geometrically, in Figure \ref{F:10.2.PD_x}. (Hint: What do you think the blue segment represents?)
+
+
+
+  \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+\ba
+\item The point $(a,b,f(a,b))$ is the fixed point and the point $(a+h,b,f(a+h,b))$ is the moving point. As the animation progresses, the secant lines to the surface in the $x$-direction connecting the points $(a,b,f(a,b))$ and $(a+h,b,f(a+h,b))$ are shown. The difference quotient $\frac{f(a+h,b) - f(a,b)}{h}$ gives the change in the function values divided by the change in $x$, or the slopes of these secant lines.
+\item Just as in single variable calculus, as $h$ goes to $0$ the slopes of the secant lines become the slope of the tangent line. So the partial derivative $f_x(a,b) = \lim_{h \to 0} \frac{f(a+h,b) - f(a,b)}{h}$ is the slope of the line tangent to the surface defined by $f$ in the $x$-direction at the point $(a,b, f(a,b))$. 
+\ea
+\end{activitySolution}
+\aftera

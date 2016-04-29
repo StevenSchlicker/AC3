@@ -1,0 +1,50 @@
+\begin{pa} \label{PA:11.6} Recall the standard parameterization of the unit circle that is given by
+\[x(t) = \cos(t) \ \ \ \ \text{ and } \ \ \ \ y(t) = \sin(t),\]
+where $0 \le t \le 2\pi$.
+    \ba
+        \item Determine a parameterization of the circle of radius 1 in $\R^3$ that has its center at $(0,0,1)$ and lies in the plane $z=1$.
+
+        \item Determine a parameterization of the circle of radius 1 in 3-space that has its center at $(0,0,-1)$ and lies in the plane $z=-1$.
+
+        \item Determine a parameterization of the circle of radius 1 in 3-space that has its center at $(0,0,5)$ and lies in the plane $z=5$.
+
+        \item Taking into account your responses in (a), (b), and (c), describe the graph that results from the set of parametric equations
+        \[x(s,t) = \cos(t), \ \ \ \ y(s,t) = \sin(t), \ \ \ \ \text{ and } \ \ \ \ z(s,t) = s,\]
+        where $0 \le t \le 2\pi$ and $-5 \le s \le 5$.         Explain your thinking.
+
+
+    \item Just as a cylinder can be viewed as a ``stack'' of circles of constant radius, a cone can be viewed as a stack of circles with varying radius.  Modify the parametrizations of the circles above in order to construct the parameterization of a cone whose vertex lies at the origin, whose base radius is 4, and whose height is 3, where the base of the cone lies in the plane $z = 3$. Use appropriate technology\footnote{e.g., \url{http://www.flashandmath.com/mathlets/multicalc/paramrec/surf_graph_rectan.html}} to plot the parametric equations you develop. (Hint: The cross sections parallel to the $xz$ plane are circles, with the radii varying linearly as $z$ increases.)
+
+
+    \ea
+ 
+\end{pa} 
+  
+\begin{activitySolution}
+
+    \ba
+        \item A parameterization of the circle of radius 1 in $\R^3$ that has its center at $(0,0,1)$ and lies in the plane $z=1$ is
+\[x(t) = \cos(t), \ y(t) = \sin(t), \ \text{ and } \ z(t) = 1.\]
+
+        \item A parameterization of the circle of radius 1 in 3-space that has its center at $(0,0,-1)$ and lies in the plane $z=-1$ is
+\[x(t) = \cos(t), \ y(t) = \sin(t), \ \text{ and } \ z(t) = -1.\]
+
+        \item A parameterization of the circle of radius 1 in 3-space that has its center at $(0,0,5)$ and lies in the plane $z=5$.
+\[x(t) = \cos(t), \ y(t) = \sin(t), \ \text{ and } \ z(t) = 5.\]
+
+        \item This set of parametric equations would describe a cylinder centered around the $z$-axis, with a radius of $1$, that extended from $z=-5$ to $z=5$. The parameter $s$ in $z(t)$ allows the $z$ value to vary independently of the parameter $t$, which traces out the circles at each cross-sectional level of the cylinder.
+
+    \item If we set the vertex of the cone at the origin and orient the cone to open upwards, then the cross sections parallel to the $xz$ plane are again circles, with the radii varying linearly as $z$ varies. So the parameterization defined by 
+\[\vr(s,t) = t \cos(s) \vi + t \sin(s) \vj + t \vk\]
+for $t \geq 0$ will gives us a cone.
+
+If we want a cone with base radius 4 and height 3, we can modify the equations a bit. We need the radii to increase linearly so that when $z$ is 3 the radius of the cross section parallel to the $xy$ plane is 4. That means we need the radii to be $\frac{4}{3}z$ as $z$ increases from 0 to 3. So a parameterization that will gives us this cone is defined by
+\[\vr(s,t) = \frac{4}{3}t \cos(s) \vi + \frac{4}{3} t \sin(s) \vj + t \vk\]
+for $t$ from 0 to 3.
+
+    \ea
+
+
+\end{activitySolution}    
+
+\afterpa 

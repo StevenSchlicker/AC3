@@ -1,0 +1,26 @@
+\begin{activity} \label{A:1.4.5}  Use the formula (\ref{eq:cp_comp}) to calculate the following.
+	\ba
+	\item $\langle 2, -1, 0 \rangle \times \langle 0, 1, 3 \rangle$.
+	
+	
+	
+	\item $\langle 2, -1, 0 \rangle \times \langle -4, 2, 0 \rangle$. Why should you have expected this result?
+	
+	
+	
+	\item The volume of the parallelepiped determined by the vectors $\langle 2, -1, 0 \rangle$, $\langle 0, 1, 3 \rangle$, and $\langle 1, 1, 1 \rangle$.
+	
+	
+	
+	\ea
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

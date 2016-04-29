@@ -1,0 +1,156 @@
+\section{Applications of Double Integrals} \label{S:11.4.Double_Integrals_Applications}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+\item If we have a mass density function for a lamina (thin plate), how does a double integral determine the mass of the lamina?
+
+\item How may a double integral be used to find the area between two curves?
+
+\item Given a mass density function on a lamina, how can we find the lamina's center of mass?
+\item What is a joint probability density function? How do we determine the probability of an event if we know a probability density function?
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+So far, we have interpreted the double integral of a function $f$ over a domain $D$ in two different ways. First, $\iint_D f(x,y) \, dA$ tells us a difference of volumes -- the volume the surface defined by $f$ bounds above the $xy$-plane on $D$ minus the volume the surface bounds below the $xy$-plane on $D$.  In addition, $\frac{1}{A(D)} \iint_D f(x,y) \, dA$ determines the average value of $f$ on $D$. In this section, we investigate several other applications of double integrals, using the integration process as seen in Preview Activity \ref{PA:11.4}: we partition into small regions, approximate the  desired quantity on each small region, then use the integral to sum these values exactly in the limit.
+
+The following preview activity explores how a double integral can be used to determine the density of a thin plate with a mass density distribution.  Recall that in single-variable calculus, we considered a similar problem and computed the mass of a one-dimensional rod with a mass-density distribution.  There, as here, the key idea is that if density is constant, mass is the product of density and volume.
+
+\input{previews/11.4.PA1}
+
+\subsection*{Mass}
+
+Density is a measure of some quantity per unit area or volume. For example, we can measure the human population density of some region as the number of humans in that region divided by the area of that region. In physics, the mass density of an object is the mass of the object per unit area or volume.  As suggested by Preview Activity~\ref{PA:11.4}, the following holds in general.
+
+ \vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{If $\delta(x, y)$ describes the density of a lamina defined by a planar region $D$, then the \textbf{mass}\index{double integral!mass of lamina} of $D$ is given by the double integral $\ds \iint_D \delta(x,y) \, dA$.
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+\input{activities/11.4.Act3}
+
+\subsection*{Area}
+
+If we consider the situation where the mass-density distribution is constant, we can also see how a double integral may be used to determine the area of a region.  Assuming that $\delta(x,y) = 1$ over a closed bounded region $D$, where the units of $\delta$ are ``mass per unit of area,'' it follows that $\iint_D 1 \, dA$ is the mass of the lamina.  But since the density is constant, the numerical value of the integral is simply the area. 
+
+As the following activity demonstrates, we can also see this fact by considering a three-dimensional solid whose height is always 1.  %We have used a single integral to calculate the areas of regions in the plane. The double integral can be used to calculate areas\index{double integral!area between curves} as well.
+
+\input{activities/11.4.Act1}
+
+We now formally state the conclusion from our earlier discussion and Activity~\ref{A:11.4.1}.
+
+ \vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{Given a closed, bounded region $D$ in the plane, the area of $D$, denoted $A(D)$, is given by the double integral
+$$A(D) = \iint_D 1 \, dA.$$
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+%\input{activities/11.4.Act2}
+
+\subsection*{Center of Mass}
+
+The center of mass of an object is a point at which the object will balance perfectly.  For example, the center of mass of a circular disk of uniform density is located at its center.  For any object,  if we throw it through the air, it will spin around its center of mass and behave as if all the mass is located at the center of mass. 
+
+In order to understand the role that integrals play in determining the center of a mass of an object with a nonuniform mass distribution, we start by finding the center of mass of a collection of $N$ distinct point-masses in the plane.  %Throughout, we denote the center of mass by $(\overline{x}, \overline{y})$.
+
+Let $m_1$, $m_2$, $\ldots$, $m_N$ be $N$ masses located in the plane. Think of these masses as connected by rigid rods of negligible weight from some central point $(x,y)$. A picture with four masses is shown in Figure \ref{F:11.4.COM}. Now imagine balancing this system by placing it on a thin pole at the point $(x,y)$ perpendicular to the plane containing the masses. Unless the masses are perfectly balanced, the system will fall off the pole. The point $(\overline{x}, \overline{y})$ at which the system will balance perfectly is called the \emph{center of mass} of the system. Our goal is to determine the center of mass of a system of discrete masses, then extend this to a continuous lamina.
+\begin{figure}[h]
+\begin{center}
+%\resizebox{!}{2.0in}{\includegraphics{11_4_COM_discrete}}
+  \includegraphics{figures/fig_11_4_masses.eps}
+\end{center}
+\caption{A center of mass $(\overline{x}, \overline{y})$ of four masses.}
+\label{F:11.4.COM}
+\end{figure}
+
+Each mass exerts a force (called a \emph{moment}) around the lines $x=\overline{x}$ and $y=\overline{y}$ that causes the system to tilt in the direction of the mass. These moments are dependent on the mass and the distance from the given line. Let $(x_1,y_1)$ be the location of mass $m_1$, $(x_2,y_2)$ the location of mass $m_2$, etc. In order to balance perfectly, the moments in the $x$ direction and in the $y$ direction must be in equilibrium. We determine these moments and solve the resulting system to find the equilibrium point $(\overline{x}, \overline{y})$ at the center of mass.
+
+The force that mass $m_1$ exerts to tilt the system from the line $y=\overline{y}$ is
+\[m_1g(\overline{y} - y_1),\]
+where $g$ is the gravitational constant. Similarly, the force mass $m_2$ exerts to tilt the system from the line $y= \overline{y}$ is
+\[m_2g(\overline{y}-y_2).\]
+In general, the force that mass $m_k$ exerts to tilt the system from the line $y= \overline{y}$ is
+\[m_kg(\overline{y}-y_k).\]
+For the system to balance, we need the forces to sum to 0, so that
+\[\sum_{k=1}^N m_kg(\overline{y}-y_k) = 0.\]
+Solving for $\overline{y}$, we find that
+\[\overline{y} = \frac{\sum_{k=1}^N m_ky_k}{\sum_{k=1}^N m_k}.\]
+A similar argument shows that
+\[\overline{x} = \frac{\sum_{k=1}^N m_kx_k}{\sum_{k=1}^N m_k}.\]
+The value $M_x~=~\sum_{k=1}^N m_ky_k$ is called the \emph{total moment} with respect to the $x$-axis; $M_y~=~\sum_{k=1}^N m_kx_k$ is the \emph{total moment} with respect to the $y$-axis.  Hence, the respective quotients of the moments to the total mass, $M$,  determines the center of mass of a point-mass system: $$(\overline{x}, \overline{y}) = \left(\frac{M_y}{M}, \frac{M_x}{M}\right).$$
+
+Now, suppose that rather than a point-mass system, we have a continuous lamina with a variable mass-density $\delta(x, y)$. We may estimate its center of mass by partitioning the lamina into $mn$ subrectangles of equal area $\Delta A$, and treating the resulting partitioned lamina as a point-mass system.  In particular, we select a point $(x_{ij}^*,y_{ij}^*)$ in the $ij$th subrectangle, and observe that the quanity
+\[\delta(x_{ij}^*,y_{ij}^*) \Delta A\]
+is density times area, so $\delta(x_{ij}^*,y_{ij}^*) \Delta A$ approximates the mass of the small portion of the lamina determined by the subrectangle $R_{ij}$. 
+
+We now treat $\delta(x_{ij}^*,y_{ij}^*) \Delta A$ as a point mass at the point $(x_{ij}^*,y_{ij}^*)$. The coordinates $(\overline{x}, \overline{y})$ of the center of mass of these $mn$ point masses are thus given by
+\[\overline{x} = \frac{\sum_{j=1}^n \sum_{i=1}^m x_{ij}^*\delta(x_{ij}^*,y_{ij}^*) \Delta A}{\sum_{j=1}^n\sum_{i=1}^m \delta(x_{ij}^*,y_{ij}^*) \Delta A} \ \ \ \ \ \text{ and } \ \ \ \ \ \overline{y} = \frac{\sum_{j=1}^n \sum_{i=1}^m y_{ij}^*\delta(x_{ij}^*,y_{ij}^*) \Delta A}{\sum_{j=1}^n\sum_{i=1}^m \delta(x_{ij}^*,y_{ij}^*) \Delta A}.\]
+If we take the limit as $m$ and $n$ go to infinity, we obtain the exact center of mass $(\overline{x}, \overline{y})$ of the continuous lamina.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{The coordinates $(\overline{x}, \overline{y})$ of the \textbf{center of mass of a lamina}\index{double integral!center of mass of a lamina} $D$ with density $\delta = \delta(x,y)$ are given by
+\[\overline{x} = \frac{\iint_D x\delta(x,y) \, dA}{\iint_D \delta(x,y) \, dA} \ \ \ \ \ \text{ and } \ \ \ \ \ \overline{y} = \frac{\iint_D y\delta(x,y) \, dA}{\iint_D \delta(x,y) \, dA}.\]
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+The numerators of $\overline{x}$ and $\overline{y}$ are called the respective \emph{moments}\index{moments about coordinate axes} of the lamina about the coordinate axes. Thus, the moment of a lamina $D$ with density $\delta = \delta(x,y)$ about the $y$-axis is
+\[M_y = \iint_D x\delta(x,y) \, dA\]
+and the moment of  $D$ about the $x$-axis is
+\[M_x = \iint_D y\delta(x,y) \, dA.\]
+If $M$ is the mass of the lamina, it follows that the center of mass is $(\overline{x}, \overline{y}) = \left(\frac{M_y}{M}, \frac{M_x}{M}\right)$. 
+\input{activities/11.4.Act4}
+
+%\input{activities/11.4.Act5}
+
+
+\subsection*{Probability}
+
+Calculating probabilities is a very important application of integration in the physical, social, and life sciences. To understand the basics, consider the game of darts in which a player throws a dart at a board and tries to hit a particular target. Let us suppose that a dart board is in the form of a disk $D$ with radius 10 inches. If we assume that a player throws a dart at random, and is not aiming at any particular point, then it is equally probable that the dart will strike any single point on the board. For instance, the probability that the dart will strike a particular 1 square inch region is $\frac{1}{100 \pi}$, or the ratio of the area of the desired target to the total area of $D$ (assuming that the dart thrower always hits the board itself at some point). Similarly, the probability that the dart strikes a point in the disk $D_3$ of radius 3 inches is given by the area of $D_3$ divided by the area of $D$. In other words, the probability that the dart strikes the disk $D_3$ is
+\[\frac{9 \pi}{100\pi} = \iint_{D_3} \frac{1}{100 \pi} \, dA.\]
+The integrand, $\frac{1}{100\pi}$, may be thought of as a \emph{distribution function}, describing how the dart strikes are distributed across the board. In this case the distribution function is constant since we are assuming a uniform distribution, but we can easily envision situations where the distribution function varies.  For example, if the player is fairly good and is aiming for the bulls eye (the center of $D$), then the distribution function $f$ could be skewed toward the center, say
+\[f(x,y) = K e^{-(x^2+y^2)}\]
+for some constant positive $K$. If we assume that the player is consistent enough so that the dart always strikes the board, then the probability that the dart strikes the board somewhere is 1, and the distribution function $f$ will have to satisfy\footnote{This makes $K = \frac{1}{\pi\left(1-e^{-100}\right)}$, which you can check.}
+\[\iint_D f(x,y) \, dA = 1.\]
+For such a function $f$, the probability that the dart strikes in the disk $D_1$ of radius 1 would be
+\[\iint_{D_1} f(x,y) \, dA.\]
+Indeed, the probability that the dart strikes in any region $R$ that lies within $D$ is given by
+\[\iint_R f(x,y) \, dA.\]
+
+The preceding discussion highlights the general idea behind calculating probabilities. We assume we have a \emph{joint probability density function}\index{joint probability density function} $f$, a function of two independent variables $x$ and $y$ defined on a domain $D$ that satisfies the conditions
+\begin{itemize}
+\item $f(x,y) \geq 0$ for all $x$ and $y$ in $D$,
+\item the probability that $x$ is between some values $a$ and $b$ while $y$ is between some values $c$ and $d$ is given by
+\[\int_a^b \int_c^d f(x,y) \, dy \, dx,\]
+\item The probability\index{double integral!probability} that the point $(x,y)$ is in $D$ is 1, that is
+\begin{equation} \label{eq:11.4.pdf}
+\iint_D f(x,y) \, dA = 1.
+\end{equation}
+\end{itemize}
+Note that it is possible that $D$ could be an infinite region and the limits on the integral in Equation~(\ref{eq:11.4.pdf}) could be infinite. When we have such a probability density function $f=f(x,y)$, the probability that the point $(x,y)$ is in some region $R$ contained in the domain $D$ (the notation we use here is ``$P((x,y)\in R)$'') is determined by
+\[P((x,y)\in R) = \iint_R f(x,y) \, dA.\]
+
+\input{activities/11.4.Act6}
+
+%\input{activities/11.4.Act7}
+
+\begin{summary}
+\item The mass of a lamina $D$ with a mass density function $\delta = \delta(x,y)$ is  $\iint_D \delta(x,y) \, dA.$
+
+\item The area of a region $D$ in the plane has the same numerical value as the volume of a solid of uniform height 1 and base $D$, so the area of $D$ is given by $\iint_D 1 \, dA.$   
+    
+\item The center of mass, $(\overline{x},\overline{y})$, of a continuous lamina with a variable density $\delta(x,y)$ is given by \[\overline{x} = \frac{\iint_D x\delta(x,y) \, dA}{\iint_D \delta(x,y) \, dA} \ \ \ \ \ \text{ and } \ \ \ \ \ \overline{y} = \frac{\iint_D y\delta(x,y) \, dA}{\iint_D \delta(x,y) \, dA}.\]
+
+\item Given a joint probability density function $f$ is a function of two independent variables $x$ and $y$ defined on a domain $D$, 
+if $R$ is some subregion of $D$, then the probability that $(x,y)$ is in $R$ is given by
+\[\iint_R f(x,y) \, dA.\]
+\end{summary}
+
+\nin \hrulefill
+
+\input{exercises/11.4.Double_Integrals_Applications(Ex)}
+
+\clearpage

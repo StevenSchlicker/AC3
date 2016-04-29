@@ -1,0 +1,161 @@
+\section{Change of Variables} \label{S:11.9.Change_of_Variable}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+\item What is a change of variables?
+\item What is the Jacobian, and how is it related to a change of variables?
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+In single variable calculus, we encountered the idea of a change of variable in a definite integral through the method of substitution. For example, given the definite integral
+\[\int_0^2 2x(x^2+1)^3 \, dx, \]
+we naturally consider the change of variable $u = x^2+1$.  From this substitution, it follows that $du = 2x \, dx$, and since $x = 0$ implies $u = 1$ and $x = 2$ implies $u = 5$, we have transformed the original integral in $x$ into a new integral in $u$.  In particular,
+\[\int_0^2 2x(x^2+1)^3 \, dx = \int_1^5 u^3 \, du.\]
+The latter integral, of course, is far easier to evaluate.
+
+Through our work with polar, cylindrical, and spherical coordinates, we have already implicitly seen some of the issues that arise in using a change of variables with two or three variables present.  In what follows, we seek to understand the general ideas behind any change of variables in a multiple integral.
+
+\input{previews/11.9.PA1}
+
+\subsection*{Change of Variables in Polar Coordinates}
+
+The general idea behind a change of variables is suggested by Preview Activity \ref{PA:11.9}.  There, we saw that in a change of variables from rectangular coordinates to polar coordinates, a polar rectangle $[r_1, r_2] \times [\theta_1, \theta_2]$ gets mapped to a Cartesian rectangle under the transformation
+\begin{equation*}
+x = r \cos(\theta)  \ \ \ \ \ \text{ and } \ \ \ \ \ y = r \sin(\theta).
+\end{equation*}
+The vertices of the polar rectangle $P$ are
+transformed into the vertices 
+of a closed and bounded region $P'$ in
+rectangular coordinates. If we view the standard coordinate system as having the horizontal axis represent $r$ and the vertical axis represent $\theta$, then the polar
+rectangle $P$ appears to us at left in Figure
+\ref{F:11.9.Change_vars1_a}. The image $P'$ of the polar rectangle $P$
+under the transformation given by (\ref{eq:11.9.pol_to_rect}) is shown at right in
+Figure \ref{F:11.9.Change_vars1_a}.   We thus see that there is a correspondence between a simple region (a traditional, right-angled rectangle) and a more complicated region (a fraction of an annulus) under the function $T(r, \theta) = r\cos(\theta), r\sin(\theta))$.
+
+\begin{figure}[ht]
+\begin{center}
+% \begin{minipage}{2.5in}
+% \begin{center}
+% \resizebox{!}{2.4in}{\includegraphics{11_9_Polar_COV_1}}
+% \end{center}
+% \caption{Rectangle $P$ in the polar world.}
+% \end{minipage}
+% \begin{minipage}{2.5in}
+% \begin{center}
+% \resizebox{!}{2.4in}{\includegraphics{11_9_Polar_COV_2}}
+  \includegraphics{figures/fig_11_9_polar_change.eps}
+\end{center}
+  \caption{A rectangle $P$ and its image $P'$.}
+\label{F:11.9.Change_vars1_a}
+% \end{minipage}
+% \end{center}
+\end{figure}
+Furthermore, as Preview Activity~\ref{PA:11.9} suggest, it follows generally that for an original polar rectangle $P = [r_1, r_2] \times [\theta_1, \theta_2]$, the area of the transformed rectangle $P'$ is given by $\frac{r_2+r_1}{2} \Delta r \Delta \theta$.  Therefore, as $\Delta r$ and $\Delta \theta$ go to 0 this area becomes the familiar area element $dA = r \, dr \, d\theta$ in polar coordinates.  When we proceed to working with other transformations for different changes in coordinates, we have to understand how the transformation affects area so that we may use the correct area element in the new system of variables.
+
+\subsection*{General Change of Coordinates}
+
+We first focus on double integrals.  As with single integrals, we may be able to simplify a double integral of the form
+\[\iint_D f(x,y) \, dA\]
+by making a change of variables (that is, a substitution) of the form
+\[x = x(s, t) \ \ \ \ \ \text{ and } \ \ \ \ \  y = y(s, t)\]
+where $x$ and $y$ are functions of new variables $s$ and $t$. This transformation introduces a correspondence between a problem in the $xy$-plane and one in the the $st$-plane. The equations $x=x(s,t)$ and $y=y(s,t)$ convert $s$ and $t$ to $x$ and $y$; we call these formulas the \emph{change of variable} formulas. To complete the change to the new $s,t$ variables, we need to understand the area element, $dA$, in this new system.  The following activity helps to illustrate the idea.
+
+\input{activities/11.9.Act1}
+
+Activity \ref{A:11.9.1} presents the general idea of how a change of variables works. We partition a rectangular domain in the $st$ system into subrectangles. Let $T = [a, b] \times [a+\Delta s, b+\Delta t]$ be one of these subrectangles. Then we transform this into a region $T'$ in the standard $xy$ Cartesian coordinate system. The region $T'$ is called the \emph{image} of $T$; the region $T$ is the \emph{pre-image} of $T'$.  Although the sides of this $xy$ region $T'$ aren't necessarily straight (linear), we will approximate the element of area $dA$ for this region with the area of the parallelogram whose sides are given by the vectors $\vv$ and $\vw$, where $\vv$ is the vector from $(x(a, b), y(a, b))$ to $(x(a + \Delta s, b), y(a + \Delta s, b))$, and $\vw$ is the vector from $(x(a, b), y(a, b))$ to $(x(a, b + \Delta t), y(a, b + \Delta t))$.
+
+An example of an image $T'$ in the $xy$ plane that results from a transformation of a rectangle $T$ in the $st$ plane is shown in Figure \ref{F:11.9.Change_vars_ex}.
+\begin{figure}[ht]
+\begin{center}
+%\resizebox{!}{2.5in}{\includegraphics{11_9_COV_area_element}}
+  \includegraphics{figures/fig_11_9_general_change.eps}
+\end{center}
+\caption{Approximating an area of an image resulting from a transformation.}
+\label{F:11.9.Change_vars_ex}
+\end{figure}
+
+The components of the vector $\vv$ are
+\begin{align*}
+\vv &= \left\langle x(a+ \Delta s, b) - x(a,b), y(a+ \Delta s, b) - y(a,b), 0 \right\rangle
+\end{align*}
+and similarly those for $\vw$ are
+\begin{align*}
+\vw &= \left\langle x(a, b+ \Delta t) - x(a,b), y(a, b+ \Delta s) - y(a,b), 0 \right\rangle.
+\end{align*}
+
+Slightly rewriting $\vv$ and $\vw$, we have 
+\begin{align*}
+\vv &= \left\langle \frac{x(a+ \Delta s, b) - x(a,b)}{\Delta s}, \frac{y(a+ \Delta s, b) - y(a,b)}{\Delta s}, 0 \right\rangle \Delta s, \ \mbox{and} \\
+\vw &= \left\langle \frac{x(a, b+ \Delta t) - x(a,b)}{\Delta t}, \frac{y(a, b+ \Delta s) - y(a,b)}{\Delta t}, 0 \right\rangle \Delta t.
+\end{align*}
+For small $\Delta s$ and $\Delta t$, the definition of the partial derivative tells us that
+\[\vv \approx \left\langle \frac{\partial x}{\partial s}(a,b), \frac{\partial y}{\partial s}(a,b), 0 \right\rangle \Delta s \ \ \ \ \ \text{ and } \ \ \ \ \  \vw \approx \left\langle \frac{\partial x}{\partial t}(a,b), \frac{\partial y}{\partial t}(a,b), 0 \right\rangle \Delta t.\]
+Recall that the area of the parallelogram with sides $\vv$ and $\vw$ is the length of the cross product of the two vectors, $|\vv \times \vw|$. From this, we observe that
+\begin{align*}
+\vv \times \vw &\approx \left\langle \frac{\partial x}{\partial s}(a,b), \frac{\partial y}{\partial s}(a,b), 0 \right\rangle \Delta s \times \left\langle \frac{\partial x}{\partial t}(a,b), \frac{\partial y}{\partial t}(a,b), 0 \right\rangle \Delta t \\
+    &= \left\langle 0, \ 0, \ \frac{\partial x}{\partial s}(a,b) \frac{\partial y}{\partial t}(a,b) - \frac{\partial x}{\partial t}(a,b) \frac{\partial y}{\partial s}(a,b) \right\rangle \Delta s \, \Delta t.
+\end{align*}
+Finally, by computing the magnitude of the cross product, we see that
+\begin{align*}
+|\vv \times \vw| &\approx \left|\left\langle 0,0, \frac{\partial x}{\partial s}(a,b) \frac{\partial y}{\partial t}(a,b) - \frac{\partial x}{\partial t}(a,b) \frac{\partial y}{\partial s}(a,b) \right\rangle \Delta s \, \Delta t\right| \\
+    &= \left|\frac{\partial x}{\partial s}(a,b) \frac{\partial y}{\partial t}(a,b) - \frac{\partial x}{\partial t}(a,b) \frac{\partial y}{\partial s}(a,b)\right| \Delta s \, \Delta t.
+\end{align*}
+
+Therefore, as the number of subdivisions increases without bound in each direction, $\Delta s$ and $\Delta t$ both go to zero, and we have
+\begin{equation} \label{E:Area_Element}
+dA = \left|\frac{\partial x}{\partial s} \frac{\partial y}{\partial t} - \frac{\partial x}{\partial t} \frac{\partial y}{\partial s} \right| ds \, dt.
+\end{equation}
+
+Equation~\eqref{E:Area_Element} hence determines the general change of variable formula in a double integral, and we can now say that
+\[\iint_T f(x,y) \, dA = \iint_R f(x,y) \, dy \, dx = \iint_{T'} f(x(s,t),y(s,t)) \left|\frac{\partial x}{\partial s} \frac{\partial y}{\partial t} - \frac{\partial x}{\partial t} \frac{\partial y}{\partial s}\right| ds \, dt.\]
+The quantity
+\[\left|\frac{\partial x}{\partial s} \frac{\partial y}{\partial t} - \frac{\partial x}{\partial t} \frac{\partial y}{\partial s}\right|\]
+is called the \emph{Jacobian}\index{Jacobian}, and we denote the Jacobian using the shorthand notation 
+\[ \left| \frac{\partial (x,y)}{\partial (s,t)} \right| =  \left| \frac{\partial x}{\partial s} \frac{\partial y}{\partial t} - \frac{\partial x}{\partial t} \frac{\partial y}{\partial s} \right|.\footnote{If you are familiar with determinants of matrices, we can can also represent $\frac{\partial (x,y)}{\partial (s,t)}$ as the determinant of a $2 \times 2$ matrix
+\[\frac{\partial (x,y)}{\partial (s,t)} = \renewcommand{\tabcolsep}{0.1cm}
+\renewcommand{\arraystretch}{2.5} \left| \begin{array}{cc} \ds \frac{\partial x}{\partial s} & \ds \frac{\partial x}{\partial t} \\ \ds \frac{\partial y}{\partial s} & \ds \frac{\partial y}{\partial t} \end{array} \right|.\]}\]
+
+To summarize, the preceding change of variable formula that we have derived now follows.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\textbf{Change of Variables in a Double Integral.\index{change of variable!double integral}} Suppose a change of variables $x = x(s,t)$ and $y = y(s,t)$ transforms a closed and bounded region $R$ in the $st$-plane into a closed and bounded region $R'$ in the $xy$-plane. Under modest conditions (that are studied in advanced calculus), it follows that
+\[\iint_{R'} f(x,y) \, dA = \iint_{R} f(x(s,t), y(s,t)) \left|\frac{\partial (x,y)}{\partial (s,t)}\right| \, ds \, dt.\]
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+\input{activities/11.9.Act2}
+
+Given a particular double integral, it is natural to ask, ``how can we find a useful change of variables?'' There are two general factors to consider: if the integrand is particularly difficult, we might choose a change of variables that would make the integrand easier; or, given a complicated region of integration, we might choose a change of variables that transforms the region of integration into one that has a simpler form. These ideas are illustrated in the next activities.
+
+\input{activities/11.9.Act3}
+
+\input{activities/11.9.Act4}
+
+
+\subsection*{Change of Variables in a Triple Integral}
+
+Given a function $f = f(x,y,z)$ over a region $S'$ in $\R^3$, similar arguments can be used to show that a change of variables $x=x(s,t,u)$, $y=y(s,t,u)$, and $z = z(s,t,u)$ in a triple integral\index{change of variable!triple integral} results in the equality
+\[\iiint_{S'} f(x,y,z) \, dV = \iiint_{S} f(x(s,t,u),y(s,t,u),z(s,t,u)) \ \left| \frac{\partial(x,y,z)}{\partial(s,t,u)} \right| \, ds \, dt \, du,\]
+where
+\[\frac{\partial(x,y,z)}{\partial(s,t,u)} = \left| \renewcommand{\tabcolsep}{0.1cm}
+\renewcommand{\arraystretch}{2.5}
+\begin{array}{ccc} \ds \frac{\partial x}{\partial s} & \ds \frac{\partial x}{\partial t} & \ds \frac{\partial x}{\partial u} \\ \ds \frac{\partial y}{\partial s} & \ds \frac{\partial y}{\partial t} & \ds \frac{\partial y}{\partial u} \\ \ds \frac{\partial z}{\partial s} & \ds \frac{\partial z}{\partial t} & \ds \frac{\partial z}{\partial u} \end{array} \right|.\]
+In expanded form,
+\[\frac{\partial(x,y,z)}{\partial(s,t,u)} = \frac{\partial x}{\partial s}\left[\frac{\partial y}{\partial t}\frac{\partial z}{\partial u} - \frac{\partial y}{\partial u}\frac{\partial z}{\partial t}\right] - \frac{\partial x}{\partial t}\left[\frac{\partial y}{\partial s}\frac{\partial z}{\partial u} - \frac{\partial y}{\partial u}\frac{\partial z}{\partial s}\right] + \frac{\partial x}{\partial u}\left[\frac{\partial y}{\partial s}\frac{\partial z}{\partial t} - \frac{\partial y}{\partial t}\frac{\partial z}{\partial s}\right].\]
+The expression $\left|\frac{\partial(x,y,z)}{\partial(s,t,u)}\right|$ is again called the Jacobian\index{Jacobian}.
+
+%\input{activities/11.9.Act5}
+
+\begin{summary}
+\item If an integral is described in terms of one set of variables, we may write that set of variables in terms of another set of the same number of variables. If the new variables are chosen appropriately, the transformed integral may be easier to evaluate. 
+\item The Jacobian is a scalar function that relates the area or volume element in one coordinate system to the corresponding element in a new system determined by a change of variables. 
+\end{summary}
+
+\nin \hrulefill
+
+\input{exercises/11.9.Change_of_Variable(Ex)}
+
+\clearpage

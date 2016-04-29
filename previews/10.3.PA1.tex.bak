@@ -1,0 +1,48 @@
+\begin{pa} \label{PA:2.3} Consider the kinetic energy function $f$ from Preview Activity \ref{PA:2.2} defined by 
+\[f(m,v) = \frac{1}{2}mv^2,\]
+where $f$ is measured in Joules if the mass $m$ is in kilograms and the velocity $v$ is in meters per second.
+    \ba
+    \item The first order partial derivative $f_m$ of $f$ is a function of both $m$ and $v$. Calculate $f_{mm} = (f_m)_m$, the partial derivative of $f_m$ with respect to $m$. What are the units of $f_{mm}$?
+
+\begin{comment}
+
+Since $f_m(m,v) = \frac{1}{2}v^2$ it follows that $f_{mm}(m,v) = 0$. The units of $f_m$ are $\frac{\text{J}}{\text{k}}$, so the units of $f_{mm}$ are $\frac{\frac{\text{J}}{\text{k}}}{k}$. 
+
+\end{comment}
+
+    \item The first order partial derivative $f_m$ of $f$ is a function of both $m$ and $v$. Calculate $f_{mv} = (f_m)_v$, the partial derivative of $f_m$ with respect to $v$. What are the units of $f_{mv}$?
+
+\begin{comment}
+
+Since $f_m(m,v) = \frac{1}{2}v^2$ it follows that $f_{mv}(m,v) = v$. The units of $f_m$ are $\frac{\text{J}}{\text{k}}$, so the units of $f_{mv}$ are $\frac{\frac{\text{J}}{\text{k}}}{m/s}$.
+
+\end{comment}
+
+   \item The first order partial derivative $f_v$ of $f$ is a function of both $m$ and $v$. Calculate $f_{vm} = (f_v)_m$, the partial derivative of $f_v$ with respect to $m$. What are the units of $f_{vm}$?
+
+\begin{comment}
+
+Since $f_v(m,v) = mv$ it follows that $f_{vm}(m,v) = v$. The units of $f_v$ are $\frac{\text{J}}{\text{m/s}}$, so the units of $f_{vm}$ are $\frac{\frac{\text{J}}{\text{m/s}}}{k}$.
+
+\end{comment}
+
+    \item The first order partial derivative $f_v$ of $f$ is a function of both $m$ and $v$. Calculate $f_{vv} = (f_v)_v$, the partial derivative of $f_v$ with respect to $v$. What are the units of $f_{vv}$?
+
+\begin{comment}
+
+Since $f_v(m,v) = mv$ it follows that $f_{vv}(m,v) = m$. The units of $f_v$ are $\frac{\text{J}}{\text{m/s}}$, so the units of $f_{vv}$ are $\frac{\frac{\text{J}}{\text{m/s}}}{m/s}$.
+
+\end{comment}
+
+    \item What, if anything, do you notice about $f_{mv}(m,v)$ and $f_{vm}(m,v)$? 
+
+\begin{comment}
+
+The only thing to notice is that $f_{mv}(m,v) = v$ and $f_{vm}(m,v)= v$, and so $f_{mv}(m,v) = f_{vm}(m,v)$, although their units are different. 
+
+\end{comment}    
+
+    \ea
+
+
+\end{pa} \afterpa 

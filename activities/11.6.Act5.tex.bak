@@ -1,0 +1,37 @@
+\begin{activity} \label{A:11.6.5} Set up an iterated integral to find the surface area of a sphere of radius $a$ (see Activity \ref{A:ex:11.6.1}). Then calculate the surface area and compare to the formula for the surface area of sphere that you can find on-line. (Hint: Exploit the symmetry.)
+
+
+
+\begin{comment}
+
+From Activity \ref{ex:11.6.Sphere_SA} we know that a parameterization of a sphere of radius $a$ centered at the origin is $x(s,t) = a \cos(s) \cos(t)$, $y(s,t) = a \sin(s) \cos(t)$, and $z(s,t) = a \sin(t)$ for $s$ and $t$ in $[0, 2\pi]$. By symmetry, we can just calculate the surface area of the sphere in the first octant, then multiply by 8. So we can assume $0 \leq \s \leq \frac{\pi}{2}$, Now
+\[\vr(s,t) = \langle a\cos(s) \cos(t), a\sin(s)\cos(t), a\sin(t) \rangle, \ \ \vr_s(s,t) = \langle -a\sin(s) \cos(t), a\cos(s)\cos(t), 0 \rangle, \ \ \text{ and } \vr_t(s,t) = \langle -a\cos(s) \sin(t), -a\sin(s)\sin(t), -a\cos(t) \rangle,\]
+so
+\begin{align*}
+\lvert \vr_s(s,t) \times \vr_t(s,t) \rvert &= \lvert \langle -a\sin(s) \cos(t), a\cos(s)\cos(t), 0 \rangle \times \langle -a\cos(s) \sin(t), -a\sin(s)\sin(t), -a\cos(t) \rangle \rvert \\
+    &= \lvert \langle -a^2\cos(s)\cos^2(t), -a^2\sin(s)\cos^2(t), a^2\cos(t)\sin(t) \rangle \rvert \\
+    &= \sqrt{a^4\cos^2(s)\cos^4(t) + a^4\sin^2(s)\cos^4(t) + a^4\cos^2(t)\sin^2(t)} \\
+    &= a^2\sqrt{\cos^2(t)} \\
+    &= a^2\cos(t).
+\end{align*}
+Therefore, the surface area of this sphere is
+\begin{align*}
+8 \int_0^{\pi/2} \int_0^{\pi/2} a^2 \cos(t) \, dt \, ds &= 8a^2 \int_0^{\pi/2} \sin(t) \biggm|_0^{\pi/2} \, ds \\
+    &= 8a^2 \int_0^{\pi/2} 1 \, ds \\
+    &= 4\pi a^2.
+\end{align*}
+
+\end{comment}
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

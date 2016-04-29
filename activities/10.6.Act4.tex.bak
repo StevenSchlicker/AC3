@@ -1,0 +1,24 @@
+\begin{activity} \label{A:2.6.4} Let $f(x,y) = \frac{100}{1+(x-5)^2 + 4(y-2.5)^2}$.
+    \ba
+    \item Find $f_x(x,y)$ and $f_y(x,y)$.
+
+
+
+    \item Find the direction of greatest increase in $f$ at the point $(3,4)$.
+
+
+
+    \ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

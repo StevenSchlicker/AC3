@@ -1,0 +1,43 @@
+\begin{activity} \label{A:11.5.4} Let $f(x,y) = x+y$ and $D = \{(x,y) : x^2 + y^2 \leq 4\}$.
+    \ba
+    \item Write the double integral of $f$ over $D$ as an iterated integral in rectangular coordinates.
+
+    \item Write the double integral of $f$ over $D$ as an iterated integral in polar coordinates.
+
+    \item Evaluate one of the iterated integrals. Why is the final value you found not surprising?
+
+
+    \ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+    \ba
+    \item The integral $\ds \int \int_D f(x,y) \, dA$ can be written as the iterated integral
+\[\int_{x=-2}^{2} \int_{y=-\sqrt{4-x^2}}^{\sqrt{4-x^2}} x+y \, dy \, dx.\]
+
+    \item To convert to polar coordinates, we replace $x$ with $r \cos(\theta)$, $y$ with $r \sin(\theta)$ and $dy \ dx$ with $r \, dr \, d\theta$ to obtain
+\[\int \int_D \left[ r \cos(\theta) + r \sin(\theta) \right] \ r \, dr \, d\theta.\]
+The disc $D$ is described in polar coordinates by the constraints $0 \leq r \leq 2$ and $0 \leq \theta \leq 2\pi$. So we have
+\[\int \int_D r\cos(\theta) + r \sin(\theta) \ r \, dr \, d\theta = \int_{\theta=0}^{2\pi} \int_{r=0}^2 \left[r\cos(\theta) + r \sin(\theta)\right] \ r \, dr \, d\theta.\]
+
+    \item We evaluate the integral in polar coordinates as follows:
+\begin{align*}
+\int_{\theta=0}^{2\pi} \int_{r=0}^2 \left[r\cos(\theta) + r \sin(\theta)\right] \ r \, dr \, d\theta &= \int_{\theta=0}^{2\pi} \int_{r=0}^2 r^2\left[\cos(\theta) + \sin(\theta)\right] \, dr \, d\theta \\
+	&= \int_{\theta=0}^{2\pi} \left( \left[\cos(\theta) + \sin(\theta)\right]\frac{r^3}{3}\biggm|_{r=0}^2 \right) \, d\theta \\
+	&= \int_{\theta=0}^{2\pi} \frac{8}{3} \left[ \cos(\theta) + \sin(\theta) \right] \, d\theta \\
+	&= \frac{8}{3}\left[\sin(\theta) - \cos(\theta)\right]\biggm|_{\theta=0}^{2\pi} \\
+	&= \frac{8}{3}[(-1)-(-1)] \\
+	&= 0.
+\end{align*}
+The graph of the plane $z=x+y$ crosses the $xy$-plane along the line $y=-x$, and bounds the same amount of volume below the $xy$-plane as above on the disk $D$. So we should have expected the value of the integral to be $0$.
+
+    \ea
+\end{activitySolution}
+\aftera

@@ -1,0 +1,47 @@
+\begin{activity} \label{A:10.6.3} In this activity we investigate how the gradient is related to the directions of greatest increase and decrease of a function.  Let $f$ be a differentiable function and $\vu$ a unit vector.
+\ba
+    \item Let $\theta$ be the angle between $\nabla f(x_0,y_0)$ and $\vu$.  Explain why
+\begin{equation}
+D_{\vu} f(x_0,y_0) = |\langle f_x(x_0,y_0), f_y(x_0,y_0) \rangle | \cos(\theta). \label{eq:10.6.DD_grad2}
+\end{equation}
+
+    \item At the point $(x_0,y_0)$, the only quantity in Equation~(\ref{eq:10.6.DD_grad2}) that can change is $\theta$ (which determines the direction $\vu$ of travel). Explain why $\theta = 0$ makes the quantity 
+\[|\langle f_x(x_0,y_0), f_y(x_0,y_0) \rangle| \cos(\theta)\]
+as large as possible.
+
+
+    \item When $\theta = 0$, in what direction does the unit vector $\vu$ point relative to $\nabla f(x_0,y_0)$? Why? What does this tell us about the direction of greatest increase of $f$ at the point $(x_0,y_0)$?
+    
+    \item In what direction, relative to $\nabla f(x_0,y_0)$, does $f$ decrease most rapidly at the point $(x_0,y_0)$?
+    
+    \item State the unit vectors $\vu$ and $\vv$ (in terms of $\nabla f(x_0,y_0)$) that provide the directions of greatest increase and decrease for the function $f$ at the point $(x_0,y_0)$.  What important assumption must we make regarding $\nabla f(x_0,y_0)$ in order for these vectors to exist?
+
+
+    \ea
+
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+\ba 
+\item Using the dot product we can see that
+\[D_{\vu} f(x_0,y_0) = \langle f_x(x_0,y_0), f_y(x_0,y_0) \rangle \cdot \vu = |\langle f_x(x_0,y_0), f_y(x_0,y_0) \rangle| \cos(\theta),\]
+where $\theta$ is the angle between $\langle f_x(x_0,y_0), f_y(x_0,y_0) \rangle$ and $\vu$.
+
+\item The maximum value of $D_{\vu} f(x_0,y_0)$ will occur when $\cos(\theta)$ is as large as possible. This happens when $\cos(\theta) = 1$ or $\theta = 0$.
+
+\item When $\theta = 0$, the angle between the vector $\vu$ and the vector $\langle f_x(x_0,y_0), f_y(x_0,y_0) \rangle$ is 0, so the vector $\vu$ must have the same direction as $\langle f_x(x_0,y_0), f_y(x_0,y_0) \rangle$. In other words, the direction of greatest increase of $f$ at the point $(x_0,y_0)$ is the direction of the vector $\langle f_x(x_0,y_0), f_y(x_0,y_0) \rangle$.
+
+\item If $f$ increases most rapidly in the direction of $\langle f_x(x_0,y_0), f_y(x_0,y_0) \rangle$ at the point $(x_0,y_0)$, then $f$ must decrease most rapidly in the opposite direction, or in the direction of $-langle f_x(x_0,y_0), f_y(x_0,y_0) \rangle$.
+
+\item The unit vector that provides the direction of greatest increase in $f$ at the point $(x_0,y_0)$ is $\vu=\frac{1}{|\nabla f(x_0,y_0)|} \nabla f(x_0,y_0)$ and the unit vector that provides the direction of greatest decrease in $f$ at the point $(x_0,y_0)$ is $\vv = -\vu$. For either vector to exist, it must be the case that $\nabla f(x_0,y_0) \neq \langle 0,0 \rangle$. 
+\ea
+
+\end{activitySolution}
+\aftera

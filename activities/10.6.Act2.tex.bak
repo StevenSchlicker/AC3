@@ -1,0 +1,24 @@
+\begin{activity} \label{A:2.6.2} Let $f(x,y) = 3xy-x^2y^3$.
+	\ba
+	\item Find the derivative of $f$ in the direction of the vector $\vv = \langle 2, 3 \rangle$ at the point $(1,-1)$.
+	
+	
+	
+	\item Find $D_{\vi} f(x,y)$. What familiar function is $D_{\vi} f(x,y)$? What familiar function is $D_{\vj} f(x,y)$?
+	
+	
+	
+	\ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

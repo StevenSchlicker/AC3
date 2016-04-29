@@ -1,0 +1,63 @@
+\begin{activity} \label{A:11.5.3} Consider a polar rectangle $R$, with $r$ between $r_i$ and $r_{i+1}$ and $\theta$ between $\theta_j$ and $\theta_{j+1}$ as shown in Figure \ref{F:11.5.Polar_area_a}. Let $\Delta r = r_{i+1}-r_i$ and $\Delta \theta = \theta_{j+1}-\theta_j$. Let $\Delta A$ be the area of this region.
+	\ba
+	\item Explain why the area $\Delta A$ in polar coordinates is not $\Delta r \, \Delta \theta$.
+
+
+
+	\item Now find $\Delta A$ by the following steps:
+		\begin{enumerate}[i.]
+		\item Find the area of the annulus (the washer-like region) between $r_i$ and $r_{i+1}$, as shown at right in Figure \ref{F:11.5.Polar_area_b}. This area will be in terms of $r_i$ and $r_{i+1}$.
+
+		\item Observe that the region $R$ is only a portion of the annulus, so the area $\Delta A$ of $R$ is only a fraction of the area of the annulus.  For instance, if $\theta_{i+1} - \theta_i$ were $\frac{\pi}{4}$, then the resulting wedge would be 
+		$$\frac{ \frac{\pi}{4} }{2\pi} = \frac{1}{8}$$
+		of the entire annulus.  In this more general context, using the wedge between the two noted angles, what fraction of the area of the annulus is the area $\Delta A$? 
+
+		\item Write an expression for $\Delta A$ in terms of $r_i$, $r_{i+1}$, $\theta_j$, and $\theta_{j+1}$.
+
+		\item Finally, write the area $\Delta A$ in terms of $r_i$, $r_{i+1}$, $\Delta r$, and $\Delta \theta$, where each quantity appears only once in the expression. (Hint: Think about how to factor a difference of squares.)
+	
+
+	
+		\end{enumerate}
+	
+	\item As we take the limit as $\Delta r$ and $\Delta \theta$ go to 0, $\Delta r$ becomes $dr$, $\Delta \theta$ becomes $d \theta$, and $\Delta A$ becomes $dA$, the area element. Using your work in (iv), write $dA$ in terms of $r$, $dr$, and $d \theta$.
+
+
+
+	\ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+	\ba
+	\item The quantity $\Delta r \, \Delta \theta$ would be the area of a rectangle with side lengths $\Delta r$ and $\Delta \theta$. The area $\Delta A$ of the polar region is the area of a slice of a washer, not a rectangle -- the sides are not all straight. 
+
+	\item Now find $\Delta A$ by following these steps.
+		\begin{enumerate}[i.]
+		\item The area of the annulus between $r_i$ and $r_{i+1}$ is the area of the disk with larger radius $r_{i+1}$ minus the area of the disk with smaller radius $r_{i}$. So the area of the annulus is $\pi r^2_{i+1} - \pi r^2_{i}$. 
+
+		\item Our region $R$ is the portion of the annulus between $\theta_{i}$ and $\theta_{i+1}$. So the angle that cuts the region $R$ from the annulus has measure $\Delta \theta = \theta_{i+1} - \theta_{i}$. Since the central angle of the entire annulus is $2 \pi$, the area of the region $R$ is the fractional portion $\frac{\Delta \theta}{2 \pi}$ of the whole annulus. 
+
+		\item The fractional portion $\frac{\Delta \theta}{2 \pi}$ of the area of the whole annulus is 
+\[\Delta A = \frac{\Delta \theta}{2 \pi} \left( \pi r^2_{i+1} - \pi r^2_{i} \right).\]
+
+		\item Using a difference of squares gives us
+\begin{align*}
+\Delta A &= \frac{\Delta \theta}{2 \pi} \left( \pi r^2_{i+1} - \pi r^2_{i} \right) \\
+	&= \frac{1}{2}\Delta \theta (r_{i+1} +  r_{i})(r_{i+1} -  r_{i}) \\
+	&= \frac{1}{2}(r_{i+1} +  r_{i}) \Delta \theta  \Delta r.
+\end{align*}
+		
+		\end{enumerate}
+	
+	\item Taking the limit as $\Delta r$ and $\Delta \theta$ go to 0, both $r_{i+1}$ and $r_i$ approach the same value $r$, so 
+\[dA = \frac{1}{2}(r+r) \, dr \, d \theta = r \, dr \, d \theta.\]
+
+	\ea
+\end{activitySolution}
+\aftera

@@ -1,0 +1,49 @@
+\begin{activity} \label{A:9.2.3}
+Let $\vu = \langle 2, 3 \rangle$, $\vv = \langle -1, 4 \rangle$.
+    \ba
+    \item Using the two specific vectors above, what is the natural way to define the vector sum $\vu + \vv$? 
+
+    \item In general, how do you think the vector sum $\va + \vb$ of vectors $\va = \langle a_1, a_2 \rangle$ and $\vb = \langle b_1, b_2 \rangle$ in $\R^2$ should be defined? Write a formal definition of a vector sum based on your intuition.
+
+    \item In general, how do you think the vector sum $\va + \vb$ of vectors $\va = \langle a_1, a_2, a_3 \rangle$ and $\vb = \langle b_1, b_2, b_3 \rangle$ in $\R^3$ should be defined? Write a formal definition of a vector sum based on your intuition.
+
+    \item Returning to the specific vector $\vv = \langle -1, 4 \rangle$ given above, what is the natural way to define the scalar multiple $\frac{1}{2}\vv$? 
+
+    \item In general, how do you think a scalar multiple of a vector $\va = \langle a_1, a_2 \rangle$ in $\R^2$ by a scalar $c$ should be defined? how about for a scalar multiple of a vector $\va = \langle a_1, a_2, a_3 \rangle$ in $\R^3$ by a scalar $c$? Write a formal definition of a scalar multiple of a vector based on your intuition.
+
+    \ea
+\end{activity}
+\begin{smallhint}
+   \ba
+    \item Do the most obvious thing.
+    \item Do the most obvious thing.
+    \item Do the most obvious thing.
+    \item Do the most obvious thing.
+    \item Do the most obvious thing.
+    \ea
+\end{smallhint}
+\begin{bighint}
+	\ba
+	\item Think about how to combine corresponding components. 
+    \item Think about how to combine corresponding components. 
+    \item Think about how to combine corresponding components. 
+	\item How should a scalar affect each component?
+	\item How should a scalar affect each component?
+    \ea
+\end{bighint}
+\begin{activitySolution}
+   \ba
+    \item It would be natural to add vectors by adding their corresponding components. So we should expect $\vu + \vv$ to be the vector $\vu+\vv = \langle 2+(-1), 3+4 \rangle = \langle 1, 7\rangle$. 
+    \item It would be natural to add vectors by adding their corresponding components. So we should expect the sum of vectors $\va = \langle a_1, a_2 \rangle$ and $\vb = \langle b_1, b_2 \rangle$ in $\R^2$ to be
+\[\va + \vb =  \langle a_1, a_2 \rangle + \langle b_1, b_2 \rangle = \langle a_1+b_1, a_2+b_2 \rangle.\]
+    \item It would be natural to add vectors by adding their corresponding components. So we should expect the sum of vectors $\va = \langle a_1, a_2, a_3 \rangle$ and $\vb = \langle b_1, b_2, b_3 \rangle$ in $\R^3$ to be
+\[\va + \vb =  \langle a_1, a_2, a_3 \rangle + \langle b_1, b_2, b_3 \rangle = \langle a_1+b_1, a_2+b_2, a_3+b_3 \rangle.\]
+    \item It would be natural to multiply a vector by a scalar by multiplying each component of the vector by that scalar. So the scalar multiple $\frac{1}{2}\vv$ should be defined as 
+\[\frac{1}{2}\vv = \frac{1}{2}\langle -1, 4 \rangle = \left\langle -\frac{1}{2}, 2 \right\rangle.\]
+    \item It would be natural to multiply a vector by a scalar by multiplying each component of the vector by that scalar. So the scalar multiple $c\langle a_1, a_2 \rangle$ in $\R^2$ should be defined as 
+\[c\langle a_1, a_2 \rangle = \langle ca_1, ca_2 \rangle\]
+and the scalar multiple $c\langle a_1, a_2, a_3 \rangle$ in $\R^3$ should be defined as 
+\[c\langle a_1, a_2, a_3 \rangle = \langle ca_1, ca_2, ca_3 \rangle\]
+    \ea
+\end{activitySolution}
+\aftera

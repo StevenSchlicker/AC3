@@ -1,0 +1,136 @@
+\begin{exercises} 
+
+\item Consider the ellipsoid given by the equation 
+$$\frac{x^2}{16} + \frac{y^2}{25} + \frac{z^2}{9} = 1.$$
+In Activity~\ref{A:11.6.10}, we found that a parameterization of the sphere $S$ of radius $R$ centered at the origin is 
+\[x(r,s) = R\cos(s) \cos(t), \ y(s,t) = R \cos(s) \sin(t), \ \text{ and } \ z(s,t) = R\sin(s)\]
+for $-\frac{\pi}{2} \leq s \leq \frac{\pi}{2}$ and $0 \leq t \leq 2\pi$.
+	
+\ba
+	\item Let $(x,y,z)$ be a point on the ellipsoid and let $X = \frac{x}{4}$, $Y = \frac{y}{5}$, and $Z = \frac{z}{3}$. Show that $(X,Y,Z)$ lies on the sphere $S$. Hence, find a parameterization of $S$ in terms of $X$, $Y$, and $Z$ as functions of $s$ and $t$. 
+	\item Use the result of part (a) to find a parameterization of the ellipse in terms of $x$, $y$, and $z$ as functions of $s$ and $t$. Check your parametrization by substituting $x$, $y$, and $z$ into the equation of the ellipsoid. Then check your work by plotting the surface defined by your parameterization with
+    appropriate technology\footnote{e.g.,
+    \url{http://web.monroecc.edu/manila/webfiles/calcNSF/JavaCode/CalcPlot3D.htm}
+    or
+    \url{http://www.flashandmath.com/mathlets/multicalc/paramrec/surf_graph_rectan.html}}.
+\ea
+
+\begin{exerciseSolution}
+\ba
+	\item If $(x,y,z)$ lies on the ellipse and $X = \frac{x}{4}$, $Y = \frac{y}{5}$, and $Z = \frac{z}{3}$, then 
+\begin{align*}
+X^2+Y^2+Z^2 &= \left(\frac{x}{4}\right)^2 + \left(\frac{y}{5}\right)^2 + \left(\frac{z}{3}\right)^2 \\
+	&= \frac{x^2}{16} + \frac{y^2}{25} + \frac{z^2}{9} \\
+	&= 1.
+\end{align*}
+So $(X,Y,Z)$ lies on the sphere $S$ and $S$ has parameterization 
+\[X(r,s) = \cos(s) \cos(t), \ Y(s,t) = \cos(s) \sin(t), \ \text{ and } \ Z(s,t) = \sin(s)\]
+for $-\frac{\pi}{2} \leq s \leq \frac{\pi}{2}$ and $0 \leq t \leq 2\pi$.
+	\item Since $x = 4X$, $y = 5Y$, and $z = 3Z$ we have 
+\[x(r,s) = 4\cos(s) \cos(t), \ y(s,t) = 5\cos(s) \sin(t), \ \text{ and } \ z(s,t) = 3\sin(s)\]
+for $-\frac{\pi}{2} \leq s \leq \frac{\pi}{2}$ and $0 \leq t \leq 2\pi$. Note that 
+\begin{align*}
+\frac{x^2}{16} + \frac{y^2}{25} + \frac{z^2}{9} &= \cos^2(s)\cos^2(t) + \cos^2(s) \sin^2(t)  + \sin^2(s) \\
+	&= \cos^2(s)[\cos^2(t) + \sin^2(t)] + \sin^2(s) \\
+	&= \cos^2(s) + \sin^2(s) \\
+	&= 1.
+\end{align*}
+So $x(r,s) = 4\cos(s) \cos(t)$, $y(s,t) = 5\cos(s) \sin(t)$, and $z(s,t) = 3sin(s)$ is a parametrization of the ellipse. 
+\ea
+\end{exerciseSolution}
+
+  \item In this exercise, we explore how to use a parametrization and iterated integral to determine the surface area of a sphere.
+  \ba
+  	\item Set up an iterated integral whose value is the portion of the surface area of a sphere of radius $R$ that lies in the first octant (see the parameterization you developed in Activity \ref{A:11.6.10}). 
+	\item Then, evaluate the integral to calculate the surface area of this portion of the sphere.
+	\item By what constant must you multiply the value determined in (b) in order to find the total surface area of the entire sphere.  	
+\item Finally, compare your result to the standard formula for the surface area of sphere. 
+  \ea
+
+\begin{exerciseSolution}
+\ba
+\item From Activity \ref{A:11.6.10} we know that a parameterization of a sphere of radius $R$ centered at the origin is 
+\[x(s,t) = R \cos(s) \cos(t), \ y(s,t) = R\sin(s) \cos(t), \ \text{ and } \ z(s,t) = R \sin(t)\]
+for $-\frac{\pi}{2} \leq s \leq \frac{\pi}{2}$ and $t$ in $[0, 2 \pi]$. By symmetry, we can just calculate the surface area of the sphere in the first octant, then multiply by 8. So we can assume $0 \leq s, t \leq \frac{\pi}{2}$.
+\item With $\vr(s,t) = \langle R \cos(s) \cos(t),  R\sin(s) \cos(t),  R \sin(t) \rangle$ we have
+\begin{align*}
+\vr_s(s,t) &= \langle -R\sin(s) \cos(t), R\cos(s)\cos(t), 0 \rangle, \\
+\vr_t(s,t) &= \langle -R\cos(s) \sin(t), -R\sin(s)\sin(t), -R\cos(t) \rangle,
+\end{align*}
+and so 
+\begin{align*}
+\lvert \vr_s(s,t) \times \vr_t(s,t) \rvert &= \lvert \langle -R\sin(s) \cos(t), R\cos(s)\cos(t), 0 \rangle \times \langle -R\cos(s) \sin(t), -R\sin(s)\sin(t), -R\cos(t) \rangle \rvert \\
+    &= \lvert \langle -R^2\cos(s)\cos^2(t), -R^2\sin(s)\cos^2(t), R^2\cos(t)\sin(t) \rangle \rvert \\
+    &= \sqrt{R^4\cos^2(s)\cos^4(t) + R^4\sin^2(s)\cos^4(t) + R^4\cos^2(t)\sin^2(t)} \\
+    &= R^2\sqrt{\cos^2(t)} \\
+    &= R^2\cos(t).
+\end{align*}
+Therefore, the surface area of the first octant portion of the sphere is
+\begin{align*}
+ \int_0^{\pi/2} \int_0^{\pi/2} R^2 \cos(t) \, dt \, ds &= 8R^2 \int_0^{\pi/2} \sin(t) \biggm|_0^{\pi/2} \, ds \\
+    &= R^2 \int_0^{\pi/2} 1 \, ds \\
+    &= \frac{1}{2}\pi R^2.
+\end{align*}
+\item We multiply the previous result by 8 to reproduce the surface area calculation in each of the eight octants. So the surface area of a sphere of radius $R$ is $4 \pi R^2$. 
+\item  The result of part (c) is the standard formula for the surface area of a sphere of radius $R$. 
+\ea
+\end{exerciseSolution}
+
+\item Consider the plane generated by $z = f(x,y) = 24 - 2x - 3y$ over the region $D = [0,2]\times[0,3]$.
+	
+\ba
+	\item Sketch a picture of the overall solid generated by the plane over the given domain.
+	\item Determine a parameterization $\vr(s,t)$ for the plane over the domain $D$.
+	\item Use Equation~\ref{E:surface_area} to determine the surface area generated by $f$ over the domain $D$.
+	\item Observe that the vector $\vu = \langle 2, 0, -4 \rangle$ points from $(0,0,24)$ to $(2,0,20)$ along one side of the surface generated by the plane $f$ over $D$.  Find the vector $\vv$ such that $\vu$ and $\vv$ together span the parallelogram that represents the surface defined by $f$ over $D$, and hence compute $| \vu \times \vv |$.  What do you observe about the value you find?
+\ea
+
+\begin{exerciseSolution}
+\ba
+	\item The solid looks like a box with a slanted top. 
+	\item If we let $x(s,t) = s$ and $y(s,t) = t$, then $z(s,t) = 24-2s-3t$ provides a parameterization of the plane. So we can let $\vr(s,t) = s \vi + t \vj + (24-2s-3t) \vk$. 
+	\item In our situation we have $\vr_s(s,t) = \vi - 2 \vk$ and $\vr_t(s,t) = \vj - 3 \vk$. So $\vr_s(s,t) \times \vr_t(s,t) = 2 \vi + 3\vj + \vk$. So  the surface area generated by $f$ over the domain $D$ is found by 
+\begin{align*}
+ \int_0^{3} \int_0^{2} | \langle 2,3,1 \rangle | \, dt \, ds &=  \sqrt{14} \int_0^{3} \int_0^{2} \, dt \, ds \\
+    &= 6 \sqrt{14}.
+\end{align*}
+	\item Take $\vv = \langle 0, 2, -9 \rangle$ to be the vector that points from $(0,0,24)$ to $(0,3,15)$ along one side of the surface generated by the plane $f$ over $D$. Then $\vu$ and $\vv$ together span the parallelogram that represents the surface defined by $f$ over $D$. Here we have 
+\[| \vu \times \vv | = | \langle 12, 18, 6 \rangle | = \sqrt{504} = 6 \sqrt{14}.\]
+Since $| \vu \times \vv |$ is the area of the parallelogram determined by $\vu$ and $\vv$, we should expect this area to be the same as the surface area of the surface defined by the plane $f$ over $D$. 
+\ea
+\end{exerciseSolution}
+
+\item A cone with base radius $a$ and height $h$ can be realized as the surface defined by $z = \frac{h}{a} \sqrt{x^2+y^2}$, where $a$ and $h$ are positive.  
+ 	\ba
+	\item Find a parameterization of the cone described by $z = \frac{h}{a} \sqrt{x^2+y^2}$. (Hint: Compare to the parameterization of a cylinder as seen in Activity  \ref{A:11.6.4}.) 
+	
+	\item Set up an iterated integral to determine the surface area of this cone.
+	
+	\item Evaluate the iterated integral to find a formula for the lateral surface area of a cone of height $h$ and base $a$. 
+	
+	\ea
+
+\begin{exerciseSolution}
+\ba
+\item Let $t$ run along the positive $z$-axis from 0 to $h$. By similar triangles, the cross section of the cone at height $t$ parallel to the $x$-$y$ plane has radius $\frac{h}{a}t$. We can think of the cone as made of circles with these varying radii, so a parameterization of the cone is 
+\[\vr(s,t) = \frac{h}{a}t \cos(s) \vi + \frac{h}{a}t \sin(s) \vj + t \vk,\]
+for $0 \leq s \leq 2 \pi$ and $0 \leq t \leq a$. 
+
+\item We have 
+\[\vr_s(s,t) = -\frac{h}{a}t\sin(s) \vi + \frac{h}{a}t\cos(s) \vj  \ \text{ and } \ \vr_t(s,t) =  \frac{h}{a} \cos(s) \vi + \frac{h}{a} \sin(s) \vj + \vk,\]
+and
+\[\vr_s(s,t) \times \vr_t(s,t) = -\frac{h}{a}t\cos(s) \vi + \frac{h}{a}t\sin(s) \vj + \left(\frac{a}{h}\right)^2 t \vk.\]
+By symmetry, we calculate the area of the cone in the first octant and multiply by 4 to obtain the area of the surface of the cone as
+\[4\int_0^{\pi/2} \int_0^a |\vr_s \times \vr_t| \, dt \, ds = 4\int_0^{\pi/2} \int_0^a \frac{a}{h^2} \sqrt{h^2+a^2} t \, dt \, ds.\]
+
+\item Evaluating the iterated integral yields
+\begin{align*}
+4\int_0^{\pi/2} \int_0^a \frac{a}{h^2} \sqrt{h^2+a^2} t \, dt \, ds &= 4\frac{a}{h^2} \sqrt{h^2+a^2} \int_0^{\pi/2} \frac{1}{2}t^2 \biggm|_0^h \, ds \\
+	&= 2 a \sqrt{h^2+a^2} \int_{0}^{\pi/2}  \, ds \\
+	&= \pi  a \sqrt{h^2+a^2}. 
+\end{align*}
+
+\ea
+\end{exerciseSolution}
+\end{exercises}
+\afterexercises

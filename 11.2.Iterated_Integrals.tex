@@ -1,0 +1,99 @@
+\section{Iterated Integrals} \label{S:11.2.Iterated_Integrals}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+\item How do we evaluate a double integral over a rectangle as an iterated integral, and why does this process work?
+\end{goals}} \hspace*{3 pt}}
+
+
+
+\subsection*{Introduction}
+
+Recall that we defined the double integral of a continuous function $f = f(x,y)$ over a rectangle $R = [a,b] \times [c,d]$ as
+\[\iint_R f(x,y) \, dA = \lim_{m,n \to \infty} \sum_{j=1}^n \sum_{i=1}^m f\left(x_{ij}^*, y_{ij}^*\right) \cdot \Delta A,\]
+where the different variables and notation are as described in Section~\ref{S:11.1.Double_Integrals_Rectangles}.  Thus $\iint_R f(x,y) \, dA$ is a limit of double Riemann sums, but while this definition tells us exactly what a double integral is, it is not very helpful for determining the value of a double integral. Fortunately, there is a way to view a double integral as an \emph{iterated integral}\index{iterated integral!rectangular coordinates}, which will make computations feasible in many cases.
+
+The viewpoint of an iterated integral is closely connected to an important idea from single-variable calculus.  When we studied solids of revolution, such as the one shown in Figure~\ref{F:6.2.Ex1}, we saw that in some circumstances we could slice the solid perpendicular to an axis and have each slice be approximately a circular disk.  From there, we were able to find the volume of each disk, and then use an integral to add the volumes of the slices.  In what follows, we are able to use single integrals to generalize this approach to handle even more general geometric shapes.
+
+\begin{figure}[h]
+\begin{center}
+%\includegraphics{figures/6_2_Ex1.eps}
+  \includegraphics{figures/fig_11_2_volume_revolve.eps}
+\caption{A solid of revolution.} \label{F:6.2.Ex1}
+\end{center}
+\end{figure}
+
+%\begin{itemize}
+%\item $x_0$, $x_1$, $\ldots$, $x_m$ are the endpoints of $m$ equal length subintervals of $[a,b]$ of length $\Delta x = \frac{b-a}{m}$ with $a = x_0<x_1<x_2 < \cdots < x_m = b$;
+%\item $y_0$, $y_1$, $\ldots$, $y_n$ are the endpoints of $n$ equal length subintervals of $[c, d]$ of length $\Delta y = \frac{d-c}{n}$ with $c = y_0<y_1<y_2 < \cdots < y_n = d$;
+%\item $R_{ij} = [x_{i-1},x_{i}] \times [y_{j-1}, y_j]$ is the subrectangle of $R$ with opposite vertices $(x_{i-1},y_{j-1})$ and $(x_i, y_j)$ for $i$ between $1$ and $m$ and $j$ between $1$ and $n$. The area of $R_{ij}$ is $\Delta A = \Delta x \cdot \Delta y$;
+%\item $(x_{ij}^*, y_{ij}^*)$ is a point in rectangle $R_{ij}$.
+%\end{itemize}
+
+
+
+\input{previews/11.2.PA1}
+
+\subsection*{Iterated Integrals}
+
+The ideas that we explored in Preview Activity \ref{PA:11.2} work more generally and lead to the idea of an iterated integral. Let $f$ be a continuous function on a rectangular domain $R = [a,b] \times [c,d]$, and let
+\[A(x) = \int_c^d f(x,y) \, dy.\]
+The function $A = A(x)$ determines the value of the cross sectional area\footnote{By area we mean ``signed" area.} in the $y$ direction for the fixed value of $x$ of the solid bounded between the surface defined by $f$ and the $xy$-plane.
+
+\begin{figure}[ht]
+\begin{center}
+%\resizebox{!}{3.0in}{\animategraphics[controls,trim=0cm 0.25cm 0.1cm 1.0cm]{4}{11_2_II_}{01}{05}}
+%\animategraphics[controls]{6}{figures/fig_11_2_preview_animate_}{0}{5}
+\resizebox{!}{1.5in}{\includegraphics{figures/fig_11_2_preview_animate_0.pdf}} \hspace{0.25in} \resizebox{!}{1.5in}{\includegraphics{figures/fig_11_2_preview_animate_2.pdf}} \hspace{0.25in} \resizebox{!}{1.5in}{\includegraphics{figures/fig_11_2_preview_animate_5.pdf}}
+\end{center}
+\caption{Summing cross section slices.}
+\label{F:11.2.Cross_section_y_slab_sum}
+\end{figure}
+%crop graphics in animate trim=<left> <bottom> <right> <top>, add, clip with \includegraphics
+
+The value of this cross sectional area is determined by the input $x$ in $A$. Since $A$ is a function of $x$, it follows that  we can integrate $A$ with respect to $x$. In doing so, we use a partition of $[a, b]$ and make an approximation to the integral given by
+\[\int_a^b A(x) \, dx  \approx \sum_{i=1}^m A(x_i^*) \Delta x,\]
+where $x_i^*$ is any number in the subinterval $[x_{i-1},x_i]$. Each term $A(x_i^*) \Delta x$ in the sum represents an approximation of a fixed cross sectional slice of the surface in the $y$ direction with a fixed width of $\Delta x$ as illustrated in Figure \ref{F:11.2.Cross_section_PA_y_slab}. We add the signed volumes of these slices as shown in the frames in Figure \ref{F:11.2.Cross_section_y_slab_sum} to obtain an approximation of the total signed volume.
+
+As we let the number of subintervals in the $x$ direction approach infinity, we can see that the Riemann sum $\ds \sum_{i=1}^m A(x_i^*) \Delta x$
+approaches a limit and that limit is the sum of signed volumes bounded by the function $f$ on $R$. Therefore, since $A(x)$ is itself determined by an integral, we have
+\[\iint_R f(x,y) \, dA = \lim_{m \to \infty} \sum_{i=1}^m A(x_i^*) \Delta x = \int_a^b A(x) \, dx = \int_a^b \left( \int_c^d f(x,y) \, dy \right) \, dx.\]
+
+Hence, we can compute the double integral of $f$ over $R$ by first integrating $f$ with respect to $y$ on $[c, d]$, then integrating the resulting function of $x$ with respect to $x$ on $[a, b]$. The nested integral
+\[\int_a^b \left( \int_c^d f(x,y) \, dy \right) \, dx = \int_a^b \int_c^d f(x,y) \, dy \, dx \]
+is called an \emph{iterated integral}, and we see that each double integral may be represented by two single integrals.
+
+We made a choice to integrate first with respect to $y$. The same argument shows that we can also find the double integral as an iterated integral integrating with respect to $x$ first, or
+\[\iint_R f(x,y) \, dA = \int_c^d \left( \int_a^b f(x,y) \, dx \right) \, dy = \int_c^d  \int_a^b f(x,y) \, dx  \, dy.\]
+
+The fact that integrating in either order results in the same value is known as Fubini's Theorem.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\textbf{Fubini's Theorem.} If $f = f(x,y)$ is a continuous function on a rectangle $R = [a,b] \times [c,d]$, then
+\[\iint_R f(x,y) \, dA = \int_c^d \int_a^b f(x,y) \, dx \, dy = \int_a^b \int_c^d f(x,y) \, dy \, dx.\]
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+Fubini's theorem enables us to evaluate iterated integrals without resorting to the limit definition.  Instead, working with one integral at a time, we can use the Fundamental Theorem of Calculus from single-variable calculus to find the exact value of each integral, starting with the inner integral.
+
+\input{activities/11.2.Act1}
+
+\input{activities/11.2.Act2}
+
+\begin{summary}	
+\item We can evaluate the double integral $\ds \iint_R f(x,y) \, dA$ over a rectangle $R = [a,b] \times [c,d]$ as an iterated integral in one of two ways:
+    \begin{itemize}
+    \item[-] $\ds \int_a^b \left( \int_c^d f(x,y) \, dy \right) \, dx$, or
+    \item[-] $\ds \int_c^d \left( \int_a^b f(x,y) \, dx \right) \, dy$.
+    \end{itemize}
+This process works because each inner integral represents a cross-sectional (signed) area and the outer integral then sums all of the cross-sectional (signed) areas.  Fubini's Theorem guarantees that the resulting value is the same, regardless of the order in which we integrate.
+\end{summary}
+
+
+\nin \hrulefill
+
+\input{exercises/11.2.Iterated_Integrals(Ex)}
+
+\clearpage

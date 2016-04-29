@@ -1,0 +1,35 @@
+\begin{activity} \label{A:1.1.8}
+   On the topographical map of the Porcupine Mountains in Figure \ref{F:1.1.porcupine},
+
+   \ba
+    \item identify the highest and lowest points you can find;
+    \item determine a path of steepest ascent that leads to the highest point;
+    \item determine the least steep path that leads to the highest point.
+
+     \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+
+\end{activitySolution}
+
+%\newpage
+%\begin{landscape}
+%\begin{figure}[ht]
+%\begin{center}
+%\resizebox{!}{4.0in}{\includegraphics[trim=40cm 40cm 40cm 40cm, clip]{figures/1_1_porcupine_2}} %trim=left bottom right top, need clip if not animation
+%\caption{Contour map of the Porcupine Mountains.}
+%\label{F:1.1.porcupine}
+%\end{center}
+%\end{figure}
+%\end{landscape}
+%\newpage
+
+\aftera 

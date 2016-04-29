@@ -1,0 +1,28 @@
+\begin{activity} \label{A:1.8.7} Find the curvature of the helix with parameterization $\vr(t) = \cos(t) \vi + \sin(t) \vj + t \vk$.
+
+
+
+\begin{comment}
+
+Here we have
+\[\vr'(t) = (-\sin(t)) \vi + \cos(t) \vj + \vk\]
+and
+\[\vT(t) = \frac{1}{\sqrt{2}}\left( (-\sin(t)) \vi + \cos(t) \vj + \vk \right).\]
+Then
+\[\vT'(t) = \frac{1}{\sqrt{2}}\left( (-\cos(t)) \vi - \sin(t) \vj \right)\]
+and so
+\[\kappa(t) = \frac{1}{2}.\]
+
+\end{comment}
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

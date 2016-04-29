@@ -1,0 +1,39 @@
+\begin{activity} \label{A:10.5.2} Find the indicated derivative.
+	\ba	
+	\item $\frac{\partial f}{\partial w}$ if $f(x,y) = 2x^2y$, $x=w+z^2$, and $y=\frac{2z+1}{w}$
+
+
+
+	\item $\frac{\partial f}{\partial v}$ if $f(x,y,z) = 2x^2y+z^3$, $x=u-v+2w$, $y=w2^v-u^3$, and $z = u^2-v$
+
+
+
+	\ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+\ba 
+\item By the chain rule we have
+\begin{align*}
+\frac{\partial f}{\partial w} &= \frac{\partial f}{\partial x} \frac{\partial x}{\partial w}+ \frac{\partial f}{\partial y} \frac{\partial y}{\partial w} \\
+	&= \left( 4xy \right)\left( 1 \right) + \left( 2x^2 \right)\left( -\frac{2z+1}{w^2} \right) \\
+	&= \left( \frac{(2z+1)4(w+z^2)y}{w} \right) - \left( \frac{2(2z+1)((w+z^2)^2}{w^2} \right).
+\end{align*}
+
+\item By the chain rule we have
+\begin{align*}
+\frac{\partial f}{\partial v} &= \frac{\partial f}{\partial x} \frac{\partial x}{\partial v}+ \frac{\partial f}{\partial y} \frac{\partial y}{\partial v} + \frac{\partial f}{\partial z} \frac{\partial z}{\partial v} \\
+	&= \left( 4xy \right)\left( -1 \right) + \left( 2x^2 \right)\left( w^2 \right) + \left( 3z^2 \right)\left( -1 \right)  \\
+	&= -4(u-v+2w)(w2^v-u^3) + 2(u-v+2w)^2w^2 - 3(u-v+2w)^2.
+\end{align*}
+
+\ea
+\end{activitySolution}
+\aftera

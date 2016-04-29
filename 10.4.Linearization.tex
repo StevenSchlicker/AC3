@@ -1,0 +1,303 @@
+\section{Linearization: Tangent Planes and Differentials} \label{S:10.4.Linearization}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+  \item What does it mean for a function of two variables to be
+    locally linear at a point?
+  \item How do we find the equation of the plane tangent to a locally
+    linear function at a point?
+  \item What does it mean to say that a multivariable function is \emph{differentiable}?
+  \item What is the differential of a multivariable function of two
+    variables and what are its uses?
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+One of the central concepts in single variable calculus is that the
+graph of a differentiable function, when viewed on a very small scale, looks like a
+line.  We call this line the tangent line and measure its slope with
+the derivative.  In this section, we will extend this concept to
+functions of several variables.
+
+Let's see what happens when we look
+at the graph of a two-variable function on a small scale.  To begin, let's consider the function
+$$ 
+f(x,y) = 6 - \frac{x^2}2 - y^2,
+$$
+whose graph is shown in Figure \ref{F:10.4.tangent.1}.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_10_4_tangent_1.eps}
+  \end{center}
+  \caption{The graph of $f(x,y)=6-x^2/2 - y^2$.}
+  \label{F:10.4.tangent.1}
+\end{figure}
+
+We choose to study the behavior of this function near the point $(x_0,
+y_0) = (1,1)$.  In particular, we wish to view the graph on an
+increasingly small scale around this point, as shown in the two plots in Figure
+\ref{F:10.4.tangent.2}
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_10_4_tangent_2.eps} \hspace*{20pt}
+    \includegraphics{figures/fig_10_4_tangent_3.eps}
+  \end{center}
+  \caption{The graph of $f(x,y)=6-x^2/2 - y^2$.}
+  \label{F:10.4.tangent.2}
+\end{figure}
+
+Just as the graph of a differentiable single-variable function looks like a line
+when viewed on a small scale, we see that the graph of this particular two-variable
+function looks like a plane, as seen in Figure \ref{F:10.4.tangent.4}.
+In the following preview activity, we explore how to find the equation of this plane.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_10_4_tangent_4.eps}
+  \end{center}
+  \caption{The graph of $f(x,y)=6-x^2/2 - y^2$.}
+  \label{F:10.4.tangent.4}
+\end{figure}
+
+In what follows, we will also use the important fact\footnote{As we saw in Section \ref{S:9.5.Lines_Planes}, the equation
+  of a plane passing through the point $(x_0, y_0, z_0)$ may be written
+  in the form $A(x-x_0) + B(y-y_0) + C(z-z_0) = 0$.  If the
+  plane is not vertical, then $C\neq 0$, and we can
+  rearrange this and hence write
+$
+    C(z-z_0) = -A(x-x_0) - B(y-y_0) 
+$
+and thus
+\begin{align*}
+    z & = z_0-\frac AC(x-x_0) - \frac BC(y-y_0) \\
+      & = z_0 + a(x-x_0) + b(y-y_0)
+  \end{align*}
+  where $a=-A/C$ and $b=-B/C$, respectively.} that the plane passing through $(x_0, y_0, z_0)$ may be expressed in the form
+$z = z_0 + a(x-x_0) + b(y-y_0)$, where $a$ and $b$ are constants.
+
+\input{previews/10.4.PA4}
+%\input{previews/10.4.PA3}
+
+\subsection*{The tangent plane}
+
+%When we looked at the graph of a differentiable single-variable
+%function on a small scale, we found that it looked like a line,
+%which we called the tangent line.  
+
+
+Before stating the formula for the equation of the tangent plane at a point for
+a general function $f(x,y)$, we need to discuss a mild technical
+condition.   As we have noted, when we look at the graph of a single-variable
+function on a small scale near a point $x_0$, we expect to see a line;
+in this case, we say that {\em $f$ is locally linear near $x_0$} since
+the graph looks like a linear function locally around $x_0$.  Of
+course, there are functions, such as $f(x)=|x|$, that are not locally
+linear at every point.  In single-variable calculus, we learn that if the derivative of a function exists at a point, 
+then the function is guaranteed to be locally linear there.
+
+In a similar way, we say that a two-variable function {\em $f$ is
+  locally linear\index{function!locally linear} near $(x_0,y_0)$} provided that the graph of $f$ looks like a
+plane when viewed on a small scale near $(x_0,y_0)$.  There are, of
+course, functions that are not locally linear at some points
+$(x_0,y_0)$.  However, it turns out that if the first-order partial derivatives, $f_x$ and $f_y$, are continuous near
+$(x_0,y_0)$, then $f$ is locally linear at $(x_0,y_0)$ and the graph
+looks like a plane, which we call the tangent plane, when viewed on a
+small scale.  Moreover, when a function is locally linear at a point, we will also say it is \emph{differentiable} at that point.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{If $f$ is a function of the independent variables $x$ and $y$ and both $f_x$ and $f_y$ exist and are continuous in an open disk containing 
+the point $(x_0,y_0)$, then $f$ is \textbf{differentiable}\index{function!differentiable} at $(x_0,y_0)$.
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+
+So, whenever a function $z = f(x,y)$ is differentiable at a point $(x_0,y_0)$, it follows that the function has a tangent plane at $(x_0,y_0)$.  Viewed up close, the tangent plane and the function are then virtually indistinguishable.  In addition, as in Preview Activity~\ref{PA:10.4}, we find the following general formula for the tangent plane.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{
+  If $f(x,y)$ has continuous first-order partial derivatives, 
+  then the equation of the plane
+    tangent to the graph of $f$ at the point $(x_0,y_0,f(x_0,y_0))$ is
+  \begin{equation}
+    z = f(x_0,y_0) + f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0).
+    \label{eq:10.4.tan_plane}
+  \end{equation}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+Finally, one important note about the form of the equation for the tangent plane, $z = f(x_0,y_0) + f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0)$.  Say, for example, that we have the particular tangent plane $z = 7 - 2(x-3) + 4(y+1)$.  Observe that we can immediately read from this form that  $f_x(3,-1) = -2$ and $f_y(3,-1) = 4$; furthermore, $f_x(3,-1)=-2$ is the slope of the trace to both $f$ and the tangent plane in the $x$-direction at $(-3,1)$.  In the same way, $f_y(3,-1) = 4$ is the slope of the trace of both $f$ and the tangent plane in the $y$-direction at $(3,-1)$.
+
+\input{activities/10.4.Act1}
+
+\subsection*{Linearization}
+
+In single variable calculus, an important use of the tangent line is
+to approximate the value of a differentiable function.  Near the point $x_0$, the
+tangent line to the graph of $f$ at $x_0$ is close to the
+graph of $f$ near $x_0$, as shown in Figure \ref{F:10.4.2d.linear}.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_10_4_2d_linear.eps}
+    \hspace*{20pt}
+    \includegraphics{figures/fig_10_4_2d_linear_gray.eps}
+  \end{center}
+  \caption{The linearization of the single-variable function $f(x)$.}
+  \label{F:10.4.2d.linear}
+\end{figure}
+
+In this single-variable setting, we let $L$ denote the function whose graph is the tangent line, and thus
+$$
+L(x) = f(x_0) + f'(x_0)(x-x_0)
+$$
+Furthermore, observe that $f(x) \approx L(x)$ near $x_0$.  We call $L$ the
+{\em linearization} of $f$.
+
+In the same way, the tangent plane to the graph of a differentiable function $z = f(x,y)$ at a point
+$(x_0,y_0)$ provides a good approximation of $f(x,y)$ near $(x_0,
+y_0)$.  Here, we define the linearization, $L$, to be the two-variable function whose
+graph is the tangent plane, and thus
+$$
+L(x,y) = f(x_0,y_0) + f_x(x_0,y_0)(x-x_0) +
+f_y(x_0,y_0)(y-y_0).
+$$
+Finally, note that $f(x,y)\approx L(x,y)$ for points near $(x_0,
+y_0)$. This is illustrated in Figure \ref{F:10.4.tangent.9}.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_10_4_tangent_9.eps}
+  \end{center}
+  \caption{The linearization of $f(x,y)$.}
+  \label{F:10.4.tangent.9}
+\end{figure}
+
+\input{activities/10.4.Act11}
+
+\subsection*{Differentials}
+
+As we have seen, the linearization $L(x,y)$ enables us to estimate the value of $f(x,y)$ for points $(x,y)$ near the base point
+$(x_0, y_0)$. 
+Sometimes, however, we are more interested in the {\em change} in the
+function $f(x,y)$ as we move from the base point $(x_0,y_0)$ to another
+point $(x,y)$.  
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_10_4_tangent_10.eps}
+  \end{center}
+  \caption{The differential $df$ measures the approximate change in
+    $f(x,y)$.} 
+  \label{F:10.4.differential}
+\end{figure}
+
+Figure \ref{F:10.4.differential} illustrates this situation.  Suppose
+we are at the point $(x_0,y_0)$, and we know the value $f(x_0,y_0)$ of $f$ at $(x_0,y_0)$.  If we consider the displacement $\langle \Delta x, \Delta
+y\rangle$ to a new point $(x,y) = (x_0+\Delta x, y_0
++ \Delta y)$, we would like to know how much the function has changed.
+We denote this change by $\Delta f$, where
+$$
+\Delta f = f(x,y) - f(x_0, y_0).
+$$
+A simple way to estimate the change $\Delta f$ is to approximate it by
+$df$, which represents the change in the linearization $L(x,y)$ as we move from
+$(x_0,y_0)$ to $(x,y)$.  This gives
+\begin{align*}
+  \Delta f \approx df &= L(x,y)-f(x_0, y_0)  \\
+  &= [f(x_0,y_0)+ f_x(x_0,y_0)(x-x_0) +
+  f_y(x_0,y_0)(y-y_0)] - f(x_0, y_0) \\
+  &= f_x(x_0,y_0)\Delta x + f_y(x_0, y_0)\Delta y. 
+\end{align*}
+%This leaves us with $\Delta f \approx df = f_x(x_0,y_0)\Delta x +
+%f_y(x_0, y_0)\Delta y$.  
+For consistency, we will denote the
+change in the independent variables as $dx = \Delta x$ and $dy =
+\Delta y$, and thus
+\begin{equation}
+  \Delta f \approx df = f_x(x_0,y_0)~dx + f_y(x_0,y_0)~dy.
+  \label{E:10.4.differential}
+\end{equation}
+Expressed equivalently in Leibniz notation, we have
+\begin{equation}
+  df = \frac{\partial f}{\partial x}~dx + \frac{\partial f}{\partial
+    y}~dy.
+  \label{E:10.4.differential.leib}
+\end{equation}
+
+
+We call the quantities $dx$, $dy$, and $df$ {\em differentials}, and
+we think of them as measuring small changes in the quantities $x$,
+$y$, and $f$.  Equations (\ref{E:10.4.differential}) 
+and (\ref{E:10.4.differential.leib}) express the
+relationship between these changes.  Equation
+(\ref{E:10.4.differential.leib}) resembles an important idea 
+from single-variable calculus:  when $y$ depends on $x$,
+it follows in the notation of differentials that 
+$$
+dy = y'~dx = \frac{dy}{dx}~dx.
+$$
+
+We will illustrate the use of differentials with an
+example.  Suppose we have a machine that manufactures rectangles of
+width $x=20$ cm and height $y=10$ cm.  However, the machine isn't
+perfect, and therefore the width could be off by $dx = \Delta x = 0.2$ cm and
+the height could be off by $dy = \Delta y = 0.4$ cm.  
+
+The area of the rectangle is 
+$$
+A(x,y) = xy,
+$$
+so that the area of a perfectly manufactured rectangle is $A(20, 10) =
+200$ square centimeters.  Since the machine isn't perfect, we would
+like to know how much the area of a given manufactured rectangle could differ from the
+perfect rectangle.  We will estimate the uncertainty in the area using
+(\ref{E:10.4.differential}), and find that
+$$
+\Delta A \approx dA = A_x(20, 10)~dx + A_y(20,10)~dy.
+$$
+Since $A_x = y$ and $A_y = x$, we have
+$$
+\Delta A \approx dA = 10~dx + 20~dy = 10\cdot0.2 + 20\cdot0.4 = 10.
+$$
+That is, we estimate that the area in our rectangles could be off by
+as much as 10 square centimeters.
+
+\input{activities/10.4.Act12.tex}
+
+
+
+\begin{summary}
+\item A function $f$ of two independent variables is locally linear at
+  a point $(x_0,y_0)$ if the graph of $f$ looks like a plane 
+  as we zoom in on the graph around the point $(x_0,y_0)$.  In this
+  case, the equation of the tangent plane is given by
+  $$
+  z = f(x_0,y_0) + f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0).
+  $$
+\item The tangent plane $L(x,y) = f(x_0,y_0) + f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0)$, when considered as a function, is
+  called the linearization of a differentiable function $f$ at $(x_0,y_0)$ and may be used
+  to estimate values of $f(x,y)$;  that is, $f(x,y) \approx L(x,y)$
+  for points $(x,y)$ near $(x_0,y_0)$.
+  
+\item A function $f$ of two independent variables is differentiable at $(x_0,y_0)$ provided that both $f_x$ and $f_y$ exist and are continuous in an open disk containing 
+the point $(x_0,y_0)$.
+
+\item The differential $df$ of a function $f(x,y)$ is related to the
+  differentials $dx$ and $dy$ by
+  \[df = f_x(x_0,y_0) dx + f_y(x_0,y_0)dy.\] 
+  We can use this relationship to
+  approximate small changes in $f$ that result from small changes in
+  $x$ and $y$.
+\end{summary}
+
+
+\nin \hrulefill
+
+\input{exercises/10.4.Linearization(Ex)}
+
+\clearpage

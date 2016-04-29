@@ -1,0 +1,50 @@
+\begin{activity} \label{A:11.5.5} 
+Consider the circle given by $x^2 + (y-1)^2 = 1$ as shown in Figure \ref{F:11.5.Polar_exercise}.
+
+\ba
+	\item Determine a polar curve in the form $r = f(\theta)$ that traces out the circle $x^2 + (y-1)^2 = 1$.
+	\item Find the exact average value of $g(x,y) = \sqrt{x^2 + y^2}$ over the interior of the circle $x^2 + (y-1)^2 = 1$.
+	\item Find the volume under the surface $h(x,y) = x$ over the region $D$, where $D$ is the region bounded above by the line $y=x$ and below by the circle.
+	\item Explain why in both (b) and (c) it is advantageous to use polar coordinates. 
+\ea
+
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+\ba
+\item When expanded, the equation of the circle is $x^2+y^2 - 2y = 0$. We can write this in polar coordinates as $r^2 - 2r \sin(\theta) = 0$, or $r = 2\sin(\theta)$.  Thus, the circle $C$ can be described as $0 \leq r \leq \ 2\sin(\theta)$ with $0 \leq \theta \leq \pi$. 
+
+\item The circle $C$ has radius 1, so $A(C) = \pi$. Note that $g(x,y) = \sqrt{x^2 + y^2}$ can be written in polar form as $g(r,\theta) = r$. Thus, the average value of $g$ over $C$ is 
+\begin{align*}
+\frac{1}{\pi}\int \int_C g(x,y) \, dA &= \int_{0}^{\pi} \int_{0}^{2\sin(\theta)} r r \, dr \, d \theta \\
+	&= \frac{1}{\pi}\int_{0}^{\pi} \frac{r^3}{3} \biggm|_{0}^{2\sin(\theta)} \, d \theta \\
+	&= \frac{8}{3\pi} \int_{0}^{\pi} \sin^3(\theta) \, d \theta \\
+	&= \frac{8}{3\pi} \int_{0}^{\pi} \sin(\theta)(1-\cos^2(\theta)) \, d \theta \\
+	&= \frac{8}{3\pi} \left(-\cos(\theta)+\frac{\cos^3(\theta)}{3}\right)\biggm|_{0}^{\pi}   \\
+	&= \frac{8}{3\pi}\left(2-\frac{2}{3}\right) \\
+	&= \frac{32}{9\pi}.
+\end{align*}
+
+\item In polar coordinates, the line $y=x$ is represented as $r \sin(\theta) = r \cos(\theta)$, or $\tan(\theta) = 1$, or $\theta = \frac{\pi}{4}$. Therefore, the region $D$ is described by $0 \leq r \leq \ 2\sin(\theta)$ with $0 \leq \theta \leq \pi/4$. So the under the surface $h(x,y) = x$ over the region $D$ is given by
+\begin{align*}
+\int \int_D x \, dA &= \int_{0}^{\pi/4} \int_{0}^{2\sin(\theta)} r\cos(\theta) r \, dr \, d \theta \\
+	&= \int_{0}^{\pi/4} \cos(\theta) \frac{r^3}{3} \biggm|_{0}^{2\sin(\theta)} \, d \theta \\
+	&= \frac{8}{3} \int_{0}^{\pi/4} \cos(\theta) \sin^3(\theta) \, d \theta \\
+	&= \frac{8}{12} \left. \sin^4(\theta) \right|_{0}^{\pi/4}  \\
+	&= \frac{2}{3} \left(\frac{\sqrt{2}}{2}\right)^4  \\
+	&= \frac{1}{6}.
+\end{align*} 
+
+\item In (b), it is very difficult to integrate $\sqrt{x^2+y^2}$ in rectangular coordinates, and in (c) the region $D$ is much more easily described in polar coordinates. 
+
+\ea
+
+\end{activitySolution}
+\aftera

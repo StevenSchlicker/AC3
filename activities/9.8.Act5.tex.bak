@@ -1,0 +1,32 @@
+\begin{activity} \label{A:1.8.5} Recall from (\ref{eq:circle_arc_length_parameterization}) that an arc length parameterization of a circle in 2-space of radius $a$ centered at the origin is (from (\ref{eq:circle_arc_length_parameterization}))
+\[x(s) = a \cos\left(\frac{s}{a}\right)  \ \ \ \ \text{ and } \ \ \ \ y(t) = a \sin\left(\frac{s}{a}\right).\]
+Show that the curvature of this circle is the constant $\frac{1}{a}$. Conclude that smaller circles have larger curvature. Does this make sense?
+
+
+
+\begin{comment}
+
+We have
+\[\vT(s) = \left\langle -\sin\left(\frac{s}{a}\right), \cos\left(\frac{s}{a}\right) \right\rangle.\]
+So the curvature of a circle of radius $a$ is
+\begin{align*}
+\kappa &= \left\lvert \frac{d \vT}{ds} \right\rvert \\
+    &= \left\lvert \left\langle -\frac{1}{a}\cos\left(\frac{s}{a}\right), -\frac{1}{a}\sin\left(\frac{s}{a}\right) \right\rangle \right\rvert \\
+    &= \frac{1}{a}.
+\end{align*}
+So, as expected, larger circles have smaller curvature.
+
+\end{comment}
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

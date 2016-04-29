@@ -1,0 +1,64 @@
+\begin{pa} \label{PA:10.8} The Cobb-Douglas production function\index{Cobb-Douglas production function} is used in economics to model production levels based on labor and equipment. A Cobb-Douglas function has the form
+\[f(x,y) = Cx^{\alpha}y^{1-\alpha}\]
+where $x$ is the dollar amount spent on labor and $y$ the amount of capital spent on equipment. Suppose we have a specific Cobb-Douglas function of the form
+\[f(x, y) = 50 x^{0.4}y^{0.6}.\]
+The problem we want to address is how to maximize output in this system if we have a fixed amount of money, say \$1.5 million, to spend.
+
+This is a problem where we have an external constraint on our variables, namely that  $x + y$  cannot exceed \$1.5 million. We assume we will use all of the capital available to maximize production.\footnote{We could solve this problem by solving the equation $x+y = 1.5$ for $y$ and substituting into $f$ to write $f$ as a function of $x$ alone. However, there is a general method that we want to understand in this section, and we are using a two-variable example to make the ideas easier to see.}
+    \ba
+    \item Our constraint defines a function $g$, given by
+    \[g(x,y) = x+y.\]
+    Explain why the constraint is a level curve of $g$, and is therefore a two-dimensional curve.
+
+
+
+\begin{comment}
+
+A level curve is a curve obtained by setting the dependent variable equal to a constant. So if $g(x,y) = x+y$, then the equation $1.5 = x+y = g(x,y)$ is a level of $g$.
+
+
+
+\end{comment}
+
+    \item Use the applet at \\
+    \url{http://ocw.mit.edu/ans7870/18/18.02/f07/tools/LagrangeMultipliersTwoVariables.html} to draw a contour diagram of $f$ along with level curves of the constraint function $g$ on the rectangle $[0,2] \times [0,2]$. Click off the boxes Show grad f and Show grad g. You will see the level curve $g(x,y) = b$ in yellow and level curves of $f$ in blue. You can vary the value of $b$ using the $b$ slider. You should also see the level curve $f(x,y) = a$ in green, and you can control the value of $a$ with the $a$ slider. The intersections of the constraint curve with the level curves of $f$ are the points of interest. Draw the constraint $g(x,y) = 1.5$, or at least get as close as you can to the value $b=1.5$. Now move the $a$ slider back and forth to see which level curves of $f$ intersect the constraint curve $g(x,y) = 1.5$. Explain why the maximum production will occur when the graph of the constraint is tangent to a contour of $f$.
+
+
+
+\begin{comment}
+
+As we move the $a$ slider back and forth, we see that the values of $a$ for this the level curves of $f$ intersect the constraint $g$ all correspond to value of $a$ less than about 38. The level curves of $f$ with values less than 38 all intersect the constraint at two points, and the largest value of $a$ (and hence $f$) occurs when the level curve of $f$ intersects the constraint at only one point -- or when the level curve of $f$ is tangent to the constraint.
+
+
+
+\end{comment}
+
+
+    \item Now check the boxes Show grad f and Show grad g. You can then move the pink point around to see how the two gradients are related at various points in the plane. To find an optimal production value, we want to understand how $\nabla f$ is related to $\nabla g$ at the point of tangency.
+        \begin{enumerate}[i.]
+        \item In general, how are $\nabla f$ and $\nabla g$ related to the level curves of $f$ and $g$, respectively?
+
+
+
+\begin{comment}
+
+We have seen that the gradient of a function is always orthogonal to its level curves.
+
+
+\end{comment}
+
+        \item Explain then why $\nabla f$ and $\nabla g$ will be parallel at the point where the graph of the constraint is tangent to a level curve of $f$.
+
+
+
+\begin{comment}
+
+When the graph of the constraint is tangent to a level curve of $f$, then the two curves will have the same direction at this point. This implies any two vectors that are orthogonal to these level curves will have to be parallel at the point of tangency. So $\nabla f$ and $\nabla g$ will have to be parallel at the point of tangency.
+
+
+
+\end{comment}
+
+        \end{enumerate}
+    \ea
+\end{pa} \afterpa 

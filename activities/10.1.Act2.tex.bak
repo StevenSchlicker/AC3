@@ -1,0 +1,20 @@
+\begin{activity} \label{A:10.1.2} As a second example, let $f(x,y) = \frac{x}{\sqrt{x^2+y^2}}$. Determine if $f$ has a limit at $(0,0)$. Hint: Consider the behavior of $f$ along the simplest paths that contain $(0,0)$. A graph of $f$ is shown in Figure \ref{F:10.1.limit2}.
+\begin{figure}[ht]
+\begin{center}
+\resizebox{!}{2.5in}{\includegraphics{10_1_Limit2}}
+\end{center}
+\caption{A graph of $f(x,y)=\frac{x}{\sqrt{x^2+y^2}}$}
+\label{F:10.1.limit2}
+\end{figure}
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

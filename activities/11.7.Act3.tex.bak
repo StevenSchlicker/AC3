@@ -1,0 +1,52 @@
+\begin{activity} \label{A:11.7.3} Let $S$ be the solid cone bounded by $z = \sqrt{x^2+y^2}$ and $z=3$. A picture of $S$ is shown in Figure \ref{F:11.7.Cone_ex}. In this activity we set up an iterated integral of the form
+\begin{equation} \label{eq:11.7.TI_not_box}
+\int_?^? \int_?^? \int_?^? \delta(x,y,z) \, dz \, dy \, dx
+\end{equation}
+to represent the mass of $S$ if $\delta(x,y,z)$ tells us the density of $S$ at the point $(x,y,z)$. Our job is to find the limits on the integrals.
+\begin{figure}[ht]
+\begin{center}
+\begin{minipage}{2.5in}
+\begin{center}
+\resizebox{!}{2.4in}{\includegraphics[trim=0cm 1cm 0cm 1.5cm, clip]{11_7_Cone_ex}}
+\end{center}
+\caption{A cone.}
+\label{F:11.7.Cone_ex}
+\end{minipage} \hspace{0.5in}
+\begin{minipage}{2.5in}
+\begin{center}
+\resizebox{!}{2.4in}{\includegraphics{11_7_Cone_proj}}
+\end{center}
+\caption{The projection of the cone.}
+\label{F:11.7.Cone_proj}
+\end{minipage}
+\end{center}
+\end{figure}
+%crop graphics in animate trim=<left> <bottom> <right> <top>, clip with includegraphics
+
+\begin{exercise} 
+    \ba
+    \item What are the limits on $z$ in the innermost integral? A slice in the $z$ direction with $x$ and $y$ fixed is pictured in Figure \ref{F:11.7.Cone_ex}. Note that at least one of these limits is not constant but depends on $x$ and $y$.
+
+
+
+    \item The projection of the cone $S$ onto the $xy$-plane is shown in Figure \ref{F:11.7.Cone_proj}. What are the limits on the middle integral? Note that at least one of these limits is not constant and depends on $x$.
+
+
+
+    \item Write an iterated integral of the form (\ref{eq:11.7.TI_not_box}) that represents the mass of the cone $S$.
+
+
+
+    \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

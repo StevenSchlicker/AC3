@@ -1,0 +1,38 @@
+\begin{activity} \label{A:11.8.9} We can use spherical coordinates to derive the formula for the volume of a sphere of radius $a$.
+    \ba
+    \item How can we describe a sphere in spherical coordinates? (Hint: Refer to Activity \ref{A:11.8.7}, part (a).)
+
+
+
+    \item Use the result of (a) to set up and evaluate an iterated integral in spherical coordinates to find the volume of a sphere of radius $a$.
+
+
+
+\begin{comment}
+Recall that the volume of a solid $S$ is given by
+\[\int \int \int_S \, dV.\]
+In spherical coordinates, we can represent a sphere of radius $a$ by $0 \leq \rho \leq a$, $0 \leq \phi \leq \pi$, and $0 \leq \theta \leq 2\pi$. Thus, the volume of this sphere of radius $a$ can be calculated as an iterated integral as follows:
+\begin{align*}
+\int \int \int_S \, dV &= \int_0^{2\pi} \int_0^{\pi} \int_0^{a} \rho^2 \sin(\phi) \, d\rho \, d\phi \, d\theta \\
+	&= \int_0^{2\pi} \int_0^{\pi} \left[\frac{\rho^3}{3} \sin(\phi) \right]\biggm|_0^a  \, d\phi \, d\theta \\
+	&= \int_0^{2\pi} \int_0^{\pi} \frac{a^3}{3} \sin(\phi) \, d\phi \, d\theta \\
+	&= \int_0^{2\pi} \left[-\frac{a^3}{3} \cos(\phi)\right]\bigm|_0^{\pi} \, d\theta \\
+	&= \int_0^{2\pi} 2\frac{a^3}{3} \, d\theta \\
+	&= \frac{4}{3}\pi a^3.
+\end{align*}
+
+\end{comment}
+
+    \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

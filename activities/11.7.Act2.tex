@@ -1,0 +1,23 @@
+\begin{activity} \label{A:11.7.2} Evaluate the triple integral of $f(x,y,z) = x-y+2z$ over the box $B = [0,2] \times [1,4] \times [-2,3]$.
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+As an iterated integral we have
+\begin{align*}
+\int \int \int_B f(x,y,z) \, dV &= \int_{-2}^3 \int_1^4 \int_0^2 x-y+2z \, dz \, dy \, dx \\
+	&= \int_{-2}^3 \int_1^4 \left. \left[ (x-y)z+z^2\right] \right|_0^2 \, dy \, dx \\
+	&= \int_{-2}^3 \int_1^4 2(x-y)+4 \, dy \, dx \\
+	&= \int_{-2}^3 \left. \left[2xy-y^2+4y\right] \right|_1^4 \, dx \\
+	&= \int_{-2}^3 6x-3 \, dx \\
+	&= \left. \left[3x^2-3x\right] \right|_{-2}^3 \\
+	&= 0.
+\end{align*}
+\end{activitySolution}
+\aftera

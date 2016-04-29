@@ -1,0 +1,27 @@
+\begin{activity} \label{A:2.2.4} Let $f(x,y) = \sin(x)e^{-y}$. A graph of $f$ on the domain $[0,\pi] \times [-2,0]$ is shown in Figure \ref{F:PD_y}.
+    \ba
+	\item Run the animation in Figure \ref{F:PD_y}. Pick a frame and explain as best you can, and in as much detail as you can, what the difference quotient
+\[\frac{f(a,b+h) - f(a,b)}{h}\]
+represents, geometrically, for some appropriate value of $h$.
+
+
+
+    \item Now explain in as much detail as you can what you think the partial derivative
+\[\lim_{h \to 0} \frac{f(a,b+h) - f(a,b)}{h}\]
+represents, geometrically, in Figure \ref{F:PD_y}.
+
+
+
+  \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

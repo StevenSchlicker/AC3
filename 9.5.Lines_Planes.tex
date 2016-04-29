@@ -1,0 +1,361 @@
+
+\section{Lines and Planes in Space} \label{S:9.5.Lines_Planes}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+\item How are lines in $\R^3$ similar to and different from lines in $\R^2$?
+\item What is the role that vectors play in representing equations of lines, particularly in $\R^3$?
+\item How can we think of a plane as a set of points determined by a point and a vector?
+\item How do we find the equation of a plane through three given non-collinear points?
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+In single variable calculus, we learn that a differentiable function
+is \emph{locally linear} \index{locally linear}. In other words, if we
+zoom in on the graph of a differentiable function at a point, the
+graph looks like the tangent line to the function at that point.  In
+multivariable calculus, we will soon study curves in space;
+differentiable curves turn out to be locally linear as well.  In
+addition, as we study functions of two variables, we will see that
+such a function is locally linear at a point if the surface defined by
+the function looks like a plane (the tangent plane) as we zoom in on
+the graph.
+
+Consequently, it is important for us to understand both lines and
+planes in space.  We begin our work by considering some familiar ideas
+in $\R^2$ but from a new perspective.
+
+\input{previews/9.5.PA1}
+
+\subsection*{Lines in Space}
+In two-dimensional space, a non-vertical line is defined to be the set
+of points satisfying the equation
+\[y = mx + b,\] for some constants $m$ and $b$. The value of $m$ (the
+slope) tells us how the dependent variable changes for every one unit
+increase in the independent variable, while the point $(0,b)$ is the
+$y$-intercept and anchors the line to a location on the
+$y$-axis. Alternatively, we can think of the slope as being related to
+the vector $\langle 1, m \rangle$, which tells us the direction of the
+line, as shown on the left in Figure \ref{F:9.5.line}. Thus, we can
+identify a line in space by fixing a point $P$ and  
+a direction $\vv$, as shown on the right.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_9_5_line_slope.eps}
+    \caption{A vector description of a line}
+    \label{F:9.5.line}
+  \end{center}
+\end{figure}
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+  \parbox{6.25 in}{\begin{definition} \label{D:LineInSpace} A
+      \textbf{line}\index{line!in space} in space is the set of
+      terminal points of vectors emanating from a given point $P$ that are
+      parallel to a fixed vector $\vv$. \end{definition} } \hspace*{3 pt}}
+\vspace*{5pt}
+
+The fixed vector $\vv$ in the definition is called a
+\emph{direction vector}\index{line!direction vector} for the line. As
+we saw in Preview Activity~\ref{PA:9.5}, to find an equation for a
+line through point $P$ in the direction of vector $\vv$, observe that
+any vector parallel to $\vv$ will have the form $t \vv$ for some
+scalar $t$. So, any vector emanating from the point $P$ in a direction
+parallel to the vector $\vv$ will be of the form
+\begin{equation} \label{eq:9.5.lines_1}
+\overrightarrow{OP} + \vv t
+\end{equation}
+for some scalar $t$ (where $O$ is the origin).
+
+\begin{figure}[ht]
+\begin{center}
+%\begin{minipage}{2.5in}
+%\begin{center}
+%\resizebox{!}{2.4in}{\animategraphics[controls]{4}{9_5_L2_}{01}{10}}
+\resizebox{!}{1.25in}{\includegraphics{figures/fig_9_5_line_2d_01.eps}} \hspace{0.25in} \resizebox{!}{1.25in}{\includegraphics{figures/fig_9_5_line_2d_10.eps}} \hspace{0.25in} \resizebox{!}{1.25in}{\includegraphics{figures/fig_9_5_line_2d_20.eps}}  
+%\animategraphics[controls]{4}{figures/fig_9_5_line_2d_}{00}{25}
+%\end{center}
+\caption{A line in 2-space.}
+\label{F:9.5.Line_2D}
+%\end{minipage} \hspace{0.5in}
+%\begin{minipage}{2.5in}
+%\begin{center}
+%\resizebox{!}{2.4in}{\animategraphics[controls,trim=0.5cm 1.5cm 2.5cm 0.5cm]{4}{9_5_L3_}{01}{10}}
+%\animategraphics[controls]{4}{figures/fig_9_5_line_3d_}{00}{25}
+%\end{center}
+%\caption{A line in 3-space.}
+%\label{F:9.5.Line_3D}
+%\end{minipage}
+\end{center}
+\end{figure}
+
+
+Figure \ref{F:9.5.Line_2D} presents three images of a line in two-space in which we can identify the vector
+$\overrightarrow{OP}$ and the vector $t \vv$ as in Equation
+(\ref{eq:9.5.lines_1}).  Here, $\overrightarrow{OP}$ is the fixed
+vector shown in blue, while the direction vector $\vv$ is the vector
+parallel to the vector shown in green (that is, the green vector
+represents $t\vv$, and the line is traced out by the terminal points
+of the magenta vector). In other words, the tips (terminal points) of the magenta vectors (the vectors of the form $\overrightarrow{OP} + t\vv$) trace out the line as $t$ changes. 
+%\input{activities/9.5.Act1}
+
+In particular, the terminal points of the vectors of the form in
+(\ref{eq:9.5.lines_1}) define a linear function $\vr$ in space of the
+following form, which is valid in any dimension.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{The \textbf{vector form} of a line\index{line!vector equation} through the point $P$ in the direction of the vector $\vv$ is
+\begin{equation} \label{eq:9.5.line_vect}
+\vr(t) = \vr_0 + t\vv,
+\end{equation}
+where $\vr_0$ is the vector $\overrightarrow{OP}$ from the origin to
+the point $P$. 
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+Of course, it is common to
+represent lines in the plane using the slope-intercept equation $y=mx
++ b$.  The vector form of the line, described above, is an
+alternative way to represent lines that has the following two
+advantages.  First, in two dimensions, we are able to represent
+vertical lines, whose slope $m$ is not defined, using a vertical
+direction vector, such as $\vv=\langle 0, 1\rangle$.  Second, this
+description of lines works in any dimension even though
+there is no concept of the slope of a line in more than two dimensions.
+
+\begin{figure}[h]
+\begin{center}
+%\begin{minipage}{2.5in}
+%\begin{center}
+%\resizebox{!}{2.4in}{\animategraphics[controls]{4}{9_5_L2_}{01}{10}}
+\resizebox{!}{1.25in}{\includegraphics{figures/fig_9_5_line_3d_01.eps}} \hspace{0.25in} \resizebox{!}{1.25in}{\includegraphics{figures/fig_9_5_line_3d_10.eps}} \hspace{0.25in} \resizebox{!}{1.25in}{\includegraphics{figures/fig_9_5_line_3d_20.eps}}  
+%\animategraphics[controls]{4}{figures/fig_9_5_line_2d_}{00}{25}
+%\end{center}
+\caption{A line in 3-space.}
+\label{F:9.5.Line_3D}
+%\end{minipage} \hspace{0.5in}
+%\begin{minipage}{2.5in}
+%\begin{center}
+%\resizebox{!}{2.4in}{\animategraphics[controls,trim=0.5cm 1.5cm 2.5cm 0.5cm]{4}{9_5_L3_}{01}{10}}
+%\animategraphics[controls]{4}{figures/fig_9_5_line_3d_}{00}{25}
+%\end{center}
+%\caption{A line in 3-space.}
+%\label{F:9.5.Line_3D}
+%\end{minipage}
+\end{center}
+\end{figure}
+
+\input{activities/9.5.Act2}
+
+
+\subsection*{The Parametric Equations of a Line}
+
+The vector form of a line, $\vr(t) = \vr_0 + t\vv$ in
+Equation~(\ref{eq:9.5.line_vect}), describes a line as the set of
+terminal points of the vectors $\vr(t)$. If we write this in terms of
+components letting
+\[\vr(t) = \langle x(t), y(t), z(t) \rangle, \ \ \ \vr_0 = \langle x_0, y_0, z_0 \rangle, \ \ \ \text{ and } \ \ \ \vv = \langle a, b, c \rangle,\]
+then we can equate the components on both sides of $\vr(t) = \vr_0 +
+t\vv$ to obtain the equations
+\[x(t) = x_0 + at, \ \ \ \ \ y(t) = y_0 + bt, \ \ \ \ \ \text{ and } \ \ \ z(t) = z_0 +
+ct,\] which describe the coordinates of the points on the line. The
+variable $t$ represents an arbitrary scalar and is called a
+\emph{parameter}.  In particular, we use the following language.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+  \parbox{6.25 in}{The \textbf{parametric equations} for a
+    line\index{line!parametric equations} through the point $P = (x_0,
+    y_0, z_0)$ in the direction of the vector $\vv = \langle a,b,c
+    \rangle$ are
+\[x(t) = x_0 + at, \ \ \ \ \ y(t) = y_0 + bt, \ \ \ \ \ z(t) = z_0 + ct.\]
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+Notice that there are many different parametric equations for the same
+line.  For example, choosing another point $P$ on the line or
+another direction vector $\vv$ produces another set of parametric
+equations.  It is sometimes useful to think of $t$ as a time parameter
+and the parametric equations as telling us where we are on the line at
+each time.  In this way, the parametric equations describe a
+particular walk taken along the line; there are, of course,
+many possible ways to walk along a line.
+
+\input{activities/9.5.Act3} 
+
+
+% \subsection*{The Symmetric Equations of a Line}
+
+% So far, we have seen that a line can be represented parametrically, where the parameter's value enables us to locate various points along the line as the parameter changes.  In addition, we saw in Activity~\ref{A:9.5.2} that it a given line has more than one parameterization.  Next, we observe that in certain circumstances, we can describe a line in space through a different set of equations that are independent of a parameter.
+
+% In particular, if we assume that $a$, $b$, and $c$ are nonzero in the parametric equations of a given line, then we can solve each of the three equations for $t$ and obtain the \emph{symmetric equations} of the line
+% %\[\frac{x-x_0}{a} = \frac{y-y_0}{b} = \frac{z-z_0}{c}.\]
+% %If any one of $a$, $b$, or $c$ is 0, then the line is parallel to one of the coordinate planes. For example, if $a=0$ and $b$ and $c$ are %non-zero, then the line is in the plane $x=x_0$ and the symmetric equations for the line are
+% %\[\frac{y-y_0}{b} = \frac{z-z_0}{c} \ \text{ and } x = x_0.\]
+
+% \vspace*{5pt}
+% \nin \framebox{\hspace*{3 pt}
+% \parbox{6.25 in}{The \textbf{symmetric equations} for a line\index{line!symmetric equations} through the point $P = (x_0, y_0, z_0)$ in the direction of the vector $\vv = \langle a,b,c \rangle$ are
+% \[\frac{x-x_0}{a} = \frac{y-y_0}{b} = \frac{z-z_0}{c},\]
+% provided that $a$, $b$, and $c$ are not zero.
+% } \hspace*{3 pt}}
+% \vspace*{5pt}
+
+% For example, for the line $\mathcal{L}$ in Activity~\ref{A:9.5.2}, which passes through $P_1 = (1,2,-1)$ and $P_2=(-2,1,-2)$, which has parametric equations
+% $$x(t) = 1-3t, \ \ y(t) = 2-t, \ \ z(t) = -1-t,$$
+% the symmetric equations are 
+% $$\frac{x-1}{-3} = \frac{y-2}{-1} = \frac{z+1}{-1}.$$
+
+% %\input{activities/9.5.Act4}
+% %\input{activities/9.5.Act5}
+
+
+
+\subsection*{Planes in Space}
+
+Now that we have a way of describing lines, we would like to develop a means of describing planes in three dimensions.  We studied the coordinate planes and planes parallel to them in Section \ref{S:9.1.Functions}. Each of those planes had one of the variables $x$, $y$, or $z$ equal to a constant. We can note that any vector in a plane with $x$ constant is orthogonal to the vector $\langle 1,0,0 \rangle$, any vector in a plane with $y$ constant is orthogonal to the vector $\langle 0,1,0 \rangle$, and any vector in a plane with $z$ constant is orthogonal to the vector $\langle 0,0,1 \rangle$.  This idea works in general to define a plane. 
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+  \parbox{6.25 in}{\begin{definition} A
+      \textbf{plane}\index{plane!definition} $p$ in space is the set of
+      all terminal points of vectors emanating from a given point
+      $P_0$ perpendicular to a fixed vector $\vn$, as shown in Figure
+      \ref{F:9.5.plane.normal}. \end{definition} }
+  \hspace*{3 pt}} \vspace*{5pt} 
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_9_5_plane_normal.eps}
+    \caption{A point $P_0$ on a plane $p$ with a normal vector $\vn$}
+    \label{F:9.5.plane.normal}
+  \end{center}
+\end{figure}
+
+The definition allows us to find the equation of a plane. Assume that $\vn=\langle a,b,c\rangle$, $P_0 =
+(x_0, y_0, z_0)$, and that $P=(x,y,z)$ is an arbitrary point on the plane.
+Since the vector $\overrightarrow{PP_0}$ lies in
+the plane, it must be perpendicular to $\vn$.  This means that
+
+\begin{eqnarray*}
+  0 & = & \vn\cdot\overrightarrow{PP_0}  \\
+     & = & \vn\cdot \big(\langle x,y,z \rangle - \langle x_0, y_0,
+    z_0\rangle\big)  \\
+     &=& \vn \cdot \langle x-x_0, y-y_0, z-z_0 \rangle  \\
+     &=& a(x-x_0) + b(y-y_0) + c(z-z_0). \\
+\end{eqnarray*}
+
+The fixed vector $\vn$ perpendicular to the plane is frequently called
+a {\em normal vector} to the plane.  We may now summarize as follows.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+  \parbox{6.25 in}{The \textbf{scalar equation} of the
+    plane\index{plane!scalar equation} with normal vector $\vn =
+    \langle a,b,c \rangle$ containing the point $P_0 = (x_0, y_0,
+    z_0)$ is
+\begin{equation}\label{eq:9.5.plane_norm}
+a(x-x_0) + b(y-y_0) + c(z-z_0) = 0.
+\end{equation}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+We may take this a little further and note that since
+\begin{equation*}
+  a(x-x_0) + b(y-y_0) + c(z-z_0) = 0, 
+\end{equation*}
+it equivalently follows that
+\begin{equation*}
+  ax + by + cz = ax_0+by_0+cz_0.
+\end{equation*}
+That is, we may write the equation of a plane as $ax+by+cz = d$ where
+where $d = \vn\cdot\langle x_0,y_0,z_0\rangle$.  
+
+For instance, if we would like to describe the plane passing through
+the point $P_0=(4, -2,1)$ and perpendicular to the vector $\vn =
+\langle 1, 2, 1 \rangle$, we have
+$$
+  \langle 1,2,1 \rangle\cdot \langle x,y,z\rangle =
+  \langle 1,2,1 \rangle\cdot \langle 4,-2,1\rangle 
+$$
+or
+$$
+x + 2y + z = 1.
+$$
+
+Notice that the coefficients of $x$, $y$, and $z$ in this description
+give a vector perpendicular to the plane.  For instance, if we are
+presented with the plane
+$$
+-2x + y - 3z = 4,
+$$
+we know that $\vn = \langle -2, 1, -3\rangle$ is a vector
+perpendicular to the plane.
+  
+\input{activities/9.5.Act9}
+
+Just as two distinct points in space determine a line, three
+non-collinear points in space determine a plane.  
+% Alternatively, we
+% know that for a line, a single point and a direction vector suffice to
+% determine the line.  For a plane, we will see that a single point and
+% a \emph{normal vector} (that is, a vector perpendicular to the plane)
+% will fully characterize the plane.
+Consider three points $P_0$, $P_1$, and $P_2$ in space, not all lying
+on the same line as shown in Figure \ref{F:9.5.Plane}.
+\begin{figure}[ht]
+\begin{center}
+%\resizebox{!}{1.0in}{\includegraphics{9_5_Plane}}
+\includegraphics{fig_9_5_plane_3pts.eps}
+\end{center}
+\caption{A plane determined by three points $P_0$, $P_1$, and $P_2$}
+\label{F:9.5.Plane}
+\end{figure}
+% We would like to find an equation of the plane $p$ that contains these
+% points, and thus describes the set of all points on the plane.
+
+Observe that the vectors $\overrightarrow{P_0P_1}$ and
+$\overrightarrow{P_0P_2}$ both lie in the plane $p$.  
+If we form their cross-product
+$$\vn = \overrightarrow{P_0P_1} \times \overrightarrow{P_0P_2},$$
+we obtain a normal vector to the plane $p$.  
+Therefore, if $P$ is any other point on  $p$, it then follows that
+$\overrightarrow{P_0P}$ will be perpendicular to $\vn$, and we have,
+as before, the equation
+\begin{equation} \label{eq:9.5.plane_vect}
+\vn \cdot \overrightarrow{P_0P} = 0.
+\end{equation}
+
+%\input{activities/9.5.Act6}
+% Equation (\ref{eq:9.5.plane_vect}) is the \emph{vector form}\index{plane!vector form} of the equation of a plane, and further helps us to naturally characterize a plane. 
+% This equation also tells us that a plane is the set of terminal points of vectors from a fixed point that are perpendicular to the vector $\vn$ in \ref{eq:9.5.plane_vect}.
+
+% The fixed vector in the definition of a plane is called a \emph{normal vector}\index{plane!normal vector} to the plane; in Equation~(\ref{eq:9.5.plane_vect}), the vector $\vn$ is a normal vector.  If we let $P_0 = (x_0, y_0, z_0)$ and $\vn = \langle a, b, c \rangle$ be given, and let $P = (x,y,z)$ be an arbitrary point in the plane, then Equation~(\ref{eq:9.5.plane_vect}) tells us that
+% $$
+% \langle x-x_0, y-y_0, z-z_0 \rangle \cdot \langle a,b,c \rangle = 0.
+% $$
+% When we expand the dot product in this most recent equation, we get an important standard form of the equation of a plane.
+
+\input{activities/9.5.Act7}
+
+%We can use what we know about vectors and projections to find the distance from a point to a plane.
+
+%\input{activities/9.5.Act8}
+
+\begin{summary}
+\item While lines in $\R^3$ do not have a slope, like lines in $\R^2$ they can be characterized by a point and a direction vector.  Indeed, we define a line in space to be the set of terminal points of vectors emanating from a given point that are parallel to a fixed vector.
+\item Vectors play a critical role in representing the equation of a line.  In particular, the terminal points of the vector $\vr(t) = \vr_0 + t\vv$ define a linear function $\vr$ in space through the terminal point of the vector $\vr_0$ in the direction of the vector $\vv$, tracing out a line in space.
+\item A plane in space is the set of all terminal points of vectors emanating from a given point perpendicular to a fixed vector.
+\item If $P_1$, $P_2$, and $P_3$ are non-collinear points in space, the vectors $\overrightarrow{P_1P_2}$ and and $\overrightarrow{P_1P_3}$  are vectors in the plane and the vector $\vn = \overrightarrow{P_1P_2} \times \overrightarrow{P_1P_3}$ is a normal vector to the plane. So any point $P$ in the plane satisfies the equation $\overrightarrow{PP_1} \cdot \vn = 0$.  If we let $P = (x,y,z)$, $\vn = \langle a,b,c \rangle$ be the normal vector, and $P_1 = (x_0,y_0,z_0)$, we can also represent the plane with the equation
+$$a(x-x_0) + b(y-y_0) + c(z-z_0) = 0.$$
+\end{summary}
+
+\nin \hrulefill
+
+\input{exercises/9.5.Lines_Planes(Ex)}
+
+\clearpage

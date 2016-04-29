@@ -1,0 +1,263 @@
+\section{Limits} \label{S:10.1.Limits}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+  \item What do we mean by the limit of a function $f$ of two
+    variables at a point $(a,b)$?  
+  \item What techniques can we use to show that a function of two
+    variables does not have a limit at a point $(a,b)$? 
+  \item What does it mean for a function $f$ of two variables to be
+    continuous at a point $(a,b)$? 
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+In this section, we will study limits of
+  functions of several variables, with a focus on limits of functions
+  of two variables.   In single variable calculus, we studied the notion of limit, which turned out to be a critical
+concept that formed the basis for the derivative and the definite
+integral. In this section we will begin to understand how the concept
+of limit for functions of two variables is similar to what we
+encountered for functions of a single variable.
+The limit will again be the fundamental
+idea in multivariable calculus, and we will use this notion of the limit
+of a function of several variables to define the important concept of
+differentiability later in this chapter.  We have already seen its use in the derivatives of vector-valued functions in Section~\ref{S:9.7.Vector_Valued_Functions_Derivatives}.
+  
+  Let's begin by reviewing what we mean by the
+  limit of a function of one variable.  We say that a function $f$ has a limit $L$ as
+  $x$ approaches $a$ provided that we can make the values $f(x)$ as close to $L$ as we like
+  by taking $x$ sufficiently close (but not equal) to $a$.  We denote this behavior by writing
+  $$\lim_{x\to a}f(x) = L.$$
+
+\input{previews/10.1.PA3}
+
+\subsection*{Limits of Functions of Two Variables}
+
+In Preview Activity \ref{PA:10.1}, we recalled the notion of limit
+from single variable calculus and saw that a similar concept applies
+to functions of two variables.
+Though we will focus on functions of two variables, for the sake of
+discussion, all the ideas we establish here are valid for functions of
+any number of variables. In a natural followup to our work in Preview Activity \ref{PA:10.1},
+we now formally define what it means for a function of two variables to have a
+limit at a point.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+  \parbox{6.25 in}{
+    \begin{definition} Given a function $f = f(x,y)$, we say that $f$
+      {\em has limit $L$ as $(x,y)$ approaches $(a,b)$} provided that we can make
+      $f(x,y)$ as close to $L$ as we like by taking $(x,y)$
+      sufficiently close (but not equal) to $(a,b)$.  We write 
+      $$
+      \lim_{(x,y)\to(a,b)} f(x,y) = L.
+      $$
+    \end{definition}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+To investigate the limit of a single variable function, $\lim_{x\to
+  a}f(x)$, we often consider the behavior of $f$ as $x$ approaches
+$a$ from the right and from the left.  Similarly, we may investigate
+limits of two-variable functions, $\lim_{(x,y)\to(a,b)} f(x,y)$ by
+considering the behavior of $f$ as $(x,y)$ approaches $(a,b)$ from
+various directions.  This situation is more complicated because there
+are infinitely many ways in which $(x,y)$ may approach $(a,b)$.  In the next activity, we
+see how it is important to consider a variety of those paths in investigating whether or not a limit exists.
+
+\input{activities/10.1.Act1}
+
+As we have seen in Activity \ref{A:10.1.1}, if we approach $(a,b)$
+along two different paths and find that $f(x,y)$ has two different
+limits, we can conclude that $\lim_{(x,y)\to(a,b)}f(x,y)$ does not
+exist.  This is similar
+to the one-variable example $f(x)=x/|x|$ as shown in
+\ref{F:10.1.one.variable}; 
+$\lim_{x\to0}f(x)$ does not exist because we see different limits as
+$x$ approaches 0 from the left and the right.
+
+  \begin{figure}[ht]
+    \begin{center}
+      \includegraphics{figures/fig_10_1_activity_2.eps}
+      \caption{The graph of $g(x) = \frac{x}{|x|}$.}
+      \label{F:10.1.one.variable}
+    \end{center}
+  \end{figure}
+
+As a general rule, we have 
+
+\vspace*{5pt}
+\nin 
+\framebox{
+  \hspace*{3 pt}
+  \parbox{6.25 in}{ 
+    If $f(x,y)$ has two different limits as $(x,y)$ approaches $(a,b)$
+    along two different paths, then $\lim_{(x,y)\to(a,b)}f(x,y)$ does
+    not exist.
+  }
+  \hspace*{3 pt}
+} \vspace*{5pt}
+
+As the next activity shows, studying the limit of a two-variable function
+$f(x,y)$ by considering the behavior of $f$ along various paths can require subtle insights. 
+
+\input{activities/10.1.Act2}
+
+This activity shows that we need to be careful when studying the limit
+of a two-variable functions by considering its behavior along
+different paths.  If we find two
+different paths that result in two different limits, then we may
+conclude that the limit does not exist.  However, we can never
+conclude that the limit of a function exists only by considering its
+behavior along different paths.
+
+Generally speaking, concluding that a limit
+$\lim_{(x,y)\to(a,b)}f(x,y)$ exists requires a more careful
+argument.  For example, let's consider the function
+$$
+f(x,y) = \frac{x^2y^2}{x^2+y^2}
+$$
+and ask whether $\lim_{(x,y)\to(0,0)}f(x,y)$ exists.
+
+Note that if either $x$ or $y$ is 0, then $f(x,y) = 0$. Therefore, if
+$f$ has a limit at $(0,0)$, it must be 0.  We will therefore argue
+that
+$$
+\lim_{(x,y)\to(0,0)}f(x,y) = 0,
+$$
+by showing that we can make $f(x,y)$ as close to $0$ as we wish by taking $(x,y)$ sufficiently close (but not equal) to $(0,0)$.  In what follows, we view $x$ and $y$ as being real numbers that are close, but not equal, to 0.
+
+Since $0 \leq x^2$, we have 
+$$
+y^2 \leq x^2+y^2,
+$$
+which implies that
+$$\frac{y^2}{x^2+y^2} \leq 1.$$
+Multiplying both sides by $x^2$ and observing that $f(x,y) \ge 0$ for all $(x,y)$ gives
+$$
+0\leq f(x,y) = \frac{x^2y^2}{x^2+y^2} =
+x^2\left(\frac{y^2}{x^2+y^2}\right) \leq x^2.
+$$
+This shows that we can make $f(x,y)$ as close to $0$ as we like
+by taking $x$ sufficiently close to $0$ (for this example, it turns out that we don't even need to worry about making $y$ close to 0).  Therefore,
+$$
+\lim_{(x,y) \to (0,0)} \frac{x^2y^2}{x^2+y^2} = 0.
+$$
+
+In spite of the fact that these two most recent examples 
+illustrate some of the complications that arise when studying limits
+of two-variable functions, many of the properties that are familiar
+from our study of single variable functions hold in precisely the same
+way.  For instance, 
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{
+  \textbf{Properties of Limits.} Let $f(x,y)$ and $g(x,y)$ be
+  functions so that $\ds \lim_{(x,y) \to
+    (a,b)} f(x,y)$ and $\ds \lim_{(x,y) \to (a,b)} g(x,y)$ both
+  exist. Then
+\begin{enumerate}
+  \item $\ds \lim_{(x,y)\to(a,b)} x = a$ \ \ \ and \ \ \ $\ds \lim_{(x,y)\to(a,b)}
+    y = b$.
+\item $\ds \lim_{(x,y) \to (a,b)} cf(x,y) = c\left(\lim_{(x,y) \to (a,b)}
+  f(x,y)\right)$ for any scalar $c$, 
+\item $\ds \lim_{(x,y) \to (a,b)} [f(x,y)\pm g(x,y)] = \lim_{(x,y) \to
+    (a,b)} f(x,y) \pm \lim_{(x,y) \to (a,b)} g(x,y)$, 
+%\item $\ds \lim_{(x,y) \to (a,b)} [f(x,y)-g(x,y)] = \lim_{(x,y) \to
+ %   (a,b)} f(x,y) - \lim_{(x,y) \to (a,b)} g(x,y)$, 
+\item $\ds \lim_{(x,y) \to (a,b)} [f(x,y) \cdot g(x,y)] = \left(\lim_{(x,y) \to
+    (a,b)} f(x,y)\right) \cdot \left(  \lim_{(x,y) \to (a,b)} g(x,y)\right)$, 
+\item $\ds \lim_{(x,y) \to (a,b)} \frac{f(x,y)}{g(x,y)} =
+  \frac{\lim_{(x,y) \to (a,b)} f(x,y)}{\lim_{(x,y) \to (a,b)} g(x,y)}$
+ \ \ \ if \ \ \ $\ds \lim_{(x,y) \to (a,b)} g(x,y) \neq 0$. 
+\end{enumerate}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+We can use these properties and results from single variable calculus
+to verify that many limits exist. For example, these properties show
+that the function $f$ 
+defined by 
+$$
+f(x,y) = 3x^2y^3 + 2xy^2 - 3x + 1
+$$ 
+has a limit at every point $(a,b)$ and, moreover, 
+$$
+\lim_{(x,y)\to(a,b)} f(x,y) = f(a,b).
+$$
+The reason for this is that polynomial functions of a single variable have limits at every point. 
+
+\subsection*{Continuity}
+
+Recall that a function $f$ of a single variable $x$ is said to be
+continuous at 
+$x=a$ provided that the following three conditions are satisfied: 
+\begin{enumerate}
+  \item $f(a)$ exists,
+  \item $\lim_{x\to a}f(x)$ exists, and 
+  \item $\lim_{x\to a}f(x)=f(a)$.
+\end{enumerate}
+Using our understanding of limits of multivariable functions, we can
+define continuity in the same way. 
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{
+  \begin{definition} A function $f(x,y)$ 
+    is \textbf{continuous}\index{continuity} at the point $(a,
+    b)$ provided that
+    \begin{enumerate}
+    \item $f$ is defined at the point $(a, b)$,
+    \item $\ds \lim_{(x,y) \to (a,b)} f(x,y)$ exists, and
+    \item $\ds \lim_{(x,y) \to (a,b)} f(x,y) = f(a,b)$.
+    \end{enumerate}
+  \end{definition}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+For instance, we have seen that the function $f(x,y) = 3x^2y^3 + 2xy^2
+- 3x + 1$ is continous at every point.  And just as with single variable functions, continuity has certain
+properties that are based on the properties of limits. 
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\textbf{Properties of Continuity.} Let $f$ and
+  $g$ be functions of two variables that are continuous at the point $(a,b)$. Then 
+  \begin{enumerate}
+  \item $cf$ is continuous at $(a,b)$ for any scalar $c$
+  \item $f+g$ is continuous at $(a,b)$
+  \item $f-g$ is continuous at $(a,b)$
+  \item $fg$ is continuous at $(a,b)$
+  \item $\frac{f}{g}$ is continuous at $(a,b)$ if $g(a,b) \neq 0$
+  \end{enumerate}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+Using these properties, we can apply results from single variable calculus
+to decide about continuity of multivariable functions. For example, the coordinate functions $f$ and $g$ defined by $f(x,y) = x$ and $g(x,y) = y$ are continuous at every point. We can then use properties of continuity listed to conclude that every polynomial function in $x$ and $y$ is continuous at every point. For example, $g(x,y)=x^2$ and $h(x,y)=y^3$ are continuous functions, so their product $f(x,y) = x^2y^3$ is a continuous multivariable function. 
+
+
+\begin{summary}
+\item A function $f = f(x,y)$ has a limit $L$ at a point $(a,b)$ provided that we
+  can make $f(x,y)$ as close to $L$ as we like by taking $(x,y)$
+  sufficiently close (but not equal) to $(a,b)$.  
+\item If $(x,y)$ has two different limits as $(x,y)$ approaches
+  $(a,b)$ along two different paths, we can conclude that
+  $\lim_{(x,y)\to(a,b)}f(x,y)$ does not exist.
+\item Properties similar to those for one-variable functions allow us
+  to conclude that many limits exist and to evaluate them.
+\item A function $f = f(x,y)$ is continuous at a point $(a,b)$ in its
+  domain if $f$ has a limit at $(a,b)$ and 
+\[f(a,b) = \lim_{(x,y) \to (a,b)} f(x,y).\] 
+\end{summary}
+
+
+
+\nin \hrulefill
+
+\input{exercises/10.1.Limits(Ex)}
+
+\clearpage

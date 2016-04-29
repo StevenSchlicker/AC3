@@ -1,0 +1,150 @@
+\begin{exercises} 
+
+\item The Cobb-Douglas production function\index{Cobb-Douglas production function} is used in economics to model production levels based on labor and equipment. Suppose we have a specific Cobb-Douglas function of the form
+\[f(x, y) = 50 x^{0.4}y^{0.6},\]
+where $x$ is the dollar amount spent on labor and $y$ the dollar amount spent on equipment. Use the method of Lagrange multipliers to determine how much should be spent on labor and how much on equipment to maximize productivity if we have a total of \$1.5 million dollars to invest in labor and equipment. 
+
+\begin{exerciseSolution}
+To find the values of $\lambda$ that satisfy $\nabla f = \lambda \nabla g$ for our Cobb-Douglas function, we calculate both $\nabla f$ and $\nabla g$. Now
+\[\nabla f = \frac{20y^{0.6}}{x^{0.6}} \vi + \frac{30x^{0.4}}{y^{0.4}} \vj \ \ \ \ \text{ and } \ \ \ \ \nabla g = \vi + \vj,\]
+so we need a value of $\lambda$ so that
+\[\frac{20y^{0.6}}{x^{0.6}} \vi + \frac{30x^{0.4}}{y^{0.4}} \vj = \lambda(\vi + \vj).\]
+Equating components and the original constraint give us the three equations
+\begin{align}
+20y^{0.6} &= \lambda x^{0.6} \label{eq:10.8.lag_ex1} \\
+30x^{0.4} &= \lambda y^{0.4} \label{eq:10.8.lag_ex2} \\
+x+y &= 1.5 \label{eq:10.8.lag_ex3}
+\end{align}
+in the three unknowns $x$, $y$, and $\lambda$. Dividing both sides of (\ref{eq:10.8.lag_ex1}) by the corresponding sides of (\ref{eq:10.8.lag_ex2}) yields
+\begin{align}
+\frac{2}{3} \frac{y^{0.6}}{x^{0.4}} &= \frac{x^{0.6}}{y^{0.4}} \notag \\
+\frac{2}{3} y &= x \label{eq:10.8.lag_ex4}
+\end{align}
+Substituting into (\ref{eq:10.8.lag_ex3}) gives us
+\[\frac{2}{3}y + y = 1.5\]
+or
+\[y = \frac{9}{10}.\]
+Then $x = \frac{3}{5}$ and $\lambda \approx 25.51$. Therefore we maximize our output when we spend \$0.6 million on labor and \$0.9 million on equipment. 
+
+\end{exerciseSolution}
+
+\item Use the method of Lagrange multipliers to find the point on the line 
+  $x-2y=5$ that is closest to the point $(1,3)$.  To do so, respond to the following prompts.
+  \ba
+  \item Write the function $f=f(x,y)$ that measures the {\em square} of
+    the distance from $(x,y)$ to $(1,3)$.  (The extrema of this
+    function are the same as the extrema of the distance function, but
+    $f(x,y)$ is simpler to work with.)
+  \item What is the constraint $g(x,y) = c$?
+  \item Write the equations resulting from $\nabla f = \lambda \nabla
+    g$ and the constraint.  Find all the points
+    $(x,y)$ satisfying these equations.
+  \item Test all the points you found to determine the extrema.
+
+    \ea
+
+\begin{exerciseSolution}
+  \ba
+  \item The square of the distance from $(x,y)$ to $(1,3)$ is given by $f(x,y) = (x-1)^2 + (y-3)^2$.
+  \item The constraint is that the point $(x,y)$ lies on the line $x-2y=5$, so $g(x,y) = x-2y$. 
+  \item Since $\nabla f = \langle 2(x-1) + 2(y-3)$ and $\nabla g = \langle 1, -2 \rangle$, the equations resulting from $\nabla f = \lambda \nabla
+    g$ and the constraint are 
+\begin{align*}
+2(x-1) &= \lambda \\
+2(y-3) &= -2\lambda \\
+x-2y &= 5.
+\end{align*}
+Substituting $2(x-1)$ for $\lambda$ in the second equation yields $2(y-3) = -4(x-1)$ or $4x+2y=10$. Adding corresponding sides of this new equation with the third equation gives us $5x = 15$ or $x=3$. Then $y = -1$. 
+  \item This single critical point gives us an extreme distance of $\sqrt{f(3,-1)} = \sqrt{20}$. This is the only extreme value and points on the plane can be found as far as possible from the point $(1,3)$, we have found the minimum distance.
+
+    \ea
+\end{exerciseSolution}
+
+\item Apply the Method of Lagrange Multipliers solve each of the following constrained optimization problems.
+	\ba
+		\item Determine the absolute maximum and absolute minimum values of $f(x,y) = (x-1)^2 + (y-2)^2$ subject to the constraint that $x^2 + y^2 = 16$. 
+		\item Determine the points on the sphere $x^2 + y^2 + z^2 = 4$ that are closest to and farthest from the point $(3,1,-1)$.  (As in the preceding exercise, you may find it simpler to work with the square of the distance formula, rather than the distance formula itself.)
+		\item Find the absolute maximum and minimum of $f(x,y,z) = x^2 + y^2 + z^2$ subject to the constraint that $(x-3)^2 + (y+2)^2 + (z-5)^2 \le 16$.  (Hint: here the constraint is a closed, bounded region.  Use the boundary of that region for applying Lagrange Multipliers, but don't forget to also test any critical values of the function that lie in the interior of the region.)
+	\ea	
+ 
+ \begin{exerciseSolution}
+	\ba
+		\item Here we have $g(x,y) = x^2+y^2$, so the system of equations resulting from $\nabla f = \lambda \nabla g$ and the constraint is
+\begin{align*}
+2(x-1) &= 2\lambda x \\
+2(y-2) &= 2\lambda y \\
+x^2 + y^2 &= 16.
+\end{align*}
+Dividing corresponding sides of the first equation by the second shows that $\frac{x-1}{y-2} = \frac{x}{y}$ or $(x-1)y = x(y-2)$. Simplifying yields $y=2x$. Substituting into the constraint equation gives us $x^2+4x^2 = 16$ or $x = pm \frac{4}{\sqrt{5}}$. Checking the values of $f$ at these critical points we see that 
+\begin{align*}
+f\left(\frac{4}{\sqrt{5}}, \frac{8}{\sqrt{5}}\right) &= 21-8\sqrt{5} \approx 3.11 \\
+f\left(-\frac{4}{\sqrt{5}}, -\frac{8}{\sqrt{5}}\right) &= 21+8\sqrt{5} \approx 38.89.
+\end{align*}
+So the maximum value of $f$ subject to this constraint is $21+8\sqrt{5}$ and occurs at the point $\left(\frac{4}{\sqrt{5}}, \frac{8}{\sqrt{5}}\right)$ while the minimum value is $21-8\sqrt{5}$ and occurs at $\left(-\frac{4}{\sqrt{5}}, -\frac{8}{\sqrt{5}}\right)$.
+
+		\item The square of the distance from $(x,y,z)$ to $(3,1,-1)$ is given by $f(x,y) = (x-3)^2 + (y-1)^2 + (z+1)^2$. The constraint is $g(x,y) = x^2+y^2+z^2=4$. The equations resulting from $\nabla f = \lambda \nabla g$ and the constraint are  
+\begin{align*}
+2(x-3) &= 2\lambda x \\
+2(y-1) &= 2\lambda y \\
+2(z+1) &= 2\lambda z \\
+x^2+y^2+z^2 &= 4.
+\end{align*}
+Dividing corresponding sides of the first equation by the second shows that $\frac{x-3}{y-1} = \frac{x}{y}$ or $(x-3)y = x(y-1)$. Simplifying yields $x=3y$. Dividing corresponding sides of the second equation by the third shows that $\frac{y-1}{z+1} = \frac{y}{z}$ or $(y-1)z = y(z+1)$. Simplifying yields $z=-y$. Substituting into the constraint equation gives us $11y^2=4$ or $y = \pm \frac{2}{\sqrt{11}}$. Checking the values of $f$ at these critical points we see that 
+\begin{align*}
+f\left(\frac{6}{\sqrt{11}}, \frac{2}{\sqrt{11}}, -\frac{2}{\sqrt{11}} \right) &= 15-4\sqrt{11} \approx 1.73 \\
+f\left(-\frac{6}{\sqrt{11}}, -\frac{2}{\sqrt{11}}, \frac{2}{\sqrt{11}} \right) &= 15+4\sqrt{11} \approx 28.27.
+\end{align*}
+
+So the point on the sphere closest to $(3,1,-1)$ is $\left(\frac{6}{\sqrt{11}}, \frac{2}{\sqrt{11}}, -\frac{2}{\sqrt{11}} \right)$ and the point on the sphere farthest from $(3,1,-1)$ is $\left(-\frac{6}{\sqrt{11}}, -\frac{2}{\sqrt{11}}, \frac{2}{\sqrt{11}} \right)$. 
+
+		\item First we find the critical points of $f$ inside the sphere. We have $\nabla f = 0$ when 
+\[2x = 0, \ 2y = 0, \ \text{ and } \ 2z = 0,\]
+yielding the single critical point $(0,0,0)$. Next we determine the critical points of $f$ on the boundary of the sphere $(x-3)^2 + (y+2)^2 + (z-5)^2 \le 16$, using the constraint $g(x,y,z) = (x-3)^2 + (y+2)^2 + (z-5)^2 = 16$. The equations resulting from $\nabla f = \lambda \nabla g$ and the constraint are  
+\begin{align*}
+2x &= 2\lambda (x-3) \\
+2y &= 2\lambda (y+2) \\
+2z &= 2\lambda (z-5) \\
+(x-3)^2 + (y+2)^2 + (z-5)^2 &= 16.
+\end{align*}
+Dividing corresponding sides of the first equation by the second shows that $\frac{x}{y} = \frac{x-3}{y+2}$ or $x(y+2)=y(x-3)$. Simplifying yields $x=-\frac{3}{2}y$. Dividing corresponding sides of the second equation by the third shows that $\frac{y}{z}=\frac{y+2}{z-5}$ or $y(z-5) = z(y+2)$. Simplifying yields $z=-\frac{5}{2}y$. Substituting into the constraint equation gives us $\frac{19}{2}y^2+38y+38=16$. The quadratic formula reveals that $y = -2 \pm \frac{4}{19} \sqrt{38}$. Checking the values of $f$ at these critical points we see that 
+\begin{align*}
+f\left(-\frac{3}{2}\left(-2 +\frac{4}{19} \sqrt{38}\right), -2 + \frac{4}{19} \sqrt{38}, -\frac{5}{2}\left(-2 +\frac{4}{19} \sqrt{38}\right) \right) &= 54-8\sqrt{38} \approx 4.68 \\
+f\left(-\frac{3}{2}\left(-2 -\frac{4}{19} \sqrt{38}\right), -2 - \frac{4}{19} \sqrt{38}, -\frac{5}{2}\left(-2 -\frac{4}{19} \sqrt{38}\right)  \right) &= 54+8\sqrt{38} \approx 103.32 \\
+f(0,0,0) &= 0.
+\end{align*}
+
+So the absolute maximum value of $f$ on the domain $(x-3)^2 + (y+2)^2 + (z-5)^2 \le 16$ is $54+8\sqrt{38}$ and the absolute minimum value is 0.  
+
+	\ea	
+\end{exerciseSolution}
+
+\item There is a useful interpretation of the Lagrange multiplier $\lambda$. Assume that we want to optimize a function $f$ with constraint $g(x,y)=c$. Recall that an optimal solution occurs at a point $(x_0, y_0)$ where $\nabla f = \lambda \nabla g$. As the constraint changes, so does the point at which the optimal solution occurs. So we can think of the optimal point as a function of the parameter $c$, that is $x_0 = x_0(c)$ and $y_0=y_0(c)$. The optimal value of $f$ subject to the constraint can then be considered as a function $f(x_0(c), y_0(c))$ of $c$. The Chain Rule shows that 
+\[\frac{df}{dc} = \frac{\partial f}{\partial x_0} \frac{dx_0}{dc} + \frac{\partial f}{\partial y_0} \frac{dy_0}{dc}.\]
+	\ba
+	\item Use the fact that $\nabla f = \lambda \nabla g$ at $(x_0,y_0)$ to explain why  
+\[\frac{df}{dc} = \lambda \frac{dg}{dc}.\]
+	\item Use the fact that $g(x,y) = c$ to show that 
+	\[\frac{df}{dc} = \lambda.\]
+Conclude that $\lambda$ tells us the rate of change of the function $f$ as the parameter $c$ increases (or by approximately how much the optimal value of the function $f$ will change if we increase the value of $c$ by 1 unit). 
+\item Suppose that $\lambda = 324$ at the point where the package described in Preview Activity~\ref{PA:10.8} has its maximum volume. Explain in context what the value $324$ tells us about the package.
+	\ea
+	
+\begin{exerciseSolution} 
+\ba
+\item The Chain Rule shows that 
+\begin{align*}
+\frac{df}{dc} &= \frac{\partial f}{\partial x_0} \frac{dx_0}{dc} + \frac{\partial f}{\partial y_0} \frac{dy_0}{dc} \\
+	&= \left(\lambda \frac{\partial g}{\partial x_0} \right) \frac{dx_0}{dc} + \left(\lambda \frac{\partial g}{\partial y_0} \right) \frac{dy_0}{dc} \\
+	&= \lambda \left(\frac{\partial g}{\partial x_)} \frac{dx_)}{dc} + \frac{\partial g}{\partial y_0} \frac{dy_0}{dc} \right) \\
+	&= \lambda \frac{dg}{dc}.
+\end{align*}
+\item Since $g(x,y)=c$, we have $\frac{dg}{dc} = 1$. So 
+\[\frac{df}{dc}	= \lambda \frac{dg}{dc} = \lambda.\]
+\item  If we could increase the girth plus the length by 1 inch, the maximum volume of our package will increase by approximately 324 cubic inches.
+\ea
+\end{exerciseSolution}
+
+
+
+\end{exercises}
+\afterexercises

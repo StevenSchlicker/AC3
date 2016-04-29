@@ -1,0 +1,27 @@
+\begin{activity} \label{A:10.4.4} Let $f$ represent the vertical displacement in centimeters from the rest position of a string (like a guitar string) as a function of the distance $x$ in centimeters from the fixed left end of the string and $y$ the time in seconds after the string has been plucked.\footnote{An interesting video of this can be seen at \url{https://www.youtube.com/watch?v=TKF6nFzpHBUA}.} A simple model for $f$ could be
+\[f(x,y) = \cos(x)\sin(2y).\]
+Use the differential (\ref{eq:10.4.differential}) to approximate how much more this vibrating string is vertically displaced from its position at $(a,b) = \left(\frac{\pi}{4}, \frac{\pi}{3} \right)$ if we decrease $a$ by $0.01$ cm and increase the time by $0.1$ seconds. Compare to the value of $f$ at the point $\left(\frac{\pi}{4}-0.01, \frac{\pi}{3}+0.1\right)$.
+
+
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+First note that
+\[\frac{\partial f}{\partial x} = -\sin(x)\sin(2y) \ \ \text{ and } \ \ \frac{\partial f}{\partial y} = 2\cos(x)\cos(2y)\]
+and
+\[f_x\left(\frac{\pi}{4}, \frac{\pi}{3}\right) = -\sin\left(\frac{\pi}{4}\right)\sin\left(\frac{2\pi}{3}\right) = -\frac{\sqrt{6}}{4} \ \ \text{ and } \ \ f_y\left(\frac{\pi}{4}, \frac{\pi}{3}\right) = 2\cos\left(\frac{\pi}{4}\right)\cos\left(\frac{2\pi}{3}\right) = -\frac{\sqrt{2}}{2}.\]
+
+So with $dx = -0.01$ and $dy = 0.1$ we have 
+\[df = f_x(a,b)(-0.01) + f_y(a,b)(y-b) = -\frac{\sqrt{6}}{4}(-0.01) - \frac{\sqrt{2}}{2}(0.1) \approx -0.065.\]
+So the string is vertically displaced approximately $-0.064$ centimeters from its position at $(a,b)$. Comparing to the exact displacement
+\[f(a,b) - f(a-0.01, b+0.1) \approx 0.077,\]
+we see that our approximation is off by about $0.01$.
+\end{activitySolution}
+\aftera

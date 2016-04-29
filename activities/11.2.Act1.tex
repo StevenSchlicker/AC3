@@ -1,0 +1,47 @@
+\begin{activity} \label{A:11.2.1} Let $f(x,y) = 25-x^2-y^2$ on the rectangular domain $R = [-3,3] \times [-4,4]$.
+	\ba
+	\item Viewing $x$ as a fixed constant, use the Fundamental Theorem of Calculus to evaluate the integral 
+	\[A(x) = \int_{-4}^4 f(x,y) \, dy.\]
+Note that you will be integrating with respect to $y$, and holding $x$ constant.  Your result should be a function of $x$ only.
+
+	\item Next, use your result from (a) along with the Fundamental Theorem of Calculus to determine the value of $\ds \int_{-3}^3 A(x) \, dx$.
+		
+	\item What is the value of $\ds \iint_R f(x,y) \, dA$? What are two different ways we may interpret the meaning of this value?
+	
+	\ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+	\ba
+	\item Treating $x$ as a constant we have 
+\begin{align*}
+A(x) &= \int_{-4}^4 f(x,y) \, dy \\
+	&= \int_{-4}^4 25-x^2-y^2 \, dy \\
+	&= \left. \left[ (25-x^2)y - \frac{y^3}{3} \right] \right|_{-4}^4 \\
+	&= 8(25-x^2) - \frac{128}{3} \\
+	&= \frac{472}{3} - 8x^2.
+\end{align*}
+
+	\item Then
+\begin{align*}
+\int_{-3}^3 A(x) \, dx &= \int_{-3}^3 \frac{472}{3} - 8x^2 \, dx \\
+	&= \left. \left[ \frac{472}{3}x - \frac{8}{3}x^3 \right] \right|_{-3}^3 \\
+	&= 944 - 144 \\
+	&= 800.
+\end{align*}
+	
+	\item Using the results of parts (a) and (b) we have 
+\[\iint_R f(x,y) \, dA = \int_{-3}^3 \int_{-4}^4 f(x,y) \, dy \, dx = 800.\]
+Since $f(x,y) \geq 0$ on $R$, this result tells us that the volume of the solid bounded above the graph of $f$ and below by the rectangle $R$ is 800. The area of $R$ is 48, so this result also tells us that the average value of $f$ on $R$ is $\frac{800}{48}$. 
+	
+	
+	
+	\ea
+\end{activitySolution}
+\aftera

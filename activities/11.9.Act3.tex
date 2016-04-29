@@ -1,0 +1,36 @@
+\begin{activity} \label{A:11.9.3} Consider the problem of finding the area of the region $D'$ defined by the ellipse $x^2 + \frac{y^2}{4} = 1$. Here we will make a change of variables so that the pre-image of the domain is a circle.
+	\ba
+	\item Let $x(s,t) = s$ and $y(s,t) = 2t$. Explain why the pre-image of the original ellipse (which lies in the $xy$ plane)   is the circle $s^2 + t^2 = 1$ in the $st$-plane.
+	
+	\item Recall that the area of the ellipse $D'$ is determined by the double integral $\ds \iint_{D'} 1 \, dA$. Explain why
+	\[\iint_{D'} 1 \, dA = \iint_{D} 2 \, ds \, dt\]
+	where $D$ is the disk bounded by the circle $s^2 + t^2 = 1$.  In particular, explain the source of the ``2'' in the $st$ integral.
+	
+	\item Without evaluating any of the integrals present, explain why the area of the original elliptical region $D'$ is $2\pi$.
+
+	
+
+	\ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+	\ba
+	\item Substituting $s$ for $x$ and $2t$ for $y$ in our ellipse equation gives us
+\[1 = x^2 + \frac{y^2}{4} = s^2 + \frac{(2t)^2}{4} = s^2 + t^2.\]
+So the pre-image of the the ellipse in the $st$-plane is the circle $s^2 + t^2 = 1$.
+	
+	\item This is just asking us to find the Jacobian
+\[\left|\frac{\partial(x,y)}{\partial(s,t)}\right| = \left|\frac{\partial x}{\partial s} \frac{\partial y}{\partial t} - \frac{\partial x}{\partial t} \frac{\partial y}{\partial s}\right| = |(1)(2) - (0)(0)| = 2.\]
+	
+	\item We know that $D'$ is a circle of radius 1 and so has area $\pi$. Therefore, 
+\[\iint_D 1 \, dA = \iint_{D'} 2 \, ds \, dt = 2\iint_{D'}  \, ds \, dt = 2\pi.\]
+
+	\ea
+\end{activitySolution}
+\aftera

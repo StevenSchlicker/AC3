@@ -1,0 +1,81 @@
+\begin{activity} \label{A:10.8.1} A cylindrical soda can holds
+  about 355 cc of liquid. In this activity, we want to find the
+  dimensions of such a can that will minimize the surface area.  
+\ba
+    \item What are the variables in this problem? What restriction(s),
+      if any, are there on these variables? 
+
+    \item What quantity do we want to optimize in this problem? What
+      equation describes the constraint? 
+
+    \item Find $\lambda$ and the values of your variables that satisfy
+      Equation (\ref{eq:10.8.Lagrange_ex1}) in the context of this
+      problem. 
+
+    \item Determine the dimensions of the pop can that give the
+      desired solution to this constrained optimization problem. 
+
+
+    \ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+\ba
+\item Assume the pop can is cylindrical. Let $r$ by the radius and $h$ the height of the can. The volume $V$ of the can is constant at 355 cc of liquid. The radius and height can be any positive numbers as long as the volume is 355.
+
+\item We want to minimize the surface area $A$ of the can, where
+\[A(r,h) = 2\pi r^2 + 2\pi r h.\]
+The volume of the can is $V(r,h) = \pi r^2 h$, so our constraint is
+\[355 = V(r,h) = \pi r^2 h.\]
+
+\item To solve this constrained optimization problem, we need to find the values of $\lambda$, $r$, and $h$ that satisfy
+\begin{align*}
+\nabla A &= \lambda \nabla V \\
+\left\langle 4\pi r + 2\pi h, 2 \pi r \right\rangle &= \lambda \left\langle 2\pi rh, \pi r^2 \right\rangle.
+\end{align*}
+So we have to solve the equations
+\begin{align*}
+\pi r^2h &= 355 \\
+4\pi r + 2\pi h &= \lambda 2\pi rh \\
+2 \pi r &= \lambda \pi r^2.
+\end{align*}
+Since $r>0$, these equations simplify to
+\begin{align*}
+2\pi r^2h &= 355 \\
+2r + h &= \lambda rh \\
+2 &= \lambda r.
+\end{align*}
+So
+\begin{equation} \label{eq:LM_example1}
+\lambda = \frac{2}{r} = \frac{2r+h}{rh}.
+\end{equation}
+Now
+\[h = \frac{355}{\pi r^2},\]
+so equation (\ref{eq:LM_example1}) becomes
+\[\frac{2}{r} = \frac{r+h}{rh} = \frac{2\pi r^3+355}{355r}.\]
+Applying some algebra yields
+\begin{align*}
+\frac{2}{r} &= \frac{2\pi r^3+355}{355r} \\
+710 &= 2\pi r^3 + 355 \\
+r^3 &= \frac{355}{2\pi} \\
+r &= \sqrt[3]{\frac{355}{2\pi}} \\
+r &\approx 3.84 \text{ cm}.
+\end{align*}
+This makes
+\[h = \frac{355}{\pi r^2} \approx 7.66 \text{ cm}\]
+and
+\[\lambda = \frac{2}{r} \approx 0.52.\]
+
+\item To minimize the surface area under the assumptions we have made, the radius should be approximately 3.84 cm and the height approximately 7.66 cm.
+
+\ea
+
+\end{activitySolution}
+\aftera

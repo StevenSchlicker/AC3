@@ -1,0 +1,139 @@
+\begin{exercises} 
+
+\item \label{Ez:9.6.1}   The standard parameterization for the unit circle is $\langle \cos(t), \sin(t) \rangle$, for $0 \le t \le 2\pi$.
+
+%\begin{figure}[h]
+%\begin{center}
+ %\includegraphics{figures/1_1_Ez1.eps}
+ %\caption{A bungee jumper's height function.} \label{F:1.1.Ez1}
+%\end{center}
+%\end{figure}
+
+\ba
+
+	\item Find a vector-valued function $\vr$ that describes a point traveling along the unit circle so that at time $t=0$ the point is at $\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2} \right)$ and travels clockwise along the circle as $t$ increases.
+	\item Find a vector-valued function $\vr$ that describes a point traveling along the unit circle so that at time $t=0$ the point is at $\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2} \right)$ and travels counter-clockwise along the circle as $t$ increases.
+	\item Find a vector-valued function $\vr$ that describes a point traveling along the unit circle so that at time $t=0$ the point is at $\left(-\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2} \right)$ and travels clockwise along the circle as $t$ increases.
+
+\ea
+
+\begin{exerciseSolution}
+\ba
+	\item The vector valued function defined by $\sin(t) \vi + \cos(t) \vj$ is a clockwise parameterization of the unit circle that is at the point $(0,1)$ at time $t=0$. So the vector-valued function $\vr$ defined by 
+\[\vr(t) = \sin\left(t+\frac{\pi}{4}\right) \vi + \cos\left(t+\frac{\pi}{4}\right) \vj\]
+describes a point traveling along the unit circle so that at time $t=0$ the point is at $\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2} \right)$ and travels clockwise along the circle as $t$ increases.
+	\item Interchanging the cosine and sine in part (a) will reverse the direction, so the vector-valued function $\vr$ defined by 
+\[\vr = \cos\left(t+\frac{\pi}{4}\right) \vi + \sin\left(t+\frac{\pi}{4}\right) \vj\]
+describes a point traveling along the unit circle so that at time $t=0$ the point is at $\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2} \right)$ and travels counter-clockwise along the circle as $t$ increases.
+	\item We can adjust the function from part (a) and see that the vector-valued function $\vr$ defined by 
+\[\vr = \sin\left(t-\frac{\pi}{4}\right) \vi + \cos\left(t-\frac{\pi}{4}\right) \vj\]
+describes a point traveling along the unit circle so that at time $t=0$ the point is at $\left(-\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2} \right)$ and travels clockwise along the circle as $t$ increases.
+
+\ea
+\end{exerciseSolution}
+
+\item \label{Ez:9.6.2}   Let $a$ and $b$ be positive real numbers.  You have probably seen the equation $\frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1$ that generates an ellipse, centered at $(h,k)$, with a horizontal axis of length $2a$ and a vertical axis of length $2b$.
+\ba
+	\item Explain why the vector function $\vr$ defined by $\vr(t) = \langle a\cos(t), b\sin(t) \rangle$, $0 \le t \le 2\pi$ is one parameterization of the ellipse $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$.
+
+	\item Find a parameterization of the ellipse $\frac{x^2}{4} + \frac{y^2}{16} = 1$ that is traversed counterclockwise.
+	
+	\item Find a parameterization of the ellipse $\frac{(x+3)^2}{4} + \frac{(y-2)^2}{9} = 1$.
+	
+	\item Determine the $x$-$y$ equation of the ellipse that is parameterized by $$\vr(t) = \langle 3 + 4\sin(2t), 1 + 3\cos(2t) \rangle.$$
+\ea
+
+%\begin{figure}[h]
+%\begin{center}
+ %\includegraphics{figures/1_1_Ez1.eps}
+ %\caption{A bungee jumper's height function.} \label{F:1.1.Ez1}
+%\end{center}
+%\end{figure}
+
+
+
+\begin{exerciseSolution}
+\ba
+	\item Notice that 
+\[\frac{(a\cos(t))^2}{a^2} + \frac{(b\sin(t))^2}{b^2} = \frac{a^2}{a^2} \cos^2(t) + \frac{b^2}{b^2}\sin^2(t) = \cos^2(t)+\sin^2(t) = 1,\]
+so that the points $(a\cos(t), b\sin(t))$ lie on the ellipse. As we let $t$ run from 0 to $2 \pi$ these points travel once over the ellipse.
+
+	\item The vector-valued function $\vr$ defined by 
+\[\vr(t) = \langle 2\cos(t), 4\sin(t) \rangle\]
+is a counterclockwise parameterization of the ellipse $\frac{x^2}{4} + \frac{y^2}{16} = 1$.
+	
+	\item The vector-valued function $\langle 2\cos(t), 3\sin(t) \rangle$ is a parameterization of the ellipse $\frac{x^2}{4} + \frac{y^2}{9} = 1$.Translating by the vector $\langle -3,2 \rangle$ gives the vector-valued function $\vr$ defined by 
+\[\vr(t) = \langle 2\cos(t)-3, 3\sin(t)+2 \rangle\]
+that parameterizes the ellipse $\frac{(x+3)^2}{4} + \frac{(y-2)^2}{9} = 1$. 
+	
+	\item This is a translation of the ellipse $\frac{x^2}{16} + \frac{y^2}{9} = 1$ by the vector $\langle 3,1\rangle$, so an equation of this ellipse is 
+\[\frac{(x-3)^2}{16} + \frac{(y-1)^2}{9} = 1.\]
+The $2t$ as an argument of the sine and cosine just means that the ellipse is traveled twice as fast as if we used $t$ as the argument. 
+\ea
+\end{exerciseSolution}
+
+\item \label{Ez:9.6.3}   Consider the two-variable function $z = f(x,y) = 3x^2 + 4y^2 - 2$. 
+
+%\begin{figure}[h]
+%\begin{center}
+ %\includegraphics{figures/1_1_Ez1.eps}
+ %\caption{A bungee jumper's height function.} \label{F:1.1.Ez1}
+%\end{center}
+%\end{figure}
+
+\ba
+	\item Determine a vector-valued function $\vr$ that parameterizes the curve which is the $x = 2$ trace of $z = f(x,y)$.  Plot the resulting curve.  Do likewise for $x = -2, -1, 0,$ and $1$.
+	\item Determine a vector-valued function $\vr$ that parameterizes the curve which is the $y = 2$ trace of $z = f(x,y)$.  Plot the resulting curve.  Do likewise for $y = -2, -1, 0,$ and $1$.
+	\item Determine a vector-valued function $\vr$ that parameterizes the curve which is the $z = 2$ contour of $z = f(x,y)$.  Plot the resulting curve.  Do likewise for $z = -2, -1, 0,$ and $1$.
+	\item Use the traces and contours you've just investigated to create a wireframe plot of the surface generated by $z = f(x,y)$.  In addition, write two sentences to describe the characteristics of the surface.
+\ea
+
+\begin{exerciseSolution}
+\ba
+	\item A vector-valued function $\vr$ that parameterizes the curve which is the $x = a$ trace of $z = f(x,y)$ is defined by 
+\[\vr(t) = \langle a, t, f(a,t) \rangle = \langle a, t, 3a^2+4t^2-2 \rangle.\]
+	\item A vector-valued function $\vr$ that parameterizes the curve which is the $y = b$ trace of $z = f(x,y)$ is defined by 
+\[\vr(t) = \langle t, b, f(t,b) \rangle = \langle t, b, 3t^2+4b^2-2 \rangle.\]
+	\item A vector-valued function $\vr$ that parameterizes the curve which is the $z = c$ contour of $z = f(x,y)$ is defined by 
+\[\vr(t) = \left\langle \sqrt{c+2}\frac{\sin(t)}{\sqrt{3}}, \sqrt{c+2}\frac{\cos(t)}{2}, c \right\rangle.\]
+	\item The traces in the $x$ and $y$ directions are parabolas, and the contours are circles whose radii increase as $z$ increases. So the surface defined by $f$ is a bowl shaped surface (a paraboloid), opening in the positive $z$ direction. 
+\ea
+\end{exerciseSolution}
+
+\item \label{Ez:9.6.4}   Recall that any line in space may be represented parametrically by a vector-valued function.
+
+%\begin{figure}[h]
+%\begin{center}
+ %\includegraphics{figures/1_1_Ez1.eps}
+ %\caption{A bungee jumper's height function.} \label{F:1.1.Ez1}
+%\end{center}
+%\end{figure}
+
+\ba
+	\item Find a vector-valued function $\vr$ that parameterizes the line through $(-2,1,4)$ in the direction of the vector $\vv = \langle 3, 2, -5 \rangle$.
+	\item Find a vector-valued function $\vr$ that parameterizes the line of intersection of the planes $x + 2y - z = 4$ and $3x + y - 2z = 1$.
+	\item Determine the point of intersection of the lines given by 
+	$$x = 2 + 3t, \ y = 1 - 2t, \ z = 4t,$$
+	$$x = 3 + 1s, \ y = 3-2s, \ z = 2s.$$
+	Then, find a vector-valued function $\vr$ that parameterizes the line that passes through the point of intersection you just found and is perpendicular to both of the given lines.
+\ea
+
+\begin{exerciseSolution}
+\ba
+	\item Since we have a point and a direction vector for this line, a vector-valued function $\vr$ that parameterizes the line through $(-2,1,4)$ in the direction of the vector $\vv = \langle 3, 2, -5 \rangle$ is given by 
+	\[\vr(t) = \langle -2+3t, 1+2t, 4-5t \rangle.\]
+	\item A direction vector for this line will be orthogonal to the normal vectors of both planes, so a direction vector for this line is 
+\[\langle 1, 2, -1 \rangle \times \langle 3,1,-2 \rangle = \langle -3,-1,-5 \rangle.\]
+To find a parameterization for this line, we need a point on the line. When $y=0$, we must have $x$ and $z$ satisfy the system $x-z=4$ and $3x-2z=1$. The solution to this system is $x=-7$ and $z=-11$. So a vector-valued function $\vr$ that parameterizes the line of intersection of the planes $x + 2y - z = 4$ and $3x + y - 2z = 1$ is defined by
+\[\vr(t) = \langle -7-3t, -t, -11-5t \rangle.\]
+	\item For a point to lie on both lines, the equations $2+3t=3+s$, $1-2t=3-2s$, and $4t=2s$ must be simultaneously satisfied. The third equation shows that $s=2t$, and substituting back into the first equation gives $2+3t=3+2t$ or $t=1$. When $t=1$ and $s=2$ we see that the point $(5,-1,4)$ lies on both lines. A line perpendicular to both lines will have a direction vector that is perpendicular to the direction vectors of both lines. So a direction vector for this line will be 
+\[\langle 3,-2,4 \rangle \times \langle 1, -2,2 \rangle = \langle 4, 2, -4 \rangle.\]
+So a vector-valued function $\vr$ that parameterizes the line that passes through the point of intersection you just found and is perpendicular to both of the given lines is given by 
+\[\vr(t) = \langle 5+4t, -1+2t, 4-4t \rangle.\]
+\ea
+\end{exerciseSolution}
+
+
+
+\end{exercises}
+\afterexercises

@@ -1,0 +1,45 @@
+\begin{activity} \label{A:11.9.1}  Consider the change of variables
+\[x = s + 2 t \ \ \ \ \ \text{ and } \ \ \ \ \ y = 2 s + \sqrt{t}.\]
+Let's see what happens to the rectangle $T = [0,1] \times [1,4]$ in the $st$-plane under this change of variable.
+	\ba
+	\item Draw a picture of $T$ in the $st$-plane.
+	
+	
+	
+	\item Find the image of the $st$-vertex $(0,1)$ in the $xy$-plane.
+
+	
+
+	\item Find the image of the $st$-vertex $(0,4)$ in the $xy$-plane.
+	
+	
+	
+	\item Find the image of the $st$-vertex $(1,1)$ in the $xy$-plane.
+	
+	
+	
+	\item Find the image of the $st$-vertex $(1,4)$ in the $xy$-plane.
+	
+	
+	
+	\item Draw a picture of the image $T'$ of the $st$-rectangle $T$ in the $xy$-plane. What does the image look like?
+	
+	
+	
+	\item To translate an integral with a change of variable,  we need to find the area element $dA$ for this type of translated rectangle. How would find the area of the $xy$-figure $T'$?
+	
+	
+	
+	\ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

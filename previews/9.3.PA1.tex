@@ -1,0 +1,59 @@
+\begin{pa} \label{PA:9.3}
+Let us return to Sarah and John walking on the Grand Valley State University Allendale campus (see the GVSU Allendale campus map in Figure \ref{F:9.2.GVSU}). Let $\vv_1 = \langle a, b \rangle$ be the vector representing the displacement from the Recreation Center to the entrance at the northwest end of Mackinac Hall, and let ${\vv_2 = \langle c,d \rangle}$ be the vector representing the displacement from the Recreation Center to Au Sable Hall.
+    \ba
+    \item Use a protractor\footnote{You can find printable protractors at many Internet sites.} or other appropriate tool to approximate the angle between the vectors $\vv_1$ and $\vv_2$.
+
+\begin{comment}
+
+Using a protractor, I found the angle between $\vv_1$ and $\vv_2$ to be approximately $75^{\circ}$.
+
+\end{comment}
+
+    \item Draw a triangle with the Recreation Center, the entrance at the northwest end of Mackinac Hall, and Au Sable Hall as the vertices.  In terms of $a$, $b$, $c$, and $d$, what is the vector representing the displacement from Au Sable Hall to the northwest end of Mackinac Hall?
+
+\begin{comment}
+
+The vector we want is $\vv_1 - \vv_2 = \langle a-c, b-d \rangle$.
+
+\end{comment}
+
+    \item Let $\alpha$ be the angle between $\vv_1$ and $\vv_2$. Use the Law of Cosines (look it up if you don't remember it) to write an equation that relates $\alpha$, $a$, $b$, $c$, and $d$. Then simplify and solve this equation (this will require some algebra!) to show that
+\begin{equation} \label{eq:GVSU_dot_product}
+\cos(\alpha) = \frac{ac+bd}{\sqrt{a^2+b^2}\sqrt{c^2+d^2}}.
+\end{equation}
+
+\begin{comment}
+
+\vs
+
+\solution The distance from the Recreation Center to the northwest end of Mackinac Hall is $d_1=\sqrt{a^2+b^2}$ and the distance from the Recreation Center to Au Sable Hall is $d_2=\sqrt{c^2+d^2}$. The distance from Au Sable Hall to the northwest end of Mackinac Hall is
+\[ \sqrt{(a-c)^2 + (b-d)^2}.\]
+Let $\alpha$ the angle between $\vv_1$ and $\vv_2$. The Law of Cosines states that
+\[\left(\sqrt{(a-c)^2 + (b-d)^2}\right)^2 = d_1^2+d_2^2 - 2d_1d_2 \cos(\alpha).\]
+So
+\begin{align*}
+(a-c)^2 + (b-d)^2 &= (a^2+b^2) + (c^2+d^2) - 2\sqrt{(a^2+b^2)(c^2+d^2)} \cos(\alpha) \\
+(a^2-2ac+c^2) + (b^2-2bd+d^2) &= (a^2+b^2) + (c^2+d^2) - 2\sqrt{a^2+b^2}\sqrt{c^2+d^2} \cos(\alpha) \\
+ac + bd &= \sqrt{a^2+b^2}\sqrt{c^2+d^2} \cos(\alpha) \\
+\cos(\alpha) &= \frac{ac+bd}{\sqrt{a^2+b^2}\sqrt{c^2+d^2}}.
+\end{align*}
+
+\vs
+
+\end{comment}
+
+        \item Assume that ${\vv_1 = \langle 750, 420 \rangle}$ and ${\vv_2 = \langle 1200, -1100 \rangle}$. Use these vectors and Equation (\ref{eq:GVSU_dot_product}) to calculate the angle between $\vv_1$ and $\vv_2$. How does this compare to the angle you measured in part (a)?
+
+\begin{comment}
+
+Using our formula from the previous problem, with $a = 750$, $b=420$, $c=1200$, and $d = -1100$, we have
+\[\cos(\alpha) = \frac{(750)(1200)+(420)(-1100)}{\sqrt{750^2+420^2} \sqrt{1200^2+(-1100)^2}} \approx 0.313.\]
+So
+\[\alpha \approx arccos(-.313) \approx 71.8^{\circ}.\]
+This is reasonably close to the measurement made in part (a). We shouldn't expect much more accuracy because of the estimating we had to do to make our measurements. 
+
+\end{comment}
+
+    \ea
+
+\end{pa} \afterpa 

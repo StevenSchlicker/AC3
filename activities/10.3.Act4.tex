@@ -1,0 +1,55 @@
+\begin{activity} \label{A:10.3.4} Let $f(x,y) = \frac{1}{2}xy^2$ represent the kinetic energy in Joules of an object of mass $x$ in
+kilograms with velocity $y$ in meters per second. Let $(a,b)$ be the point $(4,5)$ in the domain of $f$.
+	\ba
+	\item Calculate $\ds \frac{ \partial^2 f}{\partial x^2}$ at the point $(a,b)$. Then explain as best you can what this second order partial
+derivative tells us about kinetic energy. (Hint: Recall that $\ds \frac{ \partial^2 f}{\partial x^2}$ is the second order unmixed partial derivative of
+$f_x$ with respect to $x$ as discussed in Activity \ref{act:10.2.5}.)
+
+
+
+	\item Calculate $\ds \frac{ \partial^2 f}{\partial y^2}$ at the point $(a,b)$. Then explain as best you can what this second order partial
+derivative tells us about kinetic energy.
+
+
+
+	\item Calculate $\ds \frac{ \partial^2 f}{\partial y \partial x}$ at the point $(a,b)$. Then explain as best you can what this second order
+partial derivative tells us about kinetic energy.
+
+
+
+	\item Calculate $\ds \frac{ \partial^2 f}{\partial x \partial y}$ at the point $(a,b)$. Then explain as best you can what this second order
+partial derivative tells us about kinetic energy.
+
+
+
+	\ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+\ba
+\item Since $f_x(x,y) = \frac{1}{2}y^2$, we have 
+\[\frac{ \partial^2 f}{\partial x^2}  = 0.\]
+So $f_{xx}(a,b) = 0$.  This calculation tells us that a small increase in the mass of an object from 4 kg does not affect the rate at which the kinetic energy changes as we increase the mass. In other words, $\frac{\partial f}{\partial x}(4.1,5)$ should be approximately the same as $\frac{\partial f}{\partial x}(4,5)$ 
+
+\item Since $f_y(x,y) = xy$, we have 
+\[\frac{ \partial^2 f}{\partial y^2}  = x.\]
+So $f_{yy}(a,b) = 4$.  This calculation tells us that increasing the velocity of an object by one meter per second from 5 meters per second while keeping the mass constant at 4 kg causes an approximate 4 unit (in Joules per meter per second) increase in the rate at which the kinetic energy changes as we increase the velocity. In other words, $\frac{\partial f}{\partial y}(4,6)$ should be approximately $4$ Joules per meters per second larger than $\frac{\partial f}{\partial y}(4,5)$.  
+
+\item Since  
+\[\frac{ \partial^2 f}{\partial y \partial x}  = y,\]
+we have $f_{xy}(a,b) = 5$.  This calculation tells us that increasing the mass of an object by one kg from 4 kg while keeping the velocity constant at 5 meters per second causes an approximate 5 unit (in Joules per kilogram) increase in the rate at which the kinetic energy changes as we increase the mass. In other words, $\frac{\partial f}{\partial x}(4,6)$ should be approximately $5$ Jules per kilogram larger than $\frac{\partial f}{\partial x}(4,5)$.  
+
+\item Since  
+\[\frac{ \partial^2 f}{\partial x \partial y}  = y,\]
+we have $f_{yx}(a,b) = 5$.  This calculation tells us that increasing the velocity of an object by one meter per second from 5 meters per second while keeping the mass constant at 4 kg causes an approximate 5 unit (in Joules per meter per second) increase in the rate at which the kinetic energy changes as we increase the velocity. In other words, $\frac{\partial f}{\partial y}(5,5)$ should be approximately $5$ Jules per meter per second larger than $\frac{\partial f}{\partial y}(4,5)$.  
+
+\ea
+
+\end{activitySolution}
+\aftera

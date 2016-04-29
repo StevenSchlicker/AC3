@@ -1,0 +1,32 @@
+\begin{activity} \label{A:1.5.5}  Let $P_1 = (1,2,-1)$ and $P_2 = (-2,1,-2)$, and let $\mathcal{L}$ be the line in $\R^3$ through $P_1$ and $P_2$ as in Activity \ref{A:1.5.2}.
+	\ba
+	\item What values of the parameter $t$ describe the entire line $\mathcal{L}$?
+	
+	
+	
+	\item What value of the parameter $t$ makes $(x(t), y(t), z(t)) = P_1$?
+	
+	
+	
+	\item What value of the parameter $t$ makes $(x(t), y(t), z(t)) = P_2$?
+	
+	
+	
+	\item What restrictions on the parameter $t$ describe the line segment between the points $P_1$ and $P_2$?
+	
+	
+	
+	\ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

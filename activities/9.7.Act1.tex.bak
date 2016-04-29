@@ -1,0 +1,51 @@
+\begin{activity} \label{A:9.7.1} Let's examine how we can interpret the derivative $\vr'(t)$. Let $\vr$ be the vector-valued function whose graph is shown in Figure \ref{F:VVF_tan_vector}, and let $h$ be a scalar. The vector $\vr(t)$ is the blue vector in Figure \ref{F:9.7.VVF_tan_vector} and $\vr(t+h)$ is the green vector.
+\begin{figure}[ht]
+\begin{center}
+\begin{minipage}{2.5in}
+\begin{center}
+\resizebox{!}{2.5in}{\includegraphics{9_7_VVFD_01}}
+\end{center}
+\caption{A difference quotient.}
+\label{F:9.7.VVF_tan_vector}
+\end{minipage} \hspace{0.15in}
+\begin{minipage}{2.5in}
+\begin{center}
+\resizebox{!}{2.5in}{\animategraphics[controls]{4}{9_7_VVFD_}{01}{20}}
+\end{center}
+\caption{The difference quotients.}
+\label{F:9.7.VVF_tan_vector_animation}
+\end{minipage}
+\end{center}
+\end{figure}
+    \ba
+    \item What kind of an object is $\vr(t+h)-\vr(t)$? A vector or a scalar? What does this object look like in Figure \ref{F:9.7.VVF_tan_vector}?
+
+
+
+    \item What kind of an object is $\frac{\vr(t+h)-\vr(t)}{h}$? A vector or a scalar? Identify what this object might be in Figure \ref{F:VVF_tan_vector}.
+
+
+
+    \item What words would you use to describe the vector $\frac{\vr(t+h)-\vr(t)}{h}$? (Think about how we described the difference quotient $\frac{f(x+h)-f(x)}{h}$ for a function of a single variable, and remember that there is no concept of slope in three dimensions.)
+
+
+
+    \item Figure \ref{F:9.7.VVF_tan_vector_animation} presents an animation of the vectors $\frac{\vr(t+h)-\vr(t)}{h}$ as we let $h \to 0$. Run this animation and describe what you see. What words would you use to describe the vector
+        \[\ds \lim_{h \to 0} \frac{\vr(t+h)-\vr(t)}{h}?\]
+         (Think about how we described the limit of the difference quotient $\frac{f(x+h)-f(x)}{h}$ for a function of a single variable, and remember that there is no concept of slope in three dimensions.)
+
+
+
+    \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

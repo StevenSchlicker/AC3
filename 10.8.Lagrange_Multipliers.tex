@@ -1,0 +1,90 @@
+\section{Constrained Optimization:Lagrange Multipliers} \label{S:10.8.Lagrange_Multipliers}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+  \item What geometric condition enables us to optimize a function $f=f(x,y)$ subject to a constraint given by $g(x,y) = k$, where $k$ is a constant?
+  \item How can we exploit this geometric condition to find the extreme values of a function subject to a constraint?
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+We previously considered how to find the extreme values of functions on both unrestricted domains and on closed, bounded domains. Other types of optimization problems involve maximizing or minimizing a quantity subject to an external constraint. In these cases the extreme values frequently won't occur at the points where the gradient is zero, but rather at other points that satisfy an important geometric condition. These problems are often called \emph{constrained optimization} problems and can be solved with the method of Lagrange Multipliers, which we study in this section. 
+
+\input{previews/10.8.PA3}
+
+\subsection*{Constrained Optimization and Lagrange Multipliers}
+
+In Preview Activity \ref{PA:10.8}, we considered an optimization problem where there is an external constraint on the variables, namely that the girth plus the length of the package cannot exceed 108 inches. We saw that we can create a function $g$ from the constraint, specifically $g(x,y) = 4x+y$.  The constraint equation is then just a contour of $g$, $g(x, y) = c$,  where $c$ is a constant (in our case 108). Figure \ref{F:10.8.Lagrange1} illustrates that the volume function $f$ is maximized, subject to the constraint $g(x, y) = c$, when the graph of $g(x, y) = c$ is tangent to a contour of $f$. Moreover, the value of $f$ on this contour is the sought maximum value.
+\begin{figure}[h]
+\begin{center}
+%\resizebox{!}{2.0in}{\includegraphics{10_8_Lagrange1}}
+  \includegraphics{figures/fig_10_8_postal_solution.eps}
+\end{center}
+\caption{Contours of $f$ and the constraint contour.}
+\label{F:10.8.Lagrange1}
+\end{figure}
+To find this point where the graph of the constraint is tangent to a contour of $f$, recall that $\nabla f$ is perpendicular to the contours of $f$ and $\nabla g$ is perpendicular to the contour of $g$. At such a point, the vectors $\nabla g$ and $\nabla f$ are parallel, and thus we need to determine the points where this occurs. Recall that two vectors are parallel if one is a nonzero scalar multiple of the other, so we therefore look for values of a parameter $\lambda$ that make
+\begin{equation}
+\nabla f = \lambda \nabla g.\label{eq:10.8.Lagrange_ex1}
+\end{equation}
+The constant $\lambda$ is called a \emph{Lagrange multiplier}\index{Lagrange multiplier}.
+
+To find the values of $\lambda$ that satisfy (\ref{eq:10.8.Lagrange_ex1}) for the volume function in Preview Activity~\ref{PA:10.8}, we calculate both $\nabla f$ and $\nabla g$. Observe that
+\[\nabla f = 2xy \vi + x^2 \vj \ \ \ \ \text{ and } \ \ \ \ \nabla g = 4\vi + \vj,\]
+and thus we need a value of $\lambda$ so that
+\[2xy \vi + x^2 \vj = \lambda(4\vi + \vj).\]
+Equating components in the most recent equation and incorporating the original constraint, we have three equations
+\begin{align}
+2xy &= \lambda (4) \label{eq:10.8.lag_ex1} \\
+x^2 &= \lambda (1) \label{eq:10.8.lag_ex2} \\
+4x+y &= 108 \label{eq:10.8.lag_ex3}
+\end{align}
+in the three unknowns $x$, $y$, and $\lambda$. First, note that if $\lambda = 0$, then equation (\ref{eq:10.8.lag_ex2}) shows that $x=0$. From this, Equation~(\ref{eq:10.8.lag_ex3}) tells us that $y = 108$. So the point $(0,108)$ is a point we need to consider. Next, provided that $\lambda \neq 0$ (from which it follows that $x \neq 0$ by Equation (\ref{eq:10.8.lag_ex2})), we may divide both sides of Equation~(\ref{eq:10.8.lag_ex1}) by the corresponding sides of (\ref{eq:10.8.lag_ex2}) to eliminate $\lambda$, and thus find that
+\begin{align*} 
+\frac{2y}{x} &= 4, \ \mbox{so} \\ \notag
+y &= 2x. \label{eq:10.8.lag_ex4}
+\end{align*}
+Substituting into Equation~(\ref{eq:10.8.lag_ex3}) gives us
+\[4x+2x = 108\]
+or
+\[x = 18.\]
+Thus we have $y = 2x = 36$ and $\lambda = x^2 = 324$ as another point to consider. So the points at which the gradients of $f$ and $g$ are parallel, and thus at which $f$ may have a maximum or minimum subject to the constraint, are $(0,108)$ and $(18,36)$.  By evaluating the function $f$ at these points, we see that we maximize the volume when the length of the square end of the box is 18 inches and the length is 36 inches, for a maximum volume of $f(18,36) = 11664$ cubic inches. Since $f(0,108) = 0$, we obtain a minimum value at this point. %Note that this point occurs at an endpoint of the constraint $g(x,y) = 108$.  
+
+We summarize the process of Lagrange multipliers as follows. 
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{The general technique for optimizing a function $f = f(x,y)$ subject to a constraint $g(x,y)=c$ is to solve the system $\nabla f = \lambda \nabla g$ for $x$, $y$, and $\lambda$.  We then evaluate the function $f$ at each point $(x,y)$ that results from a solution to the system in order to find the optimum values of $f$ subject to the constraint. 
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+\input{activities/10.8.Act1}
+
+The method of Lagrange multipliers also works for functions of more than two variables.
+
+\input{activities/10.8.Act2}
+
+\newpage
+
+\begin{summary}
+\item The extrema of a function $f(x,y)$ subject to a constraint
+  $g(x,y) = c$ occur at points for which the contour of $f$ is tangent to the curve that represents the constraint equation. This occurs when 
+  $$
+  \nabla f = \lambda \nabla g.
+  $$
+
+\item We use the condition  $\nabla f = \lambda \nabla g$ to generate a system of equations, together
+  with the constraint $g(x,y) = c$, that may be
+  solved for $x$, $y$, and $\lambda$.  Once we have all the solutions, we evaluate $f$
+  at each of the $(x,y)$ points to determine the extrema.
+\end{summary}
+
+
+
+
+\nin \hrulefill
+
+\input{exercises/10.8.Lagrange_Multipliers(Ex)}
+
+\clearpage

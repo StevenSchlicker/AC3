@@ -1,0 +1,207 @@
+\section{Vector-Valued Functions} \label{S:9.6.Vector_Valued_Functions}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+  \item What is a vector-valued function? What do we mean by the graph
+    of a vector-valued function?
+  \item What is a parameterization of a curve in $\R^2$? In $\R^3$?
+    What can the parameterization of a curve can tell us?
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+So far, we have seen several different examples of curves in space,
+including traces and contours of functions of two variables, as well
+as lines in 3-space.  Recall that for a line through a fixed point
+$\vr_0$ in the direction of vector $\vv$, we may express the line
+parametrically through the single vector equation
+$$\vr(t) = \vr_0 + t\vv.$$
+From this perspective, the vector $\vr(t)$ is a function that depends
+on the parameter $t$, and the terminal points of this vector trace out
+the line in space.
+
+Like lines, other curves in space are one-dimensional objects, and
+thus we aspire to similarly express the coordinates of points on a
+given curve in terms of a single variable.  Vectors are a perfect
+vehicle for doing so -- we can use vectors based at the origin to
+identify points in space, and connect the terminal points of these
+vectors to draw a curve in space.  This approach will allow us to draw
+an incredible variety of graphs in 2- and 3-space, as well as to
+identify and describe curves in $n$-space for any $n$.
+
+\input{previews/9.6.PA1}
+
+\subsection*{Vector-Valued Functions}
+
+Consider the curve shown in Figure \ref{F:9.6.VVF_graph}. As in
+Preview Activity \ref{PA:9.6}, we can think of a point on this curve
+as resulting from a vector from the origin to the point. As the point
+travels along the curve, the vector changes in order to terminate at
+the desired point. %An animation is provided in Figure \ref{F:9.6.VVF_animation}.
+A few still pictures of this motion are shown in Figure \ref{F:9.6.VVF_graph}.
+
+\begin{figure}[ht]
+\begin{center}
+%\begin{minipage}{2.5in}
+%\begin{center}
+%\resizebox{!}{1.25in}{\includegraphics{9_6_VVF_graph1}}
+%  \includegraphics{figures/fig_9_6_curve_1.eps}
+\resizebox{!}{1.5in}{\includegraphics{figures/fig_9_6_curve_animate_01.pdf}} \hspace{0.25in} \resizebox{!}{1.5in}{\includegraphics{figures/fig_9_6_curve_animate_25.pdf}} \hspace{0.25in} \resizebox{!}{1.5in}{\includegraphics{figures/fig_9_6_curve_animate_40.pdf}}
+%\end{center}
+%\ \vspace{0.075in} \
+\caption{The graph of a curve in space.}
+\label{F:9.6.VVF_graph}
+%\end{minipage} \hspace{0.15in}
+%\begin{minipage}{2.5in}
+%\begin{center}
+%\resizebox{!}{2.5in}{\animategraphics[controls]{4}{9_6_VVF_}{00}{20}}
+%\animategraphics[controls]{4}{figures/fig_9_6_curve_animate_}{00}{50}
+%\end{center}
+%\caption{The vector-valued function.}
+%\label{F:9.6.VVF_animation}
+%\end{minipage}
+\end{center}
+\end{figure}
+
+
+
+Thus, we can think of the curve as a collection of terminal points of
+vectors emanating from the origin. We therefore view a point traveling
+along this curve as a function of time $t$, and define a function
+$\vr$ whose input is the variable $t$ and whose output is the vector
+from the origin to the point on the curve at time $t$.  In so doing,
+we have introduced a new type of function, one whose input is a scalar
+and whose output is a vector.
+
+The terminal points of the vector outputs of $\vr$ then trace out the
+curve in space. From this perspective, the $x$, $y$, and $z$
+coordinates of the point are functions of time, $t$, say
+\[x = x(t), \ \ \ y = y(t), \ \ \ \text{ and } \ \ \ \ \ z = z(t), \]
+and thus we have three coordinate functions that enable us to
+represent the curve. The variable $t$ is called a \emph{parameter} and
+the equations $x = x(t)$, $y = y(t)$, and $z = z(t)$ are called
+\emph{parametric equations} (or a \emph{parameterization of the
+  curve}). The function $\vr$ whose output is the vector from the
+origin to a point on the curve is defined by
+\[\vr(t) = \langle x(t), y(t), z(t) \rangle.\]
+Note that the input of $\vr$ is the real-valued parameter $t$ and the
+corresponding output is vector $\langle x(t), y(t), z(t)
+\rangle$. Such a function is called a \emph{vector-valued function}
+because each real number input generates a vector output.  More
+formally, we state the following definition.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+  \parbox{6.25 in}{\begin{definition} A \textbf{vector-valued
+        function}\index{vector-valued function!definition} is a
+      function whose input is a real parameter $t$ and whose output is
+      a vector that depends on $t$. The {\bf graph}\index{graph of a
+        vector-valued function!definition} of a vector-valued function
+      is the set of all terminal points of the output vectors with
+      their initial points at the origin. \end{definition}
+
+    {\bf Parametric equations}\index{parametric equations for a
+      curve}\index{parameterization!curve} for a curve are equations
+    of the form
+\[x = x(t), \ \ \ y = y(t), \ \ \ \text{ and } \ \ \ \ \ z = z(t)\]
+that describe the $(x,y,z)$ coordinates of a point on a curve in $\R^3$. \\
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+Note particularly that every set of parametric equations determines a
+vector-valued function of the form
+\[\vr(t) = \langle x(t), y(t), z(t) \rangle,\]
+and every vector-valued function defines a set of parametric equations
+for a curve.  Moreover, we can consider vector-valued functions and
+parameterizations in $\R^2$, $\R^4$, or indeed a real space of any
+dimension.  As a reminder, in Section~\ref{S:9.5.Lines_Planes}, we
+determined the parametric equations of a line in space using a point
+and a direction vector.  For a nonlinear example, the curve in Figure
+\ref{F:9.6.VVF_graph} has the parametric equations
+\[x(t) = \cos(t), \ \ \ y(t) = \sin(t), \ \ \ \text{ and } \ \ \ z(t)
+= \cos(t) \sin(t).\] Represented as a vector-valued function $\vr$,
+the curve in Figure \ref{F:9.6.VVF_graph} is the graph of
+\[\vr(t) = \langle \cos(t), \sin(t), \cos(t) \sin(t) \rangle.\]
+
+%WolframAlpha notation ParametricPlot3D[{2t, Cos[t]^2, t}, {t, 0, 10}]
+%3D only \url{http://cs.jsu.edu/mcis/faculty/leathrum/Mathlets/parapath.html}
+%\url{http://dlippman.imathas.com/g1/GrapherLaunch.html}
+
+\input{activities/9.6.Act1}
+
+The examples in Activity \ref{A:9.6.1} illustrate that a
+parameterization allows us to look not only at the graph, but at the
+direction and speed at which the graph is traversed as $t$ changes. In
+the different parameterizations of the circle, we see that we can 
+start at different points and move around the circle in either
+direction.  The calculus of vector-valued functions -- which we will
+begin to investigate in
+Section~\ref{S:9.7.Vector_Valued_Functions_Derivatives} -- will enable
+us to precisely quantify the direction, speed, and acceleration of a
+particle moving along a curve in space.  As such, describing curves
+parametrically will allow us to not only indicate the curve itself,
+but also to describe how motion occurs along the curve.
+
+%\input{activities/9.6.Act2}
+
+
+
+Using parametric equations to define vector-valued functions in two
+dimensions is much more versatile than just defining $y$ as a function
+of $x$. In fact, if $y = f(x)$ is a function of $x$, then we can
+parameterize the graph of $f$ by
+\[\vr(t) = \langle t, f(t) \rangle,\]
+and thus every single-variable function may be described
+parametrically.  In addition, as we saw in Preview Activity
+\ref{PA:9.6} and Activity \ref{A:9.6.1}, we can use vector-valued
+functions to represent curves in the plane that do not define $y$ as a
+function of $x$ (or $x$ as a function of $y$).\footnote{As an aside,
+  vector-valued functions make it easy to plot the inverse of a
+  one-to-one function in two dimensions. To see how, if $y = f(x)$
+  defines a one-to-one function, then we can parameterize this
+  function by $\vr(t) = \langle t, f(t) \rangle$. Since the inverse
+  function just reverses the role of input and output, a
+  parameterization for $f^{-1}$ is $\langle f(t), t \rangle$.}
+
+\input{activities/9.6.Act3}
+
+
+
+Recall from our earlier work that the traces and level curves of a
+function are themselves curves in space.  Thus, we may determine 
+parameterizations for them.  For example, if $z = f(x,y) = \cos(x^2 +
+y^2)$, the $y = 1$ trace of the function is given by setting $y = 1$
+and letting $x$ be parameterized by the variable $t$; then, the trace
+is the curve whose parameterization is $\langle t, 1, \cos(t^2 + 1)
+\rangle.$
+
+\input{activities/9.6.Act4}
+
+
+\begin{summary}
+\item A vector-valued function is a function whose input is a real
+  parameter $t$ and whose output is a vector that depends on $t$. The
+  graph of a vector-valued function is the set of all terminal points
+  of the output vectors with their initial points at the origin.
+\item Every vector-valued function provides a parameterization of a
+  curve. In $\R^2$, a parameterization of a curve is a pair of
+  equations $x = x(t)$ and $y = y(t)$ that describes the coordinates
+  of a point $(x,y)$ on the curve in terms of a parameter $t$. In
+  $\R^3$, a parameterization of a curve is a set of three equations $x
+  = x(t)$, $y=y(t)$, and $z = z(t)$ that describes the coordinates of
+  a point $(x,y,z)$ on the curve in terms of a parameter $t$.
+  % \item If we think of the parameter in a parameterization as
+  %   representing time, then a parameterization of a curve not only
+  %   describes the curve, but also a direction of motion along the
+  %   curve and the rate at which a point travels along the curve as a
+  %   function of time.
+\end{summary}
+
+
+
+\nin \hrulefill
+
+\input{exercises/9.6.Vector_Valued_Functions(Ex)}
+
+\clearpage

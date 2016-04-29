@@ -1,0 +1,174 @@
+\begin{exercises} 
+
+\item For each of the following iterated integrals, (a) sketch the region of integration, (b) write an equivalent iterated integral expression in the opposite order of integration, and (c) choose one of the two orders and evaluate the integral.
+\ba
+	\item $\ds \int_{x=0}^{x=1}  \int_{y=x^2}^{y=x} xy \, dy  \, dx$
+	\item $\ds \int_{y=0}^{y=2}  \int_{x=-\sqrt{4-y^2}}^{x=0} xy \, dx  \, dy$
+	\item $\ds \int_{x=0}^{x=1}  \int_{y=x^4}^{y=x^{1/4}} x+y \, dy  \, dx$
+	\item $\ds \int_{y=0}^{y=2}  \int_{x=y/2}^{x=2y} x+y \, dx  \, dy$
+\ea
+
+\begin{exerciseSolution}
+\ba
+	\item Integrating in the reverse order gives us 
+\[\int_{y=0}^{y=1}  \int_{x=y}^{x=\sqrt{y}} xy \, dy  \, dx.\]
+
+We integrate first with respect to $y$:
+\begin{align*}
+\int_{x=0}^{x=1}  \int_{y=x^2}^{y=x} xy \, dy  \, dx &= \int_{x=0}^{x=1} \frac{1}{2}xy^2 \biggm|_{y=x^2}^{y=x}  \, dx \\
+	&= \int_{x=0}^{x=1} \frac{1}{2}x\left(x^2-x^4\right) \, dx \\
+	&= \int_{x=0}^{x=1} \frac{1}{2}\left(x^3-x^5\right) \, dx \\
+	&= \frac{1}{2} \left(\frac{1}{4}x^4-\frac{1}{6}x^6\right)\biggm|_{x=0}^{x=1} \\
+	&= \frac{1}{2} \left(\frac{1}{4}-\frac{1}{6}\right) \\
+	&= \frac{1}{24}.
+\end{align*}
+
+	\item Integrating in the reverse order gives us 
+\[\int_{x=-2}^{x=0}  \int_{y=0}^{y=\sqrt{4-x^2}} xy \, dy  \, dx.\]
+
+We integrate first with respect to $y$:
+\begin{align*}
+\int_{x=-2}^{x=0}  \int_{y=0}^{y=\sqrt{4-x^2}} xy \, dy  \, dx &= \int_{x=-2}^{x=0} \frac{1}{2}xy^2 \biggm|_{y=0}^{y=\sqrt{4-x^2}}  \, dx \\
+	&= \frac{1}{2} \int_{x=-2}^{x=0} x\left(4-x^2\right) \, dx \\
+	&= \frac{1}{2}\int_{x=-2}^{x=0} \left(4x-x^3\right) \, dx \\
+	&= \frac{1}{2} \left(2x^2-\frac{1}{4}x^4\right)\biggm|_{x=-2}^{x=0} \\
+	&= -\frac{1}{2} \left(8-4\right) \\
+	&= -2.
+\end{align*}
+
+	\item Integrating in the reverse order gives us 
+\[\int_{y=0}^{y=1}  \int_{x=y^{4}}^{x=y^{1/4}} x+y \, dx  \, dy.\]
+
+We integrate first with respect to $y$:
+\begin{align*}
+\int_{x=0}^{x=1}  \int_{y=x^4}^{y=x^{1/4}} x+y \, dy  \, dx &= \int_{x=0}^{x=1} \left(xy + \frac{1}{2}y^2 \right) \biggm|_{y=x^4}^{y=x^{1/4}}  \, dx \\
+	&= \int_{x=0}^{x=1} x\left(x^{1/4}-x^4\right) - \frac{1}{2}\left(x^{1/2}-x^8\right) \, dx \\
+	&= \int_{x=0}^{x=1} \left(x^{5/4}-x^5\right) - \frac{1}{2}\left(x^{1/2}-x^8\right) \, dx \\
+	&=\left(\frac{4}{9}x^{9/4} - \frac{1}{6}x^6 - \frac{1}{3}x^{3/2} - \frac{1}{18}x^9\right)\biggm|_{x=0}^{x=1} \\
+	&= \frac{4}{9} - \frac{1}{6} - \frac{1}{3} - \frac{1}{18} \\
+	&= \frac{5}{9}.
+\end{align*}
+
+	\item To integrate in the reverse order we need two integrals:
+\[\int_{y=x/2}^{y=2x}  \int_{x=0}^{x=1} x+y \, dy  \, dx + \int_{y=x/2}^{y=2}  \int_{x=1}^{x=4} x+y \, dy  \, dx.\]
+
+We integrate first with respect to $x$:
+\begin{align*}
+\int_{y=0}^{y=2}  \int_{x=y/2}^{x=2y} x+y \, dx  \, dy &= \int_{y=0}^{y=2} \left(\frac{1}{2}x^2 +xy\right) \biggm|_{x=y/2}^{x=2y}  \, dx \\
+	&= \int_{y=0}^{y=2} \left[\left(2y^2+2y^2\right) - \left(\frac{1}{8}y^2 + \frac{1}{2}y^2\right)\right] \, dy \\
+	&= \frac{27}{8} \int_{y=0}^{y=2} y^2 \, dy \\
+	&= \frac{27}{8} \left(\frac{1}{3}y^3\right)\biggm|_{y=0}^{y=2} \\
+	&= \frac{9}{8}(8) \\
+	&= 9.
+\end{align*}
+
+\ea
+\end{exerciseSolution}
+
+\item The temperature at any point on a metal plate in the $xy$ plane is given by $T(x,y) = 100-4x^2 - y^2$, where $x$ and $y$ are measured in inches and $T$ in degrees Celsius.  Consider the portion of the plate that lies on the region $D$ that is the finite region that lies between the parabolas $x = y^2$ and $x = 3 - 2y^2$.
+
+\ba
+	\item Construct a labeled sketch of the region $D$.
+	\item Set up an integrated integral whose value is $\iint_D T(x,y) \, dA$. 
+	\item Set up an integrated integral whose value is $\iint_D T(x,y) \, dA$.
+	\item Use the Fundamental Theorem of Calculus to evaluate the integrals you determined in (b) and (c).
+	\item Determine the exact average temperature, $T_{\mbox{\tiny{AVG}(D)}}$, over the region $D$.
+\ea
+
+\begin{exerciseSolution}
+\ba
+	\item Use appropriate technology to draw the surface. 
+	\item The area of $D$ is given by 
+\[A(D) = \int_{y=-1}^{y=1}  (3-2y^2) - y^2 \, dy.\]
+
+	\item An integrated integral whose value is $\iint_D T(x,y) \, dA$ is
+\[\int_{y=-1}^{y=1} \int_{x=y^2}^{x=3-2y^2} 100-4x^2 - y^2 \, dx \, dy.\]
+ 
+	\item The area of $D$ is 
+\begin{align*}
+\int_{y=-1}^{y=1}  (3-2y^2) - y^2 \, dy &= \left(3y-y^3 \right)\biggm|_{y=-1}^{y=1} \\
+	&= (3-1)-((-3)-(-1)) \\
+	&= 4.
+\end{align*}
+The value of $\iint_D T(x,y) \, dA$ is
+\begin{align*}
+\int_{y=-1}^{y=1} \int_{x=y^2}^{x=3-2y^2} 100-4x^2 - y^2 \, dx \, dy &= \int_{y=-1}^{y=1} \left[(100-y^2)x - \frac{4}{3}x^3\right] \biggm|_{x=y^2}^{x=3-2y^2}  \, dy \\
+	&= \int_{y=-1}^{y=1} \left[(100-y^2)(3-3y^2) - \frac{4}{3}\left(3-2y^2\right)^3 + \frac{4}{3}y^6\right]  \, dy \\
+	&= \int_{y=-1}^{y=1} \left[264-231y^2-45y^4+12y^6\right]  \, dy \\
+	&= \left[264y-77y^3-9y^5+\frac{12}{7}y^7\right] \biggm|_{y=-1}^{y=1}  \\
+	&= \left[264-77-9+\frac{12}{7}\right] - \left[-264y+77+9-\frac{12}{7}\right]   \\
+	&= \frac{2516}{7}.
+\end{align*}
+
+	\item The exact average temperature, $T_{\mbox{\tiny{AVG}(D)}}$, over the region $D$ is
+\[T_{\mbox{\tiny{AVG}(D)}} = \frac{1}{\text{Area}(D)} \iint_D T(x,y) \, dA = \frac{2516}{28}.\]
+
+\ea
+\end{exerciseSolution}
+
+\item Consider the solid that is given by the following description:  the base is the given region $D$, while the top is given by the surface $z = p(x,y)$.  In each setting below, set up, but do not evaluate, an iterated integral whose value is the exact volume of the solid.  Include a labeled sketch of $D$ in each case.
+
+\ba
+	\item $D$ is the interior of the quarter circle of radius 2, centered at the origin, that lies in the second quadrant of the plane; $p(x,y) = 16-x^2-y^2$.
+	\item $D$ is the finite region between the line $y = x + 1$ and the parabola $y = x^2$; \\ $p(x,y) = 10-x-2y$.
+	\item $D$ is the triangular region with vertices $(1,1)$, $(2,2)$, and $(2,3)$; $p(x,y) = e^{-xy}$.
+	\item $D$ is the region bounded by the $y$-axis, $y = 4$ and $x = \sqrt{y}$; $p(x,y) = \sqrt{1 + x^2 + y^2}$.
+\ea
+
+\begin{exerciseSolution}
+\ba
+	\item The volume of the solid bounded above by the graph of $p$ and below by the region $D$ is given by 
+\[\int_{x=-2}^{x=0} \int_{y=0}^{y=\sqrt{4-x^2}} 16-x^2-y^2 \, dy \, dx.\]
+
+	\item The volume of the solid bounded above by the graph of $p$ and below by the region $D$ is given by 
+\[\int_{x=1/2(1-\sqrt{5})}^{x=1/2(1+\sqrt{5}} \int_{y=x^2}^{y=x+1} 10-x-2y \, dy \, dx.\]
+
+	\item The volume of the solid bounded above by the graph of $p$ and below by the region $D$ is given by 
+\[\int_{x=1}^{x=2} \int_{y=x+1}^{y=2x-1} e^{-xy} \, dy \, dx.\]
+
+	\item The volume of the solid bounded above by the graph of $p$ and below by the region $D$ is given by 
+\[\int_{y=0}^{y=4} \int_{x=0}^{x=\sqrt{y}} \sqrt{1 + x^2 + y^2} \, dx \, dy.\]
+
+\ea
+\end{exerciseSolution}
+
+\item Consider the iterated integral $\displaystyle I = \int_{x=0}^{x=4} \int_{y=\sqrt{x}}^{y=2} \cos(y^3) \, dy \, dx$.
+   
+   \ba
+	  \item Sketch the region of integration.
+	  \item Write an equivalent iterated integral with the order of integration reversed.
+	  \item Choose one of the two orders of integration and evaluate the iterated integral you chose by hand.  Explain the reasoning behind your choice.
+	  \item Determine the exact average value of $\cos(y^3)$ over the region $D$ that is determined by the iterated integral $I$.
+   \ea
+
+
+\begin{exerciseSolution}
+   \ba
+	  \item Use appropriate technology to draw the surface. 
+	  \item An equivalent iterated integral with the order of integration reversed is
+\[ \int_{y=0}^{y=2} \int_{x=0}^{x=y^2} \cos(y^3) \, dx \, dy.\]
+	  
+	  \item Since we do not know how to integrate $\cos(y^3)$ with respect to $y$, we choose to integrate first with respect to $x$:
+\begin{align*}
+ \int_{y=0}^{y=2} \int_{x=0}^{x=y^2} \cos(y^3) \, dx \, dy &= \int_{y=0}^{y=2}  x\cos(y^3) \biggm|_{x=0}^{x=y^2}  \, dy \\
+	&= \int_{y=0}^{y=2}  y^2\cos(y^3)   \, dy \\
+	&= \frac{1}{3}\sin(y^3)\biggm|_{y=0}^{y=2} \\
+	&= \frac{1}{3}\sin(8).
+\end{align*}
+
+	  \item The area of the region $D$ is 
+\begin{align*}
+\text{Area}(D) &= \int_0^2 y^2 \, dy \\
+	&= \frac{1}{3}y^3 \biggm|_0^2 \\
+	&= \frac{8}{3}.
+\end{align*}
+So the exact average value of $\cos(y^3)$ over the region $D$ is
+\[\frac{I}{\text{Area}(D)} = \frac{\frac{\sin(8)}{3}}{\frac{8}{3}} = \frac{1}{8}\sin(8).\]
+
+   \ea
+\end{exerciseSolution}
+
+
+\end{exercises}
+
+\afterexercises

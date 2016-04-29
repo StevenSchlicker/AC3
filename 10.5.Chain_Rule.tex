@@ -1,0 +1,149 @@
+\section{The Chain Rule} \label{S:10.5.Chain_Rule}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+\item What is the Chain Rule and how do we use it to
+  find a derivative?  
+\item How can we use a tree diagram to guide us in applying the Chain
+  Rule? 
+\end{goals}} \hspace*{3 pt}}
+
+
+\subsection*{Introduction}
+
+In single-variable calculus, we encountered situations in
+which some quantity $z$ depends on $y$ and, in turn, $y$ depends on
+$x$.  A change in $x$ produces a change in $y$, which consequently
+produces a change in $z$.  Using the language of differentials that we saw
+in the previous section, these changes are naturally related by
+$$
+dz = \frac{dz}{dy}~dy 
+\hspace*{20pt}
+\mbox{and}
+\hspace*{20pt}
+dy = \frac{dy}{dx}~dx.
+$$
+In terms of instantaneous rates of change, we then have
+$$
+dz = \frac{dz}{dy}\frac{dy}{dx}~dx = \frac{dz}{dx}~dx
+$$
+and thus
+$$
+\frac{dz}{dx} = \frac{dz}{dy}\frac{dy}{dx}.
+$$
+This most recent equation we call the {\em Chain Rule}.
+
+In the case of a function $f$ of two variables where $z = f(x,y)$, it might be that both $x$ and $y$ depend on another variable $t$. A change in $t$ then produces changes in both $x$ and $y$, which then cause $z$ to change. In this section we will see how to find the change in $z$ that is caused by a change in $t$, leading us to multivariable versions of the Chain Rule involving both regular and partial derivatives. 
+
+\input{previews/10.5.PA3}
+
+\subsection*{The Chain Rule}
+
+As Preview Activity \ref{PA:10.3} suggests, the following version of the Chain Rule holds in general.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{Let $z = f(x,y)$, where $f$ is a differentiable function of the independent variables $x$ and $y$, and let $x$ and $y$ each be differentiable functions of an independent variable $t$. Then
+\begin{equation} \label{E:10.5.chain.rule}
+\frac{dz}{dt} = \frac{\partial z}{\partial x} \frac{dx}{dt} + \frac{\partial z}{\partial y} \frac{dy}{dt}.
+\end{equation}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+It is important to note the differences among the derivatives in (\ref{E:10.5.chain.rule}). Since $z$ is a function of the two variables $x$ and $y$, the derivatives in the Chain Rule for $z$ with respect to $x$ and $y$ are partial derivatives. However, since $x = x(t)$ and $y = y(t)$ are functions of the single variable $t$, their derivatives are the standard derivatives of functions of one variable. When we compose $z$ with $x(t)$ and $y(t)$, we then have $z$ as a function of the single variable $t$, making the derivative of $z$ with respect to $t$ a standard derivative from single variable calculus as well.
+
+To understand why this Chain Rule works in general, suppose that some quantity $z$ depends on $x$ and $y$ so
+that
+\begin{equation}
+  dz = \frac{\partial z}{\partial x}~dx + \frac{\partial z}{\partial
+    y}~dy.
+  \label{E:10.5.1}
+\end{equation}
+Next, suppose that $x$ and $y$ each depend on another quantity $t$, so that
+\begin{equation}
+  dx = \frac{dx}{dt}~dt
+  \hspace*{20pt}
+  \mbox{and}
+  \hspace*{20pt}
+  dy = \frac{dy}{dt}~dt.
+  \label{E:10.5.2}
+\end{equation}
+    
+Combining Equations~(\ref{E:10.5.1}) and (\ref{E:10.5.2}), we find that
+$$
+dz = \frac{\partial z}{\partial x}\frac{dx}{dt}~dt 
++ \frac{\partial z}{\partial y}\frac{dy}{dt}~dt = \frac{dz}{dt}~dt,
+$$
+which is the Chain Rule in this particular context, as expressed in Equation~\ref{E:10.5.chain.rule}.
+
+\input{activities/10.5.Act11}
+
+\subsection*{Tree Diagrams}
+
+Up to this point, we have applied the Chain Rule to situations where
+we have a function $z$ of variables $x$ and $y$, with both $x$ and $y$ depending on another single
+quantity $t$.  We may apply the Chain Rule, however, when $x$ and $y$ each
+depend on more than one quantity, or when $z$ is a function of more than two variables. It can be challenging to keep track
+of all the dependencies among the variables, and thus a tree diagram can be a useful tool to organize our work. 
+For example, suppose that $z$ depends on $x$ and $y$, and $x$ and $y$
+both depend on $t$.  We may represent these relationships using the tree
+diagram shown at left Figure \ref{F:10.5.tree.1}.  We place the dependent
+variable at the top of the tree and connect it to the variables on
+which it depends one level below.  We then connect each of those variables to the variable on which each depends.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_10_5_tree_3.eps} \hspace{0.5in} \includegraphics{figures/fig_10_5_tree_1.eps}
+  \end{center}
+  \caption{A tree diagram illustrating dependencies.}
+  \label{F:10.5.tree.1}
+\end{figure}
+
+To represent the Chain Rule, we label every edge of the diagram with the
+appropriate derivative or partial derivative, as seen at right in Figure
+\ref{F:10.5.tree.1}.  To calculate an overall derivative according to the Chain Rule, we
+construct the product of the derivatives along all paths connecting
+the variables and then add all of these products.
+For example, the
+diagram at right in \ref{F:10.5.tree.1} illustrates the Chain Rule
+$$
+\frac{dz}{dt} = \frac{\partial z}{\partial x}\frac{dx}{dt} +
+\frac{\partial z}{\partial y}\frac{dy}{dt}.
+$$
+
+%\begin{figure}[ht]
+%  \begin{center}
+%    \includegraphics{figures/fig_10_5_tree_1.eps}
+%  \end{center}
+%  \caption{A tree diagram illustrating dependencies.}
+%  \label{F:10.5.tree.1}
+%\end{figure}
+
+%\input{activities/10.5.Act12}
+%\input{activities/10.5.Act12}
+\input{activities/10.5.Act14}
+
+
+
+
+\begin{summary}
+\item The Chain Rule is a tool for differentiating a composite for
+  functions.  In its simplest form, it says that if $f(x,y)$ is a
+  function of two variables and $x(t)$ and $y(t)$ depend on $t$, then
+  $$
+  \frac{df}{dt} = \frac{\partial f}{\partial x}\frac{dx}{dt}
+  + \frac{\partial f}{\partial y}\frac{dy}{dt}.
+  $$
+
+\item A tree diagram can be used to represent the dependence of variables on other variables. By following the links in the tree diagram, we can form chains of partial derivatives or derivatives that can be combined to give a desired partial derivative. 
+\end{summary}
+
+
+
+
+\nin \hrulefill
+
+\input{exercises/10.5.Chain_Rule(Ex)}
+
+\clearpage

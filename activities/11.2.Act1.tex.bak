@@ -1,0 +1,93 @@
+\begin{activity} \label{A:11.1.1} Let $f(x,y) = 100 - x^2-y^2$ be defined on the rectangular domain $R = [a,b] \times [c,d]$. Partition the interval $[a,b]$ into four uniformly sized subintervals and the interval $[c,d]$ into three evenly sized subintervals as shown in Figure \ref{F:11.1.Domain2}. As we did in Preview Activity \ref{PA:11.1}, we will need a method for identifying the endpoints of each subinterval and the resulting subrectangles.
+
+\begin{figure}[ht]
+\begin{center}
+\setlength{\unitlength}{0.75cm}
+\begin{picture}(8.5,6.5)
+\put(-0.5,-0.4){$x=a$}
+%\put(1.65,-0.4){$i=1$}
+%\put(3.65,-0.4){$i=2$}
+\put(7.45,-0.4){$x=b$}
+\put(-1.4,0.05){$y=c$}
+%\put(-1.0,1.9){$j=1$}
+\put(-1.4,5.9){$y=d$}
+\put(0,0){\line(1,0){8}}
+\put(0,2){\line(1,0){8}}
+\put(0,4){\line(1,0){8}}
+\put(0,6){\line(1,0){8}}
+\put(0,0){\line(0,1){6}}
+\put(2,0){\line(0,1){6}}
+\put(4,0){\line(0,1){6}}
+\put(6,0){\line(0,1){6}}
+\put(8,0){\line(0,1){6}}
+\end{picture}
+\end{center}
+\caption{Rectangular domain with subrectangles.}
+\label{F:11.1.Domain2}
+\end{figure}
+ 
+
+
+	\ba
+	\item Let $a=x_0 < x_1 < x_2 < x_3 < x_4 =b$ be the endpoints of the subintervals of $[a,b]$ after partitioning. Label these endpoints in Figure \ref{F:11.1.Domain2}.
+	
+	
+	
+	\item What is the length $\Delta x$ of each subinterval $[x_{i-1},x_i]$? Your answer should be in terms of $a$ and $b$.
+	
+	
+		
+	\item Let $c=y_0 < y_1 < y_2 < y_3 =d$ be the endpoints of the subintervals of $[c,d]$ after partitioning. Label these endpoints in Figure \ref{F:11.1.Domain2}.
+	
+		
+	
+	\item What is the length $\Delta y$ of each subinterval $[y_{j-1},y_j]$? Your answer should be in terms of $c$ and $d$.
+	
+	
+
+	\item The partitions of the intervals $[a,b]$ and $[c,d]$ partition the rectangle $R$ into subrectangles. How many subrectangles are there?
+	
+	
+	
+	\item Let $R_{ij}$ denote the subrectangle $[x_{i-1},x_i] \times [y_{j-1},y_j]$. Label each subrectangle in Figure \ref{F:11.1.Domain2}.
+	
+	
+	
+	\item What is area $\Delta A$ of each subrectangle?
+	
+	
+	
+	\item Now let $[a,b] = [0,8]$ and $[c,d] = [2,6]$.  Let $(x_{11}^*,y_{11}^*)$ be the point in the upper right corner of the subrectangle $R_{11}$. Identify and correctly label this point in Figure \ref{F:11.1.Domain2}. Calculate the product
+\[f\left(x_{11}^*,y_{11}^*\right) \Delta A.\]
+Explain, geometrically, what this product represents.
+
+	
+	
+	\item For each $i$ and $j$, choose a point $(x_{ij}^*,y_{ij}^*)$ in the subrectangle $R_{i,j}$. Identify and correctly label these points in Figure \ref{F:11.1.Domain2}. Explain what the product
+\[f\left(x_{ij}^*,y_{ij}^*\right) \Delta A\]
+represents.
+
+	
+	
+	\item \label{p:11.1.Rsum_1} If we were to add all the values $f\left(x_{ij}^*,y_{ij}^*\right) \Delta A$ for each $i$ and $j$, what does the resulting number approximate about the surface defined by $f$ on the domain $R$? (You don't actually need to add these values.)
+
+	
+	
+	\item Write a double sum using summation notation that expresses the arbitrary sum from part ($j$).
+	
+
+
+    \ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

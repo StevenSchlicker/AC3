@@ -1,0 +1,343 @@
+\section{The Dot Product} \label{S:9.3.Dot_Product}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+  \item How is the dot product of two vectors defined and what
+    geometric information does it tell us? 
+  \item How can we tell if two vectors in $\R^n$ are perpendicular?
+  \item How do we find the projection of one vector onto another?
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+In the last section, we considered vector addition and scalar
+multiplication and found that each operation had a natural geometric
+interpretation.  In this section, we will introduce a means of
+multiplying vectors.
+
+\input{previews/9.3.PA2}
+
+\subsection*{The Dot Product}
+
+If we have two $n$-dimensional vectors 
+$\vu=\langle u_1, u_2,\ldots,u_n\rangle$ 
+and 
+$\vv=\langle v_1, v_2,\ldots,v_n\rangle$, we define their \emph{dot
+product}\footnote{As we will see shortly, the dot product arises in physics to calculate the work done by a vector force in a given direction. It might be more natural to define the dot product in this context, but it is more convenient from a mathematical perspective to define the dot product algebraically and then view work as an application of this definition.}\index{dot product} as
+$$
+\vu\cdot\vv = u_1v_1+u_2v_2 + \ldots + u_nv_n.
+$$
+For instance, we find that
+$$
+\langle 3, 0, 1 \rangle\cdot\langle -2, 1, 4\rangle = 3\cdot(-2) +
+0\cdot1 + 1\cdot4 = -6 + 0 + 4 = -2.
+$$
+Notice that the resulting quantity is a scalar.  Our work in Preview
+Activity \ref{PA:9.3} examined dot products of two-dimensional
+vectors.  
+
+\input{activities/9.3.Act2}
+
+The dot product is a natural way to define a product of two vectors.
+In addition, it behaves in ways that are similar to the product of,
+say, real numbers.
+
+\vspace*{5pt}
+\nin 
+\framebox{\hspace*{3 pt}
+  \parbox{6.25 in}{
+    Let $\vu$, $\vv$, and $\vw$ be vectors in $\R^n$. Then
+    \ba
+  \item $\vu \cdot \vv = \vv \cdot \vu$ (the dot product is
+    \emph{commutative}), and
+  \item if $c$ is a scalar, then $(c\vu + \vv) \cdot \vw = c(\vu \cdot
+    \vw) + \vv \cdot \vw$ (the dot product is \emph{bilinear}),
+    \ea
+  } \hspace*{3 pt}}
+\vspace*{5pt}
+
+Moreover, the dot product gives us valuable geometric information
+about the vectors and their relative orientation.  For instance, let's
+consider what happens when we dot a vector with itself:
+$$
+\vu\cdot\vu = \langle u_1,u_2,\ldots,u_n \rangle \cdot \langle u_1,u_2,\ldots,u_n \rangle = 
+u_1^2 + u_2^2 + \ldots + u_n^2 = |\vu|^2.
+$$
+In other words, the dot product of a vector with itself gives the
+square of the length of the vector:  $\vu\cdot\vu=|\vu|^2$.  
+
+\subsection*{The angle between vectors}
+
+The dot product can help us understand the angle between two
+vectors.  For instance, if we are given two vectors $\vu$ and $\vv$,
+there are two angles that these vectors create, as depicted in Figure
+\ref{F:9.3.Angle_between}. We will call $\theta$, the smaller of these
+angles, the \emph{angle between these vectors}\index{vector!angle between}.  Notice that
+$\theta$ lies between 0 and $\pi$.
+
+
+\begin{figure}[ht]
+  \begin{center}
+    \begin{minipage}{3in}
+  \begin{center}
+    \scalebox{1.0}{\includegraphics{figures/fig_9_3_angle_1.eps}}
+    \caption{The angle between vectors $\vu$ \\ and $\vv$.}
+    \label{F:9.3.Angle_between}  
+  \end{center}
+    \end{minipage}
+    \begin{minipage}{3in}
+      \begin{center}
+    \scalebox{1.0}{\includegraphics{figures/fig_9_3_angle_2.eps}}
+    \caption{The triangle formed by $\vu$, $\vv$, and $\vu - \vv$.}
+    \label{F:9.3.Angle}
+  \end{center}
+    \end{minipage}
+  \end{center}
+\end{figure}
+
+To determine this angle, we may apply the Law of Cosines to the
+triangle shown in Figure \ref{F:9.3.Angle}.  
+
+Using the fact that the dot product of a vector with itself gives us
+the square of its length, together with the bilinearity of the dot product, we find:
+\begin{eqnarray*}
+  |\vu-\vv|^2 & = & |\vu|^2 + |\vv|^2 - 2|\vu||\vv|\cos\theta \\
+  (\vu-\vv)\cdot(\vu-\vv) &=&
+  \vu\cdot\vu + \vv\cdot\vv - 2|\vu||\vv|\cos\theta \\
+  \vu\cdot(\vu-\vv) - \vv\cdot(\vu-\vv)& = &
+  \vu\cdot\vu + \vv\cdot\vv - 2|\vu||\vv|\cos\theta \\
+  \vu\cdot\vu - 2\vu\cdot\vv + \vv\cdot\vv & = & 
+  \vu\cdot\vu + \vv\cdot\vv - 2|\vu||\vv|\cos\theta \\
+  -2\vu\cdot\vv & = & -2|\vu||\vv|\cos\theta \\
+  \vu\cdot\vv & = & |\vu||\vv|\cos\theta.
+\end{eqnarray*}
+To summarize, we have the important relationship
+\begin{equation}
+  \vu\cdot\vv = u_1v_1+u_2v_2 + \ldots + u_nv_n =
+  |\vu||\vv|\cos\theta.
+  \label{E:9.3.dot.angle}
+\end{equation}
+
+It is sometimes useful to think of Equation~\eqref{E:9.3.dot.angle} as giving us an expression for
+the angle between two vectors:
+$$
+\theta = \cos^{-1}\left(\frac{\vu\cdot\vv}{|\vu||\vv|}\right).
+$$
+The real beauty of this expression is this:  the dot product is a very
+simple algebraic operation to perform yet it provides us with
+important geometric information -- namely the angle between the vectors --
+that would be difficult to determine otherwise.
+
+\input{activities/9.3.Act2.a}
+
+\subsection*{The Dot Product and Orthogonality}
+
+When the angle between two vectors is a right angle, it is frequently
+the case that something important is happening.  In this case, we say the
+vectors are {\em orthogonal}.  For instance, orthogonality often plays
+a role in optimization problems; to determine the shortest path from a
+point in $\R^3$ to a given plane, we move along a line orthogonal to
+the plane.  
+
+As Activity \ref{A:9.3.2.a} indicates, the dot product
+provides a simple means to determine whether two vectors are
+orthogonal to one another.  In this case,
+$\vu\cdot\vv=|\vu||\vv|\cos(\pi/2) = 0$, so we make the following important observation.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+  \parbox{6.25 in}{Two vectors $\vu$ and $\vv$ in $\R^n$ are
+    orthogonal \index{vectors!orthogonal} to each other
+    if $\vu \cdot \vv = 0$. 
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+More generally, the sign of the dot product gives us useful
+information about the relative orientation of the vectors.   If we remember that 
+\begin{center}
+\begin{tabular}{rl}
+  $\cos\theta > 0$ & if $\theta$ is an acute angle, \\
+  $\cos\theta = 0$ & if $\theta$ is a right angle, \\
+  and $\cos\theta < 0$ & if $\theta$ is an obtuse angle, \\
+\end{tabular}
+\end{center}
+
+we see that
+\begin{center}
+\begin{tabular}{rl}
+  $\vu\cdot\vv > 0$ & if $\theta$ is an acute angle, \\
+  $\vu\cdot\vv = 0$ & if $\theta$ is a right angle, \\
+  and $\vu\cdot\vv < 0$ & if $\theta$ is an obtuse angle. \\
+\end{tabular}
+\end{center}
+This is illustrated in Figure 
+\ref{F:9.3.Orientations}.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_9_3_orientations.eps}
+    \caption{The orientation of vectors}
+    \label{F:9.3.Orientations}
+  \end{center}
+\end{figure}
+
+\newpage
+
+
+\subsection*{Work, Force, and Displacement}
+
+In physics, work is a measure of the energy required to apply a force
+to an object through a displacement.  For instance, Figure
+\ref{F:9.3.Work} shows a force $\vF$ displacing an object from point
+$A$ to point $B$.  The displacement is then represented by the
+vector $\overrightarrow{AB}$.  
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_9_3_work_1.eps}
+  \end{center}
+  \caption{A force $\vF$ displacing an object.}
+  \label{F:9.3.Work}
+\end{figure}
+
+It turns out that the work required to displace the object is
+$$
+W = \vF\cdot\overrightarrow{AB} = |\vF||\overrightarrow{AB}|\cos\theta.
+$$
+This means that the work is determined only by the magnitude of the
+force applied parallel to the displacement.  Consequently, if we are
+given two vectors $\vu$ and $\vv$, we would like to write $\vu$ as a
+sum of two vectors, one of which is parallel to $\vv$ and one of which
+is orthogonal to $\vv$.  We take up this task after the next activity.
+
+\input{activities/9.3.Act1}
+
+\subsection*{Projections}
+
+\begin{figure}[ht]
+  \begin{center}
+    \begin{minipage}{3in}
+      \begin{center}
+        \includegraphics{figures/fig_9_3_projection_1.eps}
+        \caption{The projection of $\vu$ onto $\vv$.}
+        \label{F:9.3.Projection}
+      \end{center}
+    \end{minipage}
+    \begin{minipage}{3in}
+      \begin{center}
+        \includegraphics{figures/fig_9_3_projection_2.eps}
+        \caption{$\proj_{\vv} \vu$ when $\theta > \frac\pi2$.}
+        \label{F:9.3.Projection2}
+      \end{center}
+    \end{minipage}
+  \end{center}
+\end{figure}
+
+Suppose we are given two vectors $\vu$ and $\vv$ as shown in Figure
+\ref{F:9.3.Projection}.  Motivated by our discussion of work, we would
+like to write $\vu$ as a sum of two vectors, one of which is parallel
+to $\vv$ and one of which is orthogonal.  That is, we would like to
+write 
+\begin{equation}
+  \vu = \proj_{\vv}\vu + \proj_{\perp\vv}\vu,
+  \label{E:9.3.proj}
+\end{equation}
+where $\proj_{\vv}\vu$ is parallel to $\vv$ and $\proj_{\perp\vv}\vu$
+is orthogonal to $\vv$.  
+We call the vector $\proj_{\vv}\vu$ the
+{\em projection} of $\vu$ onto $\vv$\index{vector!projection}.
+
+To find the vector $\proj_{\vv} \vu$, we will dot both sides of Equation~(\ref{E:9.3.proj}) with the vector $\vv$, to find that
+\begin{eqnarray*}
+  \vu\cdot\vv& = &(\proj_{\vv}\vu + \proj_{\perp\vv}\vu)\cdot\vv \\
+                   &=&(\proj_{\vv}\vu)\cdot\vv +
+  (\proj_{\perp\vv}\vu)\cdot\vv \\
+                  &=&(\proj_{\vv}\vu)\cdot\vv.\\
+\end{eqnarray*}
+Notice that $(\proj_{\perp\vv}\vu)\cdot\vv = 0$ since
+$\proj_{\perp\vv}\vu$ is orthogonal to $\vv$.  Also, $\proj_{\vv}\vu$
+must be a scalar multiple of $\vv$ since it is parallel to $\vv$, so we
+will write $\proj_{\vv}\vu = s\vv$.  It follows that
+$$
+  \vu\cdot\vv =(\proj_{\vv}\vu)\cdot\vv = s\vv\cdot\vv,
+$$
+which means that
+$$
+s = \frac{\vu\cdot\vv}{\vv\cdot\vv}
+$$
+and hence
+$$
+\proj_{\vv}\vu = \frac{\vu\cdot\vv}{\vv\cdot\vv}\vv =
+\frac{\vu\cdot\vv}{|\vv|^2}\vv 
+$$
+
+It is sometimes useful to write $\proj_{\vv}\vu$ as a scalar times a
+unit vector in the direction of $\vv$.  We call this scalar the
+{\em component of $\vu$ along $\vv$} and denote it as
+$\comp_{\vv}\vu$.  We therefore have
+$$
+\proj_{\vv}\vu = \frac{\vu\cdot\vv}{|\vv|^2}\vv =
+\frac{\vu\cdot\vv}{|\vv|} \frac{\vv}{|\vv|}=
+\comp_{\vv}\vu \frac{\vv}{|\vv|},
+$$
+so that
+$$
+\comp_{\vv}\vu = \frac{\vu\cdot\vv}{|\vv|}.
+$$
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+  \parbox{6.25 in}{ Let $\vu$ and $\vv$ be vectors in $\R^n$. The
+    component\index{vector!component in the direction of} of $\vu$ in
+    the direction of $\vv$ is the scalar
+    \[\comp_{\vv} \vu = \frac{\vu \cdot \vv}{|\vv|},\] and the
+    projection\index{vector!projection} of $\vu$ onto $\vv$ is the
+    vector \[\proj_{\vv} \vu = \frac{\vu \cdot \vv}{\vv\cdot\vv} \vv.\]
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+Moreover, since
+\[\vu = \proj_{\vv} \vu + \proj_{\perp \vv} \vu,\]
+it follows that
+\[\proj_{\perp \vv} \vu = \vu - \proj_{\vv} \vu.\]
+This shows that once we have computed $\proj_{\vv} \vu$, we can find
+$\proj_{\perp \vv} \vu$ simply by calculating the difference of two
+known vectors.
+
+\input{activities/9.3.Act4}
+
+
+\begin{summary}
+\item The dot product of two vectors in $\R^n$, $\vu = \langle u_1,
+  u_2, \ldots, u_n \rangle$ and $\vv = \langle v_1, v_2, \ldots, v_n
+  \rangle$, is the scalar
+  \[
+  \vu \cdot \vv = u_1v_1 + u_2v_2 + \cdots + u_nv_n.
+  \]
+\item The dot product is related to the length of a vector since
+  $\vu\cdot\vu = |\vu|^2$.
+\item The dot product provides us with information about the angle
+  between the vectors since 
+  \[
+  \vu\cdot\vv = |\vu| \ |\vv|\cos\theta,
+  \] 
+  where $\theta$ is the angle
+  between $\vu$ and $\vv$. 
+\item Two vectors are orthogonal if the angle between them
+  is $\pi/2$. In terms of the dot product, the vectors $\vu$ and
+  $\vv$ are orthogonal if and only if $\vu \cdot \vv = 0$.
+\item The projection of a vector $\vu$ in $\R^n$ onto a vector $\vv$
+  in $\R^n$ is the vector
+  \[
+  \proj_{\vv} \vu = \frac{\vu \cdot \vv}{\vv\cdot\vv} \vv.
+  \]
+\end{summary}
+
+
+
+\nin \hrulefill
+
+\input{exercises/9.3.Dot_Product(Ex)}
+
+\clearpage

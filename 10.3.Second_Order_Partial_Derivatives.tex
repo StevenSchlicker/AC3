@@ -1,0 +1,211 @@
+\section{Second-Order Partial Derivatives} \label{S:10.3.Second_Order_Partial_Derivatives}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+  \parbox{6.25 in}{
+    \begin{goals} 
+    \item Given a function $f$ of two independent
+      variables $x$ and $y$, how are the second-order
+      partial derivatives of $f$ defined?  
+    \item What do the second-order
+      partial derivatives $f_{xx}$, $f_{yy}$, $f_{xy}$, and $f_{yx}$
+      of a function $f$ tell us about the function's behavior?
+%  \item What special relationship exists among the second-order mixed partial
+ %   derivatives $f_{xy}$ and $f_{yx}$ for a function $f$ of two variables?
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+Recall that for a single-variable function $f$, the second derivative of $f$ is defined to be the derivative of the first derivative.  That is, $f''(x) = \frac{d}{dx}[f'(x)]$, which can be stated in terms of the limit definition of the derivative by writing
+$$f''(x) = \lim_{h \to 0} \frac{f'(x+h) - f'(x)}{h}.$$
+%The second derivative measures the instantaneous rate of change of the first derivative, and thus the instantaneous rate of change of the slope of the tangent line to the function $f$.  Because of this relationship, we know that the second derivative is directly connected to the concavity of the function:  $f$ is concave up if and only if $f''$ is positive, and $f$ is concave down if and only if $f''$ is negative.  
+In what follows, we begin exploring the four different second-order partial derivatives of a function of two variables and seek to understand what these various derivatives tell us about the function's behavior.
+
+\input{previews/10.3.PA2}
+
+
+\subsection*{Second-order Partial Derivatives}
+
+A function $f$ of two independent variables $x$ and $y$ has two first
+order partial derivatives, $f_x$ and $f_y$. As we saw in Preview
+Activity \ref{PA:10.3}, each of these first-order partial derivatives
+has two partial derivatives, giving a total of four {\em second-order} partial derivatives\index{partial derivatives!second-order}:
+\begin{itemize}
+\item $f_{xx} = (f_x)_x = \frac{\partial}{\partial x} 
+  \left(\frac{\partial
+    f}{\partial x}\right) = 
+  \frac{\partial^2 f}{\partial x^2}$,
+\item $f_{yy} = (f_y)_y=\frac{\partial}{\partial y} 
+  \left(\frac{\partial
+    f}{\partial y}\right) = 
+  \frac{\partial^2 f}{\partial y^2}$,
+\item $f_{xy} = (f_x)_y=\frac{\partial}{\partial y} 
+  \left(\frac{\partial
+    f}{\partial x}\right) = 
+  \frac{\partial^2 f}{\partial y \partial x}$,
+\item $f_{yx}=(f_y)_x=\frac{\partial}{\partial x} 
+  \left(\frac{\partial
+    f}{\partial y}\right) = 
+  \frac{\partial^2 f}{\partial x \partial y}$.
+\end{itemize}
+
+The first two are called \emph{unmixed} second-order partial
+derivatives\index{partial derivatives!second-order, unmixed} while the
+last two are called the \emph{mixed} second-order partial
+derivatives\index{partial derivatives!second-order, mixed}.
+
+One aspect of this notation can be a little confusing.  The notation
+$$
+\frac{\partial^2 f}{\partial y\partial x} = \frac{\partial}{\partial
+  y}\left(\frac{\partial f}{\partial x}\right)
+$$
+means that we first differentiate with respect to $x$ and then with
+respect to $y$; this can be expressed in the alternate notation $f_{xy} = (f_x)_y$.  However, to find the second partial derivative
+$$
+f_{yx} = (f_y)_x
+$$
+we first differentiate with respect to $y$ and then $x$.  This means
+that
+$$
+\frac{\partial^2 f}{\partial y\partial x} = f_{xy}, 
+\hspace*{20pt}
+\mbox{and}
+\hspace*{20pt}
+\frac{\partial^2 f}{\partial x\partial y} = f_{yx}.
+$$
+Be sure to note carefully the difference between Leibniz notation and subscript notation and the order in which $x$ and $y$ appear in each.  In addition, remember that anytime we compute a partial derivative, we hold constant the variable(s) other than the one we are differentiating with respect to.
+
+\input{activities/10.3.Act1}
+
+In Preview Activity \ref{PA:10.3} and Activity \ref{A:10.3.1}, you may have noticed 
+that the mixed second-order partial derivatives are equal.
+This observation holds generally and is known as Clairaut's Theorem.
+
+\vspace*{5pt}
+\nin 
+\framebox{
+  \hspace*{3 pt}
+  \parbox{6.25 in}{
+    \textbf{Clairaut's Theorem.} Let $f$ be a function of two variables for which
+    the partial derivatives $f_{xy}$ and $f_{yx}$ are continuous near
+    the point $(a,b)$.  Then
+    \[f_{xy}(a,b) = f_{yx}(a,b).\]
+  } 
+  \hspace*{3 pt}
+}
+\vspace*{5pt}
+
+
+\subsection*{Interpreting the second-order Partial Derivatives}
+
+Recall from single variable calculus that the second derivative
+measures the instantaneous rate of change of the derivative.  This observation is
+the key to understanding the meaning of the second-order partial
+derivatives.  
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale=0.8]{figures/fig_10_3_fxx_1.eps}
+    \includegraphics[scale=0.8]{figures/fig_10_3_fxx_2.eps}
+    \includegraphics[scale=0.8]{figures/fig_10_3_fxx_3.eps}
+  \end{center}
+  \caption{The tangent lines to a trace with increasing $x$.}
+  \label{F:10.3.fxx}
+\end{figure}
+
+Furthermore, we remember that the second derivative of a function at a
+point provides us with information about the concavity of the function
+at that point.  Since the unmixed second-order partial derivative
+$f_{xx}$ requires us to hold $y$ constant and differentiate twice with
+respect to $x$, we may simply view $f_{xx}$ as the second derivative
+of a trace of $f$ where $y$ is fixed.  As such, $f_{xx}$ will measure
+the concavity of this trace.
+
+Consider, for example, $f(x,y) = \sin(x) e^{-y}$.  Figure
+\ref{F:10.3.fxx} shows the graph of this function along with the
+trace given by $y=-1.5$.  Also shown are three tangent lines to this
+trace, with increasing $x$-values from left to right among the three plots in Figure
+\ref{F:10.3.fxx}.
+
+
+That the slope of the tangent line is decreasing as $x$ increases is
+reflected, as it is in one-variable calculus, in the fact that the
+trace is concave down.  Indeed, we see that $f_x(x,y)=\cos(x)e^{-y}$ and so
+$f_{xx}(x,y)=-\sin(x)e^{-y} < 0$, since $e^{-y} > 0$ for all values of $y$, including $y = -1.5$.
+
+In the following activity, we further explore what second-order partial derivatives tell us about the geometric behavior of a surface.
+
+\input{activities/10.3.Act2a}
+
+%Similarly, $f_{yy}=(f_y)_y$ tells us the instantaneous rate at which $f_y$ changes
+%as we move along a trace with fixed $x$.  As such, its sign determines
+%the concavity of this trace.  In our example, $f_y(x,y)=-\sin(x)e^{-y}$, so
+%that $f_{yy}(x,y)=\sin(x)e^{-y}$.  Considering the trace with $x = \frac{\pi}{2}$, since $\sin(\pi/2) = 1$, it follows
+%that $f_{yy}(\pi/2,y) = e^{-y} > 0$.  This fact is reflected in Figure
+%\ref{F:10.3.fyy}, which shows that the slope of the tangent lines
+%increase along the trace with $x = \frac{\pi}{2}$, and hence this trace is concave
+%up. 
+
+%The mixed partials, $f_{xy}$ and $f_{yx}$, require more
+%thought.  Once again, recall that $f_{xy} = (f_x)_y$ measures the instantaneous rate
+%of change of $f_x$ as we increase $y$.  In addition, $f_x$ measures the slope
+%of the tangent line to a trace with $y$ fixed. Figure \ref{F:10.3.fxy}
+%shows three such tangent lines drawn as $y$ increases.  Notice that the
+%slope of the tangent lines decreases, and thus we expect that $f_{xy} <
+%0$.  Indeed, $f_{xy} = -\cos(x)e^{-y} > 0$ at the point shown in the figure.  
+
+Just as with the first-order partial derivatives, we can
+approximate second-order partial derivatives in the situation where we have only
+partial information about the function.
+
+\input{activities/10.3.Act6}
+
+As we have found in Activities~\ref{A:10.3.2a} and~\ref{A:10.3.6}, we may think of $f_{xy}$ as measuring the
+``twist'' of the graph as we increase $y$ along a particular trace where $x$ is held constant.  In the same way, $f_{yx}$ measures how
+the graph twists as we increase $x$.  If we remember that Clairaut's
+theorem tells us that $f_{xy} = f_{yx}$, we see that the amount of
+twisting is the same in both directions.  This twisting is perhaps
+more easily seen in Figure \ref{F:10.3.ruled}, which shows the graph
+of $f(x,y) = -xy$, for which $f_{xy} = -1$.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale=0.8]{figures/fig_10_3_ruled.eps}
+  \end{center}
+  \caption{The graph of $f(x,y) = -xy$.}
+  \label{F:10.3.ruled}
+\end{figure}
+
+
+%\input{activities/10.3.Act7}
+
+%\input{activities/10.3.Act8}
+
+
+
+
+\begin{summary}
+\item There are four second-order partial derivatives of a function
+  $f$ of two independent variables $x$ and $y$:
+  $$
+  f_{xx} = (f_x)_x,
+  f_{xy} = (f_x)_y,
+  f_{yx} = (f_y)_x,\ \mbox{and} \ 
+  f_{yy} = (f_y)_y.
+  $$
+
+  \item The unmixed second-order partial derivatives, $f_{xx}$ and
+    $f_{yy}$, tell us about the concavity of the traces. The mixed second-order partial derivatives, $f_{xy}$ and
+    $f_{yx}$, tell us how the graph of $f$ twists.
+
+%  \item Clairaut's theorem tells us that, with a mild assumption on
+ %   $f$, the mixed partial derivatives of $f$ are equal:  $f_{xy} =
+ %   f_{yx}$. 
+  \end{summary}
+
+
+\nin \hrulefill
+
+\input{exercises/10.3.Second_Order_Partial_Derivatives(Ex)}
+
+\clearpage

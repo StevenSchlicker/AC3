@@ -1,0 +1,27 @@
+\begin{activity} \label{A:1.6.1} The same curve can be represented with different parameterizations. Use your calculator,\footnote{If you have a graphing calculator you can draw graphs of two-dimensional vector-valued functions using the parametric mode (often found in the MODE menu).} Wolfram$\mid$Alpha, or some other graphing device\footnote{e.g., \url{http://webspace.ship.edu/msrenault/ggb/parametric_grapher.html}} to draw the following. Compare and contrast the graphs -- explain how they are alike and how they are different.
+    \ba
+    \item $\vr(t) = \langle \sin(t), \cos(t) \rangle$
+
+
+
+    \item $\vr(t) = \langle \sin(2t), \cos(2t) \rangle$
+
+
+
+    \item $\vr(t) = \langle \cos(t+\pi), \sin(t+\pi) \rangle$
+
+
+
+    \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

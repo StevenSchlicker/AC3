@@ -1,0 +1,121 @@
+\begin{activity} \label{A:11.1.2} Let $f(x,y) = x+2y$ and let $R = [0,2] \times [1,3]$.
+	\ba
+	\item Draw a picture of $R$. Partition $[0,2]$ into 2 subintervals of equal length and the interval $[1,3]$ into two subintervals of equal length. Draw these partitions on your picture of $R$ and label the resulting subrectangles using the labeling scheme we established in the definition of a double Riemann sum.
+	
+	
+	
+	\item For each $i$ and $j$, let $(x_{ij}^*, y_{ij}^*)$ be the midpoint of the rectangle $R_{ij}$. Identify the coordinates of each $(x_{ij}^*, y_{ij}^*)$. Draw these points on your picture of $R$.
+	
+	
+	
+	\item Calculate the Riemann sum
+\[\sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \cdot \Delta A\]
+using the partitions we have described. If we let $(x_{ij}^*, y_{ij}^*)$ be the midpoint of the rectangle $R_{ij}$ for each $i$ and $j$, then the resulting Riemann sum is called a \emph{midpoint sum}.
+
+
+
+	\item Give two interpretations for the meaning of the sum you just calculated.
+
+
+    \ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+	\ba
+	\item The partition of $[0,2]$ into 2 subintervals of equal length yields endpoints $0$, $1$ and $2$, while the partition of the interval $[1,3]$ into two subintervals of equal length produces endpoints $1$, $2$, and $3$. The partitions of the intervals divide the rectangle $R$ into $4$ subrectangles of area 1 as shown in the figure below. 
+\begin{center}
+\setlength{\unitlength}{0.75cm}
+\begin{picture}(4.5,6.5)
+\put(-0.1,-0.6){$0$}
+\put(1.9,-0.6){$1$}
+\put(3.9,-0.6){$2$}
+\put(-0.4,1.85){$1$}
+\put(-0.4,3.85){$2$}
+\put(-0.4,5.85){$3$}
+\put(0.6,2.8){$R_{11}$}
+\put(2.6,2.8){$R_{21}$}
+\put(0.6,4.8){$R_{12}$}
+\put(2.6,4.8){$R_{22}$}
+%Horizontal lines
+\put(0,0){\line(1,0){5}}
+\put(-0.1,2){\line(1,0){4.1}}
+\put(-0.1,4){\line(1,0){4.1}}
+\put(-0.1,6){\line(1,0){4.1}}
+\put(4.9,-0.6){$x$}
+%Vertical lines
+\put(0,0){\line(0,1){7}}
+\put(2,2){\line(0,1){4}}
+\put(4,2){\line(0,1){4}}
+\put(-0.4,6.9){$y$}
+%Vertical tick marks
+\put(2,-0.1){\line(0,1){0.2}}
+\put(4,-0.1){\line(0,1){0.2}}
+
+\end{picture}
+\end{center}
+		
+	
+	
+	\item The point $(x_{11}^*, y_{11}^*)$ is the midpoint of the rectangle $[0,1] \times [1,2]$, and so $(x_{11}^*, y_{11}^*) = (0.5, 1.5)$. Similarly, we have $(x_{21}^*, y_{21}^*) = (1.5, 1.5)$, $(x_{12}^*, y_{12}^*) = (0.5, 2.5)$, and $(x_{22}^*, y_{22}^*) = (1.5, 2.5)$. These points are shown in the figure below. 
+\begin{center}
+\setlength{\unitlength}{0.75cm}
+\begin{picture}(4.5,6.5)
+\put(-0.1,-0.6){$0$}
+\put(1.9,-0.6){$1$}
+\put(3.9,-0.6){$2$}
+\put(-0.4,1.85){$1$}
+\put(-0.4,3.85){$2$}
+\put(-0.4,5.85){$3$}
+%\put(0.6,2.8){$R_{11}$}
+%\put(2.6,2.8){$R_{21}$}
+%\put(0.6,4.8){$R_{12}$}
+%\put(2.6,4.8){$R_{22}$}
+\put(1,3){\circle*{0.1}}
+\put(1,5){\circle*{0.1}}
+\put(3,3){\circle*{0.1}}
+\put(3,5){\circle*{0.1}}
+\put(0.2,2.5){\scriptsize{$(x_{11}^*,y_{11}^*)$}}
+\put(0.2,4.5){\scriptsize{$(x_{12}^*,y_{12}^*)$}}
+\put(2.2,2.5){\scriptsize{$(x_{21}^*,y_{21}^*)$}}
+\put(2.2,4.5){\scriptsize{$(x_{22}^*,y_{22}^*)$}}
+%Horizontal lines
+\put(0,0){\line(1,0){5}}
+\put(-0.1,2){\line(1,0){4.1}}
+\put(-0.1,4){\line(1,0){4.1}}
+\put(-0.1,6){\line(1,0){4.1}}
+\put(4.9,-0.6){$x$}
+%Vertical lines
+\put(0,0){\line(0,1){7}}
+\put(2,2){\line(0,1){4}}
+\put(4,2){\line(0,1){4}}
+\put(-0.4,6.9){$y$}
+%Vertical tick marks
+\put(2,-0.1){\line(0,1){0.2}}
+\put(4,-0.1){\line(0,1){0.2}}
+
+\end{picture}
+\end{center}
+		
+	
+	
+	\item Writing out the terms and calculating yields
+\begin{align*}
+\sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \cdot \Delta A &= f(0.5, 1.5)(1) + f(1.5, 1.5)(1) + f(0.5, 2.5)(1) + f(1.5, 2.5)(1) \\
+	&= 3.5+4.5+5.5+6.5 \\
+	&= 20.
+\end{align*}
+
+
+	\item Since $f(x,y) \geq 0$ on $R$, the sum in part (b) approximates the volume of the solid bounded above by the graph of $f$ and below by the rectangle $R$. In addition, the sum also approximates the average value of $f$ on $R$ times the area of $R$. 
+
+
+    \ea
+\end{activitySolution}
+\aftera

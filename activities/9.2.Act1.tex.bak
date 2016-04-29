@@ -1,0 +1,27 @@
+\begin{activity} \label{A:1.2.1}  As a class determine a coordinatization of your classroom, agreeing on some convenient set of axes (e.g., an intersection of walls and floor) and some units in the $x$, $y$, and $z$ directions (e.g., using lengths of sides of floor, ceiling, or wall tiles). Let $O$ be the origin of your coordinate system. Then agree on three points, $A$, $B$, and $C$ in the room  Complete the following.
+\ba
+	\item Determine the coordinates of the point $A$.
+
+    \item Determine the coordinates of the point $B$.
+
+	\item Determine the coordinates of the point $C$.
+
+    \item Determine the components of the indicated vectors.
+    \begin{center}
+	\begin{tabular}{cccccc}
+(i) $\overrightarrow{OA}$ &(ii) $\overrightarrow{OB}$ &(iii) $\overrightarrow{OC}$ &(iv) $\overrightarrow{AB}$ &(v) $\overrightarrow{AC}$ &(vi) $\overrightarrow{BC}$
+	\end{tabular}
+    \end{center}
+
+    \ea
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

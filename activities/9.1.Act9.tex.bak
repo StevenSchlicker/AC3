@@ -1,0 +1,44 @@
+
+\begin{activity} \label{A:1.1.9}
+\begin{figure}[ht]
+\begin{center}
+\begin{minipage}{2.5in}
+\begin{center}
+\resizebox{!}{1.75in}{\includegraphics{figures/1_1_contour_activity_1}}
+\caption{Level curves for $f(x,y) = x^2+y^2$.}
+\label{F:1.1.contour_activity_a}
+\end{center}
+\end{minipage}
+\hspace{0.5in}
+\begin{minipage}{2.5in}
+\begin{center}
+\resizebox{!}{1.75in}{\includegraphics{figures/1_1_contour_activity_1}}
+\caption{Level curves for $g(x,y) = \sqrt{x^2+y^2}$.}
+\label{F:1.1.contour_activity_b}
+\end{center}
+\end{minipage}
+\end{center}
+\end{figure}
+   \ba
+    \item Let $f(x,y) = x^2+y^2$. Draw the level curves $f(x,y) = k$ for $k=1$, $k=2$, $k=3$, and $k=4$ on the axes given in Figure \ref{F:1.1.contour_activity_a}. (You decide on the scaling of the axes.) Explain what the surface defined by $f$ looks like.
+
+    \item Let $g(x,y) = \sqrt{x^2+y^2}$. Draw the level curves $g(x,y) = k$ for $k=1$, $k=2$, $k=3$, and $k=4$ on the axes given in Figure \ref{F:1.1.contour_activity_b}. (You decide on the scaling of the axes.) Explain what the surface defined by $g$ looks like.
+
+    \item Compare and contrast the graphs of $f$ and $g$. How are they alike? How are they different? Use traces for each function to help answer these questions.
+
+     \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+
+\end{activitySolution}
+
+
+\aftera 

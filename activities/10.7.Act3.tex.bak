@@ -1,0 +1,26 @@
+\begin{activity} \label{A:2.7.3} Find the critical points of the following functions. Use appropriate technology (e.g., Wolfram$|$Alpha or CalcPlot3D\footnote{at \url{http://web.monroecc.edu/manila/webfiles/calcNSF/JavaCode/CalcPlot3D.htm}}) to draw the graphs of the surfaces to verify your answers.
+	\ba
+	\item $f(x,y) = 2+x^2+y^2$
+	
+	
+	
+	\item $f(x,y) = 2x-x^2-\frac{1}{4}y^2$
+	
+	
+	
+	\item $f(x,y) = |x| + |y|$
+	
+	
+
+	\ea
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

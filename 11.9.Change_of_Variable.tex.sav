@@ -1,0 +1,245 @@
+\section{Change of Variables} \label{S:11.9.Change_of_Variable}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+\item What is a change of variables?
+\item What is the Jacobean, and how is it related to a change of variables?
+\end{goals}} \hspace*{3 pt}}
+
+
+\input{previews/11.9.PA1}
+
+
+\subsection*{Introduction}
+
+In single variable calculus, we encountered the idea of a change of variable in a definite integral through the method of substitution. For example, the definite integral
+\[\int_0^2 2x(x^2+1)^3 \, dx\]
+can be transformed into the definite integral
+\[\int_1^5 u^3 \, du\]
+with the change of variable $u = x^2+1$. (Note that $du = 2x \, dx$.)
+
+This change of variable works directly because the elements of length, $du$ and $dx$, are measured in the same way. In this section we will see that a change of variables in a multiple integral is a bit more complicated.
+
+\subsection*{Change of Variables in Polar Coordinates}
+
+The idea behind a change of variables can be seen through Preview Activity \ref{PA:11.9}. We saw that in a change of variables from rectangular coordinates to polar coordinates, a polar rectangle $[r_1, r_2] \times [\theta_1, \theta_2]$ gets mapped to a Cartesian rectangle under the transformation
+\begin{equation*}
+x = r \cos(\theta),  \ \ \ \ \ \text{ and } \ \ \ \ \ y = r \sin(\theta).
+\end{equation*}
+The vertices $(r_1,\theta_1)$, $(r_2,\theta_1)$, $(r_1,\theta_2)$,and $(r_2,\theta_2)$ of the polar rectangle are transformed into the vertices $(x_1,y_1)$, $(x_2,y_2)$, $(x_3,y_3)$, and $(x_4,y_4)$, respectively, of a closed and bounded region in rectangular coordinates. If we lived in polar coordinates, the polar rectangle $P$ would look to us as shown in Figure \ref{F:11.9.Change_vars1_a}. The image $P'$ of the polar rectangle $P$ under the transformations in (\ref{eq:11.9.pol_to_rect}) is shown in Figure \ref{F:11.9.Change_vars1_b}.
+\begin{figure}[ht]
+\begin{center}
+\begin{minipage}{2.5in}
+\begin{center}
+\resizebox{!}{2.4in}{\includegraphics{11_9_Polar_COV_1}}
+\end{center}
+\caption{Rectangle $P$ in the polar world.}
+\label{F:11.9.Change_vars1_a}
+\end{minipage}
+\begin{minipage}{2.5in}
+\begin{center}
+\resizebox{!}{2.4in}{\includegraphics{11_9_Polar_COV_2}}
+\end{center}
+\caption{Image $P'$ in the Cartesian world.}
+\label{F:11.9.Change_vars1_b}
+\end{minipage}
+\end{center}
+\end{figure}
+We have seen that the area of the transformed rectangle $P'$ is given by $\frac{r_2+r_1}{2} \Delta r \Delta \theta$, and as $\Delta r$ and $\Delta \theta$ go to 0 this area becomes the area element $dA = r \, dr \, d\theta$. This is the general idea of a change of variables in multiple integrals.
+
+\subsection*{General Change of Coordinates}
+
+In this section we focus on double integrals, and make the connection to triple integrals in a later section. We may be able to simplify a double  integral of the form
+\[\int \int_D f(x,y) \, dA\]
+by making a change of variable of the form
+\[x = x(s, t) \ \ \ \ \ \text{ and } \ \ \ \ \  y = y(s, t)\]
+where $x$ and $y$ are functions of new variables $s$ and $t$. This translates our problem from the $st$-plane into the $xy$-plane. The equations $x=x(s,t)$ and $y=y(s,t)$ convert $s$ and $t$ to $x$ and $y$ by the given formulas the \emph{change of variable} formulas. To complete the change to the new $s,t$ variables, we need to know our element of area $dA$ in this new system. An example should help to illustrate the idea.
+
+\input{activities/11.9.Act1}
+
+Activity \ref{A:11.9.1} presents the general idea of how a change of variables work. We partition a rectangular domain in the $st$ system into subrectangles. Let $T = [a, b] \times [a+\Delta s, b+\Delta t]$ be one of these subrectangles. Then we transform this into a region $T'$ in the standard $xy$ Cartesian coordinate system. The region $T'$ is called the \emph{image} of $T$ and the region $T$ is the \emph{pre-image} of $T'$.  Although the sides of this $xy$ region $T'$ aren't necessarily straight (linear), we will approximate the element of area $dA$ for this region with the area of the parallelogram whose sides are given by the vectors
+\begin{itemize}
+\item $\vv$ from $(x(a, b), y(a, b))$ to $(x(a + \Delta s, b), y(a + \Delta s, b))$
+\item $\vw$ from $(x(a, b), y(a, b))$ to $(x(a, b + \Delta t), y(a, b + \Delta t))$.
+\end{itemize}
+An example of a translated image $T'$ of $T$ in the $xy$-plane is shown in Figure \ref{F:11.9.Change_vars_ex}, using the polar coordinate transformations.
+\begin{figure}[ht]
+\begin{center}
+\resizebox{!}{2.5in}{\includegraphics{11_9_COV_area_element}}
+\end{center}
+\caption{Approximating an area in polar coordinates.}
+\label{F:11.9.Change_vars_ex}
+\end{figure}
+
+The components of the vectors $\vv$ and $\vw$ are
+\begin{align*}
+\vv &= \left\langle x(a+ \Delta s, b) - x(a,b), y(a+ \Delta s, b) - y(a,b), 0 \right\rangle \\
+\vw &= \left\langle x(a, b+ \Delta t) - x(a,b), y(a, b+ \Delta s) - y(a,b), 0 \right\rangle.
+\end{align*}
+
+We can rewrite $\vv$ and $\vw$ as
+\begin{align*}
+\vv &= \left\langle \frac{x(a+ \Delta s, b) - x(a,b)}{\Delta s}, \frac{y(a+ \Delta s, b) - y(a,b)}{\Delta s}, 0 \right\rangle \Delta s \\
+\vw &= \left\langle \frac{x(a, b+ \Delta t) - x(a,b)}{\Delta t}, \frac{y(a, b+ \Delta s) - y(a,b)}{\Delta t}, 0 \right\rangle \Delta t.
+\end{align*}
+
+For small $\Delta s$ and $\Delta t$ we have
+\[\vv \approx \left\langle \frac{\partial x}{\partial s}(a,b), \frac{\partial y}{\partial s}(a,b), 0 \right\rangle \Delta s \ \ \ \ \ \text{ and } \ \ \ \ \  \vw \approx \left\langle \frac{\partial x}{\partial t}(a,b), \frac{\partial y}{\partial t}(a,b), 0 \right\rangle \Delta t.\]
+
+Recall that the area of the parallelogram with sides $\vv$ and $\vw$ is $|\vv \times \vw|$. Now
+\begin{align*}
+\vv \times \vw &\approx \left\langle \frac{\partial x}{\partial s}(a,b), \frac{\partial y}{\partial s}(a,b), 0 \right\rangle \Delta s \times \left\langle \frac{\partial x}{\partial t}(a,b), \frac{\partial y}{\partial t}(a,b), 0 \right\rangle \Delta t \\
+    &= \left\langle 0,0, \frac{\partial x}{\partial s}(a,b) \frac{\partial y}{\partial t}(a,b) - \frac{\partial x}{\partial t}(a,b) \frac{\partial y}{\partial s}(a,b) \right\rangle \Delta s \, \Delta t.
+\end{align*}
+
+So
+\begin{align*}
+|\vv \times \vw| &\approx \left|\left\langle 0,0, \frac{\partial x}{\partial s}(a,b) \frac{\partial y}{\partial t}(a,b) - \frac{\partial x}{\partial t}(a,b) \frac{\partial y}{\partial s}(a,b) \right\rangle \Delta s \, \Delta t\right| \\
+    &= \left|\frac{\partial x}{\partial s}(a,b) \frac{\partial y}{\partial t}(a,b) - \frac{\partial x}{\partial t}(a,b) \frac{\partial y}{\partial s}(a,b)\right| \Delta s \, \Delta t.
+\end{align*}
+
+Therefore, as the number of subdivisions goes to infinity in each direction we have
+\[dA = \left|\frac{\partial x}{\partial s} \frac{\partial y}{\partial t} - \frac{\partial x}{\partial t} \frac{\partial y}{\partial s} \right| ds \, dt.\]
+
+This gives us the change of variable formula in a double integral
+\[\int \int_T f(x,y) \, dA = \int \int_R f(x,y) \, dy \, dx = \int \int_{T'} f(x(s,t),y(s,t)) \left|\frac{\partial x}{\partial s} \frac{\partial y}{\partial t} - \frac{\partial x}{\partial t} \frac{\partial y}{\partial s}\right| ds \, dt.\]
+
+The quantity
+\[\left|\frac{\partial x}{\partial s} \frac{\partial y}{\partial t} - \frac{\partial x}{\partial t} \frac{\partial y}{\partial s}\right|\]
+is called the \emph{Jacobian}. There is also a useful shorthand notation for the Jacobean:
+\[\frac{\partial (x,y)}{\partial (s,t)} = \frac{\partial x}{\partial s} \frac{\partial y}{\partial t} - \frac{\partial x}{\partial t} \frac{\partial y}{\partial s}.\]
+
+If you are familiar with determinants of matrices, we can can also represent the Jacobian as the determinant of a $2 \times 2$ matrix
+\[\frac{\partial (x,y)}{\partial (s,t)} = \renewcommand{\tabcolsep}{0.1cm}
+\renewcommand{\arraystretch}{2.5} \left| \begin{array}{cc} \ds \frac{\partial x}{\partial s} & \ds \frac{\partial x}{\partial t} \\ \ds \frac{\partial y}{\partial s} & \ds \frac{\partial y}{\partial t} \end{array} \right|.\]
+
+\input{activities/11.9.Act2}
+
+\begin{exercise} Find the Jacobian when changing from rectangular to polar coordinates.
+
+
+
+\begin{comment}
+In this case we have
+\[x(r, \theta) = r \cos(\theta) \ \ \ \ \ \text{ and } \ \ \ \ \ y(r, \theta) = r \sin(\theta).\]
+Since we can assume $r \geq 0$ in polar coordinates, the Jacobian is
+\[\left|\frac{\partial x}{\partial r} \frac{\partial y}{\partial \theta} - \frac{\partial x}{\partial \theta} \frac{\partial y}{\partial r}\right| = \left|\cos(\theta)(r\cos(\theta)) - \sin(\theta)(r\sin(\theta))\right| = \left|r\cos^2(\theta) + r\sin^2(\theta)\right| = r\]
+as expected.
+\end{comment}
+
+\end{exercise}
+
+The change of variable formula that we have just derived is the following.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.75 in}{\textbf{Change of Variables in a Double Integral.} Suppose a change of variables $x = x(s,t)$ and $y = y(s,t)$ transforms a closed and bounded region $R$ in the $st$-plane into a closed and bounded region $R'$ in the $xy$-plane. Under nice\footnote{It is beyond the scope of this class to determine exactly what ``nice" is, but this will work for all the examples we will encounter.} conditions we have
+\[\int \int_R f(x,y) \, dA = \int \int_{R'} f(x(s,t), y(s,t)) \left|\frac{\partial (x,y)}{\partial (s,t)}\right| \, ds \, dt.\]
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+A natural question to ask is, given a particular double integral, how can we find a useful change of variables to make? There are two general factors to consider: if the integrand is particularly difficult, we might choose a change of variables (possibly indicated by the form of the integrand) to make the integrand easier; or we might choose a change of variables that transforms the region of integration into one that has a simpler form. These ideas are illustrated in the next activities.
+
+\ms
+
+\begin{exercise} Consider the problem of finding the area of the region $D$ defined by the ellipse $x^2 + \frac{y^2}{4} = 1$. Here we will make a change of variables so that the pre-image of the domain is a circle.
+	\ba
+	\item Let $x(s,t) = s$ and $y(s,t) = 2t$. Show that the pre-image of the the ellipse in the $st$-plane is the circle $s^2 + t^2 = 1$.
+	
+	
+	
+	\item Recall that the area of the ellipse $D$ is equal to the double integral $\ds \int \int_D 1 \, dA$. Show that
+	\[\int \int_D 1 \, dA = \int \int_{D'} 2 \, ds \, dt\]
+	where $D'$ is the disk bounded by the circle $s^2 + t^2 = 1$.
+	
+	
+	
+	\item Without doing any integration, explain why the area of the ellipse $D$ is $2\pi$.
+
+	
+
+	\ea
+\end{exercise}
+
+\ms
+
+\begin{exercise} Let $D$ be the region in the $xy$-plane bounded by the lines $y=0$, $x=0$, and $x+y=1$. We will evaluate the double integral
+\begin{equation}
+\int \int_D \sqrt{x+y}(x-y)^2 \, dA \label{eq:11.9.COV_ex}
+\end{equation}
+with a change of variables.
+	\ba
+	\item Sketch the $xy$ domain $D$.
+	
+	
+		
+	\item We would like to make the integrand a bit easier to integrate. Let $s = x+y$ and $t = x-y$. Explain why this might make integration easier.
+
+	
+
+	\item Solve the equations $s = x+y$ and $t = x-y$ for $x$ and $y$. This will give us the change of variables we want.
+
+	
+
+	\item To make this change of variables, we will need to know the $st$-region $S$ that corresponds to the $xy$-region $D$.
+		\begin{enumerate}[i.]
+		\item What $st$ equation corresponds to the $xy$ equation $x+y=1$?
+		
+		
+		
+		\item What $st$ equation corresponds to the $xy$ equation $x=0$?
+		
+		
+		
+		\item What $st$ equation corresponds to the $xy$ equation $y=0$?
+		
+		
+		
+		\item Sketch the $st$ region $S$ that corresponds to the $xy$ domain $D$.
+		
+		
+		
+		\end{enumerate}
+		
+	\item Make the change of variables indicated by $s = x+y$ and $t = x-y$ in the double integral (\ref{ex:11.9.COV_ex}) and set up an iterated integral in $st$ variables whose value is the double integral. Evaluate the iterated integral.
+	
+	
+	
+	\ea
+\end{exercise}
+
+\subsection*{Change of Variables in a Triple Integral}
+
+The same types of arguments can be used to show that a change of variables $x=x(s,t,u)$, $y=y(s,t,u)$, and $z = z(s,t,u)$ in a triple integral
+\[\int \int \int_S f(x,y,z) \, dV\]
+leads to the integral
+\[\int \int \int_S f(x,y,z) \, dV = \int \int \int_{S'} f(x(s,t,u),y(s,t,u),z(s,t,u)) \ \left| \frac{\partial(x,y,z)}{\partial(s,t,u)} \right| \, ds \, dt \, du,\]
+where
+\[\frac{\partial(x,y,z)}{\partial(s,t,u)} = \left| \renewcommand{\tabcolsep}{0.1cm}
+\renewcommand{\arraystretch}{2.5}
+\begin{array}{ccc} \ds \frac{\partial x}{\partial s} & \ds \frac{\partial x}{\partial t} & \ds \frac{\partial x}{\partial u} \\ \ds \frac{\partial y}{\partial s} & \ds \frac{\partial y}{\partial t} & \ds \frac{\partial y}{\partial u} \\ \ds \frac{\partial z}{\partial s} & \ds \frac{\partial z}{\partial t} & \ds \frac{\partial z}{\partial u} \end{array} \right|.\]
+In expanded form,
+\[\frac{\partial(x,y,z)}{\partial(s,t,u)} = \frac{\partial x}{\partial s}\left[\frac{\partial y}{\partial t}\frac{\partial z}{\partial u} - \frac{\partial y}{\partial u}\frac{\partial z}{\partial t}\right] - \frac{\partial x}{\partial t}\left[\frac{\partial y}{\partial s}\frac{\partial z}{\partial u} - \frac{\partial y}{\partial u}\frac{\partial z}{\partial s}\right] + \frac{\partial x}{\partial u}\left[\frac{\partial y}{\partial s}\frac{\partial z}{\partial t} - \frac{\partial y}{\partial t}\frac{\partial z}{\partial s}\right].\]
+The expression $\frac{\partial(x,y,z)}{\partial(s,t,u)}$ is again called the Jacobian.
+
+\ms
+
+\begin{exercise} Verify that the change of variables
+\[x(\rho, \theta, \phi) = \rho \sin(\phi) \cos(\theta), \ \ \ \ \ y(\rho, \theta, \phi) = \rho \sin(\phi) \sin(\theta), \ \ \ \ \ z(\rho, \theta, \phi) = \rho \cos(\phi)\]
+from spherical coordinates to rectangular coordinates has Jacobian $\rho^2 \sin(\phi)$.
+
+
+
+\end{exercise}
+
+\begin{summary}
+\item What is a change of variables?
+\item What is the Jacobean, and how is it related to a change of variables?
+\end{summary}
+
+\nin \hrulefill
+
+%\input{exercises/11.9.Change_of_Variable(Ex)}
+
+\clearpage

@@ -1,0 +1,18 @@
+\begin{activity} \label{A:11.9.2} Find the Jacobian when changing from rectangular to polar coordinates.  That is, for the transformation given by $x = r\cos(\theta)$, $y = r\sin(\theta)$, determine a simplified expression for the quantity 
+$$\left|\frac{\partial x}{\partial r} \frac{\partial y}{\partial \theta} - \frac{\partial x}{\partial \theta} \frac{\partial y}{\partial r}\right|.$$
+What do you observe about your result?  How is this connected to our earlier work with double integrals in polar coordinates?
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+In this case we have
+\[x(r, \theta) = r \cos(\theta) \ \ \ \ \ \text{ and } \ \ \ \ \ y(r, \theta) = r \sin(\theta).\]
+Since we can assume $r \geq 0$ in polar coordinates, the Jacobian is
+\[\left|\frac{\partial x}{\partial r} \frac{\partial y}{\partial \theta} - \frac{\partial x}{\partial \theta} \frac{\partial y}{\partial r}\right| = \left|\cos(\theta)(r\cos(\theta)) - \sin(\theta)(r\sin(\theta))\right| = \left|r\cos^2(\theta) + r\sin^2(\theta)\right| = r\]
+as expected.
+\end{activitySolution}
+\aftera

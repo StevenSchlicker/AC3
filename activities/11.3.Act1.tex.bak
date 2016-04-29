@@ -1,0 +1,29 @@
+\begin{activity} \label{A:11.2.1} Let $f(x,y) = 25-x^2-y^2$ on the rectangular domain $R = [-3,3] \times [-4,4]$.
+	\ba
+	\item Consider $x$ to be a constant and evaluate the integral to find $A(x)$ if
+\[A(x) = \int_{-4}^4 f(x,y) \, dy.\]
+Your result should be a function of $x$ only.
+
+
+
+	\item Now find the value of $\ds \int_{-3}^3 A(x) \, dx$.
+	
+	
+	
+	\item What is the value of $\ds \int \int_R f(x,y) \, dA$? Explain two things this number tells us.
+	
+	
+	
+	\ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

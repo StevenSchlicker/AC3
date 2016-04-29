@@ -1,0 +1,78 @@
+\begin{pa} \label{PA:11.2} Let $f(x,y) = 25-x^2-y^2$ on the rectangular domain $R = [-3,3] \times [-4,4]$.
+	\ba
+	\item As we did with partial derivatives, we can treat one of the variables in $f$ as constant and think of the resulting function as a function of a single variable. Now we investigate what happens if we integrate instead of differentiate. Choose a fixed value of $x$ in the interior of $[-3,3]$. Let
+\[A(x) = \int_{-4}^4 f(x,y) \, dy.\]
+Think about what the definite integral from single variable calculus tells us and explain what the value of $A(x)$ tells us about the surface defined by $f$. (Hint: Recall what a trace is and consider how $A(x)$ is related to Figure \ref{F:11.2.Cross_section_PA_y}.)
+\begin{figure}[ht]
+\begin{center}
+\begin{minipage}{2.5in}
+\begin{center}
+\resizebox{!}{2.4in}{\includegraphics[trim=0cm 0cm 0.25cm 0.5cm,clip]{11_2_Cross_section_PA_y}}
+\end{center}
+\caption{A cross section with fixed $x$.}
+\label{F:11.2.Cross_section_PA_y}
+\end{minipage} \hspace{0.2in}
+\begin{minipage}{2.5in}
+\begin{center}
+\resizebox{!}{2.4in}{\includegraphics[trim=0cm 0cm 0.25cm 0.5cm,clip]{11_2_Cross_section_PA_y_slab}}
+\end{center}
+\caption{A cross section with fixed $y$ and $\Delta x$.}
+\label{F:11.2.Cross_section_PA_y_slab}
+\end{minipage}
+\end{center}
+\end{figure}
+%crop graphics in animate trim=<left> <bottom> <right> <top>, add, clip with \includegraphics
+
+
+
+\begin{comment}
+
+Since $f(x,y) \geq 0$ on the given domain, the value of $A(x)$ tells us the area under the $y$-trace curve for that fixed value of $x$.
+
+
+
+\end{comment}
+
+	\item Since $f$ is continuous on $R$, we can define the function $A = A(x)$ at every value of $x$ in $[-3,3]$. Consequently, we can define the definite integral $\ds \int_{-3}^3 A(x) \, dx$ of $A(x)$ as
+\[\int_{-3}^3 A(x) \, dx = \lim_{m \to \infty} \sum_{i=1}^m A(x_i^*) \ \Delta x,\]
+where $-3 = x_0 < x_1 < x_2 < \cdots < x_n = 3$ are the endpoints of $m$ equal length subintervals of $[-3,3]$ and $x_i^*$ is some point in the $i$th subinterval. Explain as best you can what one of the products $A(x_i^*) \ \Delta x$ looks like. (Hint: Consider how $A(x_i^*) \Delta x$ is related to Figure \ref{F:11.2.Cross_section_PA_y_slab}.)
+
+
+
+\begin{comment}
+
+Since $A(x_i^*)$ is an area under the $y$-trace for the value $x = x_i^*$, when we multiply that area by a constant width $\Delta x$, we obtain the volume of a slab obtained by thickening the region under the $x=x_i^*$ trace by a uniform thickness $\Delta x$.
+
+
+
+\end{comment}
+
+	\item Can you visualize what the sum $\ds \sum_{i=1}^m A(x_i^*) \ \Delta x$ looks like? Explain as best you can. What will happen when we take the limit as $m$ goes to infinity?
+
+
+
+\begin{comment}
+
+This sum will give us the sum of volumes of slabs with constant cross sections parallel to the $yz$-plane, where the cross sections look like the areas under the graphs of the $x_i^*$ traces. As we let $m$ go to infinity, the thickness of the slabs goes to 0 and we are just adding up all of the cross sectional areas of the surface parallel to the $yz$-plane, giving us the volume of the solid defined by $f$.
+
+
+
+\end{comment}
+
+	\item Based on the above problems, why does $\ds \int \int_R f(x,y) \, dA$ equal
+\[\int_{-3}^3 A(x) \, dx = \int_{-3}^3 \left( \int_{-4}^4 f(x,y) \, dy \right) \, dx\]
+The latter integral is an \emph{iterated integral}.
+
+
+
+\begin{comment}
+
+In both cases, we are calculating the volume of the solid under the graph of $f$ on the domain $R$. So the two must be equal since they represent the same thing.
+
+
+
+\end{comment}
+
+
+	\ea
+\end{pa} \afterpa 

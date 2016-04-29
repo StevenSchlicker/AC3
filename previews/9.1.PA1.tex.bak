@@ -1,0 +1,104 @@
+\begin{pa} \label{PA:9.1}
+When most people buy a large ticket item like a car or a house, they have to take out a loan to make the purchase. The loan is paid back in monthly installments until the entire amount of the loan, plus interest, is paid. The monthly payment that the borrower has to make depends on the amount $P$ of money borrowed (called the principal), the duration $t$ of the loan in years, and the interest rate $r$. For example, if we borrow \$18,000 to buy a car, the monthly payment $M$ that we need to make to pay off the loan is given by the formula
+\[M = \frac{1500r}{1-\frac{1}{\left(1+\frac{r}{12}\right)^{12t}}}.\]
+The variables $r$ and $t$ are independent of each other, so using functional notation we write
+\[M(r,t) = \frac{1500r}{1-\frac{1}{\left(1+\frac{r}{12}\right)^{12t}}}.\]
+    \ba
+    \item Find the monthly payments on this loan if the interest rate is 6\% and the duration of the loan is 5 years.
+
+\begin{comment}
+
+We simply calculate $M$ when $r=0.06$ and $t=5$ to obtain (rounded to the nearest penny)
+\[M(0.06,5) = 347.99 \text{ dollars}.\]
+
+\end{comment}
+
+    \item Evaluate $M(0.05, 4)$ Explain in words what this calculation represents.
+
+\begin{comment}
+
+We evaluate $M$ when $r=0.05$ and $t=4$ to obtain (rounded to the nearest penny)
+\[M(0.05,4) = 414.53 \text{ dollars}.\]
+This tells us that the monthly payment on a loan of \$18,000 at 5\% interest for 4 years is \$414.53.
+
+\end{comment}
+
+    \item Now consider only loans where the interest rate is 5\%. Calculate the monthly payments as indicated in Table \ref{T:Payments_1}. Round payments to the nearest penny.
+    \begin{table}[ht]
+    \begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|c|c|c|} \hline
+    Duration (in years)  &\ 2 \    & \ 3 \     & \ 4 \     & \ 5 \    & \ 6 \  \\ \hline
+    Monthly payments (dollars)    &       &       &       &       & \\ \hline
+    \end{tabular}
+    \caption{Monthly payments at an interest rate of 5\%.}
+    \label{T:9.1.Payments_1}
+    \end{center}
+    \end{table}
+
+\begin{comment}
+
+We complete the table using 5\% as our interest rate with varying durations as shown in Table \ref{T:Payments_1_s}.
+
+\begin{table}[ht]
+    \begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|c|c|c|} \hline
+    Duration (in years)  &\ 2 \    & \ 3 \     & \ 4 \     & \ 5 \    & \ 6 \  \\ \hline
+    Monthly payments (dollars)    & 789.68      & 539.48      & 414.53      & 339.68      & 289.89 \\ \hline
+    \end{tabular}
+    \caption{Monthly payments at an interest rate of 5\%.}
+    \label{T:Payments_1_s}
+    \end{center}
+    \end{table}
+
+\end{comment}
+
+    \item Now consider only loans where the duration is 3 years. Calculate the monthly payments as indicated in Table \ref{T:Payments_2}. Round payments to the nearest penny.
+    \begin{table}[ht]
+    \begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|c|c|c|} \hline
+    Interest rate  &\ 0.03 \    & \ 0.05 \     & \ 0.07 \     & \ 0.09 \    & \ 0.11 \  \\ \hline
+    Monthly payments (dollars)    &       &       &       &       & \\ \hline
+    \end{tabular}
+    \caption{Monthly payments over three years.}
+    \label{T:9.1.Payments_2}
+    \end{center}
+    \end{table}
+
+\begin{comment}
+
+We complete the table using 3 years as our duration with interest rates as shown in Table \ref{T:Payments_2_s}.
+
+   \begin{table}[ht]
+    \begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|c|c|c|} \hline
+    Interest rate  &\ 0.03 \    & \ 0.05 \     & \ 0.07 \     & \ 0.09 \    & \ 0.11 \  \\ \hline
+    Monthly payments (dollars)    & 523.46       & 539.48      & 555.79      & 572.40      & 589.30 \\ \hline
+    \end{tabular}
+    \caption{Monthly payments over three years.}
+    \label{T:Payments_2_s}
+    \end{center}
+    \end{table}
+
+\end{comment}
+
+    \item Describe as best you can the combination of interest rates and durations of loans that result in a monthly payment of \$200.
+
+\begin{comment}
+
+We set $M(r,t)$ equal to 200 and determine a relationship between $r$ and $t$:
+\begin{align}
+\frac{1500r}{1-\frac{1}{\left(1+\frac{r}{12}\right)^{12t}}} &= 200 \notag \\
+7.5r &= 1-\frac{1}{\left(1+\frac{r}{12}\right)^{12t}} \notag \\
+1-7.5r &= \frac{1}{\left(1+\frac{r}{12}\right)^{12t}} \notag \\
+\left(1+\frac{r}{12}\right)^{12t} &= \frac{1}{1-7.5r} \notag \\
+12t \ln\left(1+\frac{r}{12}\right) &= \ln\left(\frac{1}{1-7.5r}\right) \notag \\
+t &= \frac{1}{12}\frac{-\ln\left(1-7.5r\right)}{\ln\left(1+\frac{r}{12}\right)}. \label{eq:monthly_payments} \\
+\end{align}
+So the duration of the loan and the corresponding interest rate that lead to a monthly payment of \$200 are given by the equation \ref{eq:monthly_payments}.
+\end{comment}
+    \ea
+\end{pa} \afterpa 

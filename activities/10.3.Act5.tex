@@ -1,0 +1,98 @@
+\begin{activity} \label{A:10.3.5} Consider the table of values of the kinetic energy function (Table \ref{T:10.2.PD_KE}, reproduced here in Table \ref{T:10.3.PD_KE_2} for convenience) instead of a formula. In this activity we will use this table of data to approximate $f_{xx}(4,5)$, $f_{yy}(4,5)$, and $f_{xy}(4,5)$ as best we can. When done, compare to your calculations from Activity \ref{A:2.3.4}.
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+	&4.6    &4.8    &5      &5.2    &5.4 \\ \hline
+3.8	&40.204 &43.776	&47.5   &51.376	&55.404 \\ \hline
+3.9	&41.262	&44.928	&48.75	&52.728	&56.862 \\ \hline
+4	&42.32	&46.08	&50	    &54.08	&58.32 \\ \hline
+4.1	&43.378	&47.232	&51.25	&55.432	&59.778 \\ \hline
+4.2	&44.436	&48.384	&52.5	&56.784	&61.236 \\ \hline
+\end{tabular}
+\caption{Kinetic energy}
+\label{T:10.3.PD_KE_2}
+\end{center}
+\end{table}
+
+    \ba
+    \item To approximate the second order partial derivative $f_{xx}(4,5)$ we can use the symmetric difference quotient
+    \[f_{xx}(4,5) \approx \frac{f_x(4+h,5) - f_x(4-h,5)}{2h}.\]
+        \begin{enumerate}[i.]
+        \item For what value of $h$ can we make the best calculations for this symmetric difference quotient?
+
+
+
+        \item Approximate $f_x(4+h,5)$ and $f_x(4-h,5)$ for the value of $h$ you found in the previous part.
+
+
+
+        \item Use your approximations to $f_x(4+h,5)$ and $f_x(4-h,5)$ to approximate $f_{xx}(4,5)$.
+
+
+
+        \end{enumerate}
+
+    \item Repeat the process from part (a) to approximate $f_{yy}(4,5)$.
+
+
+
+    \item Now we deal with the second order mixed partials.
+        \begin{enumerate}[i.]
+        \item Write the appropriate difference quotient that will allow you to approximate $f_{xy}(4,5)$.
+
+
+
+        \item Carry out the calculations to approximate $f_{xy}(4,5)$. (It is illustrative to approximate $f_{yx}(4,5)$ to check on Clairaut's
+            Theorem -- that is left for you to do.)
+
+
+
+        \end{enumerate}
+
+    \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+\ba
+\item ~
+	\begin{enumerate}[i.]
+	\item The smallest changes in $x$ values in our table are $0.1$, so our best results will be with $h = 0.1$. 
+
+	\item Here we have 
+\[f_{x}(4.1,5) \approx \frac{f(4.2,5) - f(4,5)}{0.2} = \frac{52.5-50}{0.2} = 12.5\]
+and
+\[f_{x}(3.9,5) \approx \frac{f(4,5) - f(3.8,5)}{0.2} = \frac{50-47.5}{0.2} = 12.5.\]
+	\item We can approximate $f_{xx}(4,5)$ with a symmetric difference quotient as
+\[f_{xx}(4,5) \approx \frac{f_x(4.1,5) - f_x(3.9,5)}{0.2} = \frac{12.5-12.5}{0.2} = 0.\]
+This makes sense because $f_{xx} = 0$. 
+	\end{enumerate}
+	
+\item To approximate $f_{yy}(4,5)$, we will want $f_y(4,5.2)$ and $f_y(4,4.8)$. Now
+\[f_{y}(4,5.2) \approx \frac{f(4,5.4) - f(4,5)}{0.4} = \frac{58.32-50}{0.4} = 20.8\]
+and
+\[f_{y}(4,4.8) \approx \frac{f(4,5) - f(4,4.6)}{0.4} = \frac{50-42.32}{0.4} = 19.2.\]
+So
+\[f_{yy}(4,5) \approx \frac{f_y(4,5.2) - f_y(4,4.8)}{0.4} = \frac{20.8-19.2}{0.4} = 4.\]
+
+\item ~
+	\begin{enumerate}[i.]
+	\item The mixed partial $f_{xy}$ tells us how $f_x$ changes as we change $y$. So 
+	\[f_{xy}(4,5) \approx \frac{f_x(4,5.2) - f_x(4,4.8)}{0.4}.\]
+	\item To complete our approximation of $f_{xy}(4,5)$, we approximate $f_x(4,5.2)$ and $f_x(4,4,8)$. We have 
+	\[f_{x}(4,5.2) \approx \frac{f(4.1,5.2) - f(3.9,5.2)}{0.2} = \frac{55.432-52.728}{0.2} = 13.52\]
+and
+\[f_{x}(4,4.8) \approx \frac{f(4.1,4.8) - f(3.9,4.8)}{0.2} = \frac{47.232-44.928}{0.2} = 11.52.\]
+So 
+\[f_{xy}(4,5) \approx \frac{f_x(4,5.2) - f_x(4,4.8)}{0.4} = \frac{13.52-11.52}{0.4} = 5.\]
+Note that our approximations give the same values we obtained algebraically. 
+	\end{enumerate}
+
+\ea
+\end{activitySolution}
+\aftera

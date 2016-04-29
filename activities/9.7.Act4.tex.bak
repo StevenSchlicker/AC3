@@ -1,0 +1,24 @@
+\begin{activity} \label{A:1.7.4} Let
+\[\vr(t) = \cos(t) \vi - \sin(t) \vj + t \vk.\footnote{You can draw the graph with Wolfram Alpha, \url{http://www.math.uri.edu/~bkaskosz/flashmo/parcur/}, or some other appropriate device.}\]
+    \ba
+    \item Find a direction vector for the line tangent to the graph of $\vr$ at the point where $t=\pi$.
+
+
+
+    \item Find the parametric equations of the line tangent to the graph of $\vr$ when $t=\pi$.
+
+
+
+    \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

@@ -1,0 +1,72 @@
+\begin{activity} \label{A:11.3.3} Consider the iterated integral $\ds \int_{x=0}^{x=4} \int_{y=x/2}^{y=2} e^{y^2} \, dy \, dx$.
+
+\ba
+  \item Explain why we cannot antidifferentiate $e^{y^2}$ with respect to $y$, and thus are unable to evaluate the iterated integral $\ds  \int_{x=0}^{x=4} \int_{y=x/2}^{y=2} e^{y^2} \, dy \, dx$ using the Fundamental Theorem of Calculus. 
+  \item Sketch the region of integration, $D$, so that $\ds \iint_D e^{y^2} \, dA = \int_{x=0}^{x=4} \int_{y=x/2}^{y=2} e^{y^2} \, dy \, dx.$
+  \item Rewrite the given iterated integral in the opposite order, using $dA = dx \, dy$.
+  \item Use the Fundamental Theorem of Calculus to evaluate the iterated integral you developed in (d).  Write one sentence to explain the meaning of the value you found.
+  \item What is the important lesson this activity offers regarding the order in which we set up an iterated integral?
+\ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+\ba
+\item No substitution will work to integrate $e^{y^2}$ because of the square in the exponent. Using parts only makes the integral more complicated, and we have no other techniques to apply to this integrand.
+
+\item The domain $D$ of integration is shown below. 
+%Shift up 0.5 to leave space for the x-labels
+\begin{center}
+\setlength{\unitlength}{1.0cm}
+\begin{picture}(4.5,3.0)
+\linethickness{0.35mm}
+\put(0,0.5){\vector(1,0){4.5}}
+\put(0,0.5){\vector(0,1){2.5}}
+\put(0,2.5){\line(1,0){4}}
+\color{red}
+\put(0,0.5){\line(2,1){4.0}}
+\color{black}
+\put(4.4,0.2){$x$}
+\put(-0.3,2.9){$y$}
+\put(1,0.4){\line(0,1){0.2}}
+\put(2,0.4){\line(0,1){0.2}}
+\put(3,0.4){\line(0,1){0.2}}
+\put(4,0.4){\line(0,1){0.2}}
+\put(-0.1,1.5){\line(1,0){0.2}}
+\put(-0.1,2.5){\line(1,0){0.2}}
+\put(3.9,0){$4$}
+\put(-0.4,2.4){$2$}
+\put(2.5,1.5){$y=\frac{x}{2}$}
+
+\color{blue}
+\linethickness{0.35mm}
+\put(0,1.0){\line(1,0){1.0}}
+\put(0,2.0){\line(1,0){3.0}}
+\end{picture}
+\end{center}
+
+\item When we first integrate with respect to $x$, we can see that the cross sections go from $x=0$ to $x = 2y$. The limits on $y$ are then $0$ to $2$, giving us
+\[\iint_D e^{y^2} \, d = \int_0^2 \int_{0}^{2y} e^{y^2} \, dx \, dy.\]
+
+\item Evaluating the iterated integral yields 
+\begin{align*}
+\int_0^4 \int_{0}^{x/2} e^{y^2} \, dy \, dx &= \int_0^2 \int_{0}^{2y} e^{y^2} \, dx \, dy \\
+	&= \int_0^2 \left. xe^{y^2} \right|_{0}^{2y} \, dy \\
+	&= \int_0^2 2ye^{y^2} \, dy \\
+	&= \left. e^{y^2} \right|_0^2 \\
+	&= e^4-1.
+\end{align*}
+Since $e^{y^2} > 0$ on $D$, this integral tells us the volume of the solid bounded above by the surface $z=e^{y^2}$ and below by the region $D$. 
+
+\item We need to be flexible when setting up iterated integrals -- sometimes one order of integration is very difficult (or impossible) while the other order is easier. So it is important to practice changing the order of integration in iterated integrals. 
+
+\ea
+
+\end{activitySolution}
+
+\aftera

@@ -1,0 +1,70 @@
+\begin{pa} \label{PA:10.5} There are several proposed formulas to approximate the surface area $A$ in square meters of the human body as a function of the height $h$ in centimeters and weight $w$ in kilograms of the body. One model\footnote{DuBois D, DuBois DF. A formula to estimate the approximate surface area if height and weight be known.  \emph{Arch Int Med} 1916;17:863-71.} uses the formula
+\[A(h,w) = 0.0072 h^{0.725}w^{0.425}.\]
+
+A person's height $h$ and weight $w$ both change as a person ages, so $h$ and $w$ can both be considered as functions of time $t$. Let us think about what is happening to a child whose height is $a=60$ centimeters and weight is $b=9$ kilograms. Suppose at this point in time that $h$ and $w$ are changing over time so that $h$ is increasing by 100 centimeters per year and $w$ is increasing by $16$ kg per year. Our goal is to determine the exact instantaneous change in $A$ for every unit increase in time at the point $(a,b,A(a,b))$.
+	\ba
+    \item What are $\ds \frac{dh}{dt}$ and $\ds \frac{dw}{dt}$ at $(a,b)$? Explain why
+\[h(t) \approx L_h(t) = 60+100t \ \ \ \ \text{ and } \ \ \ \ w(t) \approx L_w(t) = 9+16t\]
+for $t$ close to $0$, and why these approximations get better as $t$ gets closer to 0. (Hint: Think linearizations.)
+
+
+
+\begin{comment}
+
+Recall that the linearization $L_f$ of a function $f=f(x)$ at the point where $x=c$ is
+         \[L_f(x) = f(c) + f'(c)(x-c).\]
+Since
+\[\frac{dh}{dt}\biggm|_{(a,b)} = 100 \ \frac{\text{cm}}{\text{year}} \ \ \ \text{ and } \ \ \ \ \frac{dw}{dt}\biggm|_{(a,b)} = 16 \ \frac{\text{kg}}{\text{year}},\]
+the linearization of $h$ when $h=60$ is $L_h(t) = 60+100t$ and the linearization of $w$ when $w=9$ is $L_w(t) = 9+16t$. Note that as $t \to 0$, we have $(L_h(t), L_w(t)) \to (a,b)$.
+So for $t$ close to 0 (or, equivalently, $(h,w)$ close to $(a,b)$) we have
+\[h(t) \approx L_h(t) = 60+100t \ \ \ \ \text{ and } \ \ \ \ w(t) \approx L_w(t) = 9+16t,\]
+and the approximations get better as $t$ gets closer to 0.
+
+
+
+\end{comment}
+
+	\item Explain why, for $(h,w)$ close to $(a,b)$ we have
+\[A(h,w) \approx A(L_h(t), L_w(t)),\]
+and why the approximations get better as $t$ gets closer to 0. Find a formula for $A(L_h(t),L_w(t))$ in terms of $t$.
+
+
+
+\begin{comment}
+
+When $t$ is close to 0, $h(t) \approx L_h(t)$ and $w(t) \approx L_w(t)$, and these approximations get better as $t$ gets closer to 0. So for $(h,w)$ close to $(a,b)$ (that is, $t$ close to 0), we can think of $A$ as a function of $t$ by
+\[A = A(h(t),w(t)) \approx A(L_h(t), L_w(t)) = A(60+100t,9+16t) = 0.0072 (60+100t)^{0.725}(9+16t)^{0.425}.\]
+
+
+
+\end{comment}
+
+    \item Find $\ds \frac{dA}{dt}$. Then calculate
+\[\frac{\partial A}{\partial h} \frac{dh}{dt} + \frac{\partial A}{\partial w} \frac{dw}{dt}\]
+and compare to what you found for $\ds \frac{dA}{dt}$. What do you notice?
+
+    %A graph of $A$ as a function of $t$ is shown on the surface in Figure \ref{F:Body_surface_area}. Find $\frac{dA}{dt}$ and explain what this tell us geometrically about the picture in Figure \ref{F:Body_surface_area}.
+
+
+
+\begin{comment}
+
+To find $\frac{dA}{dt}$ we need to use our formula for $A$ as a function of $t$ and differentiate with the product and chain rules:
+\begin{align}
+\frac{dA}{dt}\biggm|_{(60,9)} &= 0.0072\left[(9+16t)^{0.425}(0.725)(60+100t)^{-0.275}(100) + (60+100t)^{0.725}(0.425)(9+16t)^{-0.575}(16)\biggm|_{t=0} \label{eq:CR_PA} \\
+    &\approx 0.7 \ \frac{\text{m}^2}{\text{year}}. \notag
+\end{align}
+Now
+\[\frac{partial A}{\partial h} = 0.0072(0.725)h^{-0.275}w^{0.425} \ \ \text{ and } \ \ \frac{partial A}{\partial w} = 0.0072(0.425)h^{0.725}w^{-0.575},\]
+so
+\[\frac{\partial A}{\partial h} \frac{dh}{dt} + \frac{\partial A}{\partial w} \frac{dw}{dt} = 0.0072(0.725)h^{-0.275}w^{0.425}(100) + 0.0072(0.425)h^{0.725}w^{-0.575}(16).\]
+This is essentially what we obtained in (\ref{eq:CR_PA}).
+%This number tells us the slope of the line tangent to the curve on the surface defined by $A(t)$ when $t=0$, or when $(h,w) = (a,b)$.
+
+
+
+\end{comment}
+
+	\ea
+
+\end{pa} \afterpa 

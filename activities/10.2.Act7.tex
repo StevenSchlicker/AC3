@@ -1,0 +1,20 @@
+\begin{activity} \label{A:10.2.7} Often we are certain graphical information about a function instead of a rule. We can use that information to approximate partial derivatives. For example, suppose that we are given a contour plot of the kinetic energy function (as in Figure \ref{F:10.2.pd_contour}) instead of a formula. Use this contour plot to approximate $f_x(4,5)$ and $f_y(4,5)$ as best you can. Compare to your calculations from Activities \ref{A:10.2.5} and \ref{A:10.2.6}.
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+To approximate $f_x(4,5)$, we will use a symmetric difference quotient like we did in single variable calculus. That is,
+\[f_x(4,5) \approx \frac{f(4+h,5)-f(4-h,5)}{2h}\]
+for a suitable value of $h$. We can approximate the values of $f$ on the contour plot for $h = 1$, giving us 
+\[f_x(4,5) \approx  \frac{f(5,5)-f(3,5)}{2} \approx \frac{60-40}{2} = 10.\]
+Similarly,
+\[f_y(4,5) \approx  \frac{f(4,6)-f(4,4)}{2} \approx \frac{65-30}{2} = 17.5.\]
+These values compare reasonably well to the values of $f_x(4,5) = 12.5$ and $f_y(4,5) = 20$ obtained in Activities \ref{A:10.2.5} and \ref{A:10.2.6}. 
+\end{activitySolution}
+\aftera

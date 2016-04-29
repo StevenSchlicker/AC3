@@ -1,0 +1,132 @@
+\section{Triple Integrals in Cylindrical and Spherical Coordinates} \label{S:11.8.Triple_Integrals_Cylindrical_Spherical}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+\item What are the cylindrical coordinates of a point, and how are they related to Cartesian coordinates?
+\item What is the volume element in cylindrical coordinates? How does this inform us about evaluating a triple integral as an iterated integral in cylindrical coordinates?
+\item What are the spherical coordinates of a point, and how are they related to Cartesian coordinates?
+\item What is the volume element in spherical coordinates? How does this inform us about evaluating a triple integral as an iterated integral in spherical coordinates?
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+We have encountered two different coordinate systems in $\R^2$ -- the rectangular and polar coordinates systems -- and seen how in certain situations, polar coordinates form a convenient alternative.  In a similar way, there there turn out to be two additional natural coordinate systems in $\R^3$.  Given that we are already familiar with the Cartesian coordinate system for $\R^3$,  we next investigate the cylindrical and spherical coordinate systems (each of which builds upon polar coordinates in $\R^2$).  In what follows, we will see how to convert among the different coordinate systems, how to evaluate triple integrals using them, and some situations in which these other coordinate systems prove advantageous.
+
+\input{previews/11.8.PA1}
+
+\subsection*{Cylindrical Coordinates}
+
+As we stated in Preview Activity~\ref{PA:11.8}, the cylindrical coordinates\index{cylindrical coordinates} of a point are $(r,\theta,z)$, where $r$ and $\theta$ are the polar coordinates of the point $(x, y)$, and $z$ is the same $z$ coordinate as in Cartesian coordinates.  The general situation is illustrated Figure \ref{F:11.8.Cylindrical_coords}.
+
+Since we already know how to convert between rectangular and polar coordinates in the plane, and the $z$ coordinate is identical in both Cartesian and cylindrical coordinates, the conversion equations between the two systems in $\R^3$ are essentially those we found for polar coordinates:
+\[x = r \cos(\theta) \hspace{0.25in} y = r \sin(\theta) \hspace{0.25in} z = z\]
+\[r^2  = x^2  + y^2 \hspace{0.25in} \tan(\theta) = \frac{y}{x} \hspace{0.25in} z = z.\]
+%The reason that the $(r,\theta,z)$ coordinates are called cylindrical coordinates can be seen in the next activity.
+
+Just as with rectangular coordinates, where we usually write $z$ as a function of $x$ and $y$ to plot the resulting surface, in cylindrical coordinates, we often express $z$ as a function of $r$ and $\theta$.  In the following activity, we explore several basic equations in cylindrical coordinates and the corresponding surface each generates.
+
+\input{activities/11.8.Act1}
+
+
+As the name and Activity \ref{A:11.8.1} suggest, cylindrical coordinates are useful for describing surfaces that are cylindrical in nature.
+
+\subsection*{Triple Integrals in Cylindrical Coordinates}
+
+To evaluate a triple integral $\ds \iiint_S f(x,y,z) \, dV$ as an iterated integral in Cartesian coordinates, we use the fact that the volume element $dV$ is equal to $dz \, dy \, dx$ (which corresponds to the volume of a small box). To evaluate a triple integral in cylindrical coordinates, we similarly must understand the volume element $dV$ in cylindrical coordinates.
+
+\input{activities/11.8.Act2}
+
+Activity \ref{A:11.8.2} demonstrates that the volume element $dV$ in cylindrical coordinates is given by $dV = r \, dz \, dr \, d\theta$, and hence the following rule holds in general.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{Given a continuous function $f = f(x,y,z)$ over a region $S$ in $\R^3$,
+$$\ds \iiint_S f(x,y,z) \, dV = \iiint_S f(r\cos(\theta), r\sin(\theta), z) \, r \, dz \, dr \, d\theta.$$
+The latter expression is an \textbf{iterated integral in cylindrical coordinates}.\index{iterated integral!cylindrical coordinates}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+Of course, to complete the task of writing an iterated integral in cylindrical coordinates, we need to determine the limits on the three integrals: $\theta$, $r$, and $z$.  In the following activity, we explore how to do this in several situations where cylindrical coordinates are natural and advantageous.
+
+\newpage
+
+\input{activities/11.8.Act3}
+
+\subsection*{Spherical Coordinates}
+
+As we saw in Preview Activity~\ref{PA:11.8}, the spherical coordinates\index{spherical coordinates} of a point in 3-space have the form $(\rho, \theta, \phi)$, where $\rho$ is the distance from the point to the origin, $\theta$ has the same meaning as in polar coordinates, and $\phi$ is the angle between the positive $z$ axis and the vector from the origin to the point.  The overall situation is  illustrated in Figure \ref{F:11.8.Spherical_coords}.
+
+\begin{figure}[ht]
+\begin{center}
+%\resizebox{!}{2.75in}{\includegraphics{11_8_Spherical_to_Cartesian}}
+  \includegraphics{figures/fig_11_8_spherical_explain.eps}
+\end{center}
+\caption{Converting from spherical to Cartesian coordinates.}
+\label{F:11.8.Spherical_to_Cartesian}
+\end{figure}
+
+The example in Preview Activity \ref{PA:11.8} suggests that given a point in rectangular coordinates, $(x,y,z)$, we can find the corresponding spherical coordinates.  Indeed, this holds generally by using the relationships
+\[\rho  = \sqrt{x^2  + y^2 + z^2}  \hspace{0.25in} \tan(\theta) = \frac{y}{x}  \hspace{0.25in} \cos(\phi) = \frac{z}{\rho} \]
+where in the latter two equations, we require $x \ne 0$ and $\rho \ne 0$.
+
+To convert from given spherical coordinates to Cartesian coordinates, we use the equations 
+\[x = \rho \sin(\phi) \cos(\theta) \hspace{0.25in} y = \rho \sin(\phi) \sin(\theta) \hspace{0.25in} z = \rho \cos(\phi),\]
+as illustrated in Figure~\ref{F:11.8.Spherical_to_Cartesian}.
+
+%\input{activities/11.8.Act6}
+
+When it comes to thinking about particular surfaces in spherical coordinates, similar to our work with cylindrical and Cartesian coordinates, we usually write $\rho$ as a function of $\theta$ and $\phi$; this is a natural analog to polar coordinates, where we often think of our distance from the origin in the plane as being a function of $\theta$.  In spherical coordinates, we likewise often view $\rho$ as a function of $\theta$ and $\phi$, thus viewing distance from the origin as a function of two key angles.  
+
+In the following activity, we explore several basic equations in spherical coordinates and the surfaces they generate.
+
+\input{activities/11.8.Act7}
+
+As the name and Activity \ref{A:11.8.7} indicate, spherical coordinates are particularly useful for describing surfaces that are spherical in nature; they are also convenient for working with certain conical surfaces.
+
+\subsection*{Triple Integrals in Spherical Coordinates}
+
+As with rectangular and cylindrical coordinates, a triple integral $\ds \iiint_S f(x,y,z) \, dV$ in spherical coordinates can be evaluated as an iterated integral once we understand the volume element $dV$.
+
+\input{activities/11.8.Act8}
+
+
+Letting $\Delta \rho$, $\Delta \phi$ and $\Delta \theta$ go to 0, it follows from the final result in
+Activity \ref{A:11.8.8} that\\ $dV = \rho^2 \, \sin(\phi) \, d\rho \, d\phi \, d\theta$ in spherical coordinates, and thus allows us to state the following general rule.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{Given a continuous function $f = f(x,y,z)$ over a region $S$ in $\R^3$,
+$$\iiint_S f(x,y,z) \, dV = \iiint_S f(\rho\sin(\phi)\cos(\theta), \rho \sin(\phi) \sin(\theta), \rho \cos(\phi)) \, \rho^2 \sin(\phi) \, d\rho \, d\phi \, d\theta.$$
+The latter expression is an \textbf{iterated integral in spherical coordinates}\index{iterated integral!spherical coordinates}.
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+Finally, in order to actually evaluate an iterated integral in spherical coordinates, we must of course determine the limits of integration in $\theta$, $\phi$,  and $\rho$.  The process is similar to our earlier work in the other two coordinate systems.
+
+%\input{activities/11.8.Act9}
+
+\input{activities/11.8.Act10}
+
+\begin{summary}
+
+\item The cylindrical coordinates of a point $P$ are $(r,\theta,z)$ where $r$ is the distance from the origin to the projection of $P$ onto the $xy$-plane, $\theta$ is the angle that the projection of $P$ onto the $xy$-plane makes with the positive $x$-axis, and $z$ is the vertical distance from $P$ to the projection of $P$ onto the $xy$-plane.  When $P$ has rectangular coordinates $(x,y,z)$, it follows that  its cylindrical coordinates are given by
+\[r^2  = x^2  + y^2, \hspace{0.25in} \tan(\theta) = \frac{y}{x}, \hspace{0.25in} z = z.\]
+When $P$ has given cylindrical coordinates $(r,\theta,z)$, its rectangular coordinates are 
+\[x = r \cos(\theta), \hspace{0.25in} y = r \sin(\theta), \hspace{0.25in} z = z.\]
+\item The volume element $dV$ in cylindrical coordinates is $dV = r \, dz \, dr \, d\theta$. Hence, a triple integral $\ds \iiint_S f(x,y,z) \, dA$ can be evaluated as the iterated integral
+    \[\iiint_S f(r\cos(\theta), r\sin(\theta), z) \, r \, dz \, dr \, d\theta.\]
+\item The spherical coordinates of a point $P$ in 3-space are $\rho$ (rho), $\phi$ (phi), and $\theta$, where $\rho$ is the distance from $P$ to the origin, $\phi$ is the angle between the positive $z$ axis and the vector from the origin to $P$, and $\theta$ is the angle that the projection of $P$ onto the $xy$-plane makes with the positive $x$-axis.  When $P$ has Cartesian coordinates $(x,y,z)$, the spherical coordinates are given by
+\[\rho^2  = x^2  + y^2 + z^2, \hspace{0.25in} \tan(\theta) = \frac{y}{x}, \hspace{0.25in} \cos(\phi) = \frac{z}{\rho}.\]
+Given the point $P$ in spherical coordinates $(\rho, \phi, \theta)$, its rectangular coordinates are 
+\[x = \rho \sin(\phi) \cos(\theta), \hspace{0.25in} y = \rho \sin(\phi) \sin(\theta), \hspace{0.25in} z = \rho \cos(\phi).\]
+\item The volume element $dV$ in spherical coordinates is $dV = \rho^2 \sin(\phi) \, d\rho \, d\phi \, d\theta$. Thus, a triple integral $\ds \iiint_S f(x,y,z) \, dA$ can be evaluated as the iterated integral
+    \[\iiint_S f(\rho\sin(\phi)\cos(\theta), \rho \sin(\phi) \sin(\theta), \rho \cos(\phi)) \, \rho^2 \sin(\phi) \, d\rho \, d\phi \, d\theta.\]
+\end{summary}
+
+
+\nin \hrulefill
+
+\input{exercises/11.8.Triple_Integrals_Cylindrical_Spherical(Ex)}
+
+\clearpage

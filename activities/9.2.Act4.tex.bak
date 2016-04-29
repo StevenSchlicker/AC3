@@ -1,0 +1,25 @@
+\begin{activity} \label{A:1.2.4}
+Let  $\vv = \langle -1, 4 \rangle$.
+    \ba
+    \item Would it seem reasonable to you to define the scalar multiple $\frac{1}{2}\vv$? If yes, how do you think this scalar multiple should be defined? If no, explain why.
+
+
+    \item In general, how do you think a scalar multiple of a vector $\va = \langle a_1, a_2 \rangle$ in $\R^2$ by a scalar $c$ should be defined? Write a formal definition of a scalar multiple of a vector based on your intuition.
+
+
+    \item In general, how do you think a scalar multiple of a vector $\va = \langle a_1, a_2, a_3 \rangle$ in $\R^3$ by a scalar $c$ should be defined? Write a formal definition of a scalar multiple of a vector based on your intuition.
+
+
+    \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

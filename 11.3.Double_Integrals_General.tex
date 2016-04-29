@@ -1,0 +1,186 @@
+\section{Double Integrals over General Regions} \label{S:11.3.Double_Integrals_General}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+\item How do we define a double integral over a non-rectangular region?
+\item What general form does an iterated integral over a non-rectangular region have?
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+Recall that we defined the double integral of a continuous function $f = f(x,y)$ over a rectangle $R = [a,b] \times [c,d]$ as
+\[\iint_R f(x,y) \, dA = \lim_{m,n \to \infty} \sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \cdot \Delta A,\]
+where the notation is as described in Section~\ref{S:11.1.Double_Integrals_Rectangles}.  Furthermore, we have seen that we can evaluate a double integral $\ds \iint_R f(x,y) \, dA$ over $R$ as an iterated integral of either of the forms
+\[\int_a^b \int_c^d f(x,y) \, dy \, dx \ \ \ \ \ \text{ or } \ \ \ \ \ \int_c^d \int_a^b f(x,y) \, dx \, dy.\]
+
+It is natural to wonder how we might define and evaluate a double integral over a non-rectangular region; we explore one such example in the following preview activity.
+
+\input{previews/11.3.PA1}
+
+\subsection*{Double Integrals over General Regions}
+
+So far, we have learned that a double integral over a rectangular region may be interpreted in one of two ways:
+\begin{itemize}
+\item $\ds \iint_R f(x,y) \, dA$ tells us the volume of the solids the graph of $f$ bounds above the $xy$-plane over the rectangle $R$ minus the volume of the solids the graph of $f$ bounds below the $xy$-plane under the rectangle $R$;
+\item $\ds \frac{1}{A(R)} \iint_R f(x,y) \, dA$, where $A(R)$ is the area of $R$ tells us the average value of the function $f$ on $R$. If $f(x, y) \geq  0$ on $R$, we can interpret this average value of $f$ on $R$ as the height of the box with base $R$ that has the same volume as the volume of the surface defined by $f$ over $R$.
+\end{itemize}
+
+As we saw in Preview Activity~\ref{PA:11.1}, a function $f = f(x,y)$ may be considered over regions other than rectangular ones, and thus we want to understand how to set up and evaluate double integrals over non-rectangular regions.  Note that if we can, then the two interpretations of the double integral noted above will naturally extend to solid regions with non-rectangular bases.
+
+So, suppose $f$ is a continuous function on a closed, bounded domain $D$. For example, consider $D$ as the circular domain shown in Figure \ref{F:11.3.nonrect_domain_1}.
+\begin{figure}[ht]
+\begin{center}
+\begin{minipage}{2.5in}
+\begin{center}
+%\resizebox{!}{0.75in}{\includegraphics[trim=0cm 5cm 0cm 5cm, clip]{11_3_nonrect_1}} %crop graphics in animate trim=<left> <bottom> <right> <top>, add, clip with \includegraphics
+  \includegraphics{figures/fig_11_3_circular.eps}
+\end{center}
+\caption{A non-rectangular domain.}
+\label{F:11.3.nonrect_domain_1}
+\end{minipage} \hspace{0.5in}
+\begin{minipage}{2.5in}
+\begin{center}
+%\resizebox{!}{0.75in}{\includegraphics[trim=0cm 5cm 0cm 5cm, clip]{11_3_nonrect_2}}
+  \includegraphics{figures/fig_11_3_circular_rect.eps}
+\end{center}
+\caption{Enclosing this domain in a rectangle.}
+\label{F:11.3.nonrect_domain_2}
+\end{minipage}
+\end{center}
+\end{figure}
+We can enclose $D$ in a rectangular domain $R$ as shown in Figure \ref{F:11.3.nonrect_domain_2} and extend the function $f$ to be defined over $R$ in order to be able to use the definition of the double integral over a rectangle.  We extend $f$ in such a way that its values at the points in $R$ that are not in $D$ contribute 0 to the value of the integral. In other words, define a function $F = F(x, y)$ on $R$ as
+\[F(x,y) = \begin{cases} f(x,y), &\text{ if } (x,y) \in D, \\ 0, &\text{ if } (x,y) \not\in D \end{cases}.\]
+We then say that the double integral of $f$ over $D$\index{double integral over a general region} is the same as the double integral of $F$ over $R$, and thus
+\[\iint_D f(x,y) \, dA = \iint_R F(x,y) \, dA.\]
+In practice, we just ignore everything that is in $R$ but not in $D$, since these regions contribute 0 to the value of the integral.
+
+Just as with double integrals over rectangles, a double integral over a domain $D$ can be evaluated as an iterated integral.  If the region $D$ can be described by the inequalities $g_1(x) \leq y \leq g_2(x)$ and $a \leq x \leq b$, where $g_1=g_1(x)$ and $g_2=g_2(x)$ are functions of only $x$, then  
+\[\iint_D f(x,y) \, dA = \int_{x=a}^{x=b} \int_{y=g_1(x)}^{y=g_2(x)} f(x,y) \, dy \, dx.\]
+Alternatively, if the region $D$ is described by the inequalities $h_1(y) \leq x \leq h_2(y)$ and $c \leq y \leq d$, where $h_1=h_1(y)$ and $h_2=h_2(y)$ are functions of only $y$, we have
+\[\iint_D f(x,y) \, dA = \int_{y=c}^{y=d} \int_{x=h_1(y)}^{x=h_2(y)} f(x,y) \, dx \, dy.\]
+
+The structure of an iterated integral is of particular note:
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{In an iterated double integral:
+\begin{itemize}
+\item the limits on the outer integral must be constants;
+\item the limits on the inner integral must be constants or in terms of only the remaining variable -- that is, if the inner integral is with respect to $y$, then its limits may only involve $x$ and constants, and vice versa.
+\end{itemize}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+We next consider a detailed example.
+
+\begin{example} Let $f(x,y) = x^2y$ be defined on the triangle $D$ with vertices $(0,0)$, $(2,0)$, and $(2,3)$ as shown in Figure \ref{F:11.3.DI_1}.
+\begin{figure}[h]
+\begin{center}
+\begin{minipage}{1.75in}
+\begin{center}
+%\resizebox{!}{1.25in}{\includegraphics{11_3_DI_1}}
+  \includegraphics{figures/fig_11_3_triangular.eps}
+\end{center}
+\caption{A triangular domain.}
+\label{F:11.3.DI_1}
+\end{minipage} \hspace{0.2in}
+\begin{minipage}{1.75in}
+\begin{center}
+%\resizebox{!}{1.25in}{\includegraphics{11_3_DI_1y}}
+  \includegraphics{figures/fig_11_3_triangular_v.eps}
+\end{center}
+\caption{Slices in the $y$ direction.}
+\label{F:11.3.DI_1y}
+\end{minipage}
+\hspace{0.2in}
+\begin{minipage}{1.75in}
+\begin{center}
+%\resizebox{!}{1.25in}{\includegraphics{11_3_DI_1x}}
+  \includegraphics{figures/fig_11_3_triangular_h.eps}
+\end{center}
+\caption{Slices in the $x$ direction.}
+\label{F:11.3.DI_1x}
+\end{minipage}
+\end{center}
+\end{figure}
+To evaluate $\ds \iint_D f(x,y) \, dA$, we must first describe the region $D$ in terms of the variables $x$ and $y$. We take two approaches.
+\begin{description}
+\item[Approach 1: Integrate first with respect to $y$.] In this case we choose to evaluate the double integral as an iterated integral in the form
+\[\iint_D x^2y \, dA = \int_{x=a}^{x=b} \int_{y=g_1(x)}^{y=g_2(x)} x^2y \, dy \, dx,\]
+and therefore we need to describe $D$ in terms of inequalities
+\[g_1(x) \leq y \leq g_2(x) \ \ \ \ \ \text{ and} \ \ \ \ \ a \leq x \leq b.\]
+Since we are integrating with respect to $y$ first, the iterated integral has the form
+\[ \iint_D x^2y \, dA =\int_{x=a}^{x=b} A(x) \, dx,\]
+where $A(x)$ is a cross sectional area in the $y$ direction. So we are slicing the domain perpendicular to the $x$-axis and want to understand what a cross sectional area of the overall solid will look like. Several slices of the domain are shown in Figure \ref{F:11.3.DI_1y}. On a slice with fixed $x$ value, the $y$ values are bounded below by 0 and above by the $y$ coordinate on the hypotenuse of the right triangle. Thus, $g_1(x) = 0$;  to find $y = g_2(x)$, we need to write the hypotenuse as a function of $x$. The hypotenuse connects the points (0,0) and (2,3) and hence has equation $y = \frac{3}{2}x$. This gives the upper bound on $y$ as $g_2(x) = \frac{3}{2}x$. The leftmost vertical cross section is at $x=0$ and the rightmost one is at $x=2$, so we have $a=0$ and $b=2$. Therefore,
+\[\iint_D x^2y \, dA = \int_{x=0}^{x=2} \int_{y=0}^{y = \frac32 x} x^2y \, dy \, dx.\]
+We evaluate the iterated integral by applying the Fundamental Theorem of Calculus first to the inner integral, and then to the outer one, and find that
+\begin{align*}
+\int_{x=0}^{x=2} \int_{y=0}^{y=\frac32 x} x^2y \, dy \, dx &= \int_{x=0}^{x=2} \left[x^2 \cdot \frac{y^2}{2}\right]\biggm|_{y=0}^{y=\frac32 x} \, dx \\
+	&= \int_{x=0}^{x=2} \frac{9}{8}x^4\, dx \\
+	&= \frac{9}{8}\frac{x^5}{5}\biggm|_{x=0}^{x=2} \\
+	&= \left(\frac{9}{8}\right) \left(\frac{32}{5}\right) \\
+	&= \frac{36}{5}.
+\end{align*}
+
+%\begin{figure}[h]
+%\begin{center}
+%\resizebox{!}{1.5in}{\includegraphics{DI_1}} \hspace{1.0in} \resizebox{!}{1.5in}{\includegraphics{DI_1x}}
+%\end{center}
+%\caption{{\scriptsize Left: A triangular domain. Right: Cross sectional slices in the $x$ direction.}}
+%\label{F:11.3.DI_2}
+%\end{figure}
+
+\item[Approach 2: Integrate first with respect to $x$.] In this case, we choose to evaluate the double integral as an iterated integral in the form
+\[\iint_D x^2y \, dA = \int_{y=c}^{y=d} \int_{x=h_1(y)}^{x=h_2(y)} x^2y \, dx \, dy\]
+and thus need to describe $D$ in terms of inequalities
+\[h_1(y) \leq x \leq h_2(y) \ \ \ \ \ \text{ and }  \ \ \ \ \  c \leq y \leq d.\]
+Since we are integrating with respect to $x$ first, the iterated integral has the form
+\[ \iint_D x^2y \, dA = \int_c^d A(y) \, dy,\]
+where $A(y)$ is a cross sectional area of the solid in the $x$ direction.  Several slices of the domain -- perpendicular to the $y$-axis -- are shown in Figure \ref{F:11.3.DI_1x}.
+
+On a slice with fixed $y$ value, the $x$ values are bounded below by the $x$ coordinate on the hypotenuse of the right triangle and above by 2. So $h_2(y) = 2$; to find $h_1(y)$, we need to write the hypotenuse as a function of $y$. Solving the earlier equation we have for the hypotenuse ($y = \frac32 x$) for $x$ gives us $x = \frac{2}{3}y$. This makes $h_1(y) = \frac{2}{3}y$. The lowest horizontal cross section is at $y=0$ and the uppermost one is at $y=3$, so we have $c=0$ and $d=3$. Therefore,
+\[\iint_D x^2y \, dA = \int_{y=0}^{y=3} \int_{x=(2/3)y}^{x=2} x^2y \, dx \, dy.\]
+We evaluate the resulting iterated integral as before by twice applying the Fundamental Theorem of Calculus, and find that
+\begin{align*}
+\int_{y=0}^{y=3} \int_{x=\frac{2}{3}y}^{2} x^2y \, dx \, dy &= \int_{y=0}^{y=3} \left[\frac{x^3}{3}\right]\biggm|_{x=\frac{2}{3}y}^{x=2}y \, dx \\
+	&= \int_{y=0}^{y=3} \left[\frac{8}{3}y - \frac{8}{81}y^4 \right] \, dy \\
+	&= \left[\frac{8}{3}\frac{y^2}{2} - \frac{8}{81}\frac{y^5}{5}\right]\biggm|_{y=0}^{y=3} \\
+	&= \left(\frac{8}{3}\right) \left(\frac{9}{2}\right) - \left(\frac{8}{81}\right) \left(\frac{243}{5}\right) \\
+	&= 12 - \frac{24}{5} \\
+	&= \frac{36}{5}.
+\end{align*}
+\end{description}
+We see, of course, that in the situation where $D$ can be described in two different ways, the order in which we choose to set up and evaluate the double integral doesn't matter, and the same value results in either case.
+
+\end{example}
+
+The meaning of a double integral over a non-rectangular region, $D$, parallels the meaning over a rectangular region.  In particular,
+\begin{itemize}
+\item $\ds \iint_D f(x,y) \, dA$ tells us the volume of the solids the graph of $f$ bounds above the $xy$-plane over the closed, bounded region $D$ minus the volume of the solids the graph of $f$ bounds below the $xy$-plane under the region $D$;
+\item $\ds \frac{1}{A(D)} \iint_R f(x,y) \, dA$, where $A(D)$ is the area of $D$ tells us the average value of the function $f$ on $D$. If $f(x, y) \geq  0$ on $D$, we can interpret this average value of $f$ on $D$ as the height of the solid with base $D$ and constant cross-sectional area $D$ that has the same volume as the volume of the surface defined by $f$ over $D$.
+\end{itemize}
+
+\input{activities/11.3.Act1}
+
+\input{activities/11.3.Act2}
+
+\input{activities/11.3.Act3}
+
+
+\begin{summary}
+\item For a double integral $\ds \iint_D f(x,y) \, dA$ over a non-rectangular region $D$, we enclose $D$ in a rectangle $R$ and then extend integrand $f$ to a function $F$ so that $F(x,y) = 0$ at all points in $R$ outside of $D$ and $F(x,y) = f(x,y)$ for all points in $D$. We then define $\ds \iint_D f(x,y) \, dA$ to be equal to $\ds \iint_R F(x,y) \, dA$.
+\item In an iterated double integral, the limits on the outer integral must be constants while the limits on the inner integral must be constants or in terms of only the remaining variable. In other words, an iterated double integral has one of the following forms (which result in the same value):
+\[\int_{x=a}^{x=b} \int_{y=g_1(x)}^{y=g_2(x)} f(x,y) \, dy \, dx,\]
+where $g_1=g_1(x)$ and $g_2=g_2(x)$ are functions of $x$ only and the region $D$ is described by the inequalities $g_1(x) \leq y \leq g_2(x)$ and $a \leq x \leq b$ or
+\[\int_{y=c}^{y=d} \int_{x=h_1(y)}^{x=h_2(y)} f(x,y) \, dx \, dy,\]
+where $h_1=h_1(y)$ and $h_2=h_2(y)$ are functions of $y$ only and the region $D$ is described by the inequalities $h_1(y) \leq x \leq h_2(y)$ and $c \leq y \leq d$.
+\end{summary}
+
+
+
+\nin \hrulefill
+
+\input{exercises/11.3.Double_Integrals_General(Ex)}
+
+\clearpage

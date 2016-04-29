@@ -1,0 +1,28 @@
+\begin{exercises} 
+
+\item Let $f$ and $g$ be differentiable functions about which the following information is known:  $f(3) = g(3) = 0$, $f'(3) = g'(3) = 0$, $f''(3) = -2$, and $g''(3) = 1$.  Let a new function $h$ be given by the rule $h(x) = \frac{f(x)}{g(x)}$.  On the same set of axes, sketch possible graphs of $f$ and $g$ near $x = 3$, and use the provided information to determine the value of 
+$$\lim_{x \to 3} h(x).$$
+Provide explanation to support your conclusion.
+
+\item Find all vertical and horizontal asymptotes of the function 
+$$R(x) = \frac{3(x-a)(x-b)}{5(x-a)(x-c)},$$
+where $a$, $b$, and $c$ are distinct, arbitrary constants.  In addition, state all values of $x$ for which $R$ is not continuous. Sketch a possible graph of $R$, clearly labeling the values of $a$, $b$, and $c$.
+
+\item Consider the function $g(x) = x^{2x}$, which is defined for all $x > 0$.  Observe that $\lim_{x \to 0^+} g(x)$ is indeterminate due to its form of $0^0$.  (Think about how we know that $0^k = 0$ for all $k > 0$, while $b^0 = 1$ for all $b \ne 0$, but that neither rule can apply to $0^0$.)
+	\ba
+		\item Let $h(x) = \ln(g(x))$.  Explain why $h(x) = 2x \ln(x).$
+		\item Next, explain why it is equivalent to write $h(x) = \frac{2\ln(x)}{\frac{1}{x}}$.
+		\item Use L'Hopital's Rule and your work in (b) to compute $\lim_{x \to 0^+} h(x)$.
+		\item Based on the value of $\lim_{x \to 0^+} h(x)$, determine $\lim_{x \to 0^+} g(x).$
+	\ea
+
+\item Recall we say that function $g$ dominates function $f$ provided that $\lim_{x \to \infty} f(x) = \infty$, $\lim_{x \to \infty} g(x) = \infty$, and $\lim_{x \to \infty} \frac{f(x)}{g(x)} = 0$. 
+	\ba
+		\item Which function dominates the other: $\ln(x)$ or $\sqrt{x}$?
+		\item Which function dominates the other: $\ln(x)$ or $\sqrt[n]{x}$? ($n$ can be any positive integer)
+		\item Explain why $e^x$ will dominate any polynomial function.
+		\item Explain why $x^n$ will dominate $\ln(x)$ for any positive integer $n$.
+	\ea
+
+\end{exercises}
+\afterexercises

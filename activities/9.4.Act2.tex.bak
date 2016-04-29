@@ -1,0 +1,25 @@
+\begin{activity} \label{A:1.4.2} 
+\ba
+	\item Is the cross product commutative? That is, is $\vu \times \vv = \vv \times \vu$ for any vectors $\vu$ and $\vv$ in $\R^3$? If yes, explain why. If no, how are $\vv \times \vu$ and $\vu \times \vv$ related? Why? (Hint: Think about how $\vu$, $\vv$, and $\vu \times \vv$ are related.)
+	
+	
+	\item Calculate $(\vi \times \vi) \times \vj$ and $\vi \times (\vi \times \vj)$.
+	
+	
+	
+	\item Is the cross product associative? That is, is $\vu \times (\vv \times \vw) = (\vu \times \vv) \times \vw$ for any vectors $\vu$, $\vv$, and $\vw$ in $\R^3$?
+	
+	
+	
+	\ea
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

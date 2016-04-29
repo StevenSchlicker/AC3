@@ -1,0 +1,40 @@
+\begin{activity} \label{A:11.7.4} There are several other ways we could have set up the integral to give the mass of the tetrahedron in Example \ref{ex:11.7.Tetrahedron_mass}.
+	\ba
+	\item How many different iterated integrals could be set up that are equal to the integral in Equation~(\ref{eq:11.7.Tetrahedron_mass})?
+
+
+
+	\item Set up an iterated integral, integrating first with respect to $z$, then $x$, then $y$ that is equivalent to the integral in Equation~(\ref{eq:11.7.Tetrahedron_mass}).  Before you write down the integral, think about Figure~\ref{F:11.7.Tetrahedron_ex}, and draw an appropriate two-dimensional image of an important projection.
+
+	\item Set up an iterated integral, integrating first with respect to $y$, then $z$, then $x$ that is equivalent to the integral in Equation~(\ref{eq:11.7.Tetrahedron_mass}).  As in (b), think carefully about the geometry first.
+
+	\item Set up an iterated integral, integrating first with respect to $x$, then $y$, then $z$ that is equivalent to the integral in Equation~(\ref{eq:11.7.Tetrahedron_mass}).
+
+
+
+	\ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+	\ba
+	\item We can choose any of $x$, $y$, or $z$ to be our innermost variable of integration. Once we make that choice, there are two variables left for the middle integral, and then only one for the outermost integral. So we have $3 \times 2 \times 1 = 6$ different iterated integrals that are equal to the integral in (\ref{eq:11.7.Tetrahedron_mass}).
+
+	\item If we integrate with respect to $z$ first, the limits on $z$ will remain the same as in (\ref{eq:11.7.Tetrahedron_mass}). The projection of the tetrahedron onto the $xy$-plane is still bounded by the line $x+2y=6$, and this region can be described by the inequalities $0 \leq x \leq 6-2y$ and $0 \leq y \leq 3$. So our iterated integral is  
+\[\int_{0}^{3} \int_{0}^{6-2y} \int_{0}^{(1/3)(6-x-2y)} x+y+z \, dz \, dx \, dy.\]
+		
+	\item If we integrate with respect to $y$ first, the lower limit on $y$ is 0 and the upper limit is the face of the tetrahedron, $y = \frac{1}{2}(6-3z-x)$. The projection of the tetrahedron onto the $xz$-plane is bounded by the coordinate axes and the line $x+3z=6$. This region can be described by the inequalities $0 \leq z \leq \frac{1}{3}(6-x)$ and $0 \leq x \leq 6$. So our iterated integral is 
+\[\int_{0}^{6} \int_{0}^{1/3(6-x)} \int_{0}^{\frac{1}{2}(6-3z-x)} x+y+z \, dy \, dz \, dx.\]
+
+
+	\item If we integrate with respect to $x$ first, the lower limit on $x$ is 0 and the upper limit is the face of the tetrahedron, $x = 6-3z-2y$. The projection of the tetrahedron onto the $yz$-plane is bounded by the coordinate axes and the line $2y+3z=6$. This region can be described by the inequalities $0 \leq y \leq \frac{1}{2}(6-3z)$ and $0 \leq z \leq 2$. So our iterated integral is 
+\[\int_{0}^{2} \int_{0}^{1/2(6-3z)} \int_{0}^{6-3z-2y} x+y+z \, dx \, dy \, dz.\]
+
+	\ea
+\end{activitySolution}
+\aftera

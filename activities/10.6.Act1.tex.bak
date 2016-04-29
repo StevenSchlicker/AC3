@@ -1,0 +1,43 @@
+\begin{activity} \label{A:2.6.1} Figure \ref{F:DD_animation} provides an animation to illustrate the difference quotients (\ref{eq:diff_quot}) for an arbitrary function $f$.
+\begin{figure}[ht]
+\begin{center}
+\resizebox{!}{2.5in}{\animategraphics[controls,trim=0cm 0.25cm 0cm 1.0cm]{4}{2_6_DD_}{01}{20}}
+\end{center}
+\caption{A directional derivative.}
+\label{F:DD_animation}
+\end{figure}
+%crop graphics in animate trim=<left> <bottom> <right> <top>, add, clip with \includegraphics
+
+    \ba
+    \item Run the animation. Then identify the coordinates of the points $P$, $Q$, $R$, and $S$.
+
+
+
+    \item What vector is $\overrightarrow{RS}$?
+
+
+
+    \item Explain what is happening to these difference quotients as we let $h \to 0$. How can we geometrically interpret the limit
+    \[\lim_{h \to 0} \frac{f(a+u_1h, b+u_2h) - f(a,b)}{h}?\]
+    Explain in as much detail as you can.
+
+
+
+\begin{comment}
+
+We can see that in the limit, the difference quotients (\ref{eq:diff_quot}) approach the slope of the tangent line to the surface at the point $(a, b, f(a, b))$ in the direction of $\vu$. We define the derivative of $f$ in the direction of $\vu$ as follows.
+
+\end{comment}
+    \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

@@ -1,0 +1,28 @@
+\begin{activity} \label{A:9.8.5} Recall that an arc length
+  parameterization of a circle in 2-space of radius $a$ centered at
+  the origin is, from
+  (\ref{eq:9.8.circle_arc_length_parameterization}),
+  \[\vr(s) = \left\langle a \cos\left(\frac{s}{a}\right),~
+    a \sin\left(\frac{s}{a}\right)\right\rangle.\] 
+    Show that the curvature
+    of this circle is the constant $\frac{1}{a}$. What can you say about the relationship between the size of the radius of a circle and the value of its curvature?  Why does this make sense?
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+We have
+\[\vT(s) = \left\langle -\sin\left(\frac{s}{a}\right), \cos\left(\frac{s}{a}\right) \right\rangle.\]
+So the curvature of a circle of radius $a$ is
+\begin{align*}
+\kappa &= \left\lvert \frac{d \vT}{ds} \right\rvert \\
+    &= \left\lvert \left\langle -\frac{1}{a}\cos\left(\frac{s}{a}\right), -\frac{1}{a}\sin\left(\frac{s}{a}\right) \right\rangle \right\rvert \\
+    &= \frac{1}{a}.
+\end{align*}
+So, as expected, larger circles have smaller curvature.
+\end{activitySolution}
+\aftera

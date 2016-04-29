@@ -1,0 +1,49 @@
+\begin{activity} \label{A:10.2.11} 
+The speed of sound $C$ traveling through ocean water is a function of
+temperature, salinity and depth.  It may be modeled by the function
+$$
+C=1449.2+4.6T-0.055T^2+0.00029T^3+(1.34-0.01T)(S-35)+0.016D.
+$$
+Here $C$ is the speed of sound in meters/second, $T$ is the
+temperature in degrees Celsius, $S$ is the salinity in grams/liter of
+water, and $D$ is the depth below the ocean surface in meters.
+
+\ba
+\item State the units in which each of the partial derivatives,
+  $C_T$, $C_S$ and $C_D$, are expressed and explain the physical
+  meaning of each. 
+
+\item Find the partial derivatives $C_T$, $C_S$ and $C_D$.  
+
+\item Evaluate each of the three partial derivatives at the point where $T=10$, $S=35$ and
+  $D=100$.  What does the sign of each partial derivatives tell us about the behavior of the function $C$ at the point $(10,35, 100)$?
+
+  \ea
+
+
+\end{activity}
+
+\begin{activitySolution}
+\ba
+\item The partial derivative $C_T$ is defined in terms of a change in $C$ per change in $T$. So the units of $C_T$ are units of $C$ over units of $T$, or $\frac{\frac{\text{m}}{\text{sec}}}{^{\circ}C}$. This partial $C_T$ approximates how the speed of sound changes for every degree Celsius increase in the temperature of the water.
+
+Similarly, the units of $C_S$ are $\frac{\frac{\text{m}}{\text{sec}}}{\frac{g}{l}}$. This partial $C_S$ approximates how the speed of sound changes for every gram per liter increase of the salinity of the water.
+
+Finally, the units of $C_D$ are $\frac{\frac{\text{m}}{\text{sec}}}{m}$. This partial $C_D$ approximates how the speed of sound changes for every meter increase in depth below the ocean surface. 
+\item Here we have 
+\begin{align*}
+C_T &= 4.6-0.11T+0.00087T^2-0.01(S-35) \\
+C_S &= 1.34-0.01T \\
+C_D &= 0.016.
+\end{align*}
+\item Evaluating the partial derivatives at the point (10,35,100) gives us 
+\begin{align*}
+C_T(10,35,100) &= 3.587 \\
+C_S(10,35,100) &= 1.24 \\
+C_D(10,35,100) &= 0.016.
+\end{align*}
+That $C_T(10,35,100)$ is positive tells us that if we increase the temperature from $10^{\circ}C$ while holding the salinity constant at 35 grams per liter and the depth constant at 100 meters, the speed of sound in the ocean increases. Similarly, the fact that $C_S(10,35,100)$ is positive tells us that if we increase salinity from 35 grams per liter while holding the the temperature constant at $10^{\circ}C$ and the depth constant at 100 meters, the speed of sound in the ocean increases. Also, the fact that $C_D(10,35,100)$ is positive tells us that if we increase depth from 100 meters while holding the the temperature constant at $10^{\circ}C$ and the salinity constant at 35 grams per liter, the speed of sound in the ocean increases. 
+\ea
+\end{activitySolution}
+
+\aftera

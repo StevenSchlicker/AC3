@@ -1,0 +1,559 @@
+\section{Functions of Several Variables and Three Dimensional Space} \label{S:9.1.Functions}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+%\item What is the difference between a left-hand system and a right-hand system? Why is there a difference?
+\item What is a function of several variables?  What do we mean by the domain of a function of several variables?
+\item How do we find the distance between two points in $\R^3$? What is the equation of a sphere in $\R^3$?
+\item What is a trace of a function of two variables? What does a trace tell us about a function?
+\item What is a level curve of a function of two variables? What does a level curve tell us about a function?
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+Throughout our mathematical careers we have studied functions of a
+single variable. We define a function of one variable as a rule that
+assigns exactly one output to each input. We analyze these functions
+by looking at their graphs, calculating limits, differentiating,
+integrating, and more. In this and following sections, we will study
+functions whose input is defined in terms of more than one variable,
+and then analyze these functions by looking at their graphs,
+calculating limits, differentiating, integrating, and more. We will
+see that many of the ideas from single variable calculus translate
+well to functions of several variables, but we will have to make some
+adjustments as well.
+
+\input{previews/9.1.PA1}
+
+\subsection*{Functions of Several Variables}
+
+Suppose we launch a projectile, using a golf club, a cannon, or some
+other device, from ground level. Under ideal conditions (ignoring wind
+resistance, spin, or any other forces except the force of gravity) the
+horizontal distance the object will travel depends on the initial
+velocity $x$ the object is given, and the angle $y$ at which it is
+launched. If we let $f$ represent the horizontal distance the object
+travels (its range), then $f$ is a function of the two variables $x$
+and $y$, and we represent $f$ in functional notation by
+\[f(x,y) = \frac{x^2 \sin(2 y)}{g},\] where $g$ is the acceleration
+due to gravity.\footnote{We will derive this equation in a later section.}
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{definition} A \textbf{function $f$ of two independent variables}\index{function!of two variables} is a rule that assigns to each ordered pair $(x,y)$ in some set $D$ exactly one real number $f(x,y)$. \end{definition}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+
+There is, of course, no reason to restrict ourselves to functions of
+only two variables---we can use any number of variables we like. For
+example,
+\[f(x,y,z) = x^2 - 2xz + \cos(y)\] 
+defines $f$ as a function of the
+three variables $x$, $y$, and $z$. In general, a function of $n$
+independent variables is a rule that assigns to an ordered $n$-tuple
+$(x_1, x_2, \ldots, x_n)$ in some set $D$ exactly one real number.
+
+As with functions of a single variable, it is important to understand
+the set of inputs for which the function is defined.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+  \parbox{6.25 in}{\begin{definition} The
+      \textbf{domain}\index{function!domain} of a function $f$ is the
+      set of all inputs at which the function is
+      defined. \end{definition} } \hspace*{3 pt}} \vspace*{5pt}
+
+\input{activities/9.1.Act1}
+
+\subsection*{Representing Functions of Two Variables}
+
+One of the techniques we use to study functions of one
+variable is to create a table of values. We can do the same for
+functions of two variables, except that our tables will have to allow
+us to keep track of both input variables. We can do this with a
+2-dimensional table, where we list the $x$-values across the first row 
+and the $y$-values down the first column. Let $f$ be the function
+defined by $f(x,y) = \frac{x^2 \sin(2y)}{g}$ that gives the range of a
+projectile as a function of the initial velocity $x$ and launch angle
+$y$ of the projectile. The value $f(x,y)$ is then displayed in the
+location where the $x$ row intersects the $y$ column, as shown in
+Table \ref{T:9.1.range} (where we measure $x$ in feet and $y$ in
+radians).
+
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
+$x\backslash y$   &$0.2$ 	&$0.4$ 	&$0.6$ 	&$0.8$ 	&$1.0$ 	&$1.2$ &$1.4$      \\ \hhline{|=|=|=|=|=|=|=|=|}
+25       &7.6		&14.0	&18.2	&19.5	&17.8	&13.2	&6.5      \\ \hline
+50       &30.4		&56.0	&72.8	&78.1	&71.0	&52.8	&26.2     \\ \hline
+75       &68.4		&126.1	&163.8	&175.7	&159.8	&118.7	&58.9   \\ \hline
+100      &121.7	&224.2	&291.3	&312.4	&284.2	&211.1	&104.7    \\ \hline
+125      &190.1	&350.3	&455.1	&488.1	&444.0	&329.8	&163.6    \\ \hline
+150      &273.8	&504.4	&655.3	&702.8	&639.3	&474.9	&235.5    \\ \hline
+175      &372.7	&686.5	&892.0	&956.6	&870.2	&646.4	&320.6    \\ \hline
+200      &486.8	&896.7	&1165.0	&1249.5	&1136.6	&844.3	&418.7    \\ \hline
+225      &616.2	&1134.9	&1474.5	&1581.4	&1438.5	&1068.6	&530.0   \\ \hline
+250      &           &           &           &           &           &           &                  \\ \hline
+%250     &760.6	&1401.1	&1820.4	&1952.3	&1776.0	&1319.3	&654.3  \\ \hline
+\end{tabular}
+\caption{Values of $f(x,y) = \frac{x^2 \sin(2y)}{g}$.}
+\label{T:9.1.range}
+\end{center}
+\end{table}
+
+%\begin{table}[ht]
+%\begin{center}
+%\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|}
+%  \hline
+%  $y\backslash x$ &25&50&75&100&125&150&175&200&225&250\\ \hhline{|=|=|=|}
+% \hline
+%  \hline
+%  0.2&7.6&30.4&68.5&121.7&190.1&273.8&372.7&486.8&616.1&\hspace*{0.75in}\\
+%  \hline
+%  0.4&14.0&56.0&126.1&224.2&350.3&504.4&686.5&896.7&1134.9&\\
+%  \hline
+%  0.6&18.2&72.8&163.8&291.3&455.1&655.3&892.0&1165.0&1474.5&\\
+%  \hline
+%  0.8&19.5&78.1&175.7&312.4&488.1&702.8&956.6&1249.5&1581.4&\\
+%  \hline
+%  1.0&17.8&71.0&159.8&284.2&444.0&639.3&870.2&1136.6&1438.5&\\
+%  \hline
+%  1.2&13.2&52.8&118.7&211.1&329.8&474.9&646.4&844.3&1068.6&\\
+%  \hline
+%  1.4&6.5&26.2&58.9&104.7&163.6&235.5&320.6&418.7&530.0&\\
+%  \hline
+%\end{tabular}
+%\caption{Values of $f(x,y) = \frac{x^2 \sin(2y)}{g}$.}
+%\label{T:9.1.range}
+%\end{center}
+%\end{table}
+
+
+\input{activities/9.1.Act2}
+
+If $f$ is a function of a single variable $x$, then we define the
+graph of $f$ to be the set of points of the form $(x,f(x))$, where $x$
+is in the domain of $f$. We then plot these points using the
+coordinate axes in order to visualize the graph. We can do a similar
+thing with functions of several variables. Table \ref{T:9.1.range}
+identifies points of the form $(x,y,f(x,y))$, and we define the graph
+of $f$ to be the set of these points.
+
+ \vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{definition} The \textbf{graph}\index{function!graph} of a function $f = f(x,y)$ is the set of points of the form $(x,y,f(x,y))$, where the point $(x,y)$ is in the domain of $f$. \end{definition}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+We also often refer to the graph of a function $f$ of two variables as
+the \emph{surface}\index{function!surface} generated by $f$. Points in
+the form $(x,y,f(x,y))$ are in three dimensions, so plotting these
+points takes a bit more work than graphs of functions in two
+dimensions. To plot these three-dimensional points, we need to set up
+a coordinate system with three mutually perpendicular axes -- the
+$x$-axis, the $y$-axis, and the $z$-axis (called the \emph{coordinate
+  axes}). There are essentially two different ways we could set up a
+3D coordinate system, as shown in Figures \ref{F:9.1.right_hand} and
+\ref{F:9.1.left_hand}; thus, before we can proceed, we need to
+establish a convention.
+
+\begin{figure}[ht]
+\begin{center}
+\begin{minipage}{2.5in}
+\begin{center}
+%\resizebox{!}{1.5in}{\includegraphics{9_1_right_hand_system}}
+  \includegraphics{figures/fig_9_1_right_hand.eps}
+\caption{A right hand system}
+\label{F:9.1.right_hand}
+\end{center}
+\end{minipage}
+\hspace{0.5in}
+\begin{minipage}{2.5in}
+\begin{center}
+%\resizebox{!}{1.5in}{\includegraphics{9_1_left_hand_system}}
+  \includegraphics{figures/fig_9_1_left_hand.eps}
+\caption{A left hand system}
+\label{F:9.1.left_hand}
+\end{center}
+\end{minipage}
+\end{center}
+\end{figure}
+
+The distinction between these two figures is subtle, but important.
+In the coordinate system shown in \ref{F:9.1.right_hand}, imagine that
+you are sitting on the positive $z$-axis next to the label ``$z$.''
+Looking down at the $x$- and $y$-axes, you see that the $y$-axis is
+obtained by rotating the $x$-axis by 90$^\circ$ in the {\em
+  counterclockwise} direction.  Again sitting on the positive $z$-axis
+in Figure \ref{F:9.1.left_hand}, you see that the $y$-axis is obtained
+by rotating the $x$-axis by 90$^\circ$ in the {\em clockwise}
+direction.
+
+
+We call the coordinate system in \ref{F:9.1.right_hand} a {\em
+  right-hand system}; if we point the index finger of our {\em right}
+hand along the positive $x$-axis and our middle finger along the
+positive $y$-axis, then our thumb points in the direction of the
+positive $z$-axis.  Following mathematical conventions, we choose to
+use a right-hand system throughout this book.
+
+% We will adopt a right-hand system\index{right hand system}, as illustrated in Figure \ref{F:9.1.right_hand}. To see the difference, think about a socket wrench -- a tool for driving screws. It consists of a handle and a socket. The socket is placed on the screw and attached to the handle. As the handle of the wrench is turned, the socket provides a force that drives the screw. If you point the index finger of your right hand in the direction of the force you apply to the handle of the wrench, and point your middle finger in the direction of the handle toward the socket, then your thumb will point in the direction in which the wrench is driving the screw. If you use your left hand instead, then your thumb will point in the opposite direction. So the socket wrench is set up to drive right-handed screws. This is exactly the 3D coordinate system we want to adopt. In a right hand system, if we point the index finger of our right hand in the direction of the positive $x$-axis and our middle finger in the direction of the positive $y$-axis, then our thumb will point in the direction of the positive $z$-axis. A left hand system and a right hand system have different orientations, so we need pick one as a standard so that the convention of orientation is understood by everyone. We will always use a right-hand system.
+
+Now that we have established a convention for a right hand system, we can draw a graph of the range function, $f(x,y) = \frac{x^2 \sin(2y)}{g}$. Note that the function $f$ is continuous in both variables, so when we plot these points in the right hand coordinate system, we can connect them all to form a surface in 3-space. The graph of the range function $f$ is shown in Figure \ref{F:9.1.range}.
+\begin{figure}[ht]
+\begin{center}
+%\resizebox{!}{2.0in}{\includegraphics[trim=0cm 0cm 1cm 4.5cm,
+%clip]{9_1_range}}
+  \includegraphics{figures/fig_9_1_range.eps}
+\caption{The range surface.}
+\label{F:9.1.range}
+\end{center}
+\end{figure}
+%trim=left bottom right top, need clip
+
+There are many graphing tools available for drawing three-dimensional
+surfaces.\footnote{e.g., Wolfram Alpha and
+  \url{http://web.monroecc.edu/manila/webfiles/calcNSF/JavaCode/CalcPlot3D.htm}}
+Since we will be able to visualize graphs of functions of two
+variables, but not functions of more than two variables, we will
+primarily deal with functions of two variables in this course. It is
+important to note, however, that the techniques we develop apply to
+functions of any number of variables.
+%We will work extensively with functions of several variables in subsequent sections.
+
+\vspace{10pt}
+
+\noindent \textbf{Notation:} We let $\R^2$ denote the set of all
+ordered pairs of real numbers in the plane (two copies of the real
+number system) and let $\R^3$ represent the set of all ordered triples
+of real numbers (which constitutes three-space).
+
+\vspace{10pt}
+
+\subsection*{Some Standard Equations in Three-Space}
+
+In addition to graphing functions, we will also want to understand
+graphs of some simple equations in three dimensions. For example, in
+$\R^2$, the graphs of the equations $x=a$ and $y=b$, where $a$ and $b$
+are constants, are lines parallel to the coordinate axes. In the next
+activity we consider their three-dimensional analogs.
+
+\input{activities/9.1.Act3}
+
+Activity \ref{A:9.1.3} shows that the equations where one independent
+variable is constant lead to planes parallel to ones that result from
+a pair of the coordinate axes. When we make the constant 0, we get the
+\emph{coordinate planes}\index{coordinate planes}. The $xy$-plane
+satisfies $z=0$, the $xz$-plane satisfies $y=0$, and the $yz$-plane
+satisfies $z=0$ (see Figure \ref{F:9.1.coordinate_planes}).
+
+\begin{figure}[ht]
+\begin{center}
+%\resizebox{!}{1.25in}{\includegraphics{9_1_xy_plane}}
+  \includegraphics{figures/fig_9_1_xy_plane.eps}
+\hspace{0.2in}
+%\resizebox{!}{1.25in}{\includegraphics{9_1_xz_plane}}
+  \includegraphics{figures/fig_9_1_xz_plane.eps}
+\hspace{0.3in}
+%\resizebox{!}{1.25in}{\includegraphics{9_1_yz_plane}}
+  \includegraphics{figures/fig_9_1_yz_plane.eps}
+\end{center}
+\caption{The coordinate planes.}
+\label{F:9.1.coordinate_planes}
+\end{figure}
+
+On a related note, we define a circle in $\R^2$ as the set of all
+points equidistant from a fixed point. In $\R^3$, we call the set of
+all points equidistant from a fixed point a
+\emph{sphere}\index{sphere!definition}. To find the equation of a
+sphere, we need to understand how to calculate the distance between
+two points in three-space, and we explore this idea in the next
+activity.
+
+\input{activities/9.1.Act4}
+
+The formula developed in Activity \ref{A:9.1.4} is important to remember.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{The distance between points $P=(x_0, y_0, z_0)$ and $Q=(x_1, y_1, z_1)$ (denoted as $|PQ|$)  in $\R^3$ is given by the formula
+\begin{equation} \label{eq:9.1.Distance_3D}
+|PQ| = \sqrt{(x_1-x_0)^2 + (y_1-y_0)^2 + (z_1-z_0)^2}.
+\end{equation}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+Equation (\ref{eq:9.1.Distance_3D}) can be used to derive the formula
+for a sphere\index{sphere!formula} centered at a point $(x_0,y_0,z_0)$
+with radius $r$. Since the distance from any point $(x,y,z)$ on such a
+sphere to the point $(x_0,y_0,z_0)$ is $r$, the point $(x,y,z)$ will
+satisfy the equation
+\[\sqrt{(x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2} = r\]
+%or
+%\[(x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 = r^2.\]
+Squaring both sides, we come to the standard equation for a sphere.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{The equation of a sphere with center $(x_0,y_0,z_0)$ and radius $r$ is
+\[(x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 = r^2.\]
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+This makes sense if we compare this equation to its two-dimensional
+analogue, the equation of a circle of radius $r$ in the plane centered
+at $(x_0,y_0)$:
+$$
+(x-x_0)^2 + (y-y_0)^2 = r^2.
+$$
+
+
+%\input{activities/9.1.Act5}
+
+\subsection*{Traces}
+
+When we study functions of several variables we are often interested
+in how each individual variable affects the function in and of
+itself. In Preview Activity \ref{PA:9.1}, we saw that the monthly
+payment on an \$18,000 loan depends on the interest rate and the
+duration of the loan. However, if we fix the interest rate, the
+monthly payment depends only on the duration of the loan, and if we
+set the duration the payment depends only on the interest rate. This
+idea of keeping one variable constant while we allow the other to
+change will be an important tool for us when studying functions of
+several variables.
+
+As another example, consider again the range function $f$ defined by
+\[f(x,y) = \frac{x^2 \sin(2y)}{g}\] where $x$ is the initial velocity
+of an object in feet per second, $y$ is the launch angle in radians,
+and $g$ is the acceleration due to gravity (32 feet per second
+squared). If we hold the launch angle constant at $y=0.6$ radians, we
+can consider $f$ a function of the initial velocity alone. In this
+case we have
+\[f(x) = \frac{x^2}{32}\sin(2\cdot 0.6).\]
+We can plot this curve on the surface by tracing out the points on the
+surface when $y = 0.6$, as shown in Figure
+\ref{F:9.1.trace1}. The graph and the formula clearly show that $f$ is
+quadratic in the $x$-direction. More descriptively, as we increase the
+launch velocity while keeping the launch angle constant, the range
+increases proportional to the square of the initial velocity.
+
+Similarly, if we fix the initial velocity at 150 feet per second, we
+can consider the range as a function of the launch angle only. In this
+case we have
+\[f(y) = \frac{150^2 \sin(2y)}{32}.\] 
+We can again plot this curve on
+the surface by tracing out the points on the surface when $x=150$, as
+shown in Figure \ref{F:9.1.trace2}. The graph and the formula clearly
+show that $f$ is sinusoidal in the $y$-direction. More descriptively,
+as we increase the launch angle while keeping the initial velocity
+constant, the range is proportional to the sine of twice the launch
+angle.
+\begin{figure}[ht]
+\begin{center}
+\begin{minipage}{2.5in}
+\begin{center}
+%\resizebox{!}{1.75in}{\includegraphics[trim=0cm 0cm 1cm 4.5cm,
+%clip]{9_1_trace1}}
+  \includegraphics{figures/fig_9_1_y_range.eps}
+\caption{The trace with $y = 0.6$.}
+\label{F:9.1.trace1}
+\end{center}
+\end{minipage}
+\hspace{0.5in}
+\begin{minipage}{2.5in}
+\begin{center}
+%\resizebox{!}{1.75in}{\includegraphics[trim=0cm 0cm 1cm 4.5cm, clip]{9_1_trace2}}
+  \includegraphics{figures/fig_9_1_x_range.eps}
+\caption{The trace with $x = 150$.}
+\label{F:9.1.trace2}
+\end{center}
+\end{minipage}
+\end{center}
+\end{figure}
+
+The curves we define when we fix one of the independent variables in our two variable function are called \emph{traces}.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{definition} A \textbf{trace}\index{trace} of a function $f$ of two independent variables $x$ and $y$ is a curve of the form $z = f(c,y)$ or $z = f(x,c)$, where $c$ is a constant. \end{definition}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+Understanding trends in the behavior of functions of two variables can
+be challenging, as can sketching their graphs; traces help us with
+each of these tasks.
+
+\input{activities/9.1.Act6}
+
+%\input{activities/9.1.Act7}
+
+\subsection*{Contour Maps and Level Curves}
+
+We have all seen topographic maps such as the one of the Porcupine
+Mountains in the upper peninsula of Michigan shown in Figure
+\ref{F:9.1.porcupine}.\footnote{Map source: Michigan Department of
+  Natural Resources,
+  \url{https://www.michigan.gov/dnr/0,4570,7-153-10369_46675_58093---,00.html},
+  with permission of the Michigan DNR and Bob Wild.} The curves on
+these maps show the regions of constant altitude. The contours also
+depict changes in altitude: contours that are close together signify
+steep ascents or descents, while contours that are far apart indicate
+only slight changes in elevation.  Thus, contour maps tell us a lot
+about three-dimensional surfaces. Mathematically, if $f(x,y)$
+represents the altitude at the point $(x,y)$, then each contour is the
+graph of an equation of the form $f(x,y) = k$, for some constant $k$.
+
+\newpage
+\begin{landscape}
+\begin{figure}[h]
+\begin{center}
+\resizebox{!}{5.0in}
+{\includegraphics[trim=55cm 40cm 40cm 40cm, clip]{9_1_porcupine_2}}
+%trim=left bottom right top, need clip if not animation
+% 
+\caption{Contour map of the Porcupine Mountains.}
+\label{F:9.1.porcupine}
+\end{center}
+\end{figure}
+\end{landscape}
+\newpage
+
+\input{activities/9.1.Act8}
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{definition} A \textbf{level curve\index{level curve} (or contour)} of a function $f$ of two independent variables $x$ and $y$ is a curve of the form $k = f(x,y)$, where $k$ is a constant. \end{definition}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+Topographical maps can be used to create a three-dimensional surface
+from the two-dimensional contours or level curves. For example, level
+curves of the range function, $f(x,y) = \frac{x^2 \sin(2y)}{32}$,
+plotted in the $xy$-plane are shown in Figure
+\ref{F:9.1.contours_1}. If we lift these contours and plot them at
+their respective heights, then we get a picture of the surface itself,
+as illustrated in Figure \ref{F:9.1.contours_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\begin{minipage}{2.5in}
+\begin{center}
+%\resizebox{!}{1.75in}{\includegraphics{9_1_contours1}}
+\includegraphics{figures/fig_9_1_contour_1.eps}
+\caption{Several level curves.}
+\label{F:9.1.contours_1}
+\end{center}
+\end{minipage}
+\hspace{0.5in}
+\begin{minipage}{2.5in}
+\begin{center}
+%\resizebox{!}{1.75in}{\includegraphics[trim=0cm 0cm 1cm 4.5cm, clip]{9_1_contours2}}
+\includegraphics{figures/fig_9_1_contour_2.eps}
+\caption{Level curves at the appropriate height.}
+\label{F:9.1.contours_2}
+\end{center}
+\end{minipage}
+\end{center}
+\end{figure}
+
+The use of level curves and traces can help us construct the graph of
+a function of two variables.
+
+\input{activities/9.1.Act9}
+
+%\input{activities/9.1.Act10}
+
+The traces and level curves of a function of two variables are curves
+in space. In order to understand these traces and level curves better,
+we will first spend some time learning about vectors and vector-valued
+functions in the next few sections and return to our study of
+functions of several variables once we have those more mathematical
+tools to support their study.
+
+\subsection*{A gallery of functions}
+
+We end this section by considering a collection of functions and
+illustrating their graphs and some level curves.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/zisr2.eps}
+    \hspace*{30pt}
+    \includegraphics{figures/zisr2_contours.eps}
+  \end{center}
+  \caption{$z=x^2+y^2$}
+\end{figure}
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/zis4r2.eps}
+    \hspace*{30pt}
+    \includegraphics{figures/zis4r2_contours.eps}
+  \end{center}
+  \caption{$z=4-(x^2+y^2)$}
+\end{figure}
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/cone.eps}
+    \hspace*{30pt}
+    \includegraphics{figures/cone_contours.eps}
+  \end{center}
+  \caption{$z=\sqrt{x^2+y^2}$}
+\end{figure}
+\clearpage
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/saddle.eps}
+    \hspace*{30pt}
+    \includegraphics{figures/saddle_contours.eps}
+  \end{center}
+  \caption{$z=x^2-y^2$}
+\end{figure}
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/sinxy.eps}
+    \hspace*{30pt}
+    \includegraphics{figures/sinxy_contours.eps}
+  \end{center}
+  \caption{$z=\sin(x)+\sin(y)$}
+\end{figure}
+\clearpage
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/elliptic.eps}
+    \hspace*{30pt}
+    \includegraphics{figures/elliptic_contours.eps}
+  \end{center}
+  \caption{$z=y^2 - x^3 + x$}
+\end{figure}
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/exp.eps}
+    \hspace*{30pt}
+    \includegraphics{figures/exp_contours.eps}
+  \end{center}
+  \caption{$z=xye^{-x^2-y^2}$}
+\end{figure}
+
+
+%\nin \framebox{\hspace*{3 pt}
+%\parbox{6.25 in}{
+\begin{summary}
+%\item A three-dimensional system has two possible orientations. In a right hand system, if we point the index finger of our right hand in the direction of the positive $x$-axis and our middle finger in the direction of the positive $y$-axis, then our thumb will point in the direction of the positive $z$-axis. A left hand system has a different orientation and we need pick one as a standard so that the convention of orientation is understood by everyone.
+\item A function $f$ of several variables is a rule that assigns a unique number to an ordered collection of independent inputs.  The domain of a function of several variables is the set of all inputs for which the function is defined.
+\item In $\R^3$, the distance between points $P=(x_0, y_0, z_0)$ and $Q=(x_1, y_1, z_1)$ (denoted as $|PQ|$)  is given by the formula
+\[|PQ| = \sqrt{(x_1-x_0)^2 + (y_1-y_0)^2 + (z_1-z_0)^2}.\]
+and thus the equation of a sphere with center $(x_0,y_0,z_0)$ and radius $r$ is
+\[(x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 = r^2.\]
+\item A trace of a function $f$ of two independent variables $x$ and $y$ is a curve of the form $z = f(c,y)$ or $z = f(x,c)$, where $c$ is a constant. A trace tells us how the function depends on a single independent variable if we treat the other independent variable as a constant. 
+\item A level curve of a function $f$ of two independent variables $x$ and $y$ is a curve of the form $k = f(x,y)$, where $k$ is a constant. A level curve describes the set of inputs that lead to a specific output of the function.
+\end{summary}
+%} \hspace*{3 pt}}
+
+\nin \hrulefill
+
+\input{exercises/9.1.Functions(Ex)}
+
+\clearpage

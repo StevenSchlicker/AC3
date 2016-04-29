@@ -1,0 +1,223 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 49 449 351 751
+%%Title: C:\Users\schlicks\Dropbox\AC Multivariable (1)\figures\9_3_Act_4_sol.ps
+%%Creator: GSview from C:\Users\schlicks\Dropbox\AC Multivariable (1)\figures\9_3_Act_4_sol.ps
+%%CreationDate: Wed Jan 28 13:25:07 2015
+%%Pages: 1
+%%EndComments
+%%Page: 1 1
+%%BeginDocument: C:\Users\schlicks\Dropbox\AC Multivariable (1)\figures\9_3_Act_4_sol.ps
+
+200 600 translate
+
+/ah 10 def %arrow height
+/aw 3 def %arrow width
+
+%need xarrrow, yarrow, arrowangle
+/Arrowhead {
+/xarrowhead xarrow arrowangle cos ah mul sub def
+/yarrowhead yarrow arrowangle sin ah mul sub def
+xarrow yarrow moveto
+arrowangle 90 add cos aw mul xarrowhead add arrowangle 90 add sin aw mul yarrowhead add lineto
+arrowangle 90 sub cos aw mul xarrowhead add arrowangle 90 sub sin aw mul yarrowhead add lineto
+closepath
+fill
+} def
+
+/hperp 4 def
+/vperp 6 def
+%need perpx, perpy at center of base of perp
+/DrawPerp {
+perpx hperp sub perpy moveto
+perpx hperp add perpy lineto
+stroke
+perpx perpy moveto
+perpx perpy vperp add lineto
+stroke
+} def
+0 0 0 setrgbcolor
+
+/scale 15 def
+/r 10 scale mul def %radius
+
+%x-axis
+r -1 mul 0 moveto
+r 0 lineto
+stroke
+%x Arrowhead
+/arrowangle 0 def
+/xarrow r def
+/yarrow 0 def
+0 0 Arrowhead stroke
+
+%y-axis
+0 r -1 mul moveto
+0 r lineto
+stroke
+%y Arrowhead
+/arrowangle 90 def
+/xarrow 0 def
+/yarrow r def
+0 0 Arrowhead stroke
+
+%Vector v
+/v1 4 scale mul def
+/v2 -8 scale mul def
+/av v2 v1 atan def
+%Initial side 
+0 0 moveto
+v1 v2 lineto
+stroke
+
+v1 v2 1 0 360 arc fill
+
+/s r 2 div def
+
+/Times-Bold findfont
+12 scalefont
+setfont
+v1 2 div 10 sub v2 2 div 2 sub moveto
+(v) show
+
+%v Arrowhead
+/arrowangle av def
+/xarrow v1 def
+/yarrow v2 def
+0 0 Arrowhead stroke
+
+%Vector u
+/u1 2 scale mul def
+/u2 6 scale mul def
+/au u2 u1 atan def
+%Terminal side
+0 0 moveto
+u1 u2 lineto
+stroke
+
+%u Arrowhead
+/arrowangle au def
+/xarrow u1 def
+/yarrow u2 def
+0 0 Arrowhead stroke
+
+u1 2 div 3 add u2 2 div 2 sub moveto
+(u) show
+0 0 moveto
+
+u1 u2 1 0 360 arc fill
+
+%Projection scalar
+/s1 u1 v1 mul u2 v2 mul add def
+/s2 v1 v1 mul v2 v2 mul add def
+/s s1 s2 div def
+
+0.5 0 0.5 setrgbcolor
+
+%Projection
+/p1 v1 s mul def
+/p2 v2 s mul def
+/ap p2 p1 atan def
+
+0 0 moveto
+p1 p2 lineto
+stroke
+
+%Projection Arrowhead
+/arrowangle ap def
+/xarrow p1 def
+/yarrow p2 def
+0 0 Arrowhead stroke
+
+0 0 0 setrgbcolor
+p1 p2 1 0 360 arc fill
+
+%Projection labels
+0.5 0 0.5 setrgbcolor
+/Times findfont
+12 scalefont
+setfont
+p1 2 div 36 sub p2 2 div 5 sub moveto
+(proj) show
+/Times-Bold findfont
+12 scalefont
+setfont
+6 0 rmoveto
+(u) show
+-13 -6 rmoveto
+(v) show
+
+
+%Orthogonal projection
+/op1 u1 p1 sub def
+/op2 u2 p2 sub def
+/aop op2 op1 atan def
+
+0 0 1 setrgbcolor
+p1 p2 moveto
+u1 u2 lineto
+stroke
+
+%O projection arrowhead
+/arrowangle aop def
+/xarrow u1 def
+/yarrow u2 def
+0 0 Arrowhead stroke
+
+
+/Times findfont
+12 scalefont
+setfont
+/xp p1 u1 add 2 div 42 sub def
+/yp p2 u2 add 2 div 5 add def
+xp yp moveto
+(proj) show
+/perpx xp 22 add def 
+/perpy yp 6 sub def
+0 0 DrawPerp stroke
+
+/Times-Bold findfont
+12 scalefont
+setfont
+perpx 4 add perpy moveto
+(v) show
+0 6 rmoveto
+(u) show
+
+0 0 moveto
+
+0 0 0 setrgbcolor
+
+
+/Times findfont
+12 scalefont
+setfont
+u1 3 add u2 3 sub moveto
+((2,6)) show
+
+v1 3 add v2 3 sub moveto
+(\(4,) show
+/Symbol findfont
+12 scalefont
+setfont
+(-) show
+/Times findfont
+12 scalefont
+setfont
+(8\)) show
+
+p1 32 sub p2 3 sub moveto
+(\() show
+/Symbol findfont
+12 scalefont
+setfont
+(-) show
+/Times findfont
+12 scalefont
+setfont
+(2,4\)) show
+
+
+
+
+%%EndDocument
+%%Trailer

@@ -1,0 +1,39 @@
+\begin{activity} \label{A:9.5.3}  	Let $P_1 = (1,2,-1)$ and $P_2 = (-2,1,-2)$, and let $\mathcal{L}$ be the line in $\R^3$ through $P_1$ and $P_2$, which is the same line as in Activity \ref{A:9.5.2}.
+	\ba
+	\item Find parametric equations of the line $\mathcal{L}$.
+	
+	\item Does the point $(1, 2, 1)$ lie on $\mathcal{L}$? If so, what value of $t$ results in this point?
+	
+	\item Consider another line, $\mathcal{K}$, whose parametric equations are 
+	$$x(s) = -2 + 4s, \ \ y(s) = 1-3s, \ \ z(s) = -2 + 2s.$$
+	What is the direction of  line $\mathcal{K}$?
+	
+	\item Do lines $\mathcal{L}$ and $\mathcal{K}$ intersect?  If so, provide the point of intersection and the $t$ and $s$ values, respectively, that result in the point.  If not, explain why.
+
+	\ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+	\ba
+	\item In Activity \ref{A:9.5.2} we saw that a vector form of this line is 
+\[\vr(t) = \langle 1,2,-1\rangle + t\langle 3, 1, 1 \rangle.\]
+Equating the components give us the following parametric equations for this line: 
+\[x(t) = 1 + 3t, \ \ \ y(t) = 2+t, \ \ \ z(t) = -1 + t.\]
+	\item To determine if the point $(1, 2, 1)$ lies on $\mathcal{L}$, we need to know if there is a value of $t$ so that 
+\[1 = 1 + 3t, \ \ \ 2 = 2+t, \ \ \ 1 = -1 + t.\]
+To satisfy the first equation we need to have $t=0$. But then the third equation is not satisfied, so the point  $(1, 2, 1)$ does not lie on $\mathcal{L}$. 
+	\item The vector $\langle 4, -3, 2 \rangle$ consisting of the coefficients of the parameter in the parametric equations gives us the direction of the line $\mathcal{K}$.
+	\item The direction vectors for the two lines are not scalar multiples of one another, so the lines $\mathcal{L}$ and $\mathcal{K}$ are not parallel and must intersect. The intersection point will occur for values of $s$ and $t$ that simultaneously satisfy the parametric equations of the two lines. In other words, we need to find $s$ and $t$ so that 
+\[1+3t = -2+4s, \ \ \ 2+t = 1-3s, \ \ \ \text{ and } \ \ \  -1+t = -2+2s.\]
+The second equation gives us $t = -1-3s$. Substituting into the first equation shows that $1+3(-1-3s) = -2+4s$ or $s = 0$. This also implies that $t=-1$. A quick check shows that all three equations are satisfied when $s=0$ and $t=-1$. To find the point of intersection we substitute $t=-1$ into the parametric equations for line $\mathcal{L}$ (or $s=0$ into the parametric equations for line $\mathcal{K}$). We conclude that the two lines intersect at the point $(-2,1,-2)$.  
+	\ea
+
+\end{activitySolution}
+\aftera

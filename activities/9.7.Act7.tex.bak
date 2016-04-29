@@ -1,0 +1,39 @@
+\begin{activity} \label{A:1.7.7} \begin{figure}[h]
+\begin{minipage}{4.0in}
+Suppose an object is at the point $(1.5,-1,0)$ at time $t=0$ and has velocity
+\[\vv(t) = (-2\sin{2t}) \vi + 2 \cos(t) \vj + \left(\frac{t}{1+t}\right) \vk.\]
+A graph of the position of the object for times $t$ in $[-0.5,3]$ is shown in Figure \ref{F:VVD_Example}.
+	\ba
+	\item Find the acceleration of the object at time $t$.
+
+
+
+	\item Find the position of the object at time $t$.
+
+
+
+
+	\item Approximate and then draw a picture of the position, velocity, and acceleration vectors of the object at time $t=1$.
+
+	\ea
+\end{minipage} \hspace{0.5in}
+\begin{minipage}{2.0in}
+\begin{center}
+\resizebox{!}{2.0in}{\includegraphics{1_7_VVD_Example}}
+\end{center}
+\caption{The position graph.}
+\label{F:VVD_Example}
+\end{minipage}
+\end{figure}
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

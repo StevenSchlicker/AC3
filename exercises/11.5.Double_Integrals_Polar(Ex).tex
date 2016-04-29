@@ -1,0 +1,167 @@
+\begin{exercises} 
+
+\item Consider the iterated integral $I = \ds \int_{-3}^{0} \int_{-\sqrt{9-y^2}}^{0} \frac{y}{x^2 + y^2+1} \, dx \, dy.$  
+	
+\ba
+	\item Sketch (and label) the region of integration.
+	\item Convert the given iterated integral to one in polar coordinates.
+	\item Evaluate the iterated integral in (b).
+	\item State one possible interpretation of the value you found in (c).
+\ea
+
+\begin{exerciseSolution}
+\ba
+	\item The region $R$ defined by $-\sqrt{9-y^2} \leq x \leq 0$ and $-3 \leq y \leq 0$ is the portion of the circle centered at the origin of radius 3 that is in the third quadrant. 
+	\item The region $R$ is described in polar coordinates by $0 \leq r \leq 3$ and $\pi \leq \theta \leq \frac{3 \pi}{2}$. With $r^2=x^2+y^2$ and $y = r\sin(\theta)$ we have  
+\[\int_{-3}^{0} \int_{-\sqrt{9-y^2}}^{0} \frac{y}{x^2 + y^2+1} \, dx \, dy = \int_{\pi}^{3\pi/2} \int_{0}^{3} \frac{r\sin(\theta)}{r^2+1} r \, dr \, d\theta.\]
+
+	\item Dividing $1+r^2$ into $r^2$ shows that $\frac{r^2}{r^2+1} = 1 - \frac{1}{r^2+1}$. Using this fact gives us 
+\begin{align*}
+\int_{\pi}^{3\pi/2} \int_{0}^{3} \frac{r^2\sin(\theta)}{r^2+1} \, dr \, d\theta &= \int_{\pi}^{3\pi/2} \sin(\theta) \int_{0}^{3} \frac{r^2}{r^2+1} \, dr \, d\theta \\
+	&= \int_{\pi}^{3\pi/2} \sin(\theta) \int_{0}^{3} 1-\frac{1}{r^2+1} \, dr \, d\theta \\
+	&= \int_{\pi}^{3\pi/2} \sin(\theta)  \left(r-\arctan(r)\right)\biggm|_{0}^{3} \, d\theta \\
+	&= \int_{\pi}^{3\pi/2} \sin(\theta)  \left(3-\arctan(3)\right) \, d\theta \\
+	&= \left(3-\arctan(3)\right) (-\cos(\theta))\biggm|_{\pi}^{3\pi/2}	 \\
+	&= \arctan(3)-3.
+\end{align*}
+ 
+	\item If $f(x,y) = \frac{y}{x^2 + y^2+1}$ is the density of the lamina defined by $R$, then $I$ represents the mass of the lamina.
+\ea
+\end{exerciseSolution}
+
+\item Let $D$ be the region that lies inside the unit circle in the plane.
+	
+\ba
+	\item Set up and evaluate an iterated integral in polar coordinates whose value is the area of $D$.
+	\item Determine the exact average value of $f(x,y) = y$ over the upper half of $D$.
+	\item Find the exact center of mass of the lamina over the portion of $D$ that lies in the first quadrant and has its mass density distribution given by $\delta(x,y) = 1$. (Before making any calculations, where do you expect the center of mass to lie? Why?)
+	\item Find the exact volume of the solid that lies under the surface $z = 8-x^2-y^2$ and over the unit disk, $D$.
+\ea
+
+\begin{exerciseSolution}
+\ba
+	\item The unit disk $D$ is described in polar coordinates as $0 \leq r \leq 1$ and $0 \leq \theta \leq 2 \pi$. So an iterated integral in polar coordinates whose value is the area of $D$ is 
+	\[\int_{0}^{2 \pi} \int_{0}^{1} r \, dr \, d\theta.\]
+	
+	\item The upper half $H$ of $D$ is represented by restricting $\theta$ to $0 \leq \theta \leq \pi$. Since the area of this half-disk is $\pi$, the exact average value of $f(x,y) = y$ over the upper half of $D$ is
+	\begin{align*}
+	\frac{1}{\pi} \iint_H f(x,y) \, dA &=  \int_{0}^{\pi} \int_{0}^{1} r (r\sin(\theta)) \, dr \, d\theta \\
+		&= \frac{1}{\pi} \int_{0}^{\pi} \sin(\theta) \frac{1}{3}r^3\biggm|_{0}^{1} \, d\theta \\
+		&= \frac{1}{3 \pi} \int_{0}^{\pi} \sin(\theta) \, d\theta \\
+		&= \frac{1}{3 \pi} (-\cos(\theta))\biggm|_{0}^{\pi} \\
+		&= \frac{2}{3\pi}.
+	\end{align*}
+	
+	\item The region and density function are symmetric around the line $y=x$, so we should expect the center of mass to lie on this line. The inequalities $0 \leq \theta \leq \frac{\pi}{2}$ describe the first quadrant region $Q$ of $D$. The area of $Q$ is $\frac{\pi}{2}$. The center of mass $(\overline{x}, \overline{y})$ of this region with mass density distribution given by $\delta(x,y) = 1$ is found by 
+\begin{align*}
+\overline{x} &= \frac{2}{\pi} \int_{0}^{\pi/2} \int_{0}^{1} r(r \cos(\theta)) \, dr \, d\theta \\
+		&= \frac{2}{\pi} \int_{0}^{\pi/2} \cos(\theta) \frac{1}{3}r^3\biggm|_{0}^{1} \, d\theta \\
+		&= \frac{2}{3 \pi} \int_{0}^{\pi/2} \cos(\theta) \, d\theta \\
+		&= \frac{2}{3 \pi} (\sin(\theta))\biggm|_{0}^{\pi/2} \\
+		&= \frac{2}{3\pi}
+	\end{align*}
+and
+	\begin{align*}
+\overline{y} &=  \frac{2}{\pi} \int_{0}^{\pi/2} \int_{0}^{1} r (r\sin(\theta)) \, dr \, d\theta \\
+		&= \frac{2}{\pi} \int_{0}^{\pi/2} \sin(\theta) \frac{1}{3}r^3\biggm|_{0}^{1} \, d\theta \\
+		&= \frac{2}{3 \pi} \int_{0}^{\pi/2} \sin(\theta) \, d\theta \\
+		&= \frac{2}{3 \pi} (-\cos(\theta))\biggm|_{0}^{\pi/2} \\
+		&= \frac{2}{3\pi}.
+	\end{align*}
+
+	\item The volume is 
+\begin{align*}
+\iint_D 8-x^2-y^2 \, dA &= \int_{0}^{2\pi} \int_0^1 (8-r^2) r \, dr \, d \theta \\
+	&= \int_{0}^{2\pi} \left( 4r^2 -\frac{1}{4}r^4 \right)\biggm|_0^1 \, d \theta \\
+	&= \frac{15}{4} \int_{0}^{2\pi} \, d \theta \\
+	&= \frac{15 \pi}{2}. 
+\end{align*}
+
+\ea
+\end{exerciseSolution}
+
+
+\item For each of the following iterated integrals, (a) sketch and label the region of integration, (b) convert the integral to the other coordinate system (if given in polar, to rectangular; if given in rectangular, to polar), and (c) choose one of the two iterated integrals to evaluate exactly.
+	
+\ba
+	\item $\ds \int_{\pi}^{3\pi/2} \int_{0}^{3}  r^3 \, dr \, d\theta$
+	\item $\ds \int_{0}^{2} \int_{-\sqrt{1-(x-1)^2}}^{\sqrt{1-(x-1)^2}} \sqrt{x^2 + y^2} \, dy \, dx$ 
+	\item $\ds \int_0^{\pi/2} \int_0^{\sin(\theta)} r \sqrt{1-r^2} \, dr \, d\theta.$
+	\item $\ds \int_0^{\sqrt{2}/2} \int_y^{\sqrt{1-y^2}} \cos(x^2 + y^2) \, dx \, dy.$
+\ea
+
+\begin{exerciseSolution}
+\ba
+	\item The region is the third quadrant portion of the disk centered at the origin of radius 3. In rectangular coordinates an equivalent iterated integral is 
+\[\int_{-3}^0 \int_{-\sqrt{9-x^2}}^0 x^2+y^2 \, dy \, dx.\]
+Evaluating the integral in polar coordinates yields
+\begin{align*}
+\int_{\pi}^{3\pi/2} \int_{0}^{3}  r^3 \, dr \, d\theta &= \int_{\pi}^{3\pi/2} \frac{1}{4}r^4\biggm|_{0}^{3} \, d\theta \\
+	&=  \frac{81}{4} \int_{\pi}^{3\pi/2} \, d\theta \\
+	&=  \frac{81 \pi}{8}.
+\end{align*}
+
+	\item The region is the disk $(x-1)^2+y^2=1$ centered at $(1,0)$ of radius 1. To convert to polar coordinates we substitute for $x$ and $y$ to see that 
+\begin{align*}
+(r \cos(\theta)-1)^2 + (r \sin(\theta))^2 &=  1 \\
+r^2\cos^2(\theta) -2r\cos(\theta) + 1 + r^2\sin^2(\theta) &=  1 \\
+r^2 - 2r\cos(\theta) &= 0 \\
+r &= 2\cos(\theta).
+\end{align*}
+So an equivalent iterated integral in polar coordinates is 
+\[\int_{-\pi/2}^{\pi/2} \int_0^{2 \cos(\theta)} r^2 \, dr \, d\theta.\]
+Evaluating the integral in polar coordinates yields
+\begin{align*}
+\int_{-\pi/2}^{\pi/2} \int_{0}^{2\cos(\theta)}  r^2 \, dr \, d\theta &= \int_{-\pi/2}^{\pi/2} \frac{1}{3}r^3\biggm|_{0}^{2\cos(\theta)} \, d\theta \\
+	&=  \int_{-\pi/2}^{\pi/2} \frac{8}{3}\cos^3(\theta) \, d\theta \\
+	&=  \frac{8}{3}\int_{-\pi/2}^{\pi/2} \cos(\theta)[1-\sin^2(\theta)] \, d\theta \\
+	&=  \frac{8}{3}\int_{-\pi/2}^{\pi/2} \cos(\theta)-\sin^2(\theta)\cos(\theta) \, d\theta \\
+	&=  \frac{8}{3} \left[\sin(\theta)-\frac{1}{3}\sin^3(\theta) \right]\biggm|_{-\pi/2}^{\pi/2} \\
+	&=  \frac{8}{3} \left[\left(1-\frac{1}{3} \right) - \left(-1 - \left(-\frac{1}{3}\right) \right)\right] \\
+	&=  \frac{32}{9}.
+\end{align*}
+
+	\item To convert the equation $r = \sin(\theta)$ to rectangular coordinates, we proceed as follows:
+\begin{align*}
+r &= \sin(\theta) \\
+r^2 &= r \sin(\theta) \\
+x^2+y^2 &= y \\
+x^2+y^2-y + \frac{1}{4} &= \frac{1}{4} \\
+x^2 + \left(y-\frac{1}{2}\right)^2 &= \left(\frac{1}{2}\right)^2.
+\end{align*}
+So the equation $r = \sin(\theta)$ is the circle centered at the point $\left( 0, \frac{1}{2}\right)$ with radius $\frac{1}{2}$. With $0 \leq \theta \leq \frac{\pi}{2}$ we only get the right half of the circle, so an equivalent iterated integral in rectangular coordinates is
+\[\int_0^1 \int_{0}^{\sqrt{y-y^2}} \sqrt{1-(x^2+y^2)} \, dx \, dy.\]
+
+Evaluating the integral in polar coordinates yields
+\begin{align*}
+\int_0^{\pi/2} \int_0^{\sin(\theta)} r\sqrt{1-r^2} \, dr \, d\theta &= \int_{0}^{\pi/2} -\frac{1}{3} (1-r^2)^{3/2}\biggm|_{0}^{\sin(\theta)} \, d\theta \\
+	&= -\frac{1}{3} \int_{0}^{\pi/2}  \left[(1-\sin^2(\theta))^{3/2}-1 \right] \, d\theta \\
+	&= -\frac{1}{3} \int_{0}^{\pi/2}  \left[(\cos^2(\theta))^{3/2} - 1 \right]  \, d\theta \\
+	&= -\frac{1}{3} \int_{0}^{\pi/2}  \cos^3(\theta) \, d\theta + \frac{1}{3} \int_{0}^{\pi/2} 1  \, d\theta \\
+	&= -\frac{1}{3} \int_{0}^{\pi/2}  \cos(\theta)(1-\sin^2(\theta)) \, d\theta + \frac{\pi}{6} \\
+	&= \frac{\pi}{6} -\frac{1}{3} \int_{0}^{\pi/2}  \cos(\theta)- \cos(\theta)\sin^2(\theta) \, d\theta  \\
+	&= \frac{\pi}{6} -\frac{1}{3} \left[ \sin(\theta)- \frac{1}{3}\sin^3(\theta)\right] \biggm|_{0}^{\pi/2}  \\
+	&= \frac{\pi}{6} -\frac{1}{3} \left[ 1- \frac{1}{3}\right]   \\
+	&= \frac{\pi}{6} -\frac{2}{9}.   
+\end{align*}
+
+
+
+	\item The graph of $x=y$ is the line through the origin with slope 1 and the graph of $x = \sqrt{1-y^2}$ is the top half of the unit circle. The circle and the lie $x=y$ intersect at $\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$. In polar coordinates the unit circle has equation $r=1$ and the line $x=y$ makes and angle of $\frac{\pi}{4}$ with the positive $x$-axis. Thus, an equivalent iterated integral in polar coordinates is 
+\[\int_{\pi/4}^{\pi/2} \int_{0}^{1} r \cos(r^2) \, dr \, d\theta.\]
+Evaluating the integral in polar coordinates using the identity for yields
+\begin{align*}
+\int_{\pi/4}^{\pi/2} \int_{0}^{1} r \cos(r^2) \, dr \, d\theta &= \int_{\sqrt{2}/2}^{\pi/2} \frac{1}{2} \sin(r^2) \biggm|_{0}^{1} \, d\theta \\
+	&= \frac{1}{2}\int_{\pi/4}^{\pi/2} \sin(1)  \, d\theta \\
+	&= \frac{1}{2} \sin(1) \int_{\pi/4}^{\pi/2} \, d\theta \\
+	&= \frac{\pi}{8} \sin(1).  
+\end{align*}
+
+\ea
+\end{exerciseSolution}
+
+
+
+\end{exercises}
+
+\afterexercises

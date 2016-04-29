@@ -1,0 +1,61 @@
+\begin{activity} \label{A:10.2.2} 
+  \ba
+\item If we have the function $f$ of the variables $x$ and $y$ and we want to find the partial derivative
+  $f_x$, which variable do we treat as a constant?  When we find the
+  partial derivative $f_y$, which variable do we treat as a constant?
+
+\item If $f(x,y) = 3x^3 - 2x^2y^5$, find the partial derivatives $f_x$
+  and $f_y$.
+
+\item If $f(x,y) = \displaystyle\frac{xy^2}{x+1}$, find the partial
+  derivatives $f_x$ and $f_y$.
+
+\item If $g(r,s) = rs\cos(r)$, find the partial derivatives $g_r$ and
+  $g_s$. 
+		
+\item Assuming $f(w,x,y) = (6w+1)\cos(3x^2+4xy^3+y)$, find the partial
+  derivatives $f_w$, $f_x$, and $f_y$.
+	
+\item Find all possible first-order partial derivatives of $q(x,t,z) =
+  \displaystyle \frac{x2^tz^3}{1+x^2}.$
+	
+  \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+	\ba
+	\item When we differentiate with respect to $x$, we treat $y$ as a constant. So the power and scalar multiple rules give us
+\[\frac{\partial f}{\partial x} = 9x^2 - 4y^5x.\]
+Similarly,
+\[\frac{\partial f}{\partial y} = -10x^2y^4.\]
+		
+	
+	\item When we differentiate with respect to $r$, we treat $s$ as a constant. So the product rule give us 
+\[g_r(r,s) = -rs\sin(r) + s\cos(r).\]
+Using the scalar multiple rule we have
+\[g_s(r,s) = r\cos(r).\]
+		
+	\item When we differentiate with respect to $w$, we treat $x$ and $y$ as constants. So the scalar multiple rule give us 
+\[\frac{\partial f}{\partial w} = 6\cos(3x^2+4xy^3+y).\]
+To differentiate with respect to $x$ will require the scalar multiple and chain rules, giving us
+\[\frac{\partial f}{\partial x} = -(6w+1)\sin(3x^2+4xy^3+y)(6x+4y^3).\]
+Similarly,
+\[\frac{\partial f}{\partial y} = -(6w+1)\sin(3x^2+4xy^3+y)(12xy^2+1).\]	
+		
+	\item When we differentiate with respect to $x$, we treat $t$ and $z$ as constants. So the scalar multiple and quotient rules give us 
+\[q_x(x,t,z) = \frac{(1+x^2)(2^tz^3)-(x2^tz^3)(2x)}{(1+x^2)^2}.\]
+To differentiate with respect to $t$, we hold $x$ and $z$ constant to obtain
+\[q_t(x,t,z) = \frac{1}{1+x^2}(x2^t\ln(2)z^3)\]
+and
+\[q_z(x,t,z) = \frac{1}{1+x^2}(3x2^tz^2).\]
+		
+	\ea
+
+\end{activitySolution}
+\aftera

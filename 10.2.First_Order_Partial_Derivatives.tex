@@ -1,0 +1,269 @@
+\section{First-Order Partial Derivatives} \label{S:10.2.First_Order_Partial_Derivatives}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+\item How are the first-order partial derivatives of a function $f$ of
+  the independent variables $x$ and $y$ defined?  
+\item Given a function
+  $f$ of the independent variables $x$ and $y$, what do the first-order partial derivatives $\frac{\partial
+    f}{\partial x}$ and $\frac{\partial f}{\partial y}$ tell us about $f$?
+\end{goals}} \hspace*{3 pt}}
+
+
+\subsection*{Introduction}
+
+The derivative plays a central role in first semester  calculus
+because it provides important information about a function.  Thinking
+graphically, for instance, the derivative at a point tells us the
+slope of the tangent line to the graph at that point.  In addition, the
+derivative at a point also provides the instantaneous rate of change of
+the function with respect to changes in the independent variable.
+
+Now that we are investigating functions of two or more variables, we
+can still ask how fast the function is changing, though we have to be careful about what we mean.  Thinking
+graphically again, we can try to measure how steep the graph of the
+function is in a particular direction.  Alternatively, we may want to know how fast a function's
+output changes in response to a change in one of the inputs.
+Over the next few sections, we will develop tools for addressing
+issues such as these these.  Preview
+Activity \ref{PA:10.2} explores some issues with what we will come to call {\em partial
+  derivatives}.
+
+\input{previews/10.2.PA2}
+
+\subsection*{First-Order Partial Derivatives}
+
+In Section \ref{S:9.1.Functions}, we studied the behavior
+of a function of two or more variables by considering the {\em traces}
+of the function.  Recall that in one example, we considered the function
+$$
+f(x,y) = \frac{x^2 \sin(2 y)}{32},
+$$
+which measures the range, or horizontal distance, in feet, traveled by a
+projectile launched with an initial 
+speed of $x$ feet per second at an angle $y$ radians to the
+horizontal.  The graph of this function is given again on the left in Figure
+\ref{F:10.2.trace.y}.  Moreover, if we fix the angle $y = 0.6$, we may view the trace $f(x,0.6)$ as a
+function of $x$ alone, as seen at right in Figure \ref{F:10.2.trace.y}.  
+
+%\begin{figure}[ht]
+ % \begin{center}
+  %      \scalebox{1.0}{\includegraphics{figures/fig_9_1_range.eps}}
+  %  \caption{The graph of $f(x,y) = x^2\sin(2y)/32$.}
+ %   \label{F:10.2.range}
+ % \end{center}
+%\end{figure}
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_10_2_trace_y_a.eps}
+    \hspace*{0.5in}
+    \includegraphics{figures/fig_10_2_trace_y.eps}
+  \end{center}
+  \caption{The trace with $y = 0.6$.}
+  \label{F:10.2.trace.y}
+\end{figure}
+
+Since the trace is a one-variable function, we may consider its
+derivative just as we did in the first semester of calculus.  With
+$y=0.6$, we have
+$$
+f(x,0.6) = \frac{\sin(1.2)}{32}x^2,
+$$
+and therefore
+$$
+\frac{d}{dx}[f(x,0.6)] = \frac{\sin(1.2)}{16}x.
+$$
+When $x=150$, this gives
+$$
+\frac{d}{dx}[f(x,0.6)]|_{x=150} = \frac{\sin(1.2)}{16}150 \approx
+8.74~\mbox{feet per feet per second},
+$$
+which gives the slope of the tangent line shown on the right of Figure 
+\ref{F:10.2.trace.y}.  Thinking of this derivative as an instantaneous
+rate of change implies that if we increase the initial speed of the projectile by
+one foot per second, we expect the horizontal distance traveled to
+increase by approximately 8.74 feet if we hold the launch angle constant at $0.6$ radians. 
+
+By holding $y$ fixed and differentiating with respect to $x$, we
+obtain the first-order {\em partial derivative of $f$ with respect to
+  $x$}.  Denoting this partial derivative as $f_x$, we have seen that
+$$
+f_x(150, 0.6) = \frac{d}{dx}f(x,0.6)|_{x=150} = \lim_{h\to
+  0}\frac{f(150+h, 0.6) - f(150, 0.6)}{h}.
+$$
+More generally, we have 
+$$
+f_x(a,b) = \lim_{h\to0} \frac{f(a+h, b)-f(a,b)}{h},
+$$
+provided this limit exists.
+
+In the same way, we may obtain a trace by setting, say, $x=150$ as shown
+in Figure \ref{F:10.2.trace.x}.
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_10_2_trace_x_a.eps}
+    \hspace*{0.5in}
+    \includegraphics{figures/fig_10_2_trace_x.eps}
+  \end{center}
+  \caption{The trace with $x = 150$.}
+  \label{F:10.2.trace.x}
+\end{figure}
+This gives
+$$
+f(150, y) = \frac{150^2}{32}\sin(2y),
+$$
+and therefore
+$$
+\frac{d}{dy}[f(150,y)] = \frac{150^2}{16}\cos(2y).
+$$
+If we evaluate this quantity at $y=0.6$, we have
+$$
+\frac{d}{dy}[f(150,y)]|_{y=0.6} = \frac{150^2}{16}\cos(1.2) \approx 509.5
+~\mbox{feet per radian}.
+$$
+Once again, the derivative gives the slope of the tangent line shown
+on the right in Figure \ref{F:10.2.trace.x}.  Thinking of the
+derivative as an instantaneous rate of change, we expect that the
+range of the projectile increases by 509.5 feet for every radian we increase the launch angle
+$y$ if we keep the initial speed of the projectile constant at 150 feet per second.  
+
+By holding $x$ fixed and differentiating with respect to $y$, we
+obtain the first-order {\em partial derivative of $f$ with respect to $y$}.  
+As before, we denote this partial derivative as $f_y$ and write
+$$
+f_y(150, 0.6) = \frac{d}{dy}f(150,y)|_{y=0.6} = \lim_{h\to
+  0}\frac{f(150, 0.6+h) - f(150, 0.6)}{h}.
+$$
+As with the partial derivative with respect to $x$, we may express this quantity more generally at an arbitrary point $(a,b)$. 
+To recap, we have now arrived at the formal definition of the first-order partial derivatives of a function of two variables.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+  \parbox{6.25 in}{ \begin{definition} The first-order \textbf{partial
+        derivatives of $f$ with respect to $x$ and $y$}\index{partial
+        derivatives!first-order} at a point $(a,b)$ are, respectively,
+    \begin{align*}
+      f_x(a,b) & = \lim_{h \to 0} \frac{f(a+h,b)-f(a,b)}{h}, \ \mbox{and} \\
+      f_y(a,b) & = \lim_{h \to 0} \frac{f(a,b+h)-f(a,b)}{h}, \\
+    \end{align*}
+    provided the limits exist.
+\end{definition}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+\input{activities/10.2.Act10}
+
+As these examples show, each partial derivative at a point arises as
+the derivative of a one-variable function defined by fixing one of the
+coordinates.  In addition, we may consider each partial derivative as defining a new
+function of the point $(x,y)$, just as the derivative $f'(x)$ defines
+a new function of $x$ in single-variable calculus.  Due to the connection between one-variable
+derivatives and partial derivatives, we will often use Leibniz-style
+notation to denote partial derivatives by writing
+$$
+\frac{\partial f}{\partial x}(a, b) = f_x(a,b),
+\hspace*{20pt}
+\mbox{and}
+\hspace*{20pt}
+\frac{\partial f}{\partial y}(a, b) = f_y(a,b).
+$$
+
+To calculate the partial
+derivative $f_x$, we hold $y$ fixed and thus we treat $y$ as a
+constant.  In Leibniz notation, observe that 
+$$
+\frac{\partial }{\partial x} (x) = 1
+\hspace*{20pt}
+\mbox{and}
+\hspace*{20pt}
+\frac{\partial }{\partial x}(y) = 0.
+$$
+To see the contrast between how we calculate single variable derivatives and partial derivatives, and the difference between the notations $\frac{d}{dx}[ \ ]$ and $\frac{\partial}{\partial x}[ \ ]$, observe that
+\begin{align*}
+  & \frac{d}{dx}[3x^2 - 2x + 3] = 3\frac{d}{dx}[x^2] - 2\frac{d}{dx}[x]
+  + \frac{d}{dx}[3] = 3\cdot 2x - 2, \\
+  \mbox{and}\hspace*{20pt} & \frac{\partial}{\partial x}[x^2y - xy + 2y] =
+  y\frac{\partial}{\partial x}[x^2] -
+  y\frac{\partial}{\partial x}[x]
+  + \frac{\partial}{\partial x}[2y] = y\cdot 2x - y 
+\end{align*}
+Thus, computing partial derivatives is straightforward:  we use the standard rules of single variable calculus, but do so while holding one (or more) of the variables constant.
+
+\input{activities/10.2.Act2}
+
+\subsection*{Interpretations of First-Order Partial Derivatives}
+
+Recall that the derivative of a single variable function has a
+geometric interpretation as the slope of the line tangent to the graph
+at a given point.  Similarly, we have seen that the partial
+derivatives measure the slope of a line tangent to a trace of a
+function of two variables as shown in Figure
+\ref{F:10.2.trace.tangent}. 
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_10_2_trace_tangent_y.eps}
+    \hspace*{0.5in}
+    \includegraphics{figures/fig_10_2_trace_tangent_x.eps}
+  \end{center}
+  \caption{Tangent lines to two traces of the range function.} 
+  \label{F:10.2.trace.tangent}
+\end{figure}
+
+Now we consider the first-order partial derivatives in context. Recall
+that the difference quotient $\frac{f(a+h)-f(a)}{h}$ for a function
+$f$ of a single variable $x$ at a point where $x=a$ tells us the
+average rate of change of $f$ over the interval $[a,a+h]$, while the
+derivative $f'(a)$ tells us the instantaneous rate of change of $f$ at
+$x=a$.
+We can use these same concepts to
+explain the meanings of the partial derivatives in context.
+
+\input{activities/10.2.Act11}
+
+\subsection*{Using tables and contours to estimate partial
+  derivatives} 
+
+Remember that functions of two variables are often represented as either
+a table of data or a contour plot.
+In single variable calculus, we saw how we can use the difference
+quotient to approximate derivatives if, instead of an algebraic
+formula, we only know the value of the
+function at a few points.
+The same idea applies to partial derivatives.
+
+\input{activities/10.2.Act12}
+
+\input{activities/10.2.Act13}
+
+\begin{summary}
+\item If $f(x,y)$ is a function of two variables, there are two first
+  order partial derivatives of $f$: the partial derivative of $f$ with respect to $x$,
+      \[\frac{\partial f}{\partial x}(x,y) = f_x(x,y) = \lim_{h \to 0}
+      \frac{f(x+h,y) - f(x,y)}{h},\]
+      and the partial derivative of $f$ with respect to $y$,
+      \[\frac{\partial f}{\partial y}(x,y) = f_y(x,y) = \lim_{h \to 0}
+      \frac{f(x,y+h) - f(x,y)}{h},\] 
+      where each partial derivative exists only at those points $(x,y)$ for which
+      the limit exists.
+  \item The partial derivative $f_x(a,b)$ tells us the instantaneous rate of
+    change of $f$ with respect to $x$ at $(x,y) = (a,b)$ when $y$ is fixed at $b$.  Geometrically,
+    the partial derivative $f_x(a,b)$ tells us the slope of the line
+    tangent to the $y=b$ trace of the function $f$ at the point
+    $(a,b,f(a,b))$.
+  \item The partial derivative $f_y(a,b)$ tells us the instantaneous rate of
+    change of $f$ with respect to $y$ at $(x,y) = (a,b)$ when $x$ is fixed at $a$.  Geometrically,
+    the partial derivative $f_y(a,b)$ tells us the slope of the line
+    tangent to the $x=a$ trace of the function $f$ at the point
+    $(a,b,f(a,b))$.
+\end{summary}
+
+
+\nin \hrulefill
+
+%\newpage
+\input{exercises/10.2.First_Order_Partial_Derivatives(Ex)}
+
+\clearpage

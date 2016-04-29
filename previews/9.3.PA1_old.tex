@@ -1,0 +1,59 @@
+\begin{pa} \label{PA:9.3}
+Let us return to Frodo walking in the Shire (see the Shire map in Figure \ref{F:9.2.Shire}). Let $\vv_1 = \langle a, b \rangle$ be the vector representing the displacement from Hobbiton to Little Delving, and let ${\vv_2 = \langle c,d \rangle}$ be the vector representing the displacement from Hobbiton to Quarry.
+    \ba
+    \item Use a protractor or  other appropriate tool to approximate the angle between the vectors $\vv_1$ and $\vv_2$.
+
+\begin{comment}
+
+Using a protractor, I found the angle between $\vv_1$ and $\vv_2$ to be approximately $150^{\circ}$.
+
+\end{comment}
+
+    \item Draw a triangle with Hobbiton, Little Delving, and Quarry as the vertices.  In terms of $a$, $b$, $c$, and $d$, what is the vector representing the displacement from Little Delving to Quarry?
+
+\begin{comment}
+
+The vector we want is $\vv_2 - \vv_1 = \langle c-a, d-b \rangle$.
+
+\end{comment}
+
+    \item Let $\alpha$ be the angle between $\vv_1$ and $\vv_2$. Use the Law of Cosines (look it up if you don't remember it) to write an equation that relates $\alpha$, $a$, $b$, $c$, and $d$. Then simplify and solve this equation (this will require some algebra!) to show that
+\begin{equation} \label{eq:Shire_dot_product}
+\cos(\alpha) = \frac{ac+bd}{\sqrt{a^2+b^2}\sqrt{c^2+d^2}}.
+\end{equation}
+
+\begin{comment}
+
+\vs
+
+\solution The distance from Hobbiton to Little Delving is $d_1=\sqrt{a^2+b^2}$ and the distance from Hobbiton to Quarry is $d_2=\sqrt{c^2+d^2}$. The distance from Hobbiton to Quarry is
+\[ \sqrt{(c-a)^2 + (d-b)^2}.\]
+Let $\alpha$ the angle between $\vv_1$ and $\vv_2$. The Law of Cosines states that
+\[\left(\sqrt{(c-a)^2 + (d-b)^2}\right)^2 = d_1^2+d_2^2 - 2d_1d_2 \cos(\alpha).\]
+So
+\begin{align*}
+(c-a)^2 + (d-b)^2 &= (a^2+b^2) + (c^2+d^2) - 2\sqrt{(a^2+b^2)(c^2+d^2)} \cos(\alpha) \\
+(c^2-2ac+a^2) + (d^2-2bd+b^2) &= (a^2+b^2) + (c^2+d^2) - 2\sqrt{a^2+b^2}\sqrt{c^2+d^2} \cos(\alpha) \\
+ac + bd &= \sqrt{a^2+b^2}\sqrt{c^2+d^2} \cos(\alpha) \\
+\cos(\alpha) &= \frac{ac+bd}{\sqrt{a^2+b^2}\sqrt{c^2+d^2}}.
+\end{align*}
+
+\vs
+
+\end{comment}
+
+        \item Assume that ${\vv_1 = \langle -18, 3.75 \rangle}$ and ${\vv_2 = \langle 19.5, 7 \rangle}$. Use these vectors and Equation (\ref{eq:Shire_dot_product}) to calculate the angle between $\vv_1$ and $\vv_2$. How does this compare to the angle you measured in part (a)?
+
+\begin{comment}
+
+Using our formula from the previous problem, with $a = -18$, $b=3.75$, $c=19.5$, and $d = 7$, we have
+\[\cos(\alpha) = \frac{(-18)(19.5)+(3.75)(7)}{\sqrt{18^2+3.75^2} \sqrt{19.5^2+7^2}} \approx -.8525021995.\]
+So
+\[\alpha \approx arccos(-.8525021995) \approx 148.48^{\circ}.\]
+This is pretty close to the measurement made in part (a).
+
+\end{comment}
+
+    \ea
+
+\end{pa} \afterpa 

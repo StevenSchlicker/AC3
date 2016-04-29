@@ -1,0 +1,99 @@
+\begin{exercises} 
+
+\item The temperature at any point on a metal plate in the $xy$ plane is given by $T(x,y) = 100-4x^2 - y^2$, where $x$ and $y$ are measured in inches and $T$ in degrees Celsius.  Consider the portion of the plate that lies on the rectangular region $R = [1,5] \times [3,6]$.
+
+\ba
+	\item Estimate the value of $\iint_R T(x,y) \, dA$ by using a double Riemann sum with two subintervals in each direction and choosing $(x_i^*, y_j^*)$ to be the point that lies in the upper right corner of each subrectangle.  
+	\item Determine the area of the rectangle $R$.
+	\item Estimate the average temperature, $T_{\mbox{\tiny{AVG}(R)}}$, over the region $R$.
+	\item Do you think your estimate in (c) is an over- or under-estimate of the true temperature?  Why?
+\ea
+
+\begin{exerciseSolution}
+\ba
+	\item The partition points in the $x$ direction are $1$, $3$, and $5$ and the partition points in the $y$ direction are $3$, $4.5$, and $6$. Using the points that lie in the upper right corner of each subrectangle we have
+\[\iint_R T(x,y) \, dA \approx T(3,4.5)(3) + T(5,4.5)(3) + T(3,6)(3) + T(5,6)(3) = 46.5.\]
+
+	\item The area of the rectangle $R$ is $(4)(3) = 12$. 
+
+	\item Using the result of part (a) we approximate the average temperature over $R$ as 
+\[T_{\mbox{\tiny{AVG}(R)}} = \frac{1}{\text{Area}(R)} \iint_R T(x,y) \approx \frac{46.5}{12} = 3.875.\]
+
+	\item The temperature function is decreasing in both the $x$ and $y$ directions, so the value at the upper right corner of each subrectangle is the smallest temperature on that subrectangle. So our approximation is an underestimate. 
+\ea
+\end{exerciseSolution}
+
+\item The wind chill, as frequently   reported, is a measure of how cold it feels outside when the wind is blowing.  In Table \ref{T:11.1.Ex.wind.chill}, the wind chill $w=w(v,T)$, measured in degrees Fahrenheit, is a function of the wind speed $v$, measured in miles per hour, and the ambient air temperature $T$, also measured in degrees Fahrenheit. Approximate the average wind chill on the rectangle $[5,35] \times [-20,20]$ using 3 subintervals in the $v$ direction, 4 subintervals in the $T$ direction, and the point in the lower left corner in each subrectangle. 
+\begin{table}[ht] 
+  \begin{center}
+    \begin{tabular}{|c||c|c|c|c|c|c|c|c|c|}
+      \hline
+      $v \backslash T$  
+         &-20 &-15 &-10 &-5  &0   &5   &10  &15  &20  \\
+      \hhline{|=||=|=|=|=|=|=|=|=|=|}
+      5  &-34 &-28 &-22 &-16 &-11 &-5 &1 &7 &13  \\
+      \hline
+      10 &-41 &-35 &-28 &-22 &-16 &-10 &-4 &3 &9   \\
+      \hline
+      15  &-45 &-39 &-32 &-26 &-19 &-13 &-7 &0 &6  \\
+      \hline
+      20 &-48 &-42 &-35 &-29 &-22 &-15 &-9 &-2 &4  \\
+      \hline
+      25 &-51 &-44 &-37 &-31 &-24 &-17 &-11 &-4 &3 \\
+      \hline
+      30  &-53 &-46 &-39 &-33 &-26 &-19 &-12 &-5 &1 \\
+      \hline
+      35  &-55 &-48 &-41 &-34 &-27 &-21 &-14 &-7 &0 \\
+      \hline
+    \end{tabular}
+    \caption{Wind chill as a function of wind speed and temperature.}
+    \label{T:11.1.Ex.wind.chill}
+  \end{center}
+\end{table}
+
+\begin{exerciseSolution}
+The length of each subinterval in the $v$ direction is $\frac{35-5}{3} = 10$, so our partition points in the $v$ direction are $5$, $15$, $25$, and $35$. The length of each subinterval in the $T$ direction is $\frac{20-(-20)}{4} = 10$, so our partition points in the $T$ direction are $-20$, $-10$, $0$, $10$, and $20$. So
+\begin{align*}
+\iint w(v,t) \, dA &\approx w(5,-20)(100) + w(15,-20)(100) + w(25,-20)(100) \\
+	&\qquad + w(5,-10)(100) + w(15,-10)(100) + w(25,-10)(100) \\
+	&\qquad + w(5,0)(100) + w(15,0)(100) + w(25,0)(100)  \\
+	&\qquad + w(5,10)(100) + w(15,10)(100) + w(25,10)(100) \\
+	&= -29200.
+\end{align*}
+So the average wind chill on $R$ is approximately
+\[ \frac{1}{\text{Area}(R)} \iint_R w(v,T) \approx -\frac{29200}{(30)(40)} = -\frac{73}{3} \approx -24.33.\]
+	
+\end{exerciseSolution}
+
+\item Consider the box with a sloped top that is given by the following description:  the base is the rectangle $R = [0,4] \times [0,3]$, while the top is given by the plane $z = p(x,y) = 20 - 2x - 3y$.
+
+\ba
+	\item Estimate the value of $\iint_R p(x,y) \, dA$ by using a double Riemann sum with four subintervals in the $x$ direction and three subintervals in the $y$ direction, and choosing $(x_i^*, y_j^*)$ to be the point that is the midpoint of each subrectangle.  
+	\item What important quantity does your double Riemann sum in (a) estimate?
+	\item Suppose it can be determined that $\iint_R p(x,y) \, dA = 138$.  What is the exact average value of $p$ over $R$?
+	\item If you wanted to build a rectangular box (with the same base) that has the same volume as the box with the sloped top described here, how tall would the rectangular box have to be?
+\ea
+
+\begin{exerciseSolution}
+\ba
+	\item Our partition points in the $x$ direction are $0$, $1$, $2$, $3$, and $4$ while the partition points in the $y$ direction are $0$, $1$, $2$, and $3$. So 
+\begin{align*}
+\iint_R p(x,y) \, dA \approx p(0.5,0.5)(1) &+ p(1.5, 0.5)(1) + p(2.5,0.5)(1) + p(3.5,0.5)(1) \\
+	&\qquad + p(0.5,1.5)(1) + p(1.5, 1.5)(1) + p(2.5,1.5)(1) + p(3.5,1.5)(1) \\
+	&\qquad + p(0.5,2.5)(1) + p(1.5, 2.5)(1) + p(2.5,2.5)(1) + p(3.5,2.5)(1) \\
+	&=  138.
+\end{align*}
+
+	\item Since $p(x,y) \geq 0$ on $R$, the geometric quantity our double Riemann sum approximates is the volume of the surface with the plane defined by $p$ as the top and with base $R$. 
+ 
+	\item The area of $R$ is 12, so the exact average value of $p$ over $R$ is 
+	\[ \frac{1}{\text{Area}(R)} \iint_R p(x,y) \approx \frac{138}{12} = 11.5.\]
+	
+	\item If $h$ is the height of the box, then we would need to have $12h=138$, or $h = 11.5$. This is the average value of $p$ over $R$. 
+\ea
+\end{exerciseSolution}
+
+
+
+\end{exercises}
+\afterexercises

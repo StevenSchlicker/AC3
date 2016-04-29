@@ -1,0 +1,46 @@
+\begin{activity} \label{A:2.1.1} Consider the function $f$ defined by $f(x,y) = \frac{2xy}{x^2+y^2}$.
+	\ba
+	\item Is $f$ defined at $(0,0)$? Explain. Could $f$ have a limit at $(0,0)$? Explain.
+	
+	
+	
+	\item Calculate values of $f$ at several points close to $(0,0)$. Based on your calculations, do you think $f$ has a limit at $(0,0)$? Explain.
+	
+	
+	
+	\item The graph of $f$ on the domain $[-1,1]$ by $[-1,1]$ is shown in Figure \ref{F:limit1}.
+\begin{figure}[ht]
+\begin{center}
+\resizebox{!}{2.0in}{\includegraphics{2_1_Limit1}}
+\end{center}
+\caption{A graph of $f(x,y)=\frac{2xy}{x^2+y^2}$}
+\label{F:limit1}
+\end{figure}
+	Based on this graph, do you think $f$ has a limit at $(0,0)$? Explain.
+	
+	
+	
+	\item To explicitly determine if $f$ has a limit at $(0,0)$ we can algebraically consider what happens to the values $f(x, y)$ as $(x, y)$ approaches $(0,0)$ from different directions. For example, let's  consider what happens to the function values of $f$ as $(x, y)$ approaches $(0,0)$ along the line $x = 0$. To do this, substitute 0 for $x$ in the rule for $f$ and explain if the resulting curve has a limit at $y=0$. If so, what is the limit? Explain why, if $f$ has a limit at $(0,0)$, it must be this limit that we found along the line $x=0$.
+	
+	
+	
+	\item Now try a different path. Does $f$ have a limit at $(0,0)$ along the path $y=x$? If so, what is the limit? Explain.
+
+
+
+	\item Does $f$ have a limit at $(0,0)$? Explain.
+	
+	
+	
+	\ea
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

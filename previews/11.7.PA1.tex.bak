@@ -1,0 +1,94 @@
+\begin{pa} \label{PA:11.5} The rectangular coordinate system allows us to draw pictures of graphs over a rectangular grid. The polar coordinate system is an alternate coordinate system that allows us to define and draw a different variety of functions. Polar coordinates also provide a convenient and useful way to represent complex numbers. Our application of polar coordinates will be to evaluate some double integrals that cannot be easily evaluated in rectangular coordinates.
+
+The coordinates of a point determine the location of the point. The rectangular coordinates of a point $P$ are given in an ordered pair $(x,y)$, where $x$ is the (signed) distance from the $y$-axis to $P$ and $y$ is the (signed) distance from the $x$-axis to $P$. In this section we will look at another set of coordinates for a point in the plane, the polar coordinates.
+    \ba
+    \item Determine the rectangular coordinates of the following points:
+        \begin{enumerate}[i.]
+        \item The point that is a distance 1 from the origin along the positive $x$-axis.
+
+
+
+\begin{comment}
+
+This point has $y$ coordinate 0, so the $x$ coordinate must be 1 and the point is $(1,0)$.
+
+
+
+\end{comment}
+
+        \item The point that is a distance 2 from the origin and makes an angle of $\frac{\pi}{2}$ with the positive $x$-axis.
+
+
+
+\begin{comment}
+
+The angle of $\frac{\pi}{2}$ with the positive $x$-axis places the point on the $y$-axis. The point on the $y$-axis a distance 2 from the origin is the point $(0,2)$.
+
+
+
+\end{comment}
+
+        \item The point that is a distance 3 from the origin and makes an angle of $\frac{2\pi}{3}$ with the positive $x$-axis.
+
+
+
+\begin{comment}
+
+\begin{figure}[h]
+\begin{center}
+\resizebox{!}{2.0in}{\includegraphics{Polar_PA}}
+\end{center}
+\caption{Finding the polar coordinates of a point.}
+\label{F:11.5.Polar_PA}
+\end{figure}
+We can use some right triangle trigonometry here, with a triangle as shown in Figure \ref{F:11.5.Polar_PA}, with a reference angle of $\frac{\pi}{3}$. So $x = 3\cos\left(\frac{2\pi}{3}\right) = -\frac{3}{2}$ and $y = 3\sin\left(\frac{2\pi}{3}\right) = \frac{3\sqrt{3}}{2}$. So this point has rectangular coordinates $\left(-\frac{3}{2}, \frac{3\sqrt{3}{2}\right)$.
+
+
+
+\end{comment}
+
+        \end{enumerate}
+
+    \item Part (a) indicates that the two pieces of information, the distance $r$ from a point to the origin along with the angle $\theta$ that the line through the origin and the point makes with the positive $x$-axis, completely determine the location of the point. The point $(r, \theta)$ is the polar coordinate representation for a point. Find polar coordinates for the points with the given rectangular coordinates.
+        \begin{enumerate}[i.]
+        \item $(0,-1)$
+
+
+
+\begin{comment}
+
+The distance from the point with rectangular coordinates $(0,-1)$ to the origin is 1, and the angle the line through the origin and this point makes with the positive $x$-axis is $\frac{\pi}{2}$, so the polar coordinate representation of this point is $\left(1,\frac{\pi}{2}\right)$.
+
+
+
+\end{comment}
+
+        \item $(-2,0)$
+
+
+
+\begin{comment}
+
+The distance from the point with rectangular coordinates $(-2,0)$ to the origin is 2, and the angle the line through the origin and this point makes with the positive $x$-axis is $\pi$, so the polar coordinate representation of this point is $(2,\pi)$.
+
+
+
+\end{comment}
+
+        \item $(-1,1)$
+
+
+
+\begin{comment}
+
+The distance from the point with rectangular coordinates $(-1,1)$ to the origin is $\sqrt{2}$, and the angle the line through the origin and this point makes with the positive $x$-axis is $\frac{3\pi}{4}$, so the polar coordinate representation of this point is $\left(\sqrt{2},\frac{3\pi}{4}\right)$.
+
+
+
+\end{comment}
+
+        \end{enumerate}
+
+    \ea
+
+\end{pa} \afterpa 

@@ -1,0 +1,63 @@
+\begin{activity} \label{A:10.4.12} The questions in this activity explore the differential in several different contexts.
+\ba
+\item Suppose that the elevation of a landscape is given by the
+  function $h$, where we additionally know that $h(3,1) = 4.35$, $h_x(3,1) = 0.27$, and $h_y(3,1) = -0.19$.  Assume that $x$ and $y$ are measured in miles in the easterly and northerly directions, respectively, from some base point $(0,0)$.
+
+  Your GPS device says that you are currently at the point $(3,1)$.
+  However, you know that the coordinates are only accurate to within
+  $0.2$ units; that is, $dx = \Delta x = 0.2$ and $dy= \Delta y =
+  0.2$.  Estimate the uncertainty in your elevation using differentials.
+
+\item The pressure, volume, and temperature of an ideal gas are
+  related by the equation 
+  $$
+  P= P(T,V) = 8.31 T/V,
+  $$
+  where $P$ is measured in kilopascals, $V$ in liters, and $T$ in
+  kelvin.  Find the pressure when the volume is 12 liters and the
+  temperature is 310 K.  Use differentials to estimate the change
+  in the pressure when the volume increases to 12.3 liters and the
+  temperature decreases to 305 K.
+
+\item Refer to Table \ref{T:10.4.wind.chill}, the table of
+  values of the wind chill $w(v,T)$, in degrees Fahrenheit, as a
+  function of temperature, also in degrees Fahrenheit, and 
+  wind speed, in miles per hour.  
+  
+  Suppose your anemometer says the wind is blowing at $25$ miles per hour and your thermometer shows a reading of $-15^\circ$ degrees.
+  However, you know your thermometer is only accurate to within
+  $2^\circ$ degrees and your anemometer is only accurate to within $3$
+  miles per hour.  What is the wind chill based on your measurements?
+  Estimate the uncertainty in your measurement of the wind chill.
+
+\ea
+
+\end{activity}
+
+\begin{activitySolution}
+\ba
+\item The error is approximated by the differential 
+\[\Delta h \approx dh = h_x(3,1)~dx + h_y(3,1)~dy = 0.27(0.2) - 0.19(0.2) = 0.016.\]
+
+\item First note that $P(310,12) = 214.675$. To find the differential, we need both $P_T(310,12)$ and $P_V(310,12)$. Our differentiation rules give us 
+\begin{align*}
+P_T(T,V) &= 8.31\frac{1}{V} \\
+P_V(T,V) &= -8.31\frac{T}{V^2}.
+\end{align*}
+So $P_T(310,12) = 0.6925$ and $P_V(310,12) \approx -17.8896$. We have $dT = -5$ and $dV = 0.3$, and the change in pressure is 
+\[\Delta P \approx dP = P_T(310,12)~dT + P_V(310,12)~dV \approx 0.6925(-5) - 17.8896(0.3) = -8.82938.\]
+Therefore, the pressure decreases by about 8.82938 kilopascals.
+
+\item First note that 
+\begin{align*}
+w_v(25,-15) &\approx \frac{w(30,-15)-w(20,-15)}{10} = \frac{-46-(-42)}{10} = -0.4 \\
+w_T(25,-15) &\approx \frac{w(25,-10)-w(25,-20)}{10} = \frac{-37-(-51)}{10} = 1.4.
+\end{align*}
+The wind chill is $w(25,-15) = -44^{\circ}F$. But since $dT = 2$ and $dv = 3$, our wind chill measurement has an error of
+\[\Delta w \approx dw = -0.4(3) + 1.4(2) = 1.6^{\circ}F.\]
+
+
+\ea
+\end{activitySolution}
+
+\aftera

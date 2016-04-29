@@ -1,0 +1,35 @@
+\begin{activity} \label{A:9.5.7}  	Let $P_0 = (1,2,-1)$, $P_1 = (1, 0 ,-1)$, and $P_2 = (0,1,3)$ and let $p$ be the plane containing $P_0$, $P_1$, and $P_2$.
+	\ba
+	\item Determine the components of the vectors $\overrightarrow{P_0P_1}$ and $\overrightarrow{P_0P_2}$.	
+	\item Find a normal vector $\vn$ to the plane $p$.
+	\item Find the scalar equation of the plane $p$.
+	\item Consider a second plane, $q$, whose scalar equation is $-3(x-1) + 4(y+3) + 2(z-5)=0$.  Find two different points on plane $q$, as well as a vector $\vm$ that is normal to $q$.
+	\item We define the angle between two planes to be the angle between their respective normal vectors.  What is the angle between planes $p$ and $q$? 
+
+	\ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+	\ba
+	\item A straightforward computation shows that 
+\[\overrightarrow{P_0P_1} = \langle 0, -2, 0 \rangle \ \ \ \text{ and } \ \ \ \overrightarrow{P_0P_2} = \langle -1, -1, 4 \rangle.\]	
+	\item Since the vectors $\overrightarrow{P_0P_1}$ and $\overrightarrow{P_0P_2}$ lie in the plane, the cross product 
+\[\vn = \overrightarrow{P_0P_1} \times \overrightarrow{P_0P_2} = \langle 0, -2, 0 \rangle \times \langle -1, -1, 4 \rangle = \langle 8,0,-2 \rangle\]
+is a normal vector $\vn$ to the plane $p$.
+	\item Using the point $P_0$, the scalar equation of the plane $p$ is
+	\[(-8)(x-1)+(0)(y-2) +(-2)(z+1) = 0\]
+	or
+	\[8x+2z=6.\]
+	\item To find a point on the plane, choose values for $x$ and $y$, and that will determine the corresponding value for $z$. If $x=1$ and $y=-3$, then $z=5$ and the point $(1,-3,5$ lies in the plane $q$. If $x=1$ and $y=-2$, then $z=3$ and the point $(1,-2,3)$ lines in the plane $q$. A normal vector $\vm = \langle -3, 4, 2 \rangle$ to $q$ is the vector of coefficients of $x$, $y$, and $z$ in the scalar equation of the plane. 
+	\item The angle $\theta$ between $\vn$ and $\vm$ is found by
+\[\theta = \cos^{-1}\left(\frac{\vn \cdot \vm}{|\vn| \ |\vm|} \right) = \cos^{-1}\left(\frac{-28}{\sqrt{68}\sqrt{29}}\right) \approx 129.1^{\circ}.\]
+	\ea
+\end{activitySolution}
+\aftera

@@ -1,0 +1,20 @@
+\begin{activity}  \label{A:1.2.2}
+    \ba
+    \item In terms of the components, how can we tell if two vectors $\vu = \langle u_1, u_2 \rangle$ and $\vv = \langle v_1, v_2 \rangle$ in $\R^2$ are equal? Explain your reasoning.
+
+    \item In terms of the components, how can we tell if two vectors $\vu = \langle u_1, u_2, u_3\rangle$ and $\vv = \langle v_1, v_2, v_3 \rangle$ in $\R^3$ are equal? Explain your reasoning.
+
+
+    \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

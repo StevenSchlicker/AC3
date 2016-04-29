@@ -1,0 +1,27 @@
+\begin{activity} \label{A:2.3.1} Find all second order partial derivatives of the following functions.
+	\ba
+	\item $f(x,y) = x^2y^3$
+	
+	
+	
+	\item $f(x,y) = y\cos(x)$
+	
+	
+	
+	\item $g(s,t) = st^3 + s^4$
+	
+	
+	
+	\ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

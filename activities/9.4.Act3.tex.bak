@@ -1,0 +1,13 @@
+\begin{activity} \label{A:9.4.3}  Let $\vu$ and $\vv$ be vectors in $\R^3$ and let $c$ be a scalar. Use (\ref{eq:cp_anticomm}) and (\ref{eq:cp_scalar}) to show that
+\[\vu \times (c\vv) = c(\vu \times \vv).\]
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

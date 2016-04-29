@@ -1,0 +1,41 @@
+\begin{activity} \label{A:9.1.1}  Identify the domain of each of the following functions. Draw a picture of each domain in the $x$-$y$ plane.
+    \ba
+    \item $f(x,y) = x^2+y^2$
+
+    \item $f(x,y) = \sqrt{x^2+y^2}$
+
+    \item $Q(x,y) = \frac{x+y}{x^2-y^2}$
+
+    \item $s(x,y) = \frac{1}{\sqrt{1-xy^2}}$
+
+    \ea
+\end{activity}
+
+\begin{smallhint}
+\ba
+\item What is the domain of a polynomial?
+\item What is the domain of the square root function?
+\item Under what conditions is a fraction undefined?
+\item Under what conditions is a fraction undefined?
+\ea
+\end{smallhint}
+
+\begin{bighint}
+\ba
+\item What are the domains of the functions defined by $g(x)=x^2$ and $h(y)=y^2$? 
+\item What is the domain of the square root function?
+\item When is $x^2-y^2=0$? 
+\item When is $\sqrt{1-xy^2} > 0$?
+\ea
+\end{bighint}
+
+\begin{activitySolution}
+\ba
+\item Since $x^2$ and $y^2$ are both polynomials, they are defined for all values of $x$ and $y$. So the domain of $f(x,y) = x^2+y^2$ is all ordered pairs of real numbers, or the entire plane. 
+\item The square root of a real number is real only for nonnegative real numbers So $f(x,y) = \sqrt{x^2+y^2}$ is defined only when the argument $x^2+y^2$ of the square root is nonnegative. Now $x^2+y^2$ can never be negative, so the domain of $f(x,y) = \sqrt{x^2+y^2}$ is all ordered pairs of real numbers, or the entire plane. 
+\item A fraction is undefined when the denominator is 0. So $Q(x,y) = \frac{x+y}{x^2-y^2}$ is defined for all pairs $(x,y)$ as long as $x^2-y^2 \neq 0$. Now $x^2-y^2=0$ when $y^2=x^2$ or when $\mid y \mid = \mid x \mid$. This happens along the lines $y=x$ and $y=-x$. So the domain of $Q(x,y) = \frac{x+y}{x^2-y^2}$ is all ordered pairs $(x,y)$ except for those where $y=x$ or $y=-x$.  
+\item A fraction is undefined when the denominator is 0. So $s(x,y) = \frac{1}{\sqrt{1-xy^2}}$ is defined for all pairs $(x,y)$ as long as $\sqrt{1-xy^2} \neq 0$. This will happen as long as $1-xy^2 \neq 0$. In order for the square root to return a real number, we also need to have $1-xy^2 \geq 0$. Now $1-xy^2 > 0$ when $x < \frac{1}{y^2}$. So the domain of $s(x,y) = \frac{1}{\sqrt{1-xy^2}}$ is all ordered pairs $(x,y)$ so that $x < \frac{1}{y^2}$. 
+\ea
+\end{activitySolution}
+
+\aftera 

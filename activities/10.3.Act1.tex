@@ -1,0 +1,64 @@
+\begin{activity} \label{A:10.3.1} Find all second order partial
+  derivatives of the following functions.   For each partial derivative you calculate, state explicitly which variable is being held constant.
+  \ba
+\item $f(x,y) = x^2y^3$
+\item $f(x,y) = y\cos(x)$
+\item $g(s,t) = st^3 + s^4$
+\item How many second order partial derivatives does the
+  function $h$ defined by $h(x,y,z) = 9x^9z-xyz^9 + 9$ have?  Find $h_{xz}$ and
+  $h_{zx}$.  
+  \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+	\ba
+	\item To begin, we calculate the first order partials, holding $y$ constant to calculate $f_x$ and $x$ constant to calculate $f_y$:
+\begin{align*}
+f_x(x,y) &= 2xy^3 \\
+f_y(x,y) &= 3x^2y^2.
+\end{align*}
+The second order partial derivatives are partial derivatives of the
+first order partial derivatives: 
+\begin{align*}
+f_{xx}(x,y) &= (f_x)_x(x,y) = 2y^3 \\
+f_{xy}(x,y) &= (f_x)_y(x,y) = 6xy^2 \\
+f_{yx}(x,y) &= (f_y)_x(x,y) = 6xy^2 \\
+f_{yy}(x,y) &= (f_y)_y(x,y) = 6x^2y.
+\end{align*}	
+		
+	\item To begin, we calculate the first order partials:
+\begin{align*}
+f_x(x,y) &= -y\sin(x) \\
+f_y(x,y) &= \cos(x).
+\end{align*}
+The second order partial derivatives are partial derivatives of the first order partial derivatives:
+\begin{align*}
+f_{xx}(x,y) &= (f_x)_x(x,y) = -y\cos(x) \\
+f_{xy}(x,y) &= (f_x)_y(x,y) = -\sin(x) \\
+f_{yx}(x,y) &= (f_y)_x(x,y) = -\sin(x) \\
+f_{yy}(x,y) &= (f_y)_y(x,y) = 0.
+\end{align*}	
+	
+	\item To begin, we calculate the first order partials, holding $t$ constant to calculate $g_s$ and $s$ constant to calculate $g_t$:
+\begin{align*}
+g_s(s,t) &= t^3+4s^3 \\
+g_t(s,t) &= 3st^2.
+\end{align*}
+The second order partial derivatives are partial derivatives of the first order partial derivatives:
+\begin{align*}
+g_{ss}(s,t) &= (g_s)_s(s,t) = 12s^2 \\
+g_{st}(s,t) &= (g_s)_t(s,t) = 3t^2 \\
+g_{ts}(s,t) &= (g_t)_s(s,t) = 3t^2 \\
+g_{tt}(s,t) &= (g_t)_t(s,t) = 6st.
+\end{align*}	
+
+	
+	\ea
+\end{activitySolution}
+\aftera

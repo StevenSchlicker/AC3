@@ -1,0 +1,51 @@
+\begin{activity} \label{A:10.7.5} Find the critical points of the
+  following functions and use the Second Derivative Test to classify
+  the critical points.  
+  \ba
+\item $f(x,y) = 3x^3+y^2-9x+4y$
+\item $f(x,y) = xy + \frac{2}{x} + \frac{4}{y}$
+\item $f(x,y) = x^3 + y^3 - 3xy$.
+  \ea
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+\ba
+\item To find the critical points, we determine the points in the domain of $f$ where $\nabla f = \vzero$ or $\nabla f$ does not exist. Now
+\[\nabla f = \langle 9x^2-9, 2y+4 \rangle,\]
+and so $\nabla f = \vzero$ when $9x^2-9 = 0$ and $2y+4 = 0$. The critical points of $f$ are then $(1,-2)$ and $(-1,-2)$. To classify these critical points with the Second Derivative Test, we need the second order partial derivatives of $f$. Differentiating the first order partial derivatives gives us
+\[\frac{\partial^2 f}{\partial x^2} = 18x, \ \ \ \frac{\partial^2 f}{\partial y^2} = 2, \ \ \text{ and } \ \ \frac{\partial^2 f}{\partial x \partial y} = 0.\]
+Then
+\[D(1,-2) = f_{xx}(1,-2)f_{yy}(1,-2) - \left(f_{xy}(1,-2)\right)^2 = (18)(2) - (0)^2 = 36.\]
+That $D(1,-2) > 0$ and $f_{xx}(1,-2) > 0$ tells us that $f$ has a relative minimum at $(1,-2)$. Also,
+Then
+\[D(-1,-2) = f_{xx}(-1,-2)f_{yy}(-1,-2) - \left(f_{xy}(-1,-2)\right)^2 = (-18)(2) - (0)^2 = -36.\]
+That $D(-1,-2) < 0$ tells us that $f$ has a saddle point at $(-1,-2)$.
+
+\item To find the critical points, we determine the points in the domain of $f$ ($x \neq 0$ and $y \neq 0$) where $\nabla f = \vzero$ or $\nabla f$ does not exist. Now
+\[\nabla f = \left\langle y-\frac{2}{x^2}, x-\frac{4}{y^2} \right\rangle,\]
+and so $\nabla f = \vzero$ when 
+\begin{align}
+y-\frac{2}{x^2} &= 0 \label{eq:Act10_7_5_1} \\
+x-\frac{4}{y^2} &= 0 \label{eq:Act10_7_5_2}
+\end{align}
+Equation (\ref{eq:Act10_7_5_1}) tells us that $y = \frac{2}{x^2}$. Substituting into equation (\ref{eq:Act10_7_5_2}) shows that 
+\begin{align*}
+x - \frac{4}{\left(\frac{2}{x^2}\right)^2} &= 0 \\
+x - \frac{4x^4}{4} &= 0 \\
+x - x^4 &= 0 \\
+x(1-x^3) &= 0.
+\end{align*}
+So $x = 0$ or $1-x^3 = 1$. This gives us $x=0$ or $x=1$. Now $x=0$ is not in the domain of $f$, so we only consider $x=1$. Then $y = \frac{2}{1^2} = 2$. Thus, the only critical point of $f$ is $(1,2)$. To classify this critical point with the Second Derivative Test, we need the second order partial derivatives of $f$. Differentiating the first order partial derivatives gives us
+\[\frac{\partial^2 f}{\partial x^2} = \frac{4}{x^3}, \ \ \ \frac{\partial^2 f}{\partial y^2} = \frac{8}{y^3}, \ \ \text{ and } \ \ \frac{\partial^2 f}{\partial x \partial y} = 1.\]
+Then
+\[D(1,2) = f_{xx}(1,2)f_{yy}(1,2) - \left(f_{xy}(1,2)\right)^2 = (4)(1) - (1)^2 = 3.\]
+That $D(1,2) > 0$ and $f_{xx}(1,2) > 0$ tells us that $f$ has a relative minimum at $(1,2)$. 
+
+\ea
+\end{activitySolution}
+\aftera

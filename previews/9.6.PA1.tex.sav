@@ -1,0 +1,14 @@
+\begin{pa} \label{PA:1.6} ~
+    \ba
+    \item Draw the vectors $\left\langle \cos(0), \sin(0) \right\rangle$, $\left\langle \cos\left(\frac{\pi}{2}\right), \sin\left(\frac{\pi}{2}\right) \right\rangle$, $\left\langle \cos\left(\pi\right), \sin\left(\pi\right) \right\rangle$, and $\left\langle \cos\left(\frac{3\pi}{2}\right), \sin\left(\frac{3\pi}{2}\right) \right\rangle$ with their initial points at the origin.
+
+
+    \item Now draw the vectors $\left\langle \cos\left(\frac{\pi}{4}\right), \sin\left(\frac{\pi}{4}\right) \right\rangle$, $\left\langle \cos\left(3\frac{\pi}{4}\right), \sin\left(\frac{3\pi}{4}\right) \right\rangle$, $\left\langle \cos\left(\frac{5\pi}{4}\right), \sin\left(\frac{5\pi}{4}\right) \right\rangle$, and $\left\langle \cos\left(\frac{7\pi}{4}\right), \sin\left(\frac{7\pi}{4}\right) \right\rangle$ on the same axes with their initial points at the origin.
+
+
+    \item Based on the pictures from parts (a) and (b), sketch a graph of the set of \emph{terminal} points of all of the vectors of the form $\langle \cos(t), \sin(t) \rangle$, where $t$ assumes values from 0 to $2 \pi$. What is the resulting figure? Why?
+
+
+    \ea
+
+\end{pa} \afterpa 

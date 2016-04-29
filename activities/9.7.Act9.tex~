@@ -1,0 +1,76 @@
+\begin{activity} \label{A:9.7.8} Figure \ref{F:9.7.space.curve} shows
+  the curve described by 
+  the vector-valued function
+  $$\vr(t) = \left\langle 2t-\frac12 t^2 + 1,
+        t-1\right\rangle.$$
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_9_7_space_curve.eps}
+    \caption{The curve $\vr(t) = \left\langle 2t-\frac12 t^2 + 1,
+        t-1\right\rangle$.}
+    \label{F:9.7.space.curve}
+  \end{center}
+\end{figure}
+
+\ba
+\item Find the object's velocity $\vv(t)$.
+
+\item Find the object's acceleration $\va(t)$.
+
+\item Indicate on Figure \ref{F:9.7.space.curve} the object's
+  position, velocity and acceleration at the times $t=0, 2, 4$.  Draw
+  the velocity and acceleration vectors with their tails placed at the
+  object's position.
+
+\item Find the object's speed and graph it as a function of time $t$.
+  When is the object's speed the slowest?  When is the speed
+  increasing?  When it is decreasing?
+
+\item What is the relationship between $\vv$ and $\va$ when the speed
+  is at a minimum?  What is the relationship between $\vv$ and $\va$
+  when the speed is increasing?  when the speed is decreasing?
+
+\item Recall that the speed is $|\vv| = \sqrt{\vv\cdot\vv}$.  Since
+  the square root is an increasing function, we see that the speed
+  increases precisely when $\vv\cdot\vv$ is increasing.  Use the
+  product rule for the dot product to express
+  $\frac{d}{dt}(\vv\cdot\vv)$ in terms of the velocity $\vv$ and
+  acceleration $\va$.  Use this to explain your observation from the
+  last part of this activity:  why is the speed increasing
+  when $\vv\cdot\va > 0$?  why is the speed decreasing when
+  $\vv\cdot\va < 0$?
+
+\item Show that the speed's rate of change is
+  $$
+  \frac{d}{dt}|\vv(t)| = \comp_{\va} \vv.
+  $$
+
+
+
+
+
+\ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+   \ba
+    \item The quantity $\vr(t+h)-\vr(t)$ is a vector quantity, the vector from the terminal point of $\vr(t)$ to the terminal point of $\vr(t+h)$.
+
+    \item The quantity $\frac{\vr(t+h)-\vr(t)}{h}$ is a vector quantity, it is a vector in the direction of $\vr(t+h)-\vr(t)$ that is $\frac{1}{h}$ times as long. 
+
+    \item The vector $\vr(t+h)-\vr(t)$ represents a change in position of the object on the time interval $[t, t+h]$. When we multiply by $\frac{1}{h}$, we can consider this vector  $\frac{\vr(t+h)-\vr(t)}{h}$ as an average change of position, or the average velocity vector of the object on the interval $[t,t+h]$. 
+
+    \item As $h \to 0$, the average velocity vectors $\frac{\vr(t+h)-\vr(t)}{h}$ approach the instantaneous velocity vector. The average velocity vector $\frac{\vr(t+h)-\vr(t)}{h}$ is a direction vector for the secant line to the curve that passes through the terminal points of $\vr(t)$ and $\vr(t+h)$. As we let $h \to 0$, these direction vectors approach a direction vector  
+        \[\ds \lim_{h \to 0} \frac{\vr(t+h)-\vr(t)}{h}\]
+of the tangent line to the curve at the terminal point of $\vr(t)$. 
+    \ea
+
+\end{activitySolution}
+\aftera

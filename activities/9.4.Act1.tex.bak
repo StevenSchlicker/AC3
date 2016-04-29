@@ -1,0 +1,39 @@
+\begin{activity} \label{A:1.4.1}  	\ba
+	\item What are two unit vectors that are orthogonal to both $\vi$ and $\vj$?
+	
+	
+	
+	\item What is $\vi \times \vj$? Explain.
+	
+	
+	
+
+	\item Determine each of
+\begin{center}
+\begin{tabular}{ccccc}
+$\vi \times \vk$	&$\vj \times \vi$	&$\vj \times \vk$	&$\vk \times \vi$	&$\vk \times \vj$	\\
+\end{tabular}
+\end{center}
+
+
+
+	\item Let $\vv$ be a vector in $\R^3$. What is $\vv \times \vv$?
+	
+	
+	
+	\item Let $\vu$ and $\vv$ be parallel vectors in $\R^3$. What is $\vu \times \vv$? Explain.
+	
+	
+	
+	\ea
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

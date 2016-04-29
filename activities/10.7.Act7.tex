@@ -1,0 +1,69 @@
+\begin{activity} \label{A:10.7.7} A manufacturer wants to procure rectangular boxes to ship its product. The boxes must contain 20 cubic feet of space. To be durable enough to ensure the safety of the product, the material for the sides of the boxes will cost \$0.10 per square foot, while the material for the top and bottom will cost \$0.25 per square foot. In this activity we will help the manufacturer determine the box of minimal cost.
+    \ba
+    \item What quantities are constant in this problem? What are the variables in this problem? Provide appropriate variable labels. What, if any, restrictions are there on the variables?
+
+    \item Using your variables from (a), determine a formula for the total cost $C$ of a box.
+
+
+    \item Your formula in part (b) might be in terms of three variables. If so, find a relationship between the variables, and then use this relationship to write $C$ as a function of only two independent variables.
+
+
+    \item Find the dimensions that minimize the cost of a box. Be sure to verify that you have a minimum cost.
+
+
+	\ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+\ba
+\item The volume of the boxes is constant at 20 cubic feet. The things that can change are the length $l$, width $w$, and height $h$ of the box. Since the volume of a box must be positive, all of the variables must be positive as well.
+
+\item The total area of the sides of a box is $2lh + 2wh$, and so the total cost of the sides is $0.2(l+w)h$. The total area of the top and bottom of a box is $2lw$, and so the total cost of the top and bottom is $0.5lw$. Thus, the total cost $C$ of a box is
+\[C(l,w,h) = 0.2(l+w)h + 0.5lw.\]
+
+\item We know that the volume of a box must be 20 cubic feet, so
+\[lwh = 20.\]
+This makes
+\[h = \frac{20}{lw}\]
+and
+\[C(l,w) = \frac{4(l+w)}{lw} + 0.5lw.\]
+
+\item The critical points come from the first order partial derivatives. Now
+\[\frac{\partial C}{\partial l} = \frac{lw(4)-4(l+w)w}{(lw)^2} + 0.5w = -\frac{4}{l^2} + 0.5w\]
+and
+\[\frac{\partial C}{\partial w} = \frac{lw(4)-4(l+w)l}{(lw)^2} + 0.5l = -\frac{4}{w^2} + 0.5l.\]
+Since $l$ and $w$ must be positive, the only critical points occur when the partials are equal to 0. To solve the system
+\begin{align*}
+-\frac{4}{l^2} + 0.5w &= 0 \\
+-\frac{4}{w^2} + 0.5l &= 0,
+\end{align*}
+we solve the first equation for $w$ to obtain
+\begin{equation} \label{eq:Optimize1_w}
+w = \frac{8}{l^2}
+\end{equation}
+and substitute into the second, yielding the equation
+\[-\frac{l^4}{16} + 0.5l = 0.\]
+Since $l > 0$, we can reduce this last equation to
+\[-\frac{l^3}{16} + 0.5 = 0,\]
+which has solution $l = \sqrt[3]{8} = 2$. Equation (\ref{eq:Optimize1_w}) then gives us $w = 2$. Then height is then ${h=\frac{20}{4} = 5}$.  Now we need to show that we obtain a minimum cost at this point.
+
+To find the discriminant, we need the second order partial derivatives of $C$. Note that
+\begin{align*}
+\frac{\partial^2 C}{\partial l^2}(2,2) &= \frac{8}{l^3}\biggm|_{(2,2)} = 1 \\
+\frac{\partial^2 C}{\partial w^2}(2,2) &= \frac{8}{w^3}\biggm|_{(2,2)} = 1 \\
+\frac{\partial^2 C}{\partial w \partial l}(2,2) &= 0.5,
+\end{align*}
+so the discriminant of $C$ at point $(2,2)$ is
+\[D=(1)(1) - 0.5^2 = 0.75.\]
+So $D>0$ and the fact that $C_{ll}(2,2) > 0$ means that we have a relative minimum value for $C$ at the point $(2,2)$. The graph of $C$ indicates that the cost at the point $(2,2)$ is a global minimum. The minimum cost per box is
+\[0.2(2+2)5 + 0.5(2)(2) = 6 \text{ dollars}.\]
+\ea
+
+\end{activitySolution}
+\aftera

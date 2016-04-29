@@ -1,0 +1,36 @@
+\begin{pa} \label{PA:2.3} Consider the kinetic energy function $f$ from Preview Activity \ref{PA:2.2} defined by 
+\[f(m,v) = \frac{1}{2}mv^2,\]
+where $f$ is measured in Joules if the mass $x$ is in kilograms and the velocity $y$ is in meters per second.
+    \ba
+    \item Fix the mass of the object to be 2 kilograms. Write $f$ as a function of the velocity alone. Then find the derivative of $f$ with respect to the velocity (keeping the mass fixed at 2 kg) when the velocity is 3 meters per second. Include the units. Explain in detail what this tells us about kinetic energy.
+
+\begin{comment}
+
+If the mass $m$ is fixed at 2 kilograms, then
+\[f = f(2,v) = v^2\]
+is a function of $v$ alone. So
+\[\frac{d}{dv} f(2,v) = 2v,\]
+and
+\[\frac{d}{dv} f(2,v)\bigm|_{v=3} = 6 \ \frac{\text{Joules}}{\text{meters/second}}.\]
+This last calculation tells us that if we increase the velocity by 1 meter per second when the velocity is 3 meters per second and the mass is 2 kilograms, then the kinetic energy increases by approximately 6 Joules.
+
+\end{comment}
+
+    \item Now let the mass vary but keep the velocity constant at 5 meters per second. Write $f$ as a function of the mass alone. Then find the derivative of $f$ with respect to the mass (keeping the velocity fixed at 5 meters per second) when the mass is 2 kilograms. Include the units. Explain in detail what this tells us about kinetic energy.
+
+\begin{comment}
+
+If the velocity $v$ is fixed at 5 meters per second, then
+\[f = f(m,5) = 12.5m\]
+is a function of $m$ alone. So
+\[\frac{d}{dm} f(m,5) = 12.5,\]
+and
+\[\frac{d}{dv} f(m,5)\bigm|_{m=2} = 12.5 \ \frac{\text{Joules}}{\text{kilogram}}.\]
+This last calculation tells us that if we increase the mass by 1 kilogram when the mass is 2 kilograms and the velocity is 5 meters per second, then the kinetic energy increases by approximately 12.5 Joules.
+
+\end{comment}
+
+    \ea
+
+
+\end{pa} \afterpa 

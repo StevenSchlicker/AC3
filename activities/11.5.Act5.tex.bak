@@ -1,0 +1,25 @@
+\begin{activity} \label{A:11.5.5} 
+\begin{figure}[ht]
+\begin{minipage}{3in}
+Evaluate $\displaystyle \int \int_D x \, dA$ in polar coordinates, where $D$ is the region bounded above by the line $y=x$ and below by the circle $x^2 + (y-1)^2 = 1$. The graph of the curves is shown in Figure \ref{F:11.5.Polar_exercise}.
+\end{minipage}
+\\begin{minipage}{2in}
+\begin{center}
+\resizebox{!}{2.0in}{\includegraphics{11_5_Polar_ex2}}
+\end{center}
+\caption{The graphs of $y=x$ and $x^2 + (y-1)^2 = 1$.}
+\label{F:11.5.Polar_exercise}
+\end{minipage}
+\end{figure}
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

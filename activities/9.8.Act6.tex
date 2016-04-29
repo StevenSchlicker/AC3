@@ -1,0 +1,47 @@
+\begin{activity} \label{A:9.8.6} Use one of the two formulas for $\kappa$ in terms of $t$ to help you answer the following questions.
+\ba
+	\item The ellipse $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ has parameterization
+\[\vr(t) = \langle a\cos(t), b\sin(t) \rangle.\]
+Find the curvature of the ellipse. Assuming $0 < b < a$, at what points is the curvature the greatest and at what points is the curvature the smallest? Does this agree with your intuition?
+	\item The standard helix has parameterization $\vr(t) = \cos(t) \vi + \sin(t) \vj + t \vk$.  Find the curvature of the helix.  Does the result agree with your intuition?
+\ea
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+\ba
+	\item We have
+\[\vT(t) = \left\langle -\frac{a\sin(t)}{\sqrt{a^2\sin^2(t) + b^2\cos^2(t)}}, \frac{b\cos(t)}{\sqrt{a^2\sin^2(t) + b^2\cos^2(t)}} \right\rangle\]
+and
+\[\vT'(t) = \left\langle -\frac{ab^2\cos(t)}{\left(a^2\sin^2(t) + b^2\cos^2(t)\right)^{3/2}}, -\frac{a^2b\sin(t)}{\left(a^2\sin^2(t) + b^2\cos^2(t)\right)^{3/2}} \right\rangle.\]
+So the curvature of the ellipse is given by
+\begin{align*}
+\kappa(t) &= \frac{1}{\left(a^2\sin^2(t) + b^2\cos^2(t)\right)^2} \sqrt{(ab^2\cos(t))^2 +(a^2b\sin(t))^2} \\
+    &= \frac{ab}{\left(a^2\sin^2(t) + b^2\cos^2(t)\right)^2} \sqrt{b^2\cos^(t) + a^2\sin^2(t)} \\
+    &= \frac{ab}{\left(a^2\sin^2(t) + b^2\cos^2(t)\right)^{3/2}}.
+\end{align*}
+If we assume that $0 < b < a$, then we should expect that ellipse to have the largest curvature at the points $(\pm a, 0)$ and the smallest at the points $(0, \pm b)$ (when $t = \frac{\pi}{2} + \pi k$ for some integer $k$). The denominator of our curvature function can be written as
+\[a^2(1-\cos^2(t)) + b^2 \cos^2(t) = a^2 - (a^2-b^2)\cos^2(t).\]
+The curvature of the ellipse is largest when this denominator is smallest, or when $t = 0$ or $t=\pi$. These $t$ values correspond to the points $(\pm a, 0)$. Similarly, the curvature of the ellipse is smallest when the denominator is largest, or when $t = \frac{\pi}{2}$ and $t = \frac{3\pi}{2}$. These $t$ values correspond to the points $(0, \pm b)$ as expected.
+	\item Here we have
+\[\vr'(t) = (-\sin(t)) \vi + \cos(t) \vj + \vk\]
+and
+\[\vT(t) = \frac{1}{\sqrt{2}}\left( (-\sin(t)) \vi + \cos(t) \vj + \vk \right).\]
+Then
+\[\vT'(t) = \frac{1}{\sqrt{2}}\left( (-\cos(t)) \vi - \sin(t) \vj \right)\]
+and so
+\[\kappa(t) = \frac{1}{2}.\]
+\ea
+\end{activitySolution}
+\aftera
+
+
+%%%%%%%%%%%%%%%%%%%%%
+
+
+
+

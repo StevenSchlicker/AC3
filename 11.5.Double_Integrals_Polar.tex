@@ -1,0 +1,162 @@
+\section{Double Integrals in Polar Coordinates} \label{S:11.5.Double_Integrals_Polar}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+\item What are the polar coordinates of a point in two-space?
+\item How do we convert between polar coordinates and rectangular coordinates?
+\item What is the area element in polar coordinates?
+\item How do we convert a double integral in rectangular coordinates to a double integral in polar coordinates?
+\end{goals}} \hspace*{3 pt}}
+
+
+\subsection*{Introduction}
+
+While we have naturally defined double integrals in the rectangular coordinate system, starting with domains that are rectangular regions, there are many of these integrals that are difficult, if not impossible, to evaluate.  For example, consider the domain $D$ that is the unit circle and $f(x,y) = e^{-x^2 - y^2}$.  To integrate $f$ over $D$, we would use the iterated integral
+$$\iint_D f(x,y) \, dA = \int_{x = -1}^{x = 1} \int_{y = -\sqrt{1-x^2}}^{y = \sqrt{1-x^2}} e^{-x^2 - y^2} \, dy \, dx.$$
+For this particular integral, regardless of the order of integration, we are unable to find an antiderivative of the integrand; in addition, even if we were able to find an antiderivative, the inner limits of integration involve relatively complicated functions.
+
+It is useful, therefore, to be able to translate to other coordinate systems where the limits of integration and evaluation of the involved integrals is simpler.  In this section we provide a quick discussion of one such system -- polar coordinates -- and then introduce and investigate their ramifications for double integrals.  The rectangular coordinate system allows us to consider domains and graphs relative to a rectangular grid. The polar coordinate system is an alternate coordinate system that allows us to consider domains less suited to rectangular coordinates, such as circles.
+
+\input{previews/11.5.PA1}
+
+\subsection*{A Quick Overview of Polar Coordinates}
+
+The rectangular coordinate system is best suited for graphs and regions that are naturally considered over a rectangular grid. The polar coordinate system is an alternative that offers good options for functions and domains that have more circular characteristics.  A point $P$ in rectangular coordinates that is described by an ordered pair $(x,y)$, where $x$ is the displacement from $P$ to the $y$-axis and $y$ is the displacement from $P$ to the $x$-axis, as seen in Preview Activity \ref{PA:11.5}, can also be described  with polar coordinates\index{polar coordinates} $(r,\theta)$, where $r$ is the distance from $P$ to the origin and $\theta$ is the angle formed by the line segment $\overline{OP}$ and the positive $x$-axis, as shown in Figure \ref{F:11.5.Polar_coords}.
+\begin{figure}[ht]
+\begin{center}
+\begin{minipage}{2.5in}
+\begin{center}
+%\resizebox{!}{2.4in}{\includegraphics{11_5_Polar_coords}}
+  \includegraphics{figures/fig_11_5_polar_def.eps}
+\end{center}
+\caption{The polar coordinates of a point.}
+\label{F:11.5.Polar_coords}
+\end{minipage} \hspace{0.5in}
+\begin{minipage}{2.5in}
+\begin{center}
+%\vspsace{0.05in}
+%\resizebox{!}{2.4in}{\includegraphics{11_5_Polar_grid}}
+  \includegraphics{figures/fig_11_5_polar_grid.eps}
+\end{center}
+\caption{The polar coordinate grid.}
+\label{F:11.5.Polar_grid}
+\end{minipage}
+\end{center}
+\end{figure}
+Trigonometry and the Pythagorean Theorem allow for straightforward conversion from rectangular to polar, and vice versa.
+
+ \vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{description}
+\item[Converting from rectangular to polar.] If we are given the rectangular coordinates $(x,y)$ of a point $P$, then the polar coordinates $(r,\theta)$ of $P$ satisfy
+\[r = \sqrt{x^2+y^2} \ \ \ \ \ \text{ and } \ \ \ \ \ \tan(\theta) = \frac{y}{x}, \text{ assuming } x \neq 0.\]
+\item[Converting from polar to rectangular.] If we are given the polar coordinates $(r,\theta)$ of a point $P$, then the rectangular coordinates $(x,y)$ of $P$ satisfy
+\[x = r\cos(\theta)  \ \ \ \ \ \text{ and } \ \ \ \ \ y = r\sin(\theta).\]
+\end{description}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+%\input{activities/11.5.Act1}
+
+We can draw graphs of curves in polar coordinates in a similar way to how we do in rectangular coordinates. However, when plotting in polar coordinates, we use a grid that considers changes in angles and changes in distance from the origin.  In particular,  the angles $\theta$ and distances $r$ partition the plane into small wedges as shown in Figure \ref{F:11.5.Polar_grid}.
+
+\input{activities/11.5.Act2}
+
+
+\subsection*{Integrating in Polar Coordinates}
+
+Consider the double integral
+\[\iint_D e^{x^2+y^2} \, dA,\]
+where $D$ is the unit disk.  While we cannot directly evaluate this integral in rectangular coordinates,  a change to polar coordinates will convert it to one we can easily evaluate.
+
+We have seen how to evaluate a double integral $\displaystyle \iint_D f(x,y) \, dA$ as an iterated integral of the form
+\[\int_a^b \int_{g_1(x)}^{g_2(x)} f(x,y) \, dy \, dx\]
+in rectangular coordinates, because we know that $dA = dy \, dx$ in rectangular coordinates. To make the change to polar coordinates, we not only need to represent the variables $x$ and $y$ in polar coordinates, but we also must understand how to write the area element, $dA$, in polar coordinates. That is, we must determine how the area element $dA$ can be written in terms of $dr$ and $d\theta$ in the context of polar coordinates.  We address this question in the following activity.
+
+\begin{figure}[ht]
+\begin{center}
+\begin{minipage}{2.5in}
+\begin{center}
+%\resizebox{!}{2.4in}{\includegraphics{11_5_Polarelement}}
+  \includegraphics{figures/fig_11_5_polar_rect.eps}
+\end{center}
+\caption{A polar rectangle.}
+\label{F:11.5.Polar_area_a}
+\end{minipage} \hspace{0.5in}
+\begin{minipage}{2.5in}
+\begin{center}
+%\resizebox{!}{2.4in} {\includegraphics{11_5_Polarannulus}}
+  \includegraphics{figures/fig_11_5_annulus.eps}
+\end{center}
+\caption{An annulus.}
+\label{F:11.5.Polar_area_b}
+\end{minipage}
+\end{center}
+\end{figure}
+
+\input{activities/11.5.Act3}
+
+
+From the result of Activity \ref{A:11.5.3}, we see when we convert an integral from rectangular coordinates to polar coordinates, we must not only convert $x$ and $y$ to being in terms of $r$ and $\theta$, but we also have to change the area element to $dA = r \, dr \, d\theta$ in polar coordinates. In other words, given a double integral $\iint_D f(x,y) \, dA$ in rectangular coordinates, to write a corresponding iterated integral in polar coordinates, we replace $x$ with $r \cos(\theta)$, $y$ with $r \sin(\theta)$ and $dA$ with $r \, dr \, d\theta$. Of course, we need to describe the region $D$ in polar coordinates as well. To summarize:
+
+ \vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{The double integral $\iint_D f(x,y) \, dA$ in rectangular coordinates can be converted to a double integral in polar coordinates\index{iterated integral!polar coordinates} as $\iint_D f(r\cos(\theta), r\sin(\theta)) \, r \, dr \, d\theta$.
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+
+\begin{example} Let $f(x,y) = e^{x^2+y^2}$ on the disk $D = \{(x,y) : x^2 + y^2 \leq 1\}$.  We will evaluate $\iint_D f(x,y) \, dA$.
+
+In rectangular coordinates the double integral $\ds \iint_D f(x,y) \, dA$ can be written as the iterated integral
+\[\ds \iint_D f(x,y) \, dA = \int_{x=-1}^{x=1} \int_{y=-\sqrt{1-x^2}}^{y=\sqrt{1-x^2}} e^{x^2+y^2} \, dy \, dx.\]
+We cannot evaluate this iterated integral, because $e^{x^2 + y^2}$ does not have an elementary antiderivative with respect to either $x$ or $y$.  However, since $r^2=x^2+y^2$ and the region $D$ is circular, it is natural to wonder whether converting to polar coordinates will allow us to evaluate the new integral. To do so, we replace $x$ with $r \cos(\theta)$, $y$ with $r \sin(\theta)$, and $dy \, dx$ with $r \, dr \, d\theta$ to obtain
+\[\ds \iint_D f(x,y) \, dA = \iint_D e^{r^2} \, r \, dr \, d\theta.\]
+The disc $D$ is described in polar coordinates by the constraints $0 \leq r \leq 1$ and $0 \leq \theta \leq 2\pi$.  Therefore, it follows that
+\[\iint_D e^{r^2} \, r \, dr \, d\theta = \int_{\theta=0}^{\theta = 2\pi} \int_{r=0}^{r=1} e^{r^2} \, r \, dr \, d\theta.\]
+We can evaluate the resulting iterated polar integral as follows:
+\begin{align*}
+\int_{\theta=0}^{\theta = 2\pi} \int_{r=0}^{r=1} e^{r^2} \, r \, dr \, d\theta &= \int_{\theta=0}^{2\pi}  \left( \frac{1}{2}e^{r^2}\biggm|_{r=0}^{r=1} \right) \, d\theta \\
+	&= \frac{1}{2} \int_{\theta=0}^{\theta = 2\pi} \left( e-1 \right) \, d\theta \\
+	&= \frac{1}{2}(e-1) \int_{\theta=0}^{\theta = 2\pi} \, d\theta \\
+	&= \frac{1}{2}(e-1)\left[\theta\right]\biggm|_{\theta=0}^{\theta = 2\pi} \\
+	&= \pi(e-1).
+\end{align*}
+\end{example}
+
+While there is no firm rule for when polar coordinates can or should be used, they are a natural alternative anytime the domain of integration may be expressed simply in polar form, and/or when the integrand involves expressions such as $\sqrt{x^2 + y^2}.$
+
+\input{activities/11.5.Act4}
+
+\begin{figure}[ht]
+\begin{center}
+%\resizebox{!}{1.5in}{\includegraphics{11_5_Polar_ex2}}
+  \includegraphics{figures/fig_11_5_polar_region.eps}
+\end{center}
+\caption{The graphs of $y=x$ and $x^2 + (y-1)^2 = 1$, for use in Activity~\ref{A:11.5.5}.}
+\label{F:11.5.Polar_exercise}
+\end{figure}
+
+\newpage
+
+\input{activities/11.5.Act5}
+
+
+\begin{summary}
+\item The polar representation of a point $P$ is the ordered pair $(r,\theta)$ where $r$ is the distance from the origin to $P$ and $\theta$ is the angle the ray through the origin and $P$ makes with the positive $x$-axis.
+\item The polar coordinates $r$ and $\theta$ of a point $(x,y)$ in rectangular coordinates satisfy
+\[r = \sqrt{x^2+y^2} \ \ \ \ \ \text{ and } \ \ \ \ \ \tan(\theta) = \frac{y}{x};\]
+the rectangular coordinates $x$ and $y$ of a point $(r,\theta)$ in polar coordinates satisfy
+\[x = r\cos(\theta)  \ \ \ \ \ \text{ and } \ \ \ \ \ y = r\sin(\theta).\]
+\item The area element $dA$ in polar coordinates is determined by the area of a slice of an annulus and is given by
+\[dA = r \, dr \, d\theta.\]
+\item To convert the double integral ${\iint_D f(x,y) \, dA}$ to an iterated integral in polar coordinates, we substitute $r \cos(\theta)$ for $x$, $r \sin(\theta)$ for $y$, and $r \, dr \, d\theta$ for $dA$ to obtain the iterated integral 
+\[{\iint_D f(r\cos(\theta), r\sin(\theta)) \, r \, dr \, d\theta}.\]
+\end{summary}
+
+\nin \hrulefill
+
+\input{exercises/11.5.Double_Integrals_Polar(Ex)}
+
+\clearpage

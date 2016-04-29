@@ -1,0 +1,118 @@
+\begin{exercises} 
+
+\item A triangular plate is bounded by the graphs of the equations $y = 2x$, $y = 4x$, and $y = 4$.  The plate's density at $(x,y)$ is given by  $\delta(x,y) = 4xy^2 + 1$, measured in grams per square centimeter (and $x$ and $y$ are measured in centimeters).  
+	
+\ba
+	\item Set up an iterated integral whose value is the mass of the plate. Include a labeled sketch of the region of integration.  Why did you choose the order of integration you did?  
+	\item Determine the mass of the plate.    
+	\item Determine the exact center of mass of the plate.  Draw and label the point you find on your sketch from (a).	
+	\item  What is the average density of the plate?  Include units on your answer.
+\ea
+
+\begin{exerciseSolution}
+\ba
+	\item We obtain mass by integrating density, so the mass of the plate is
+\[\int_{y=0}^{y=4} \int_{x=y/4}^{x=y/2} 4xy^2 + 1 \, dx \, dy.\]
+If we instead integrate first with respect to $y$, the fact that the curve on the bottom will change over the interval means that will would need two iterated integrals instead of just one.   
+	\item To find the mass $m$ we evaluate the iterated integral:
+\begin{align*}
+m&=\int_{y=0}^{y=4} \int_{x=y/4}^{x=y/2} 4xy^2 + 1 \, dx \, dy \\
+	&= \int_{y=0}^{y=4} \left(2x^2y^2+x\right)\biggm|_{x=y/4}^{x=y/2} \, dy \\
+	&= \int_{y=0}^{y=4} \left[\left(\frac{y^4}{2} + \frac{y}{2} \right) - \left(\frac{y^4}{8}+\frac{y}{4} \right)  \right] \, dy \\
+	&= \int_{y=0}^{y=4} \left[\frac{3y^4}{8}+\frac{y}{4} \right] \, dy \\
+	&= \left[\frac{3}{40}y^5 + \frac{y^2}{8} \right]  \int_{y=0}^{y=4}   \\
+	&= \frac{3}{40}4^5 + \frac{4^2}{8}     \\
+	&= \frac{394}{5}.
+\end{align*}
+
+	\item The center of mass of the plate is $(\overline{x}, \overline{y})$, where
+\begin{align*}
+\overline{x} &= \frac{1}{m} \int_{y=0}^{y=4} \int_{x=y/4}^{x=y/2} x(4xy^2 + 1) \, dx \, dy \\
+	&= \frac{5}{394} \int_{y=0}^{y=4} \left(\frac{4}{3}x^3y^2+\frac{1}{2}x^2\right)\biggm|_{x=y/4}^{x=y/2} \, dy \\
+	&= \frac{5}{394} \int_{y=0}^{y=4} \left[\left(\frac{1}{3}\frac{y^5}{2} + \frac{y^2}{8} \right) - \left(\frac{1}{3}\frac{y^5}{16}+\frac{y^2}{32} \right)  \right] \, dy \\
+	&= \frac{5}{394} \int_{y=0}^{y=4} \left[\frac{7y^5}{48}+\frac{3y^2}{32} \right] \, dy \\
+	&= \frac{5}{394} \left[\frac{7}{288}y^6 + \frac{y^3}{32} \right]  \int_{y=0}^{y=4}   \\
+	&= \frac{5}{394} \left[\frac{7}{288}4^6 + \frac{4^3}{32}\right]     \\
+	&= \frac{2285}{1773} \\
+	&\approx 1.289.
+\end{align*}
+and
+\begin{align*}
+\overline{y} &= \frac{1}{m} \int_{y=0}^{y=4} \int_{x=y/4}^{x=y/2} y(4xy^2 + 1) \, dx \, dy \\
+	&= \frac{5}{394} \int_{y=0}^{y=4} \left(2x^2y^3+xy\right)\biggm|_{x=y/4}^{x=y/2} \, dy \\
+	&= \frac{5}{394} \int_{y=0}^{y=4} \left[\left(\frac{1}{2}y^5 + \frac{1}{2}y^2\right) - \left(\frac{1}{8}y^5+\frac{1}{4}y^2 \right)  \right] \, dy \\
+	&= \frac{5}{394} \int_{y=0}^{y=4} \left[\frac{3}{8}y^5+\frac{1}{4}y^2 \right] \, dy \\
+	&= \frac{5}{394} \left[\frac{1}{16}y^6 + \frac{1}{12}y^3 \right]  \int_{y=0}^{y=4}   \\
+	&= \frac{5}{394} \left[\frac{1}{16}4^6 + \frac{1}{12}4^3 \right]     \\
+	&= \frac{1960}{591} \\
+	&\approx 3.316.
+\end{align*}
+
+
+	\item First note that the area $A$ of the plate is 
+\begin{align*}
+A &= \int_{y=0}^{y=4} \int_{x=y/4}^{x=y/2} 1 \, dx \, dy \\
+	&= \int_{y=0}^{y=4} x\biggm|_{x=y/4}^{x=y/2}  \, dy \\
+	&= \int_{y=0}^{y=4} \frac{y}{4}  \, dy \\
+	&= \frac{y^2}{8}\biggm|_{y=0}^{y=4} \\
+	&= 2.
+\end{align*}
+The average density of the plate is then 
+\[\frac{1}{A} \int_{y=0}^{y=4} \int_{x=y/4}^{x=y/2} 4xy^2 + 1 \, dx \, dy = \frac{197}{5} \ \frac{\text{g}}{\text{cm}^2}.\]
+
+\ea
+\end{exerciseSolution}
+
+\item Let $D$ be a half-disk lamina of radius 3 in quadrants IV and I, centered at the origin as in Activity \ref{A:11.4.3}.  Assume the density at point $(x,y)$ is equal to $x$. 
+	\ba 
+	    \item Before doing any calculations, what do you expect the $y$-coordinate of the center of mass to be? Why? 
+	    \item Set up iterated integral expressions which, if evaluated, will determine the exact center of mass of the lamina. 
+	    \item Use appropriate technology to evaluate the integrals to find the center of mass numerically.
+	 \ea 
+\begin{exerciseSolution}
+	\ba
+	\item Due to the symmetry of the lamina around the $x$-axis we should expect the $y$-coordinate of the center of mass to be 0. 
+
+	\item We calculated that mass of the lamina to be 18 in Activity \ref{A:11.4.3}. So the $x$-coordinate $\overline{x}$ of the center of mass of the lamina is given by 
+\[\overline{x} = \frac{1}{18} \int_{-3}^{3} \int_{0}^{\sqrt{9-y^2}} x^2 \, dx \, dy.\]
+Similarly, the $y$-coordinate $\overline{y}$ of the center of mass of the lamina is given by  
+\[\overline{y} = \frac{1}{18} \int_{-3}^{3} \int_{0}^{\sqrt{9-y^2}} xy \, dx \, dy.\]
+
+	\item Wolfram$|$Alpha gives $\overline{x} = \frac{9}{16} \pi$ and $\overline{y} = 0$, as expected.   
+	\ea
+\end{exerciseSolution}
+
+\item Let $x$ denote the time (in minutes) that a person spends waiting in a checkout line at a grocery store and $y$ the time (in minutes) that it takes to check out.  Suppose the joint probability density for $x$ and $y$ is
+\[f(x,y) = \frac{1}{8} e^{-x/4-y/2}.\]
+
+	\ba
+		\item What is the exact probability that a person spends between 0 to 5 minutes waiting in line, and then 0 to 5 minutes waiting to check out?
+		\item Set up, but do not evaluate, an iterated integral whose value determines the exact probability that a person spends at most 10 minutes total both waiting in line and checking out at this grocery store.
+		\item Set up, but do not evaluate, an iterated integral expression whose value determines the exact probability that a person spends at least 10 minutes total both waiting in line and checking out, but not more than 20 minutes.
+	\ea
+
+\begin{exerciseSolution}
+	\ba
+	\item We want to have $0 \leq x \leq 5$ and $0 \leq y \leq 5$. So the probability that a person spends between 0 to 5 minutes waiting in line, and then 0 to 5 minutes waiting to check out is
+	\begin{align*}
+	\int_0^{5} \int_0^{5} f(x,y) \, dy \, dx &= \int_0^{5} \int_0^{5} \frac{1}{8} e^{-x/4-y/2} \, dy \, dx \\
+		&= \int_0^{5} -\frac{1}{4} e^{-x/4-y/2}\biggm|_0^{5}  \, dx \\
+		&= \int_0^{5} -\frac{1}{4} \left(e^{-x/4-5/2} - e^{-x/4}\right)  \, dx \\
+		&= \left(e^{-x/4-5/2} - e^{-x/4}\right)\biggm|_{0}^{5} \\
+		&= \left(e^{-15/4} - e^{-5/4}\right) - \left(e^{-5/2} - 1\right) \\
+		&\approx 0.655.
+	\end{align*}
+So the probability is approximately 65.5\%. 
+
+	\item We need to have $x+y = 10$ with $x$ between 0 and $10$, so an iterated integral that represents the probability that a person spends no more than 10 minutes waiting and then checking out at this grocery store is
+\[\int_0^{10} \int_0^{10-x} f(x,y) \, dy \, dx.\]
+
+	\item We need to have $10 \leq x+y \leq 20$ with $x$ between 0 and $20$, so an iterated integral that represents the probability that a person spends at least 10 minutes total both waiting in line and checking out, but not more than 20 minutes is 
+\[\int_{10}^{20} \int_{10-x}^{20-x} f(x,y) \, dy \, dx.\]
+
+	\ea
+\end{exerciseSolution}
+
+\end{exercises}
+
+\afterexercises

@@ -1,0 +1,47 @@
+\begin{activity} \label{A:1.8.4} In this activity we parameterize a line in 2-space terms of arc length. Consider the line with parametric equations
+\[x(t) = x_0+at \ \ \ \ \text{ and } \ \ \ \ y(t) = y_0+bt.\]
+    \ba
+    \item To write $t$ in terms of $s$, evaluate the integral
+    \[s(t) = \int_{0}^t \sqrt{(x'(w))^2 + (y'(w))^2} \, dw\]
+    to determine the length of the line from time 0 to time $t$.
+
+
+
+\begin{comment}
+
+\begin{align*}
+s(t) &= \int_{0}^t \sqrt{(x'(w))^2 + (y'(w))^2} \, dw \\
+    &= \int_0^t \sqrt{a^2+b^2} \, dw \\
+    &= \sqrt{a^2+b^2}t.
+\end{align*}
+
+\end{comment}
+
+    \item Use the formula from (a) for $s$ in terms of $t$ to write $t$ in terms of $s$. Then explain why a parameterize of the line in terms of arc length is
+ \begin{equation} \label{eq:line_arc_length_parameterization}
+x(s) = x_0+\frac{a}{\sqrt{a^2+b^2}}s \ \ \ \ \text{ and } \ \ \ \ y(s) = y_0+\frac{b}{\sqrt{a^2+b^2}}s.
+\end{equation}
+
+
+\begin{comment}
+
+We have $t = \frac{s}{\sqrt{a^2+b^2}$, and so a parameterization for the line in terms of arc length is
+\[x(s) = x_0+\frac{a}{\sqrt{a^2+b^2}}s \ \ \ \ \text{ and } \ \ \ \ y(s) = y_0+\frac{b}{\sqrt{a^2+b^2}}s.\]
+
+
+
+\end{comment}
+
+    \ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

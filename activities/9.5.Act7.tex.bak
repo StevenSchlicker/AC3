@@ -1,0 +1,28 @@
+\begin{activity} \label{A:1.5.7}  	Let $P_0 = (1,2,-1)$, $P_1 = (1, 0 ,-1)$, and $P_2 = (0,1,3)$ and let $p$ be the plane containing $P_0$, $P_1$, and $P_2$.
+	\ba
+	\item Determine the components of the vectors $\overrightarrow{P_0P_1}$ and $\overrightarrow{P_0P_2}$.
+	
+	
+	
+	\item Find a normal vector $\vn$ to the plane $p$.
+	
+	
+	
+	\item Find the scalar equation of the plane $p$.
+	
+	
+	
+	\ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

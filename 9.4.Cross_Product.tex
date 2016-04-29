@@ -1,0 +1,404 @@
+\section{The Cross Product} \label{S:9.4.Cross_Product}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+  \item How and when is the cross product of two vectors defined?
+  \item What geometric information does the cross product provide?
+\end{goals}} \hspace*{3 pt}}
+
+The last two sections have introduced some basic algebraic operations
+on vectors---addition, scalar multiplication, and the dot
+product---with useful geometric interpretations.  In
+this section, we will meet a final algebraic operation, the {\em cross
+  product}, which again conveys important geometric information.
+
+To begin, we must emphasize that the cross product is only defined for
+vectors $\vu$ and $\vv$ in $\R^3$.  
+Also, remember that we use a right-hand coordinate
+system, as described in Section \ref{S:9.1.Functions}.  In
+particular, recall that the vectors $\vi$, $\vj$, and $\vk$ are
+oriented as shown below in Figure \ref{F:9.4.basis}.  Earlier, we
+noticed that if we point the index finger of our {\em right} hand in
+the direction of $\vi$ and our middle finger in the direction of
+$\vj$, then our thumb points in the direction of $\vk$.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_9_4_basis.eps}
+    \caption{Basis vectors $\vi$, $\vj$, and $\vk$.}
+    \label{F:9.4.basis}
+  \end{center}
+\end{figure}
+
+\input{previews/9.4.PA2}
+
+\subsection*{Computing the cross product}
+
+As we have seen in Preview Activity \ref{PA:9.4}, the cross product
+$\vu\times\vv$ is defined for two vectors $\vu$ and $\vv$ in $\R^3$
+and produces another vector in $\R^3$.
+Using the right-hand rule, we saw that
+
+\begin{table}[ht]
+  \label{T:9.4.cross.basis}
+  \begin{center}
+    \begin{tabular}{lll}
+      $\vi\times\vj = \vk,$ \hspace*{1in} &
+      $\vi\times\vk = -\vj,$ \hspace*{1in} &
+      $\vj\times\vk = \vi$\hspace*{1in} \\ \\
+      $\vj\times\vi = -\vk$ &
+      $\vk\times\vi = \vj$ &
+      $\vk\times\vj = -\vi$
+    \end{tabular}
+  \end{center}
+\end{table}
+
+If in addition we apply the bilinearity property to compute the cross product
+in terms of the components of general vectors, $\vu$ and $\vv$ we see that\footnote{Like the dot product, the cross product arises in physical applications, e.g., torque, but is it more convenient mathematically to begin from an algebraic perspective.} 
+\begin{eqnarray*}
+  \vu\times\vv & = & (u_1\vi + u_2\vj + u_3\vk) \times 
+  (v_1\vi + v_2\vj + v_3\vk) \\
+  & = & u_1\vi\times  (v_1\vi + v_2\vj + v_3\vk)+ \\
+  & & u_2\vj\times  (v_1\vi + v_2\vj + v_3\vk)+ \\
+  & & u_3\vk\times  (v_1\vi + v_2\vj + v_3\vk) \\
+  & = & u_1v_1\vi\times\vi + u_1v_2\vi\times\vj + u_1v_3\vi\times\vk +\\
+  &  & u_2v_1\vj\times\vi + u_2v_2\vj\times\vj + u_2v_3\vj\times\vk + \\
+  &  & u_3v_1\vk\times\vi + u_3v_2\vk\times\vj + u_3v_3\vk\times\vk
+  \\
+  & = & u_1v_2\vk - u_1v_3\vj - u_2v_1\vk + u_2v_3\vi +u_3v_1\vj -
+  u_3v_2\vi \\
+  & = & (u_2v_3-u_3v_2)\vi - (u_1v_3-u_3v_1)\vj + (u_1v_2-u_2v_1)\vk
+\end{eqnarray*}
+To summarize, we have shown that
+\begin{equation}\label{E:9.4.cross.def}
+(u_1\vi + u_2\vj + u_3\vk) \times 
+  (v_1\vi + v_2\vj + v_3\vk) = 
+(u_2v_3-u_3v_2)\vi - (u_1v_3-u_3v_1)\vj + (u_1v_2-u_2v_1)\vk.
+\end{equation}
+
+At first, this may look intimidating and difficult
+to remember.  However, if we rewrite the expression in Equation~\eqref{E:9.4.cross.def} using determinants, 
+important structure emerges.  The determinant of a $2\times2$ matrix is
+$$
+\left|
+  \begin{array}{cc}
+    a & b \\
+    c & d 
+  \end{array}
+\right|
+=ad - bc.$$
+It follows that we can thus rewrite Equation~\eqref{E:9.4.cross.def} in the form
+$$
+\vu\times\vv = 
+\left|
+  \begin{array}{cc}
+    u_2 & u_3 \\
+    v_2 & v_3 \\
+  \end{array}
+\right| \vi
+-
+\left|
+  \begin{array}{cc}
+    u_1 & u_3 \\
+    v_1 & v_3 \\
+  \end{array}
+\right| \vj
++
+\left|
+  \begin{array}{cc}
+    u_1 & u_2 \\
+    v_1 & v_2 \\
+  \end{array}
+\right| \vk.
+$$
+For those familiar with the determinant of a $3\times3$ matrix, we
+write the mnemonic
+$$
+\vu\times\vv = 
+\left|
+  \begin{array}{ccc}
+    \vi & \vj & \vk \\
+    u_1 & u_2 & u_3 \\
+    v_1 & v_2 & v_3
+  \end{array}
+\right|.
+$$
+
+\newpage
+\input{activities/9.4.Act5a}
+
+The cross product satisfies the following properties, which were
+illustrated in Preview Activity \ref{PA:9.4} and may be easily
+verified from the definition (\ref{E:9.4.cross.def}).
+
+\vspace*{5pt}
+\nin 
+\framebox{
+  \hspace*{3 pt}
+  \parbox{6.25 in}{
+    Let $\vu$, $\vv$, and $\vw$ be vectors in $\R^3$, and
+    let $c$ be a scalar. Then 
+    \begin{enumerate}
+    \item $\vu \times \vv = -(\vv \times \vu)$
+    \item $(c\vu +\vv)\times \vw = c(\vu \times \vw) + \vv \times \vw$
+    \item $\vu\times\vv = \vzero$ if $\vu$ and $\vv$ are parallel.
+    \item The cross product is not associative;  that is, in general
+      $$(\vu\times\vv)\times\vw \neq \vu\times(\vv\times\vw).$$
+    \end{enumerate}
+  } 
+  \hspace*{3 pt}
+}
+\vspace*{5pt}
+
+Just as we found for the dot product, the cross product provides us
+with useful geometric information.  In particular, both the length and
+direction of the cross product $\vu\times\vv$ encode information about
+the geometric relationship between $\vu$ and $\vv$.
+
+\subsection*{The Length of $\vu\times\vv$}
+
+We may ask whether the length $|\vu\times\vv|$ has any relationship to
+the lengths of $\vu$ and $\vv$.  To investigate, we will compute the
+square of the length $|\vu\times\vv|^2$ and denote by $\theta$ the
+angle between $\vu$ and $\vv$, as in Section \ref{S:9.3.Dot_Product}.
+Doing so, we find through some significant algebra that
+
+\begin{eqnarray*}
+  |\vu\times\vv|^2&=&(u_2v_3-u_3v_2)^2 + (u_1v_3-u_3v_1)^2 +
+  (u_1v_2-u_2v_1)^2 \\
+  &=&
+  u_2^2 v_3^2- 2u_2u_3v_2v_3 +u_3^2v_2^2 +
+  u_1^2 v_3^2 -2u_1u_3v_1v_3 +u_3^2v_1^2 +
+  u_1^2 v_2^2 -2u_1u_2v_1v_2 +u_2^2v_1^2 \\
+  &=&
+  u_1^2(v_2^2+v_3^2) + u_2^2(v_1^2+v_3^2) + u_3^2(v_1^2+v_2^2) -
+  2(u_1u_2v_1v_2 + u_1u_3v_1v_3 + u_2u_3v_2v_3) \\
+  & = & 
+  u_1^2(v_1^2+v_2^2+v_3^2) + u_2^2(v_1^2+v_2^2+v_3^2) +
+  u_3^2(v_1^2+v_2^2+v_3^2) - \\
+  & &
+  (u_1^2v_1^2 + u_2^2v_2^2 + u_3^2v_3^2  + 
+  2(u_1u_2v_1v_2 + u_1u_3v_1v_3 + u_2u_3v_2v_3)) \\
+  &=&
+  (u_1^2+u_2^2+u_3^2)(v_1^2+v_2^2+v_3^2)-(u_1v_1+u_2v_2+u_3v_3)^2  \\
+  &=&
+  |\vu|^2|\vv|^2-(\vu\cdot\vv)^2 \\
+  &=&
+  |\vu|^2|\vv|^2(1-\cos^2\theta) \\
+  &=&|\vu|^2|\vv|^2\sin^2\theta. \\
+\end{eqnarray*}
+Therefore, we have found $|\vu\times\vv|^2 = |\vu|^2|\vv|^2\sin^2\theta$,
+which means that
+\begin{equation}
+  \label{E:9.4.cross.length}
+  |\vu\times\vv| = |\vu||\vv|\sin\theta.
+\end{equation}
+ Note that the third property stated above says that $\vu\times\vv = \vzero$ if
+$\vu$ and $\vv$ are parallel.  This is reflected in
+Equation~(\ref{E:9.4.cross.length}) since $\sin\theta=0$ if $\vu$ and $\vv$ are
+parallel, which implies that $\vu\times\vv = \vzero$.
+
+Equation (\ref{E:9.4.cross.length}) also has a geometric implication.
+Consider the parallelogram formed by two vectors $\vu$ and $\vv$, as
+shown in Figure \ref{F:9.4.area}.  
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_9_4_area.eps}
+    \caption{The parallelogram formed by $\vu$ and $\vv$}
+    \label{F:9.4.area}
+  \end{center}
+\end{figure}
+
+
+Remember that the area of a parallelogram is the product of its
+base and height.  As shown in the figure, we may consider the base of
+the parallelogram to be $|\vu|$ and the height to be
+$|\vv|\sin\theta$.  This means that the area of the parallelogram
+formed by $\vu$ and $\vv$ is 
+$$
+|\vu||\vv|\sin\theta = |\vu\times\vv|.
+$$
+This leads to the following interesting fact.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{
+  The length, $|\vu \times \vv|$, of the cross product of vectors $\vu$
+  and $\vv$ is the area of the parallelogram determined by $\vu$
+  and $\vv$.  
+} \hspace*{3 pt}} \vspace*{5pt}
+
+\input{activities/9.4.Act4}
+
+
+\subsection*{The Direction of $\vu\times\vv$}
+
+Now that we understand the length of $\vu\times\vv$, we will
+investigate its direction.  Remember from Preview Activity
+\ref{PA:9.4} that cross products involving the vectors $\vi$, $\vj$,
+and $\vk$ resulted in vectors that are orthogonal to the two terms.
+We will see that this holds more generally.
+
+We begin by computing $\vu\cdot(\vu\times\vv)$, and see that
+\begin{eqnarray*}
+  \vu\cdot(\vu\times\vv)&=&u_1(u_2v_3-u_3v_2) - u_2(u_1v_3-u_3v_1) +
+  u_3(u_1v_2-u_2v_1) \\
+  &=&u_1u_2v_3 - u_1u_3v_2 - u_2u_1v_3+u_2u_3v_1 + u_3u_1v_2 -
+  u_3u_2v_1 \\
+  &=&0
+\end{eqnarray*}
+To summarize, we have $\vu\cdot(\vu\times\vv) = 0$, which implies that
+$\vu$ is orthogonal to $\vu\times\vv$.  In the same way, we can show that
+$\vv$ is orthogonal to $\vu\times\vv$.  The net effect is that
+$\vu\times\vv$ is a vector that is perpendicular to both $\vu$ and $\vv$, and
+hence $\vu\times\vv$ is perpendicular to the plane determined
+by $\vu$ and $\vv$.  Moreover, the direction of $\vu\times\vv$ is
+determined by applying the right-hand rule to $\vu$ and $\vv$, as we
+saw in Preview Activity \ref{PA:9.4}.  In light of our earlier work that showed 
+$
+|\vu||\vv|\sin\theta = |\vu\times\vv|.
+$, we may now express $\vu \times \vv$ in the following different way.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{
+  Suppose that $\vu$ and $\vv$ are not parallel and that 
+  $\vn$ is the unit vector perpendicular to the plane containing $\vu$
+  and $\vv$ determined by the right-hand rule.  Then
+  $$
+  \vu\times\vv = |\vu||\vv|\sin\theta ~\vn.
+  $$
+} \hspace*{3 pt}} \vspace*{5pt}
+
+There is yet one more geometric implication we may draw from this
+result.  Suppose $\vu$, $\vv$, and $\vw$ are vectors in $\R^3$ that
+are not coplanar and that form a three-dimension parallelepiped as
+shown in Figure
+\ref{F:9.4.volume}.
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics{figures/fig_9_4_volume.eps}
+    \caption{The parallelepiped determined by $\vu$, $\vv$, and $\vw$}
+    \label{F:9.4.volume}
+  \end{center}
+\end{figure}
+
+The volume of the parallelepiped is determined by multiplying $A$, the
+area of the base, by the height $h$.  As we have just seen, the area
+of the base is $|\vu\times\vv|$.  Moreover, the height
+$h=|\vw|\cos\alpha$ where $\alpha$ is the angle between $\vw$ and the
+vector $\vn$, which is orthogonal to the plane formed by $\vu$ and
+$\vv$.  Since $\vn$ is parallel to $\vu\times\vv$, the angle between
+$\vw$ and $\vu\times\vv$ is also $\alpha$.  This shows that
+$$
+|(\vu\times\vv)\cdot\vw| = |\vu\times\vw||\vw|\cos\alpha = Ah,
+$$
+and therefore 
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{
+  The volume of the parallelepiped determined by $\vu$, $\vv$, and
+  $\vw$ is $|(\vu\times\vv)\cdot\vw|$.
+}
+\hspace*{3 pt}}
+\vspace*{5pt}
+
+The quantity $|(\vu \times
+  \vv) \cdot \vw|$ is sometimes called the \emph{scalar triple product}.
+  
+  \bigskip
+  
+\input{activities/9.4.Act6}
+
+\subsection*{Torque is measured by a cross product}
+
+We have seen that the cross product enables us to produce a vector
+perpendicular to two given vectors, to measure the area of a
+parallelogram, and to measure the volume of a parallelepiped.  Besides
+these geometric applications, the cross product also enables us to
+describe a physical quantity called {\em torque}.
+
+Suppose that we would like to turn a bolt using a wrench as shown
+in Figure \ref{F:9.4.wrench}.  If a force $\vF$ is applied to the
+wrench and $\vr$ is the vector from the position on the wrench at which the force is applied to center of the bolt, we define the
+torque, $\tau$, to be
+$$
+\tau=\vF\times\vr.
+$$
+
+\begin{figure}
+  \begin{center}
+    \includegraphics{figures/fig_9_4_wrench.eps}
+    \caption{A force applied to a wrench}
+    \label{F:9.4.wrench}
+  \end{center}
+\end{figure}
+
+When a force is applied to an object, Newton's Second Law tells us
+that the force is equal to the rate of change of the object's linear
+momentum.  Similarly, the torque applied to an object is equal to the
+rate of change of the object's angular momentum.  In other words,
+torque will cause the bolt to rotate.
+
+In many industrial applications, bolts are required to be tightened
+using a specified torque.  Of course, the magnitude of the torque is
+$|\tau| =|\vF\times\vr|=|\vF||\vr||\sin(\theta)$.  Thus, to produce a
+larger torque, we can increase either $|\vF|$ or $|\vr|$, which you
+may know if you have ever removed lug nuts when changing a flat tire.
+The ancient Greek mathematician Archimedes said: ``Give me a lever
+long enough and a fulcrum on which to place it, and I shall move the
+world.''  A modern spin on this statement is: ``Allow me to make
+$|\vr|$ large enough, and I shall produce a torque large enough to
+move the world.''
+
+\subsection*{Comparing the dot and cross products}
+
+Finally, it is worthwhile to compare and contrast the dot and cross
+products.
+
+\begin{itemize}
+  \item[(a)] $\vu\cdot\vv$ is a scalar, while $\vu\times\vv$ is a vector.
+  \item[(b)] $\vu\cdot\vv = \vv\cdot\vu$, while $\vu\times\vv = -\vv\times\vu$
+  \item[(c)] $\vu\cdot\vv = |\vu||\vv|\cos\theta$, while 
+    $|\vu\times\vv| = |\vu||\vv|\sin\theta$.
+  \item[(d)] $\vu\cdot\vv = 0$ if $\vu$ and $\vv$ are perpendicular, while
+    $\vu\times\vv = \vzero$ if $\vu$ and $\vv$ are parallel.
+\end{itemize}
+
+\begin{summary}
+\item The cross product is defined \emph{only} for vectors in
+  $\R^3$. The cross product of vectors $\vu$ and $\vv$ in $\R^3$ is
+  the vector
+\[(u_1 \vi + u_2 \vj + u_3 \vk) \times (v_1 \vi + v_2 \vj + v_3 \vk) =
+(u_2v_3-u_3v_2) \vi - (u_1v_3 - u_3v_1) \vj + (u_1v_2 - u_2v_1) \vk.\]
+
+\item Geometrically, the cross product is
+\[\vu \times \vv = |\vu| \ |\vv| \ \sin(\theta) \ \vn,\]
+where $\theta$ is the angle between $\vu$ and $\vv$ and $\vn$ is a
+unit vector perpendicular to both $\vu$ and $\vv$ as determined by the
+right-hand rule.
+
+\item The cross product of vectors $\vu$ and $\vv$ is a vector
+  perpendicular to both $\vu$ and $\vv$. 
+
+\item The magnitude $|\vu \times \vv|$ of the cross product of the
+  vectors $\vu$ and $\vv$ gives the area of the parallelogram
+  determined by $\vu$ and $\vv$. Also, 
+  the scalar triple product $|(\vu \times
+  \vv) \cdot \vw|$ gives the volume of the parallelepiped determined by
+  $\vu$, $\vv$, and $\vw$.
+\end{summary}
+
+
+
+
+\nin \hrulefill
+
+\input{exercises/9.4.Cross_Product(Ex)}
+
+\clearpage
+

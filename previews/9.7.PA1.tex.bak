@@ -1,0 +1,27 @@
+\begin{pa} \label{PA:1.7} In this section we will discuss the derivative of a vector-valued function.
+    \ba
+    \item Review the definition of the derivative of a function of a single variable from single variable calculus and state the definition here. If a function $f = f(t)$ represents the position of a moving object at time $t$, what does $f'(t)$ tell us about the object?
+
+\begin{comment}
+
+Recall from single variable calculus that the derivative of a function $f$ of the independent variable $x$ is defined as
+\[f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}\]
+for those values of $x$ at which the limit exists. If $f(x)$ represents the position of an object at time $x$, then $f'(x)$ tells us the instantaneous velocity of the object at time $x$.
+
+\end{comment}
+
+    \item Let $\vr(t) = \cos(t) \vi + \sin(2t) \vj$ describe the path traveled by an object at time $t$. Use some appropriate technology to draw the graph of this vector-valued function, and then locate and identify the point on the graph when $t=\pi$.
+
+
+
+    \item Recall that the derivative of a sum is the sum of the derivatives. With this idea in mind, what do you expect the derivative of $\vr$ to be?
+
+
+
+    \item Use your result from part (c) to find $\vr'(\pi)$. Draw a picture of this vector $\vr'(\pi)$ from the point on the graph when $t=\pi$ on your graph from (b) and explain what you think $\vr'(\pi)$ tells us about the object.
+
+
+
+    \ea
+
+\end{pa} \afterpa 

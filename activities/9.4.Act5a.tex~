@@ -1,0 +1,34 @@
+\begin{activity} \label{A:9.4.5}  Suppose 
+  $\vu = \langle 2, -1, 0\rangle$ and $\vv = \langle 0, 1, 3\rangle$.
+  Use the formula (\ref{E:9.4.cross.def}) to compute the following.
+
+  \ba
+  \item Find the cross product $\vu\times\vv$.  
+
+  \item Find the cross product $\vu\times \vi$.
+
+  \item Find the cross product $\vu\times\vu$.
+
+  \item Evaluate the dot products $\vu\cdot(\vu\times\vv)$ and
+    $\vv\cdot(\vu\times\vv)$.  What does this tell you about the
+    geometric relationship between $\vu$, $\vv$, and $\vu\times\vv$?
+  \item We can see that this relationship is generally true.  Given
+    $\vu = (u_1,u_2,u_3)$ and $\vv=(v_1,v_2,v_3)$, find the dot
+    product $\vu\cdot(\vu\times\vv)$.
+  \item Explain why we now know that the cross product $\vu\times\vv$
+    is orthogonal to both $\vu$ and $\vv$.  The direction of the cross
+    product is determined by the right-hand rule.  Given the vectors
+    $\vu$ and $\vv$ shown below in Figure \ref{F:9.4.activity.2},
+    sketch the cross products $\vu\times\vv$ and $\vv\times\vu$.
+
+    \begin{figure}[ht]
+      \begin{center}
+        \includegraphics{figures/fig_9_4_activity_2}
+        \caption{Vectors $\vu$ and $\vv$}
+        \label{F:9.4.activity.2}
+      \end{center}
+    \end{figure}
+    
+    \ea
+\end{activity}
+\aftera

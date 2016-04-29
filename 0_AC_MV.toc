@@ -1,0 +1,29 @@
+\contentsline {chapter}{Preface}{v}{chapter*.2}
+\contentsline {chapter}{\numberline {9}Multivariable and Vector Functions}{1}{chapter.9}
+\contentsline {section}{\numberline {9.1}Functions of Several Variables and Three Dimensional Space}{1}{section.9.1}
+\contentsline {section}{\numberline {9.2}Vectors}{19}{section.9.2}
+\contentsline {section}{\numberline {9.3}The Dot Product}{31}{section.9.3}
+\contentsline {section}{\numberline {9.4}The Cross Product}{40}{section.9.4}
+\contentsline {section}{\numberline {9.5}Lines and Planes in Space}{50}{section.9.5}
+\contentsline {section}{\numberline {9.6}Vector-Valued Functions}{60}{section.9.6}
+\contentsline {section}{\numberline {9.7}Derivatives and Integrals of Vector-Valued Functions}{66}{section.9.7}
+\contentsline {section}{\numberline {9.8}Arc Length and Curvature}{79}{section.9.8}
+\contentsline {chapter}{\numberline {10}Derivatives of Multivariable Functions}{93}{chapter.10}
+\contentsline {section}{\numberline {10.1}Limits}{93}{section.10.1}
+\contentsline {section}{\numberline {10.2}First-Order Partial Derivatives}{105}{section.10.2}
+\contentsline {section}{\numberline {10.3}Second-Order Partial Derivatives}{117}{section.10.3}
+\contentsline {section}{\numberline {10.4}Linearization: Tangent Planes and Differentials}{127}{section.10.4}
+\contentsline {section}{\numberline {10.5}The Chain Rule}{139}{section.10.5}
+\contentsline {section}{\numberline {10.6}Directional Derivatives and the Gradient}{147}{section.10.6}
+\contentsline {section}{\numberline {10.7}Optimization}{159}{section.10.7}
+\contentsline {section}{\numberline {10.8}Constrained Optimization:Lagrange Multipliers}{174}{section.10.8}
+\contentsline {chapter}{\numberline {11}Multiple Integrals}{181}{chapter.11}
+\contentsline {section}{\numberline {11.1}Double Riemann Sums and Double Integrals over Rectangles}{181}{section.11.1}
+\contentsline {section}{\numberline {11.2}Iterated Integrals}{192}{section.11.2}
+\contentsline {section}{\numberline {11.3}Double Integrals over General Regions}{198}{section.11.3}
+\contentsline {section}{\numberline {11.4}Applications of Double Integrals}{208}{section.11.4}
+\contentsline {section}{\numberline {11.5}Double Integrals in Polar Coordinates}{218}{section.11.5}
+\contentsline {section}{\numberline {11.6}Surfaces Defined Parametrically and Surface Area}{226}{section.11.6}
+\contentsline {section}{\numberline {11.7}Triple Integrals}{235}{section.11.7}
+\contentsline {section}{\numberline {11.8}Triple Integrals in Cylindrical and Spherical Coordinates}{246}{section.11.8}
+\contentsline {section}{\numberline {11.9}Change of Variables}{257}{section.11.9}

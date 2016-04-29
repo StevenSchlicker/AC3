@@ -1,0 +1,131 @@
+\begin{theindex}
+
+  \item arclength, \hyperpage{81}
+  \item average value over a solid, \hyperpage{238}
+
+  \indexspace
+
+  \item center of mass
+    \subitem of a solid, \hyperpage{238}
+  \item change of variable
+    \subitem double integral, \hyperpage{262}
+    \subitem triple integral, \hyperpage{264}
+  \item Cobb-Douglas production function, \hyperpage{178}
+  \item continuity, \hyperpage{102}
+  \item coordinate planes, \hyperpage{6}
+  \item critical point, \hyperpage{161}
+  \item curvature, \hyperpage{86}
+  \item cylindrical coordinates, \hyperpage{247}
+
+  \indexspace
+
+  \item directional derivative, \hyperpage{149}
+  \item discriminant, \hyperpage{163}
+  \item dot product, \hyperpage{33}
+  \item double   integral
+    \subitem difference in volumes, \hyperpage{186}
+  \item double integral
+    \subitem average value, \hyperpage{187}
+    \subitem center of mass of a lamina, \hyperpage{213}
+    \subitem definition, \hyperpage{186}
+    \subitem mass of lamina, \hyperpage{209}
+    \subitem probability, \hyperpage{215}
+  \item double integral over a general region, \hyperpage{201}
+  \item double Riemann sum, \hyperpage{184}
+
+  \indexspace
+
+  \item function
+    \subitem differentiable, \hyperpage{130}
+    \subitem domain, \hyperpage{3}
+    \subitem graph, \hyperpage{4}
+    \subitem locally linear, \hyperpage{130}
+    \subitem of two variables, \hyperpage{3}
+    \subitem surface, \hyperpage{4}
+
+  \indexspace
+
+  \item graph of a vector-valued function
+    \subitem definition, \hyperpage{62}
+
+  \indexspace
+
+  \item iterated integral
+    \subitem cylindrical coordinates, \hyperpage{249}
+    \subitem polar coordinates, \hyperpage{222}
+    \subitem rectangular coordinates, \hyperpage{192}
+    \subitem spherical coordinates, \hyperpage{253}
+
+  \indexspace
+
+  \item Jacobian, \hyperpage{262}, \hyperpage{264}
+  \item joint probability density function, \hyperpage{214}
+
+  \indexspace
+
+  \item Lagrange multiplier, \hyperpage{176}
+  \item level curve, \hyperpage{12}
+  \item line
+    \subitem direction vector, \hyperpage{51}
+    \subitem in space, \hyperpage{51}
+    \subitem parametric equations, \hyperpage{54}
+    \subitem vector equation, \hyperpage{52}
+  \item locally linear, \hyperpage{50}
+
+  \indexspace
+
+  \item mass
+    \subitem of a solid, \hyperpage{237}
+  \item moments about coordinate axes, \hyperpage{213}
+
+  \indexspace
+
+  \item parameterization
+    \subitem curve, \hyperpage{62}
+    \subitem surface, \hyperpage{226}
+  \item parametric equations for a curve, \hyperpage{62}
+  \item partial derivatives
+    \subitem first-order, \hyperpage{108}
+    \subitem second-order, \hyperpage{119}
+    \subitem second-order, mixed, \hyperpage{119}
+    \subitem second-order, unmixed, \hyperpage{119}
+  \item plane
+    \subitem definition, \hyperpage{54}
+    \subitem scalar equation, \hyperpage{55}
+  \item polar coordinates, \hyperpage{219}
+  \item projectile motion
+    \subitem parametric equations, \hyperpage{75}
+
+  \indexspace
+
+  \item sphere
+    \subitem definition, \hyperpage{6}
+    \subitem formula, \hyperpage{8}
+  \item spherical coordinates, \hyperpage{250}
+  \item surface area, \hyperpage{231}
+
+  \indexspace
+
+  \item trace, \hyperpage{9}
+  \item triple integral, \hyperpage{237}
+  \item triple Riemann sum, \hyperpage{237}
+
+  \indexspace
+
+  \item vector
+    \subitem angle between, \hyperpage{33}
+    \subitem component in the direction of, \hyperpage{38}
+    \subitem definition, \hyperpage{21}
+    \subitem projection, \hyperpage{37, 38}
+    \subitem subtraction, \hyperpage{24}
+    \subitem sum, parallelogram, \hyperpage{25}
+  \item vector-valued function
+    \subitem antiderivative, \hyperpage{73}
+    \subitem definition, \hyperpage{62}
+    \subitem derivative, \hyperpage{67}
+    \subitem indefinite integral, \hyperpage{73}
+  \item vectors
+    \subitem orthogonal, \hyperpage{35}
+  \item volume of a solid, \hyperpage{238}
+
+\end{theindex}

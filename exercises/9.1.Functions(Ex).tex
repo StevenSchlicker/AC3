@@ -1,0 +1,81 @@
+\begin{exercises} 
+
+\item \label{Ez:9.1.1}   Find the equation of each of the following geometric objects.
+
+%\begin{figure}[h]
+%\begin{center}
+ %\includegraphics{figures/1_1_Ez1.eps}
+ %\caption{A bungee jumper's height function.} \label{F:1.1.Ez1}
+%\end{center}
+%\end{figure}
+
+  \ba
+  	\item  The plane parallel to the $x$-$y$ plane that passes through the point $(-4,5,-12)$.
+	\item  The plane parallel to the $y$-$z$ plane that passes through the point $(7, -2, -3)$.
+	\item   The sphere centered at the point $(2,1,3)$ and has the point $(-1,0,-1)$ on its surface.
+	\item  The sphere whose diameter has endpoints $(-3,1,-5)$ and $(7,9,-1)$.
+  
+  \ea 
+
+\begin{exerciseSolution}
+  \ba
+  	\item  A plane parallel to the $x$-$y$ plane has constant $z$-coordinate. So the equation of the plane parallel to the $x$-$y$ plane that passes through the point $(-4,5,-12)$ is $z=-12$. 
+	\item   A plane parallel to the $y$-$z$ plane has constant $x$-coordinate. So the equation of the plane parallel to the $y$-$z$ plane that passes through the point $(7, -2, -3)$ is $x=7$.
+	\item   The radius of the sphere is the distance from the center $(2,1,3)$ to the point $(-1,0,-1)$, so the radius of this sphere is $\sqrt{(2-(-1))^2 + (1-0)^2 + (3-(-1))^2} = \sqrt{26}$. So the equation of this sphere is $(x-2)^2 + (y-1)^2 + (z-3)^2 = 26$. 
+	\item  The center of the sphere will be the midpoint of the segment connecting the endpoints $(-3,1,-5)$ and $(7,9,-1)$. This midpoint is $\left(\frac{-3+7}{2}, \frac{1+9}{2}, \frac{-5+(-1)}{2} \right) = (2, 5, -3)$. The radius of the sphere is the distance from its center to either endpoint of the segment or $\sqrt{(2-(-1))^2 + (5-1)^2 + (-3-(-5))^2} = \sqrt{29}$. So the equation of this sphere is $(x-2)^2 + (y-5)^2 + (z+3)^2 = 29$.
+  
+  \ea 
+\end{exerciseSolution}
+
+
+\item \label{Ez:9.1.2}   The Ideal Gas Law, $PV = RT$, relates the pressure ($P$, in pascals), temperature ($T$, in Kelvin), and volume ($V$, in cubic meters) of 1 mole of a gas ($R =  8.314 \ \frac{\text{J}}{\text{mol} \ \text{K}}$ is the universal gas constant), and describes the behavior of gases that do not liquefy easily, such as oxygen and hydrogen. We can solve the ideal gas law for the volume and hence treat the volume as a function of the pressure and temperature:
+\[V(P,T) = \frac{8.314T}{P}.\]
+    \ba
+    \item Explain in detail what the trace of $V$ with $P=1000$ tells us about a key relationship between two quantities.
+    \item Explain in detail what the trace of $V$ with $T=5$ tells us.
+    \item Explain in detail what the level curve $V = 0.5$ tells us.
+    \item Use 2 or three additional traces in each direction to make a rough sketch of the surface over the domain of $V$ where $P$ and $T$ are each nonnegative.  Write at least one sentence that describes the way the surface looks.
+    \item Based on all your work above, write a couple of sentences that describe the effects that temperature and pressure have on volume.
+    \ea
+    
+\begin{exerciseSolution}
+    \ba
+    \item The $P=1000$ trace tells us the volume of 1 mole of a gas (in cubic meters) at a given temperature (in Kelvin) if the pressure of the gas is held constant at $1000$ pascals.
+    \item The $T=5$ trace tells us the volume of 1 mole of a gas (in cubic meters) at a given pressure (in pascals) if the temperature of the gas is held constant at $5$ Kelvin.
+    \item The $V = 0.5$ contour tells us how the temperature (in Kelvin) and pressure (in pascals) are related for a gas of fixed volume of $0.5$ cubic meters. 
+    \item The traces for fixed $P$ are lines while the traces for fixed $T$ are half-hyperbolas (for $P > 0$). The graph of $V$ looks like a sheet of paper angling upward through the $P$ axis in the first octant that bends upward toward the $V$-$P$ plane. 
+    \item The volume is directly proportional to the temperature and inversely proportional to the pressure. As temperature increases, so does volume, and as pressure increases, volume decreases. 
+    \ea
+\end{exerciseSolution}
+    
+\item \label{Ez:9.1.3}   Consider the function $h$ defined by $h(x,y) = 8 - \sqrt{4 - x^2 - y^2} $.
+    \ba
+    \item What is the domain of $h$?  (Hint:  describe a set of ordered pairs in the plane by explaining their relationship relative to a key circle.)
+    \item The \emph{range} of a function is the set of all outputs the function generates.  Given that the range of the square root function $g(t) = \sqrt{t}$ is the set of all nonnegative real numbers, what do you think is the range of $h$?  Why?
+    \item Choose 4 different values from the range of $h$ and plot the corresponding level curves in the plane.  What is the shape of a typical level curve?
+    \item Choose 5 different values of $x$ (including at least one negative value and zero), and sketch the corresponding traces of the function $h$.
+    \item Choose 5 different values of $y$ (including at least one negative value and zero), and sketch the corresponding traces of the function $h$.
+    \item Sketch an overall picture of the surface generated by $h$ and write at least one sentence to describe how the surface appears visually.  Does the surface remind you of a familiar physical structure in nature?
+    \ea    
+
+%\begin{figure}[h]
+%\begin{center}
+ %\includegraphics{figures/1_1_Ez1.eps}
+ %\caption{A bungee jumper's height function.} \label{F:1.1.Ez1}
+%\end{center}
+%\end{figure}
+
+\begin{exerciseSolution}
+    \ba
+    \item Since we cannot have a negative number under a square root, the domain of $h$ is the set of all ordered pairs $(x,y)$ such that $4-(x^2+y^2) \geq 0$ or $x^2+y^2 \leq 4$. So the domain of $h$ is the disk centered at the origin of radius 4. 
+    \item The domain of $h$ is all ordered pairs $(x,y)$ with $0 \leq x^2+y^2 \leq 4$. Then $4 \geq 4-(x^2+y^2) \geq 0$ and so $2 \geq \sqrt{4-x^2-y^2} \geq 0$. It follows that $8 \geq 8-\sqrt{4-x^2-y^2} \geq 6$. So the range of $h$ is all real numbers between 6 and 8, inclusive. 
+    \item A level curve will be of the form $c = 8-\sqrt{4-x^2-y^2}$ or $8-c = \sqrt{4-x^2-y^2}$ or $(8-c)^2 = 4-(x^2+y^2)$ or $x^2+y^2 = 4-(8-c)^2$. These level curves are all circles centered at the origin. 
+    \item A trace for a fixed value $x=a$ has the form $z = 8-\sqrt{4-a^2-y^2}$. This equation can be rewritten as $\sqrt{4-a^2-y^2} = 8-z$ or $4-a^2-y^2 = (8-z)^2$ or $y^2+(8-z)^2 = 4-a^2$ or $\frac{y^2}{4-a^2} + \frac{(8-z)^2}{4-a^2} = 1$. This is the equation of an ellipse. 
+    \item The answer here is the same as in (d).
+    \item The surface is made of half ellipses in either the $x$ or the $y$ direction, and circles in the $z$ direction. So the surface looks like a bowl.     \ea   
+
+\end{exerciseSolution}
+
+
+\end{exercises}
+\afterexercises

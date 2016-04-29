@@ -1,0 +1,47 @@
+\begin{pa} \label{PA:9.2}
+Bilbo and Frodo are walking in the Shire. See the Shire map in Figure \ref{F:9.1.Shire}.\footnote{\url{http://www.shirepost.com/ShireMapLarge.html}} As Bilbo and Frodo walk, record their movements in a pair $\langle x, y \rangle$ (we will call this pair a \emph{vector}), where $x$ is the horizontal distance (in miles) they move (with east as the positive direction) and $y$ as the vertical distance (in miles) they move (with north as the positive direction). Assume there are bridges and other devices along the paths Bilbo and Frodo take so that they can make the trips indicated. Use the legend to approximate the following as best you can.
+
+    \ba
+    \item What is the vector $\vv_1 = \langle x , y \rangle$ that describes Bilbo and Frodo's movement if they walk from Hobbiton to Little Delving? Explain how you found this vector. How many miles did they walk? Measure the number of miles walked directly and then explain how to calculate the number of miles walked in terms of $x$ and $y$.
+
+\begin{comment}
+
+\as
+
+\solution Using a marked straightedge, the horizontal distance from Hobbiton to Little Delving is approximately 18 miles, while the vertical distance is about 3.75 miles. Since the hobbits traveled west and north, the vector describing their movement is ${\vv_1 = \langle -18, 3.75 \rangle}$. The straight line distance from Hobbiton to Little Delving is measured as approximately 18.5 miles, and this can be found using the Pythagorean Theorem on the right triangle with $x$ and $y$ as legs and the distance from Hobbiton to Little Delving as the hypotenuse. This gives the straight line distance from Hobbiton to Little Delving as
+\[\sqrt{(-18)^2 + (3.75)^2} \approx 18.38.\]
+Of course, there is error here in all of the measurements.
+
+\as
+
+\end{comment}
+
+    \item What is the vector $\vv_2 = \langle x , y \rangle$ that describes Bilbo and Frodo's movement if they walk from Hobbiton to Quarry? How many miles did they walk, in terms of $x$ and $y$?
+
+\begin{comment}
+
+\as
+
+\solution Using a marked straightedge, the horizontal distance from Hobbiton to Quarry is approximately 19 miles, while the vertical distance is about 7 miles. Since the hobbits traveled east and north, the vector describing their movement is ${\vv_2 = \langle 19.5, 7 \rangle}$. The hobbits walked approximately
+\[\sqrt{19^2 + 7^2} \approx 20.25 \text{ miles}.\]
+
+\as
+
+\end{comment}
+
+    \item What is the vector $\vv_3 = \langle x , y \rangle$ that describes Bilbo and Frodo's movement if they walk from Little Delving to Quarry? What relationship do you see between the vectors $\vv_1$, $\vv_2$, and $\vv_3$? Explain why this relationship should hold.
+
+\begin{comment}
+
+\as
+
+\solution Using a marked straightedge, the horizontal distance from Little Delving to Quarry is approximately 27 miles, while the vertical distance is about 3.25 miles. Since the hobbits traveled east and north, the vector describing their movement is ${\vv_3 = \langle 27, 3.25 \rangle}$. The horizontal distance traveled from Little Delving to Quarry is the sum of the distances from Hobbiton to Little Delving and from Hobbiton to Quarry (this is because they traveled in opposite horizontal directions), while the vertical distance from Little Delving to Quarry is the difference of the vertical distance from Hobbiton to Quarry minus the vertical distance from Hobbiton to Little Delving (since they traveled in the vertical direction). So, in essence,
+\[\vv_3 - \vv_2 - \vv_1.\]
+
+\as
+
+\end{comment}
+
+    \ea
+
+\end{pa} \afterpa 

@@ -1,0 +1,23 @@
+\begin{activity} \label{A:11.2.2} Let $f(x,y) = x+y^2$ on the rectangle $R = [0,2] \times [0,3]$.
+	\ba
+	\item Set up an iterated integral, integrating first with respect to $x$, then $y$, to evaluate $\ds \int \int_R f(x,y) \, dA$. Evaluate this integral.
+	
+	
+	
+	\item Set up an iterated integral, integrating first with respect to $y$, then $x$, to evaluate $\ds \int \int_R f(x,y) \, dA$. Evaluate this integral.
+	
+	
+	
+	\ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

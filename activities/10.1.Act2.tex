@@ -1,0 +1,47 @@
+\begin{activity} \label{A:10.1.2}  Let's consider the function $g$ defined by 
+  $$g(x,y) = \frac{x^2y}{x^4 + y^2}$$
+  and investigate the limit $\lim_{(x,y)\to(0,0)}g(x,y)$.
+
+  \ba
+\item What is the behavior of $g$ on the $x$-axis?  That is, what is
+  $g(x,0)$ and what is the limit of $g$ as $(x,y)$ approaches $(0,0)$
+  along the $x$-axis?
+
+\item What is the behavior of $g$ on the $y$-axis?  That is, what is
+  $g(0,y)$ and what is the limit of $g$ as $(x,y)$ approaches $(0,0)$
+  along the $y$-axis?
+
+\item What is the behavior of $g$ on the line $y=mx$?  That is, what
+  is $g(x,mx)$ and what is the limit of $g$ as $(x,y)$ approaches $(0,0)$
+  along the line $y=mx$?
+
+\item Based on what you have seen so far, do you think
+  $\lim_{(x,y)\to(0,0)}g(x,y)$ exists?  If so, what do you think its
+    value is?
+
+\item Now consider the behavior of $g$ on the parabola $y=x^2$?  What
+  is $g(x,x^2)$ and what is the limit of $g$ as $(x,y)$ approaches
+  $(0,0)$ along this parabola?
+
+\item State whether the limit $\lim_{(x,y)\to(0,0)} g(x,y)$ exists or
+  not and provide a justification of your statement.
+
+
+
+  \ea
+
+
+\end{activity}
+
+\begin{activitySolution}
+\ba
+\item Along the $x$-axis we have $g(x,0) = 0$, so $\lim_{(x,y) \to (0,0)} g(x,0) = 0$. 
+\item Along the $y$-axis we have $g(0,y) = 0$, so $\lim_{(x,y) \to (0,0)} g(0,y) = 0$.
+\item Along the line $y=mx$ we have $g(x,mx) = \frac{mx^3}{x^4 + m^2x^2} = \frac{mx}{x^2+m^2}$. So as $x$ goes to $0$ we have $\lim_{(x,y) \to (0,0)} g(x,mx) = 0$.
+\item Based on the previous information, we might be tempted to say that $g$ has a limit of $0$ at $(0,0)$.  
+\item Along the parabola $y=x^2$ we have $g(x,x^2) = \frac{x^4}{2x^4} = \frac{1}{2}$. So as $x$ goes to $0$ we have $\lim_{(x,y) \to (0,0)} g(x,x^2) = 0.5$.
+\item Since $g$ has different limits along different paths that contain $(0,0)$, we conclude that $\lim_{(x,y) \to (0,0)} g(x,y)$ does not exist. 
+\ea
+\end{activitySolution}
+
+\aftera

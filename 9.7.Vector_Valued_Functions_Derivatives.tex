@@ -1,0 +1,398 @@
+\section{Derivatives and Integrals of Vector-Valued Functions} \label{S:9.7.Vector_Valued_Functions_Derivatives}
+ 
+\vspace*{-14 pt} \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+\item What do we mean by the derivative of a vector-valued function
+and how do we calculate it?
+\item What does the derivative of a vector-valued function measure?
+\item What do we mean by the integral of a vector-valued function and
+how do we compute it?
+\item How do we describe the motion of a projectile if the only force
+acting on the object is acceleration due to gravity?
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+A vector-valued function $\vr$ determines a curve in space as the
+collection of terminal points of the vectors $\vr(t)$. If the curve is
+smooth, it is natural to ask whether $\vr(t)$ has a derivative.  In
+the same way, our experiences with integrals in single-variable
+calculus prompt us to wonder what the integral of a vector-valued
+function might be and what it might tell us.  We
+explore both of these questions in detail in this section.
+
+For now, let's recall some important ideas from calculus I.  Given a
+function $s$ that measures the position of an object moving along
+an axis, its derivative, $s'$, is defined by
+$$s'(t) = \lim_{h \to 0} \frac{s(t+h) - s(t)}{h},$$
+and measures the instantaneous rate of change of $s$ with respect to
+time.  In particular, for a fixed value $t = a$, $s'(a)$ measures the
+velocity of the moving object, as well as the slope of the tangent
+line to the curve $y = s(t)$ at the point $(a,s(a))$.
+
+As we work with vector-valued functions, we will strive to update
+these ideas and perspectives into the context of curves in space and
+outputs that are vectors.
+
+\input{previews/9.7.PA1}
+
+\subsection*{The Derivative}
+
+In single variable calculus, we define the derivative, $f'$, of a
+given function $f$ by
+$$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h},$$
+provided the limit exists.  At a given value of $a$, $f'(a)$ measures
+the instantaneous rate of change of $f$, and also tells us the slope
+of the tangent line to the curve $y = f(x)$ at the point $(a, f(a))$.
+The definition of the derivative extends naturally to vector-valued
+functions and curves in space.
+
+\vspace*{5pt} \nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{definition} The
+\textbf{derivative}\index{vector-valued function!derivative} of a
+vector-valued function $\vr$ is defined to be
+$$ \vr'(t) = \lim_{h \to 0} \frac{\vr(t+h)-\vr(t)}{h} $$
+for those values of $t$ at which the limit exists.  We also use the
+notation $\frac{d\vr}{dt}$ and $\frac{d}{dt}[\vr(t)]$ for
+$\vr'(t)$. \end{definition} } \hspace*{3 pt}} \vspace*{5pt}
+
+\input{activities/9.7.Act1}
+
+As Activity \ref{A:9.7.1} indicates, if $\vr(t)$ determines the
+position of an object at time $t$, then $\frac{\vr(t+h)-\vr(t)}{h}$
+represents the average rate of change in the position of the object over the
+interval $[t,t+h]$, which is also the average velocity of the object
+on this interval.  Thus, the derivative
+\[\vr'(t) = \lim_{h \to 0} \frac{\vr(t+h)-\vr(t)}{h}\] is the
+instantaneous rate of change of $\vr(t)$ at time $t$ (for those values
+of $t$ for which the limit exists), so $\vr'(t) = \vv(t)$ is the
+instantaneous velocity of the object at time $t$.  Furthermore, we can
+interpret the derivative $\vr'(t)$ as the direction vector of the line
+tangent to the graph of $\vr$ at the value $t$.
+
+Similarly,
+\[\vv'(t) = \vr''(t) = \lim_{h \to 0} \frac{\vv(t+h)-\vv(t)}{h}\] is
+the instantaneous rate of change of the velocity of the object at time
+$t$, for those values of $t$ for which the limits exists, and thus
+$\vv'(t) = \va(t)$ is the acceleration of the moving object. 
+
+{\bf Note well:} Both the velocity and acceleration are \emph{vector
+  quantities}: they have magnitude and direction. By contrast, the
+magnitude of the velocity vector, $| \vv(t) |$, which is the \emph{speed} of
+the object at time $t$, is a scalar quantity.
+
+\subsection*{Computing Derivatives}
+
+As we learned in single variable calculus, computing derivatives from
+the definition is often difficult. Fortunately, properties of the
+limit make it straightforward to calculate the derivative of a
+vector-valued function similar to how we developed
+shortcut differentiation rules in calculus I. To see why, recall that
+the limit of a sum is the sum of the limits, and that we can remove
+constant factors from limits. Thus, as we observed in a particular
+example in Preview Activity \ref{PA:9.7}, if $\vr(t) = x(t) \vi + y(t)
+\vj + z(t) \vk$, it follows that
+\begin{align*} \vr'(t) &= \lim_{h \to 0} \frac{\vr(t+h)-\vr(t)}{h} \\
+&= \lim_{h \to 0} \frac{[x(t+h)-x(t)] \vi + [y(t+h)-y(t)] \vj +
+[z(t+h)-z(t)] \vk}{h} \\ &= \left(\lim_{h \to 0} \frac{x(t+h)-x(t)}{h}
+\right) \vi + \left( \lim_{h \to 0} \frac{y(t+h)-y(t)}{h} \right) \vj
++ \left( \lim_{h \to 0} \frac{z(t+h)-z(t)}{h} \right)\vk \\ &= x'(t)
+\vi + y'(t) \vj + z'(t) \vk.
+\end{align*}
+
+Thus, we can calculate the derivative of a vector-valued function by
+simply differentiating its components.
+
+\vspace*{5pt} \nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{If $\vr(t) = x(t) \vi + y(t) \vj + z(t) \vk$, then
+\[\frac{d}{dt} \vr(t) = x'(t) \vi + y'(t) \vj + z'(t) \vk\] for those
+values of $t$ at which $x$, $y$, and $z$ are differentiable.  }
+\hspace*{3 pt}} \vspace*{5pt}
+
+\input{activities/9.7.Act2}
+
+In first-semester calculus, we developed several important
+differentiation rules, including the constant multiple, product,
+quotient, and chain rules.  For instance, recall that we formally
+state the product rule as
+$$\frac{d}{dx}[f(x) \cdot g(x)] = f(x)\cdot g'(x) + g(x)\cdot f'(x).$$ 
+There are several analogous rules for vector-valued functions,
+including a product rule for scalar functions and vector-valued
+functions.  These rules, which are easily verified,  are summarized in
+the following theorem. 
+
+\vspace*{5pt} \nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{{\bf Theorem.}  Let $f$ be a differentiable
+real-valued function of a real variable $t$ and let $\vr$ and $\vs$ be
+differentiable vector-valued functions of the real variable $t$. Then
+\begin{enumerate}
+\item $\ds \frac{d}{dt} \left[\vr(t) + \vs(t) \right] = \vr'(t) +
+\vs'(t)$
+\item $\ds \frac{d}{dt} [f(t) \vr(t)] = f(t) \vr'(t) + f'(t) \vr(t)$
+\item $\ds \frac{d}{dt} \left[\vr(t) \cdot \vs(t) \right] = \vr'(t)
+\cdot \vs(t) + \vr(t) \cdot \vs'(t)$
+\item $\ds \frac{d}{dt} \left[\vr(t) \times \vs(t) \right] = \vr'(t)
+\times \vs(t) + \vr(t) \times \vs'(t)$
+\item $\ds \frac{d}{dt} \left[\vr(f(t))\right] = f'(t) \vr'(f(t))$.
+\end{enumerate} } \hspace*{3 pt}} \vspace*{5pt}
+
+{\bf Note well.}  When applying these properties, use care to
+interpret the quantities involved as either scalars or vectors.
+For example, $\vr(t) \cdot \vs(t)$ is a scalar function
+because we have taken the dot product of two vector-valued functions.
+However, $\vr(t) \times \vs(t)$ is a vector-valued function since we
+have taken the cross product of two vector-valued functions.
+
+\input{activities/9.7.Act8}
+
+%\input{activities/9.7.Act9}
+
+% To get a flavor for how to verify these properties, consider property
+% (4). Let ${\vr(t) = \langle x_r(t), y_r(t), z_r(t) \rangle}$ and
+% ${\vs(t) = \langle x_s(t), y_s(t), z_s(t) \rangle}$. Then
+% \begin{align*} %\frac{d}{dt}\left( \vr(t) \times \vs(t) \right) &=
+% \frac{d}{dt} \big([y_r(t)z_s(t)-y_s(t)z_r(t)] \vi +
+% [x_s(t)z_r(t)-x_r(t)z_s(t)] \vj \\ % &\qquad +
+% [x_r(t)y_s(t)-x_s(t)y_r(t)] \vk \big) \\ % &=
+% \left(\frac{d}{dt}[y_r(t)z_s(t)-y_s(t)z_r(t)]\right) \vi + \left(
+% \frac{d}{dt} [x_s(t)z_r(t)-x_r(t)z_s(t)] \right) \vj \\ % &\qquad +
+% \left(\frac{d}{dt} [x_r(t)y_s(t)-x_s(t)y_r(t)]\right) \vk \\ % &=
+% [(y_r(t)z'_s(t)+y_r'(t)z_s(t))-(y_s(t)z'_r(t)+y_s'(t)z_r(t)] \vi \\ %
+% &\qquad + [(x_s(t)z'_r(t)+x'_s(t)z_r(t))-(x_r(t)z'_s(t)+x'_r(t)z_s(t)]
+% \vj \\ % &\qquad +
+% [(x_r(t)y'_s(t)+x'_r(t)y_s(t))-(x_s(t)y'_r(t)+x'_s(t)y_r(t))] \vk \\ %
+% &= \left([y_r'(t)z_s(t)-y_s(t)z'_r(t)]\vi + [x_s(t)z'_r(t) -
+% x'_r(t)z_s(t)] \vj + [x'_r(t)y_s(t) - x_s(t)y'_r(t)] \vk \right) \\ %
+% &\qquad + \big([y_r(t)z'_s(t)-y_s'(t)z_r(t)] \vi +
+% [x'_s(t)z_r(t)-x_r(t)z'_s(t)] \vj \\ % &\qquad +
+% [x_r(t)y'_s(t)-x'_s(t)y_r(t)] \vk \big) \\ % &= \vr'(t) \times \vs(t)
+% + \vr(t) \times \vs'(t).
+% \end{align*} The verification of these properties is left as an
+% exercise for the reader.
+
+%\input{activities/9.7.Act3}
+
+\subsection*{Tangent Lines}
+
+One of the most important ideas in first-semester calculus is that a
+differentiable function is \emph{locally linear}: that is, when viewed
+up close, the curve generated by a differentiable function looks very
+much like a line.  Indeed, when we zoom in sufficiently far on a
+particular point, the curve looks indistinguishable from its tangent
+line.
+
+In the same way, we expect that a smooth curve in 3-space will be
+locally linear.  In the following activity, we investigate how to find
+the tangent line to such a curve.  Recall from our work in
+Section~\ref{S:9.5.Lines_Planes} that the vector equation of a line that
+passes through the point at the tip of the vector $\vL_0 = \langle
+x_0, y_0, z_0 \rangle$ in the direction of the vector $\vu = \langle
+a, b, c \rangle$ can be written as
+$$\vL(t) = \vL_0 + t \vu.$$
+In parametric form, the line $\vL$ is given by
+$$x(t) = x_0 + at, \ \ y(t) = y_0 + bt, \ \ z(t) = z_0 + ct.$$
+
+\newpage
+
+\input{activities/9.7.Act4}
+
+We see that our work in Activity~\ref{A:9.7.4} can be generalized.
+Given a differentiable vector-valued function $\vr(t)$, the tangent
+line to the curve at the input value $a$ is given by
+\begin{equation} \label{E:TanLineVecFxn} \vL(t) = \vr(a) + t \vr'(a).
+\end{equation} Here we see that because the tangent line is determined
+entirely by a given point and direction, the point is provided by the
+function $\vr(t)$, evaluated at $t = a$, while the direction is
+provided by the derivative, $\vr'(t)$, again evaluated at $t = a$.
+Note how analogous the formula for $\vL(t)$ is to the tangent line
+approximation from single-variable calculus: in that context, for a
+given function $y = f(x)$ at a value $x = a$, we found that the
+tangent line can be expressed by the linear function $y = L(x)$ whose
+formula is
+$$L(x) = f(a) + f'(a)(x-a).$$
+Equation~\eqref{E:TanLineVecFxn} for the tangent line $\vL(t)$ to the
+vector-valued function $\vr(t)$ is nearly identical.  Indeed, because
+there are multiple parameterizations for a single line, it is even
+possible\footnote{In Equation~\eqref{E:TanLineVecFxn}, $\vL(0) =
+\vr(a)$, so the line's parameterization ``starts'' at $t = 0$.  When
+we write the parameterization in the form of
+Equation~\eqref{E:TanLineVecFxn2}, $\vL(a) = \vr(a)$, so the line's
+parameterization ``starts'' at $t = a$.} to write the parameterization
+as
+\begin{equation} \label{E:TanLineVecFxn2} \vL(t) = \vr(a) + (t-a)
+\vr'(a).
+\end{equation}
+
+As we will learn more in Chapter 10, a smooth surface in 3-space is
+also locally linear. That means that the surface will look like a
+plane, which we call its {\em tangent plane}, as we zoom in on the
+graph.  It is possible to use tangent lines to traces of the surface
+to generate a formula for the tangent plane; see
+Exercise~\ref{Ez:9.7.3} at the end of this section for more details.
+
+%\input{activities/9.7.Act5}
+
+
+
+\subsection*{Integrating a Vector-Valued Function}
+
+Recall from single variable calculus that an antiderivative of a
+function $f$ of the independent variable $x$ is a function $F$ that
+satisfies $F'(x) = f(x)$. We then defined the indefinite integral
+$\int f(x) \ dx$ to be the general antiderivative of $f$.  Recall that
+the general antiderivative includes an added constant $C$ in order to
+indicate that the general antiderivative is in fact an entire family
+of functions. We can do the similar work with vector-valued functions.
+
+\vspace*{5pt} \nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{definition} An
+\textbf{antiderivative}\index{vector-valued function!antiderivative}
+of a vector-valued function $\vr$ is a vector-valued function $\vR$
+such that
+\[\vR'(t) = \vr(t).\]
+
+The \textbf{indefinite integral}\index{vector-valued
+function!indefinite integral} $\int \vr(t) \ dt$ of a vector-valued
+function $\vr$ is the general antiderivative of $\vr$ and represents the
+collection of all antiderivatives of $\vr$. \end{definition} }
+\hspace*{3 pt}} \vspace*{5pt}
+
+The same reasoning that allows us to differentiate a vector-valued
+function componentwise applies to integrating as well. Recall that the
+integral of a sum is the sum of the integrals and also that we can
+remove constant factors from integrals. So, given ${\vr(t) = x(t) \vi
++ y(t) \vj + z(t) \vk}$, it follows that we can integrate
+componentwise. Expressed more formally,
+
+\vspace*{5pt} \nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{If $\vr(t) = x(t) \vi + y(t) \vj + z(t) \vk$, then
+\[\int \vr(t) \ dt = \left(\int x(t) \ dt\right) \vi + \left( \int
+y(t) \ dt \right) \vj + \left(\int z(t) \ dt\right) \vk.\] }
+\hspace*{3 pt}} \vspace*{5pt}
+
+%\input{activities/9.7.Act6}
+
+In light of being able to integrate and differentiate componentwise
+with vector-valued functions, we can solve many problems that are
+analogous to those we encountered in single-variable calculus.  For
+instance, recall problems where we were given an object moving along
+an axis with velocity function $v(t)$ and an initial position $s(0)$.
+In that context, we were able to differentiate $v$ in order to find
+acceleration, and integrate $v$ and use the initial condition in order
+to find the position function $s$.  In the following activity, we
+explore similar ideas with vector-valued functions.
+
+\input{activities/9.7.Act7}
+
+
+\subsection*{Projectile Motion}
+
+%\input{previews/9.7.PA2}
+
+Any time that an object is launched into the air with a given velocity
+and launch angle, the path the object travels is determined almost
+exclusively by the force of gravity.  Whether in sports such as
+archery or shotput, in military applications with artillery, or in
+important fields like firefighting, it is important to be able to know
+when and where a launched projectile will land.  We can use our
+knowledge of vector-valued functions in order to completely determine
+the path traveled by an object that is launched from a given position
+at a given angle from the horizontal with a given initial velocity.
+
+\begin{figure}[ht]
+\begin{center} 
+%\resizebox{!}{1.0in}{\includegraphics{9_7_Motion}}
+\includegraphics{figures/fig_9_7_projectile.eps}
+\caption{Projectile motion.}
+\label{F:9.7.Motion}
+\end{center}
+\end{figure}
+
+Assume we fire a projectile from a launcher and the only force acting
+on the fired object is the force of gravity pulling down on the
+object.  That is, we assume no effect due to spin, wind, or air
+resistance.  With these assumptions, the motion of the object will be
+planar, so we can also assume that the motion occurs in
+two-dimensional space. Suppose we launch the object from an initial
+position $(x_0, y_0)$ at an angle $\theta$ with the positive $x$-axis
+as illustrated in Figure \ref{F:9.7.Motion}, and that we fire the
+object with an initial speed of $v_0 = |\vv(0)|$, where $\vv(t)$ is
+the velocity vector of the object at time $t$.  Assume $g$ is the
+positive constant acceleration force due to gravity, which acts to
+pull the fired object toward the ground (in the negative $y$
+direction). Note particularly that there is no external force acting
+on the object to move it in the $x$ direction.
+
+We first observe that since gravity only acts in the downward
+direction and that the acceleration due to gravity is constant,
+the acceleration vector is $\langle 0, -g
+\rangle$.  That is, $\va(t) = \langle 0, -g \rangle$.  We may use this
+fact about acceleration, together with the initial position and
+initial velocity in order to fully determine the position function
+$\vr(t)$ of the object at time $t$.  In Exercise~\ref{Ez:9.7.5}, you
+can work through the details to show that the following general
+formula holds.
+
+%\input{activities/9.7.Act8} 
+% Ultimately, we want to find the position
+% of the object as it travels through space so that we can determine
+% what initial velocity and launch angle to provide so that we hit our
+% target.  %\input{activities/9.7.Act9} %Now we can find the position
+% vector for the object at any time.  %\input{activities/9.7.Act10} %We
+% summarize the result of Activities \ref{A:9.7.7} through
+% \ref{A:9.7.9}.
+
+\vspace*{5pt} \nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{If an object is launched from a point $(x_0,y_0)$
+with initial velocity $v_0$ at an angle $\theta$ with the horizontal,
+then the position of the object at time $t$ is given by
+\[\vr(t) = \left\langle v_0 \cos(\theta)t + x_0, -\frac{g}{2}t^2 + v_0
+\sin(\theta)t + y_0 \right\rangle.\] This assumes that the only force
+acting on the object is the acceleration $g$ due to
+gravity.\index{projectile motion!parametric equations} } \hspace*{3
+pt}} \vspace*{5pt}
+
+%\input{activities/9.7.Act11}
+%\clearpage
+
+\begin{summary}
+\item If $\vr$ is a vector-valued function, then the derivative of
+$\vr$ is defined by
+\[ \vr'(t) = \lim_{h \to 0} \frac{\vr(t+h)-\vr(t)}{h}\] for those
+values of $t$ at which the limit exists, and is computed componentwise
+by the formula
+\[ \vr'(t) = x'(t) \vi + y'(t) \vj + z'(t) \vk \] for those values of
+$t$ at which $x$, $y$, and $z$ are differentiable, where $\vr(t) =
+x(t) \vi + y(t) \vj + z(t) \vk$.
+
+\item The derivative $\vr'(t)$ of the vector-valued function $\vr$
+tells us the instantaneous rate of change of $\vr$ with respect to
+time, $t$, which can be interpreted as a direction vector for the line
+tangent to the graph of $\vr$ at the point $\vr(t)$, or also as the
+instantaneous velocity of an object traveling along the graph defined
+by $\vr(t)$ at time $t$.
+ 
+\item An antiderivative of $\vr$ is a vector-valued function $\vR$
+such that $\vR'(t) = \vr(t)$.  The indefinite integral $\int \vr(t) \
+dt$ of a vector-valued function $\vr$ is the general antiderivative of
+$\vr$ (which is a collection of all of the antiderivatives of $\vr$,
+with any two antiderivatives differing by at most a constant vector).
+Moreover, if $\vr(t) = x(t) \vi + y(t) \vj + z(t) \vk$, then
+\[\int \vr(t) \ dt = \left(\int x(t) \ dt\right) \vi + \left( \int
+y(t) \ dt \right) \vj + \left(\int z(t) \ dt\right) \vk.\]
+
+\item If an object is launched from a point $(x_0,y_0)$ with initial
+velocity $v_0$ at an angle $\theta$ with the horizontal, then the
+position of the object at time $t$ is given by
+\[\vr(t) = \left\langle v_0 \cos(\theta)t + x_0, -\frac{g}{2}t^2 + v_0
+\sin(\theta)t + y_0 \right\rangle,\] provided that that the only force
+acting on the object is the acceleration $g$ due to gravity.
+\end{summary}
+
+
+\nin \hrulefill
+
+\newpage
+
+\input{exercises/9.7.Vector_Valued_Functions_Derivatives(Ex)}
+

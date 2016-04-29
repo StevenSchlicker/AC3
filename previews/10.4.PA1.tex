@@ -1,0 +1,86 @@
+\begin{pa} \label{PA:10.4} In this section we extend the notion of local linearity from functions of one variable to functions of two variables.
+\ba
+    \item Review the concept of local linearity from single variable calculus (look it up in your first semester calculus book or on-line) and explain what it means for a function of a single variable to be locally linear at a point. What is the linearization of a single variable function at a point and how do we use this linearization?
+
+
+
+\begin{comment}
+
+A function $f$ of the variable $x$ is locally linear at the point $(a,f(a))$ if the graph of $f$ ``looks" like a line (the tangent line) as we zoom in on it near the point $(a,f(a))$. Recall that the line tangent to $f$ at $(a,f(a))$ has equation
+\[L(x) = f(a) + f'(a)(x-a).\]
+The function $L$ is called the \emph{linearization} of $f$ at $a$. The linearization $L(x)$ is a good approximation of $f(x)$ for values of $x$ close to $a$.
+
+\end{comment}
+
+    \item Let $f(x,y) = x^2-y^2$. Use the program CalcPlot3D\footnote{Many thanks to Professor Paul Seeburger at Monroe Community College for this fantastic program.} at \url{http://web.monroecc.edu/manila/webfiles/calcNSF/JavaCode/CalcPlot3D.htm} (or some other 3D plotter with zooming capability) to draw a graph of this surface on the domain $[-2,2] \times [-2,2]$ (enter your function as Function 1 and make sure the box to select this function is checked). Use the menu box at the far right to set the axes. Choose the $z$ window coordinates so that the surface fits in the graphing box. Click on the $\oplus$ magnifying glass to zoom in on this surface around the origin. Explain what you see and how this is related to local linearity from first semester calculus.
+
+
+
+\begin{comment}
+
+As we magnify the graph of $f$ around a point, the surface looks like a plane -- a tangent plane to the surface at that point. This is \emph{local linearity} of a function of two variables. The tangent plane plays the role for functions of two variables that the tangent line played in single variable calculus. If we let $L(x,y)$ be the plane tangent to $f$ at the point $(a,b)$, then for $(x,y)$ close to $(a,b)$ we have
+\[f(x,y) \approx L(x,y).\]
+
+
+
+\end{comment}
+
+        \item Keep the same function $f$ from part (b). (It might be easier to visualize our work from this point on if you select ``View Settings" and then ``Make Surfaces Transparent". You can always toggle this option to make the surfaces opaque if you don't like it.) Now we want to explore the behavior of this function around the point $(1,1)$. Select ``Show a trace point on the surface" and move the point in the domain to $(1,1)$. Alternatively, use the Trace Menu to enter a trace point.
+        \begin{enumerate}[i.]
+        \item In the applet select ``Show a fx tangent line at point" to see a picture of the trace in the $x$ direction through the point $(1,1)$, along with a picture of the line tangent to the surface in this direction. What is the slope of this tangent line at this point? What does this slope tell us about the relationship between $x$ and $f(x,y)$ at this point? Explain why the vector $\langle 1,0,f_x(1,1) \rangle$ is a direction vector for this tangent line.
+
+
+
+\begin{comment}
+
+The slope of this tangent line is $f_x(1,1) = 2x\bigm|_{(1,1)} = 2$. This slope tells us how the $f$ values on the tangent line change for every one unit increase in $x$ from this point, keeping $y$ constant. So if we keep $y$ constant and increase $x$ by 1, $f$ increases by $f_x(1,1)$. This means that the vector $\langle 1,0,f_x(1,1) \rangle$ is a direction vector for this tangent line.
+
+
+
+\end{comment}
+
+         \item In the applet select ``Show a fy tangent line at point". Find a direction vector for this tangent line to $f$ in the $y$ direction at the point $(1,1)$.
+
+
+
+\begin{comment}
+
+The slope of this tangent line is $f_y(1,1) = -2y\bigm|_{(1,1)} = -2$, so, by the same reasoning as in the previous part, the vector $\langle 0,1,f_y(1,1) \rangle$ is a direction vector for this tangent line.
+
+
+
+\end{comment}
+
+        \item The tangent lines in i. and ii. form a plane. How can we use the direction vectors for these tangent lines found in parts i. and ii. to find a normal vector for this plane? Find an equation of the plane containing these two tangent lines.
+
+
+
+\begin{comment}
+
+The two vectors $\langle 1,0,f_x(1,1) \rangle = \langle 1,0,2 \rangle$ and $\langle 0,1,f_y(1,1) \rangle = \langle 0,1,-2 \rangle$ are parallel to the plane, so a normal vector to the plane is
+\[\langle 1,0,f_x(1,1) \rangle \times \langle 0,1,f_y(1,1) \rangle = \langle 1,0,2 \rangle \times \langle 0,1,-2 \rangle = \langle -2,2,1 \rangle.\]
+Since the point $(1,1,f(1,1)) = (1,1,0)$ is in the plane, an equation of this plane is
+\[-2(x-1)+2(y-1)+z = 0.\]
+
+
+
+\end{comment}
+
+
+        \item The plane found in part iii. of this activity is the \emph{tangent plane} to the surface $f$ at the point $(1,1)$. Select the option ``Show the tangent plane at point". Then reformat the axes so that the surface is drawn over a small interval containing the point $(1,1)$. Compare the graph of the surface to the graph of the tangent plane. What do you see?
+
+
+
+\begin{comment}
+
+As we plot the surface over a smaller and smaller domain containing the point $(1,1)$, the graph of the surface and the graph of the tangent plane are indistinguishable from each other. So $f$ is well approximated by its tangent plane for points $(x,y)$ close to $(1,1)$.
+
+
+
+\end{comment}
+        \end{enumerate}
+    \ea
+
+
+
+\end{pa} \afterpa 

@@ -1,0 +1,44 @@
+\begin{activity} \label{A:1.2.7}
+
+\begin{figure}[h]
+\begin{center}
+\begin{minipage}{3in}
+\begin{center}
+\resizebox{!}{2.25in}{\includegraphics{figures/1_2_Vector_magnitude1}}
+\end{center}
+\caption{The magnitude of a specific vector}
+\label{F:vector_magnitude}
+\end{minipage}
+\begin{minipage}{3in}
+\begin{center}
+\resizebox{!}{2.25in}{\includegraphics{figures/1_2_Vector_magnitude2}}
+\end{center}
+\caption{The magnitude of an arbitrary vector}
+\label{F:vector_magnitude2}
+\end{minipage}
+\end{center}
+\end{figure}
+	\ba
+	\item Let $A = (2,3)$ and $B = (4,7)$ as shown in Figure \ref{F:vector_magnitude}. Calculate $|\overrightarrow{AB}|$.
+
+
+	\item Let $\vv = \langle v_1, v_2 \rangle$ be the vector in $\R^2$ with components $v_1$ and $v_2$ as shown in Figure \ref{F:vector_magnitude2}. Use the distance formula to find a general formula for $|\vv|$.
+
+
+	\item Let $\vv = \langle v_1, v_2, v_3 \rangle$ be a vector in $\R^3$. Use the distance formula to find a general formula for $|\vv|$.
+
+
+	\ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

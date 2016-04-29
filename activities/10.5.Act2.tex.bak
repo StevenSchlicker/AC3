@@ -1,0 +1,24 @@
+\begin{activity} \label{A:2.5.2} Find the indicated derivative.
+	\ba	
+	\item $\frac{\partial f}{\partial w}$ if $f(x,y) = 2x^2y$, $x=w+z^2$, and $y=\frac{2z+1}{w}$
+
+
+
+	\item $\frac{\partial f}{\partial v}$ if $f(x,y,z) = 2x^2y+z^3$, $x=u-v+2w$, $y=w2^v-u^3$, and $z = u^2-v$
+
+
+
+	\ea
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

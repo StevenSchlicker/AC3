@@ -1,0 +1,18 @@
+\begin{activity} \label{A:2.4.4} Let $f$ represent the vertical displacement in centimeters from the rest position of a string (like a guitar string) as a function of the distance $x$ in centimeters from the fixed left end of the string and $y$ the time in seconds after the string has been plucked.\footnote{An interesting video of this can be seen at \url{https://www.youtube.com/watch?v=TKF6nFzpHBUA}.} A simple model for $f$ could be
+\[f(x,y) = \cos(x)\sin(2y).\]
+Use the differential (\ref{eq:differential}) to approximate how much more this vibrating string is vertically displaced from its position at $(a,b) = \left(\frac{\pi}{4}, \frac{\pi}{3} \right)$ if we decrease $a$ by $0.01$ cm and increase the time by $0.1$ seconds. Compare to the value of $f$ at the point $\left(\frac{\pi}{4}-0.01, \frac{\pi}{3}+0.1\right)$.
+
+
+
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

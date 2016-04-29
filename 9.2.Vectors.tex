@@ -1,0 +1,469 @@
+\section{Vectors} \label{S:9.2.Vectors}
+
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+\item What is a vector?
+\item What does it mean for two vectors to be equal?
+\item How do we add two vectors together and multiply a vector by a scalar?
+\item How do we determine the magnitude of a vector?  What is a unit vector, and how do we find a unit vector in the direction of a given vector?
+\end{goals}} \hspace*{3 pt}}
+
+\subsection*{Introduction}
+
+If we are at a point $x$ in the domain of a function of one variable,
+there are only two directions in which we can move: in the positive or
+negative $x$-direction. If, however, we are at a point $(x,y)$ in the domain of
+a function of two variables, there are many
+directions in which we can move. Thus, it is important for us to have
+a means to indicate direction, and we will do so using vectors.
+
+\input{previews/9.2.PA1}
+
+%\newpage
+
+\begin{figure}[ht]
+\begin{center}
+\resizebox{!}{5.9in}{\includegraphics{figures/9_2_GVSU_map.pdf}}
+%\resizebox{!}{6.0in} [height=6.5in, width=5.0in] trim left bottom right top [trim=0.1cm 0.5cm 01.cm 0.5cm, clip]
+\end{center}
+\caption{Grand Valley State University Allendale campus map.} 
+\label{F:9.2.GVSU}
+\end{figure}
+
+%\newpage
+
+\subsection*{Representations of Vectors}
+
+Preview Activity \ref{PA:9.2} shows how we can record the magnitude
+and direction of a change in position using an ordered pair of numbers
+$\langle x,y\rangle$. There are many other quantities, such as force
+and velocity, that possess the attributes of magnitude and direction,
+and we will call each such quantity a {\em vector}.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+  \parbox{6.25 in}{\begin{definition} A
+      \textbf{vector}\index{vector!definition} is any quantity
+      that possesses the attributes of magnitude and
+      direction. \end{definition} } \hspace*{3 pt}} \vspace*{5pt}
+
+We can represent a vector geometrically as a directed line segment,
+with the magnitude as the length of the segment and an arrowhead
+indicating direction, as shown in Figure \ref{F:9.2.vectors.single}.
+
+\begin{figure}[ht]
+  \begin{center}
+    \begin{minipage}{2.5in}
+      \begin{center}
+        % \resizebox{!}{1.75in}{\includegraphics{9_2_Vector1}}
+        % fig1.15.py
+        \includegraphics{figures/fig_9_2_single.eps}
+      \end{center}
+      \caption{A vector.}
+      \label{F:9.2.vectors.single}
+    \end{minipage}
+    \begin{minipage}{3.3in}
+      \begin{center}
+        % \resizebox{!}{1.75in}{\includegraphics{9_2_Vector1}}
+        % fig1.15.a.py
+        \includegraphics{figures/fig_9_2_multiple.eps}
+      \end{center}
+      \caption{Representations of the same vector.}
+      \label{F:9.2.vectors.many}
+    \end{minipage}
+  \end{center}
+\end{figure}
+
+
+According to the definition, a vector possesses the attributes of
+length (magnitude) and direction; the vector's position, however, is
+not mentioned.  Consequently, we regard as equal any two vectors having the
+same magnitude and direction, as shown in Figure
+\ref{F:9.2.vectors.many}.
+
+\vspace*{5pt}
+\nin 
+\begin{center}
+  \framebox{
+    \parbox{5.25 in}{ 
+      \hfill
+      Two vectors are equal provided they have the
+      same magnitude and direction.  
+      \hfill
+    }
+  }
+\end{center}
+\vspace*{5pt}
+
+This means that the same vector may be drawn in the plane in many
+different ways.  For instance, suppose that we would like to draw the
+vector $\langle 3, 4\rangle$, which
+represents a horizontal
+change of three units and a vertical change of four units.
+We may place the \emph{tail} of the vector (the point from which the
+vector originates) at the origin and the \emph{tip} (the terminal
+point of the vector) at $(3,4)$, as illustrated in Figure
+\ref{F:9.2.vectors2}.  A vector with its tail at the origin is
+said to be in \emph{standard position}.
+
+\begin{figure}[ht]
+  \begin{center}
+    \begin{minipage}{3.0in}
+      \begin{center}
+        % \resizebox{!}{1.75in}{\includegraphics{9_2_Vector2}}
+        % fig1.15.py
+%        \includegraphics{figures/fig-9-16.eps}
+        \includegraphics{figures/fig_9_2_std_pos.eps}
+      \end{center}
+      \caption{A vector in standard position}
+      \label{F:9.2.vectors2}
+    \end{minipage}
+    \begin{minipage}{3.0in}
+      \begin{center}
+        % \resizebox{!}{1.75in}{\includegraphics{9_2_Vector3}}
+        % fig1.15.py
+%        \includegraphics{figures/fig-9-17.eps}
+        \includegraphics{figures/fig_9_2_btw_pts.eps}
+      \end{center}
+      \caption{A vector between two points}
+      \label{F:9.2.vectors3}
+    \end{minipage}
+  \end{center}
+\end{figure}
+
+Alternatively, we may place the tail of the vector $\langle
+3,4\rangle$ at another point, such as $Q(1,1)$.  After a displacement
+of three units to the right and four units up, the tip of
+the vector is at the point $R(4,5)$ (see
+Figure \ref{F:9.2.vectors3}).
+
+In this example, the vector led to the directed line segment from $Q$
+to $R$, which we denote as $\overrightarrow{QR}$.  We may also
+turn the situation around: given the two points $Q$ and $R$, we obtain
+the vector $\langle 3,4\rangle$ because we move horizontally three
+units and vertically four units to get from $Q$ to $R$.  In other
+words, $\overrightarrow{QR} = \langle 3,4\rangle$.  In general, the
+vector $\overrightarrow{QR}$ from the point $Q = (q_1, q_2)$ to $R = (r_1,
+r_2)$ is found by taking the difference of coordinates, so that
+\[\overrightarrow{QR} = \langle r_1-q_1, r_2-q_2 \rangle.\]
+
+We will use boldface letters to represent vectors, such
+as $\vv = \langle 3, 4 \rangle$, to distinguish them from scalars. The
+entries of a vector are called its \emph{components}; in the vector
+$\langle 3, 4 \rangle$, the $x$ component is 3 and the $y$
+component is 4. We use pointed brackets $\langle \ , \rangle$ and the term
+\emph{components} to distinguish a vector from a point $( \ , )$ and
+its \emph{coordinates}.  There is, however, a close connection between vectors
+and points.  Given a point $P$, we will frequently consider the vector
+$\overrightarrow{OP}$ from the origin $O$ to $P$.  For instance, if
+$P=(3,4)$, then $\overrightarrow{OP}=\langle 3,4\rangle$ as in Figure \ref{F:9.2.vectors4}.  
+In this way, we think of a point $P$ as defining a vector
+$\overrightarrow{OP}$ whose components agree with the coordinates of
+$P$.
+
+\begin{figure}[ht]
+  \begin{center}
+%    \includegraphics{figures/fig-9-15-b.eps}
+    \includegraphics{figures/fig_9_2_pt_def.eps}
+      \caption{A point defines a vector}
+      \label{F:9.2.vectors4}    
+
+  \end{center}
+\end{figure}
+
+While we often illustrate vectors in the plane since it is easier
+to draw pictures, different situations call for the use of vectors
+in three or more dimensions.  For instance, a
+vector $\vv$ in $n$-dimensional space, $\R^n$, has $n$
+components and may be represented as
+\[\vv = \langle v_1, v_2, v_3,  \ldots, v_n \rangle.\]
+
+The next activity will help us to become accustomed to vectors and
+operations on vectors in three dimensions.
+
+\input{activities/9.2.Act1}
+
+\subsection*{Equality of Vectors}
+
+Because location is not mentioned in the
+definition of a vector, any two vectors that have the same
+magnitude and direction are equal. It is helpful to have an
+algebraic way to determine when this occurs. That is, if we know the
+components of two vectors $\vu$ and $\vv$, we will want to be able to
+determine algebraically when $\vu$ and $\vv$ are equal. There is an
+obvious set of conditions that we use.
+
+%\input{activities/9.2.Act2}
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+  \parbox{6.25 in}{Two vectors $\vu = \langle u_1, u_2 \rangle$ and $\vv = \langle v_1, v_2 \rangle$ in $\R^2$ are equal if and only if their corresponding components are equal:  $u_1 = v_1$ and $u_2 = v_2$.  More generally, two vectors $\vu = \langle u_1, u_2, \ldots, u_n\rangle$ and $\vv = \langle v_1, v_2, \ldots, v_n \rangle$ in $\R^n$ are equal if and only if $u_i = v_i$ for each possible value of $i$.
+ } \hspace*{3 pt}} \vspace*{5pt}
+
+\subsection*{Operations on Vectors}
+
+Vectors are not numbers, but we can now represent them with components
+that are real numbers. As such, we naturally wonder if it is possible
+to add two vectors together, multiply two vectors, or combine vectors
+in any other ways. In this section, we will study two
+operations on vectors: vector addition and scalar multiplication. To
+begin, we investigate a natural way to add two vectors together, as
+well as to multiply a vector by a scalar.
+
+\input{activities/9.2.Act3}
+
+%There is also a natural way to multiply a vector by a scalar (a real number).
+%\input{activities/9.2.Act4}
+
+We can now add vectors and multiply vectors by scalars, and thus we
+can add together scalar multiples of vectors. This allows us to define
+\emph{vector subtraction}\index{vector!subtraction}, $\vv - \vu$, as
+the sum of $\vv$ and $-1$ times $\vu$, so that
+\[\vv - \vu = \vv + (-1)\vu.\]
+
+%\input{activities/9.2.Act5}
+
+
+Using vector addition and scalar multiplication, we will often
+represent vectors in terms of the special vectors $\vi =
+\langle 1, 0 \rangle$ and $\vj = \langle 0,1 \rangle$.  For instance,
+we can write 
+the vector $\langle a, b \rangle$ in $\R^2$ as
+\[\langle a, b \rangle = a\langle 1, 0 \rangle + b\langle 0, 1 \rangle = a\vi + b \vj,\]
+which means that
+\[\langle 2, -3 \rangle = 2\vi - 3\vj.\]
+In the context of $\R^3$, we let $\vi = \langle 1, 0, 0 \rangle$, $\vj = \langle 0,1,0 \rangle$, and $\vk = \langle 0,0,1 \rangle$, and we can write the vector $\langle a, b, c \rangle$ in $\R^3$ as
+\[\langle a, b,c \rangle = a\langle 1, 0,0 \rangle + b\langle 0, 1,0 \rangle + c\langle 0,0,1 \rangle = a\vi + b \vj + c\vk.\]
+The vectors $\vi$, $\vj$, and $\vk$ are called the \emph{standard unit vectors}\footnote{As we will learn momentarily, unit vectors have length 1.}, and are important in the physical sciences.
+
+\subsection*{Properties of Vector Operations}
+
+We know that the scalar sum $1+2$ is equal to the scalar sum
+$2+1$. This is called the \emph{commutative} property of scalar
+addition. Any time we define operations on objects (like addition of
+vectors) we usually want to know what kinds of properties the
+operations have. For example, is addition of vectors a commutative
+operation? To answer this question we take two \emph{arbitrary}
+vectors $\vv$ and $\vu$ and add them together and see what
+happens. Let $\vv = \langle v_1, v_2 \rangle$ and $\vu = \langle u_1,
+u_2 \rangle$. Now we use the fact that $v_1$, $v_2$, $u_1$, and $u_2$
+are scalars, and that the addition of scalars is commutative to see
+that
+\[\vv + \vu = \langle v_1, v_2 \rangle + \langle u_1, u_2 \rangle = \langle v_1+u_1, v_2 + u_2 \rangle = \langle u_1+v_1, u_2+v_2 \rangle = \langle u_1, u_2 \rangle + \langle v_1, v_2 \rangle = \vu + \vv.\]
+So the vector sum is a commutative operation. Similar arguments can be
+used to show the following properties of vector addition and scalar
+multiplication. 
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{Let $\vv$, $\vu$, and $\vw$ be vectors in $\R^n$ and let $a$ and $b$ be scalars. Then
+\begin{enumerate}
+\item $\vv + \vu = \vu + \vv$
+\item $(\vv + \vu) + \vw = \vv + (\vu + \vw)$
+\item The vector $\vzero = \langle 0, 0, \ldots, 0 \rangle$ has the
+  property that $\vv + \vzero = \vv$. The vector $\vzero$ is called
+  the \textbf{zero vector}. 
+\item  $(-1)\vv + \vv = \vzero$. The vector $(-1)\vv = -\vv$ is called
+  the \textbf{additive inverse} of the vector $\vv$. 
+\item $(a+b) \vv = a\vv + b\vv$
+\item $a(\vv + \vu) = a\vv + a\vu$
+\item $(ab) \vv = a(b\vv)$
+\item $1 \vv = \vv$.
+\end{enumerate}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+We verified the first property for vectors in $\R^2$; it is
+straightforward to verify that the rest of the eight properties just
+noted hold for all 
+vectors in $\R^n$. 
+
+\subsection*{Geometric Interpretation of Vector Operations}
+
+Next, we explore a geometric interpretation of vector addition and
+scalar multiplication that allows us to visualize these operations.
+Let $\vu = \langle 4, 6 \rangle$ and $\vv = \langle 3, -2
+\rangle$. Then $\vw = \vu + \vv = \langle 7, 4 \rangle$, as shown on the left in
+Figure \ref{F:9.2.vector_sum}.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_9_2_operations.eps}
+  \caption{A vector sum (left), summing displacements (center), the parallelogram law (right)}
+  \label{F:9.2.vector_sum}
+  \end{center}
+\end{figure}
+
+% \begin{figure}[ht]
+% \begin{center}
+% \begin{minipage}{3in}
+% \begin{center}
+% %\resizebox{!}{2.5in}{\includegraphics{9_2_Vector_sum1}}
+% \includegraphics{figures/fig-9-18.eps}
+% \end{center}
+% \caption{{A vector sum}}
+% \label{F:9.2.vector_sum}
+% \end{minipage}
+% \begin{minipage}{3in}
+% \begin{center}
+% %\resizebox{!}{2.5in}{\includegraphics{9_2_Vector_sum2}}
+% \includegraphics{figures/fig-9-18-a.eps}
+% \end{center}
+% \caption{{Summing displacements}}
+% \label{F:9.2.vector_sum2}
+% \end{minipage}
+% \end{center}
+% \end{figure}
+
+If we think of these vectors as displacements in the plane, we 
+find a geometric way to envision vector addition.  For instance, the
+vector $\vu + \vv$ will represent the displacement obtained by
+following the displacement $\vu$ with the displacement $\vv$.  We may
+picture this by placing the tail of $\vv$ at the tip of $\vu$, as seen
+in the center of Figure \ref{F:9.2.vector_sum}.
+
+Of course, vector addition is commutative so we obtain the same sum if
+we place the tail of $\vu$ at the tip of $\vv$.
+We therefore see that $\vu+\vv$ appears as
+the 
+diagonal of the
+parallelogram\index{vector!sum, parallelogram} determined by $\vu$ and
+$\vv$, as shown on the right of Figure \ref{F:9.2.vector_sum}. 
+
+% \begin{figure}[ht]
+% \begin{center}
+% \begin{minipage}{3in}
+% \begin{center}
+% %\resizebox{!}{2.5in}{\includegraphics{9_2_Vector_sum1}}
+% \includegraphics{figures/fig-9-18-b.eps}
+% \end{center}
+% \caption{{Summing displacements}}
+% \label{F:9.2.vector_sum3}
+% \end{minipage}
+% \begin{minipage}{3in}
+% \begin{center}
+% %\resizebox{!}{2.5in}{\includegraphics{9_2_Vector_sum2}}
+% \includegraphics{figures/fig-9-19.eps}
+% \end{center}
+% \caption{{$\vu$ and $\vv$} form a parallelogram}
+% \label{F:9.2.vector_sum4}
+% \end{minipage}
+% \end{center}
+% \end{figure}
+
+Vector subtraction has a similar interpretation.  On the left in
+Figure \ref{F:9.2.vector_sum5}, we see vectors $\vu$, $\vv$, and $\vw =
+\vu + \vv$.  If we rewrite $\vv = \vw - \vu$, we have the arrangement
+of Figure \ref{F:9.2.vector_sum6}.  In other words, to form the
+difference $\vw-\vu$, we draw a vector from the tip of $\vu$ to the
+tip of $\vw$. 
+
+\begin{figure}[ht]
+  \begin{center}
+    \begin{minipage}{2.5in}
+%    \begin{minipage}{2in}
+      \begin{center}
+        % \resizebox{!}{2.5in}{\includegraphics{9_2_Vector_sum1}}
+%        \includegraphics{figures/fig-9-19-a.eps}
+        \includegraphics{figures/fig_9_2_addition.eps}
+      \end{center}
+      \caption{Vector addition}
+      \label{F:9.2.vector_sum5}
+    \end{minipage}
+    \begin{minipage}{2.5in}
+%    \begin{minipage}{2in}
+      \begin{center}
+        % \resizebox{!}{2.5in}{\includegraphics{9_2_Vector_sum2}}
+%        \includegraphics{figures/fig-9-19-b.eps}
+        \includegraphics{figures/fig_9_2_subtraction.eps}
+      \end{center}
+      \caption{Vector subtraction}
+      \label{F:9.2.vector_sum6}
+    \end{minipage}
+  \end{center}
+\end{figure}
+
+In a similar way, we may geometrically represent a scalar multiple of a
+vector.  For instance, if $\vv=\langle 2,3\rangle$, then
+$2\vv = \langle 4,6\rangle$.  As shown in Figure
+\ref{F:9.2.vector_sum7}, multiplying $\vv$ by 2 leaves the direction
+unchanged, but stretches $\vv$ by 2.  Also, $-2\vv = \langle -4,
+-6\rangle$, which shows that multiplying by a negative scalar gives a
+vector pointing in the opposite direction of $\vv$.
+
+\newpage
+
+\begin{figure}[ht]
+  \begin{center}
+    \begin{minipage}{3in}
+      \begin{center}
+        % \resizebox{!}{2.5in}{\includegraphics{9_2_Vector_sum1}}
+%        \includegraphics{figures/fig-9-19-scalar.eps}
+        \includegraphics{figures/fig_9_2_scalar.eps}
+      \end{center}
+      \caption{Scalar multiplication}
+      \label{F:9.2.vector_sum7}
+    \end{minipage}
+  \end{center}
+\end{figure}
+
+\input{activities/9.2.Act5}
+
+\subsection*{The Magnitude of a Vector}
+
+By definition, vectors have both direction and magnitude (or
+length). We now investigate how to calculate the magnitude
+of a vector.  Since a vector $\vv$ can be represented
+by a directed line segment, we can use the distance formula to
+calculate the length of the segment. This length is the
+\emph{magnitude} of the vector $\vv$ and is denoted $|\vv|$.
+
+\input{activities/9.2.Act7}
+
+
+% We close this section with an important definition.
+
+% \vspace*{5pt}
+% \nin \framebox{\hspace*{3 pt}
+% \parbox{6.25 in}{\begin{definition} A \textbf{unit vector}\index{unit vector} is a vector with magnitude or length 1. \end{definition}
+% } \hspace*{3 pt}}
+% \vspace*{5pt}
+
+% As we will see in subsequent work, unit vectors\index{unit vector}
+% will be important for defining the direction of a vector and
+% projections of vectors.
+
+%\input{activities/9.2.Act8}
+
+
+%\nin \framebox{\hspace*{3 pt}
+%\parbox{6.25 in}{
+\begin{summary}
+\item A vector is any object that possesses the attributes of
+  magnitude and direction. Examples of vector quantities are position,
+  velocity, acceleration, and force.  
+\item Two vectors are equal if they have the
+  same direction and magnitude. Notice that position is not considered, so a vector is independent of its location.
+\item If $\vu = \langle u_1, u_2, \ldots, u_n \rangle$ and $\vv =
+  \langle v_1, v_2, \ldots, v_n \rangle$ are two vectors in $\R^n$,
+  then their vector sum is the vector
+\[\vu + \vv = \langle u_1+v_1, u_2+v_2, \ldots, u_n+v_n \rangle.\]
+If $\vu = \langle u_1, u_2, \ldots, u_n \rangle$ is a vector in $\R^n$
+and $c$ is a scalar, then the scalar multiple $c\vu$ is the vector
+ \[c\vu = \langle cu_1, cu_2, \ldots, cu_n \rangle.\]
+\item The magnitude of the vector $\vv = \langle v_1, v_2, \ldots, v_n
+  \rangle$ in $\R^n$ is the scalar
+  \[|\vv| = \sqrt{v_1^2+v_2^2+ \cdots + v_n^2}.\] A vector $\vu$ is a
+  unit vector provided that $|\vu| = 1$. If $\vv$ is a nonzero vector,
+  then the vector $\frac{\vv}{|\vv|}$ is a unit vector with the same
+  direction as $\vv$.
+\end{summary}
+%} \hspace*{3 pt}}
+
+\nin \hrulefill
+
+\input{exercises/9.2.Vectors(Ex)}
+
+\clearpage

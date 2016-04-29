@@ -1,0 +1,203 @@
+\begin{exercises}
+
+\item In this exercise we investigate the sequence $\left\{\frac{b^n}{n!}\right\}$ for any constant $b$.
+    \ba
+    \item Use the Ratio Test to determine if the series $\sum \frac{10^k}{k!}$ converges or diverges.
+
+\begin{exerciseSolution}
+
+\solution We use the Ratio Test with $a_n = \frac{10^n}{n!}$. First we consider the ratios of successive terms:
+\begin{eqnarray*}
+\lim_{n \to \infty} \frac{a_{n+1}}{a_n} &=& \lim_{n \to \infty} \frac{ \frac{10^{n+1}}{(n+1)!}}{ \frac{10^{n}}{(n)!} } \\
+    &=& \lim_{n \to \infty} \frac{10}{n+1} \\
+    &=& 0.
+\end{eqnarray*}
+Since the limit of the ratio of successive terms is less than 1, we conclude that the series $\sum \frac{10^k}{k!}$ converges.
+
+\end{exerciseSolution}
+
+\item Now apply the Ratio Test to determine if the series $\left\{\frac{b^k}{k!}\right\}$ converges for any constant $b$.
+
+\begin{exerciseSolution}
+
+\solution We use the Ratio Test with $a_n = \frac{b^n}{n!}$. First we consider the ratios of successive terms:
+\begin{align*}
+\lim_{n \to \infty} \frac{a_{n+1}}{a_n} &= \lim_{n \to \infty} \frac{ \frac{b^{n+1}}{(n+1)!} }{ \frac{b^{n}}{(n)!} } \\
+    &= \lim_{n \to \infty} \frac{b}{n+1} \\
+    &= 0.
+\end{align*}
+Since the limit of the ratio of successive terms is less than 1, we conclude that the series $\sum \frac{b^k}{k!}$ converges.
+
+\end{exerciseSolution}
+
+\item Use your result from (b) to decide whether the sequence  $\left\{\frac{b^n}{n!}\right\}$ converges or diverges. If the sequence $\left\{\frac{b^n}{n!}\right\}$ converges, to what does it converge? Explain your reasoning.
+
+\begin{exerciseSolution}
+
+\solution Since the series $\sum \frac{b^n}{n!}$ converges, the Divergence Test tells us that the sequence $\left\{\frac{b^n}{n!}\right\}$ has to converge to 0.
+
+\end{exerciseSolution}
+
+\ea
+
+  \item \label{ex:8.3_Root_Test} There is a test for convergence similar to the Ratio Test called the \emph{Root Test}. Suppose we have a series $\ds \sum a_k$ of positive terms so that $a_n \to 0$ as $n \to \infty$.
+  \ba
+  \item Assume
+  \[\sqrt[n]{a_n} \to r\]
+as $n$ goes to infinity. Explain why this tells us that $a_n \approx r^n$ for large values of $n$.
+
+\begin{exerciseSolution}
+
+If $\sqrt[n]{a_n} \to r$, then as $n$ increases we know that $\sqrt[n]{a_n} \approx r$. So for large $n$ we have $a_n \approx r^n$.
+
+\end{exerciseSolution}
+
+\item Using the result of part (a), explain why $\sum a_k$ looks like a geometric series when $n$ is big. What is the ratio of the geometric series to which $\sum a_k$ is comparable?
+
+\begin{exerciseSolution}
+
+Since $a_n \approx r^n$ when $n$ is large,
+\[\sum a_k \approx \sum r^k\]
+when $k$ is large. So $\sum a_k$ looks like a geometric sequence with ratio $r$ when $n$ is big.
+
+\end{exerciseSolution}
+
+\item Use what we know about geometric series to determine that values of $r$ so that $\sum a_k$ converges if $\sqrt[n]{a_n} \to r$ as $n \to \infty$.
+
+\begin{exerciseSolution}
+
+Since the terms in our series are all positive, we must have $r > 0$.  Now the geometric series with ratio $r$ converges only for $r < 1$,so the series
+\[\sum a_k\]
+will converge if
+\[\lim_{n \to \infty} \sqrt[n]{a_n} = r\]
+with $0 < r < 1$.
+
+\end{exerciseSolution}
+
+\ea	
+
+\item The associative and distributive laws of addition allow us to add finite sums in any order we want. That is, if $\ds \sum_{k=0}^n a_k$ and $\ds \sum_{k=0}^n b_k$ are finite sums of real numbers, then
+\[\sum_{k=0}^{n} a_k + \sum_{k=0}^n b_k = \sum_{k=0}^n (a_k+b_k).\]
+However, we do need to be careful extending rules like this to infinite series.
+\ba
+\item Show by example that is is possible to have to divergent series $\ds \sum_{k=0}^{\infty} a_k$ and $\ds \sum_{k=0}^{\infty} b_k$ but yet have the series
+\[\sum_{k=0}^{\infty} a_k + \sum_{k=0}^{\infty} b_k = \sum_{k=0}^{\infty} (a_k+b_k)\]
+converge.
+
+\item Let $a_n = \ds 1 + \frac{1}{2^n}$ and $b_n = -1$ for each nonnegative integer $n$.
+    \begin{itemize}
+    \item[(i)] Explain why the series $\ds \sum_{k=0}^{\infty} (a_k+b_k)$ converges.
+
+    \item[(ii)] Explain why
+\[\sum_{k=0}^{\infty} a_k + \sum_{k=0}^{\infty} b_k \neq \sum_{k=0}^{\infty} (a_k+b_k).\]
+
+    \end{itemize}
+
+\item It is true that if $\sum a_k$ and $\sum b_k$ are convergent series, then $\sum (a_k+b_k)$ is a convergent series and
+\[\sum (a_k+b_k) = \sum a_k + \sum b_k.\]
+The following questions explore why this result is true.
+    \begin{itemize}
+    \item[(i)] Let $A_n$ and $B_n$ be the $n$th partial sums of the series $\sum a_k$ and $\sum b_k$, respectively. Explain why
+\[A_n + B_n = \sum_{k=1}^n (a_k+b_k).\]
+
+    \item[(ii)] Use the previous result and properties of limits to show that
+\[\sum (a_k+b_k) = \sum a_k + \sum b_k.\]
+
+        \end{itemize}
+
+\item Use the prior result to find the sum of the series $\ds \sum_{k=0}^{\infty} \frac{2^k+3^k}{5^k}$.
+
+\ea
+
+\item \label{ex:8.3_Direct_Comparison_Test} Series are sums, just like improper integrals. Recall that we had a comparison test for improper integrals, so it is reasonable to expect that we could have a similar test for infinite series. We consider such a test in this exercise. First we consider an example.
+    \ba
+    \item Consider the series
+\[\sum \frac{1}{k^2} \hspace{0.5in} \text{ and } \hspace{0.5in} \sum \frac{1}{k^2+k}.\]
+We know that the series $\ds \sum \frac{1}{k^2}$ is a $p$-series with $p = 2 > 1$ and so $\ds \sum \frac{1}{k^2}$ converges. In this part of the exercise we will see how to use information about $\ds \sum \frac{1}{k^2}$ to determine information about $\ds \sum \frac{1}{k^2+k}$. Let $a_k = \frac{1}{k^2}$ and $b_k = \frac{1}{k^2+k}$.
+        \begin{itemize}
+        \item[(i)] Let $S_n$ be the $n$th partial sum of $\ds \sum \frac{1}{k^2}$ and $T_n$ the $n$th partial sum of $\ds \sum \frac{1}{k^2+k}$. Which is larger, $S_1$ or $T_1$? Why?
+
+\begin{exerciseSolution}
+Since $S_1 = 1$ and $T_1 = \frac{1}{2}$, we see that $S_1 > T_1$.
+\end{exerciseSolution}
+
+        \item[(ii)] Recall that
+\[S_2 = S_1 + a_2 \hspace{0.5in} \text{ and } \hspace{0.5in} T_2 = T_1 + b_2.\]
+Which is larger, $a_2$ or $b_2$? Based on that answer, which is larger, $S_2$ or $T_2$?
+
+\begin{exerciseSolution}
+Since $a_2 = \frac{1}{4}$ and $b_2 = \frac{1}{6}$, it is the case that $a_2 > b_2$. We already know that $S_1 > T_1$, so adding a larger number to $S_1$ than we add to $T_1$ makes $S_2 > T_2$.
+\end{exerciseSolution}
+
+        \item[(iii)] Recall that
+\[S_3 = S_2 + a_3 \hspace{0.5in} \text{ and } \hspace{0.5in} T_3 = T_2 + b_3.\]
+Which is larger, $a_3$ or $b_3$? Based on that answer, which is larger, $S_3$ or $T_3$?
+
+\begin{exerciseSolution}
+Since $a_3 = \frac{1}{9}$ and $b_3 = \frac{1}{12}$, it is the case that $a_3 > b_3$. We already know that $S_2 > T_2$, so adding a larger number to $S_2$ than we add to $T_2$ makes $S_3 > T_3$.
+\end{exerciseSolution}
+
+        \item[(iv)] Which is larger, $a_n$ or $b_n$? Explain. Based on that answer, which is larger, $S_n$ or $T_n$?
+
+\begin{exerciseSolution}
+Since $n^2+n > n^2$ when $n$ is positive, we have $\frac{1}{n^2} > \frac{1}{n^2+n}$ or $a_n > b_n$. So at each step, we are adding larger numbers to the partial sums of $\ds \sum \frac{1}{k^2}$ than we are to the partial sums of $\ds \sum \frac{1}{k^2+k}$, we conclude that $S_n > T_n$.
+\end{exerciseSolution}
+
+        \item[(v)] Based on your response to the previous part of this exercise, what relationship do you expect there to be between $\ds \sum \frac{1}{k^2}$ and  $\ds \sum \frac{1}{k^2+k}$? Do you expect $\ds \sum \frac{1}{k^2+k}$ to converge or diverge? Why?
+
+\begin{exerciseSolution}
+Since $S_n > T_n$, we should expect $\ds \lim_{n \to \infty} S_n > \lim_{n \to \infty} T_n$ or
+\[ \sum \frac{1}{k^2} >  \sum \frac{1}{k^2+k}.\]
+Since $\ds \sum \frac{1}{k^2}$ is a $p$-series with $p=2 > 1$, we know that $\ds \sum \frac{1}{k^2}$ converges (and is finite). Now $\ds \sum \frac{1}{k^2+k}$ is a sum of positive terms and is therefore positive, and is also less than a finite number ($\ds \sum \frac{1}{k^2}$), so we expect that $\ds \sum \frac{1}{k^2+k}$ converges as well.
+\end{exerciseSolution}
+
+        \end{itemize}
+
+    \item The example in the previous part of this exercise illustrates a more general result. Explain why the Direct Comparison Test, stated here, works.
+    
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{
+\textbf{The Direct Comparison Test. } If
+\[0 \leq b_k \leq a_k\]
+for every $k$, then we must have
+\[0 \leq \sum b_k \leq \sum a_k\]
+\begin{enumerate}
+\item If $\sum a_k$ converges, then $\sum b_k$ converges.
+\item If $\sum b_k$ diverges, then $\sum a_k$ diverges.
+\end{enumerate}
+} \hspace*{3 pt}}
+\vspace*{1pt}
+
+\noindent \textbf{Important Note:} It is important to note that this comparison test applies only to series with nonnegative terms.
+
+\begin{exerciseSolution}
+If we have two series $\sum a_k$ and $\sum b_k$ of positive terms with $a_k \geq b_k$ for every $k$, then
+\[\sum a_k \geq \sum b_k > 0.\]
+Now if $\sum b_k$ diverges, then $\sum b_k$ is infinite. Anything larger must also be infinite and so $\sum a_k$ must also diverge. On the other hand, if $\sum a_k$ is convergent (that is, finite), then anything smaller and positive must also be finite and so $\sum b_k$ must also converge. \end{exerciseSolution}
+
+    \begin{itemize}
+    \item[(i)] Use the Direct Comparison Test to determine the convergence or divergence of the series $\ds \sum \frac{1}{k-1}$. Hint: Compare to the harmonic series.
+
+\begin{exerciseSolution}
+For any $k$ we have $k > k-1$, so if $k > 1$ then it follows that $0 < \frac{1}{k} < \frac{1}{k-1}$. Since the harmonic series $\ds \sum \frac{1}{k}$ diverges, the Direct Comparison Test shows that the larger series $\ds \sum \frac{1}{k-1}$ must also diverge.
+\end{exerciseSolution}
+
+    \item[(ii)] Use the Direct Comparison Test to determine the convergence or divergence of the series $\ds \sum \frac{k}{k^3+1}$.
+
+\begin{exerciseSolution}
+In this case we know that $k^3 < k^3+1$ and so if $k > 0$ then $\frac{1}{k^3} > \frac{1}{k^3+1}$. It follows that $\frac{k}{k^3} > \frac{k}{k^3+1}$ and so the series $\ds \sum \frac{k}{k^3+1}$ is bounded below by 0 and above by the series $\ds \sum \frac{k}{k^3}$. Now
+\[\frac{k}{k^3} = \frac{1}{k^2}\]
+and so the series $\ds \sum \frac{k}{k^3}$ is a $p$-series with $p=2$ and converges. The Direct Comparison Test shows that the smaller series $\ds \sum \frac{k}{k^3+1}$ must also converge.
+\end{exerciseSolution}
+
+    \end{itemize}
+
+    \ea
+
+
+
+\end{exercises}
+
+
+\afterexercises

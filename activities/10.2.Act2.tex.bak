@@ -1,0 +1,31 @@
+\begin{activity} \label{A:2.2.2} Calculate all partial derivatives of the indicated functions.
+	\ba
+	\item $f(x,y) = 3x^3 - 2x^2y^5$
+	
+	
+	
+	\item $g(r,s) = rs\cos(r)$
+	
+	
+	
+	\item $f(w,x,y) = (6w+1)\cos(3x^2+4xy^3+y)$
+	
+	
+	
+	\item $q(x,t,z) = \frac{x2^tz^3}{1+x^2}$
+	
+	
+	
+	\ea
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+
+\end{activitySolution}
+\aftera

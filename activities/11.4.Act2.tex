@@ -1,0 +1,19 @@
+\begin{activity} \label{A:11.4.2} Find the area of the region bounded by the curves $y^2 = x$ and $4-y^2=x$.
+
+\end{activity}
+\begin{smallhint}
+
+\end{smallhint}
+\begin{bighint}
+
+\end{bighint}
+\begin{activitySolution}
+The two curves intersect when $x = 4-x$ or when $x=2$. The $y$-coordinates of the points of intersection are $y = \sqrt{2}$ and $y = -\sqrt{2}$. A picture of the region is shown below. If we integrate with respect to $x$ first, the cross sections run from the curve on the left ($y^2=x$) to the curve on the right ($4-y^2=x$). So the area of the region is represented by 
+\begin{align*}
+\int_{-\sqrt{2}}^{\sqrt{2}} \int_{y^2}^{4-y^2} 1 \, dx, \, dy &= \int_{-\sqrt{2}}^{\sqrt{2}} \left. y \right|_{y^2}^{4-y^2}  \, dy \\
+	&= \int_{-\sqrt{2}}^{\sqrt{2}} 4-2y^2  \, dy \\
+	&= \left. \left[ 4y - \frac{2}{3}y^3 \right] \right|_{-\sqrt{2}}^{\sqrt{2}} \\
+	&= \frac{16}{3} \sqrt{2}.
+\end{align*}
+\end{activitySolution}
+\aftera

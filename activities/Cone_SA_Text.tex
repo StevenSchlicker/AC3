@@ -1,0 +1,45 @@
+\item Consider a cone with base radius $a$ and height $h$. 
+	\ba
+	\item Find a parameterization $\vr(s,t)$ of this cone. (Hint: Place the cone so its vertex is at the origin with the $z$-axis as its axis. Compare to the parameterization of a cylinder in Activity \ref{A:11.6.4}.) 
+	
+	\item Set up an iterated integral to determine the surface area of this cone.
+	
+	\item Evaluate the iterated integral. 
+	
+	\item Recall that one way to think about the surface area of a cylinder is to cut the cylinder horizontally and find the perimeter of the resulting cross sectional circle, then multiply by the height.  Calculate the surface area of the given cylinder using this alternate approach, and compare your work in (b).
+
+	\ea
+
+
+\begin{exerciseSolution}
+\ba
+\item Consider the line segment connecting the points $(0,0)$ and $(a,h)$. Such a segment is determined by a slant length of the cone. A formula for this segment is $y = \frac{h}{a}t$. Then $\frac{h}{a}t$ describes the radius of a cross section of the cone parallel to the $x$-$y$ plane. We can replace the radius in our parameterization of a cylinder with this variable radius to obtain a parameterization of the cone:
+\[\vr(s,t) = \frac{h}{a}t\cos(s) \vi + \frac{h}{a} t \sin(s) \vj + \frac{h}{a}t \vk\]
+for $0 \leq s \leq 2\pi$ and $0 \let t \leq a$. 
+
+\item With our parameterization we have 
+\[\vr_s(s,t) = \frac{h}{a} (-t\sin(s) \vi + t\cos(s) \vj) \ \text{ and } \ \vr_t(s,t) = \frac{h}{a} (\cos(s) \vi + \sin(s) \vj + \vk).\]
+This makes 
+\[|\vr_s(s,t) \times \vr_t(s,t)| = \left| \left\langle \left(\frac{h}{a}\right)^2t\cos(s), \left(\frac{h}{a}\right)^2t\sin(s), -\left(\frac{h}{a}\right)^2t \right\rangle \right| = \sqrt{3}\left{\frac{h}{a}\right)^2t.\]
+So the surface area of the cone is 
+\begin{align*}
+\int_0^{2\pi} \int__0^a \sqrt{3}\left{\frac{h}{a}\right)^2t \, dt \, ds &= \sqrt{3}\left{\frac{h}{a}\right)^2 \int_0^{2\pi} \frac{1}{2}t^2\biggm|_0^a \, ds \\
+	&= \frac{\sqrt{3}}{2}\left{\frac{h}{a}\right)^2 \int_0^{2\pi} a^2 \, ds \\
+	&= \sqrt{3} \pi h^2.
+\end{align*}
+
+In this case, $dA = ds \ dt$, so an iterated integral that represents the area of the surface is 
+\[\int \int_D |\vr_s \times \vr_t| \, dA = \int_{0}^{h} \int_{0}^{2 \pi} a \, ds \, dt.\]
+
+\item We can find the surface area of the cylinder by multiplying the circumference of the circle of radius $a$ by the height $h$ to obtain $2 \pi a h$. Evaluating the iterated integral yields
+\begin{align*}
+\int_{0}^{h} \int_{0}^{2 \pi} a^2 \, ds \, dt &= a \int_{0}^{h} \left. s \right|_{0}^{2 \pi}  \, dt \\
+	&= 2 \pi a \int_{0}^{h}  \, d \theta \\
+	&= 2 \pi a \left. t \right|_{0}^{h}  \\
+	&= 2 \pi a h.
+\end{align*}
+
+\item If we slice the cylinder horizontally, a cross section is a circle of radius $a$. The circumference of this circle is $2 \pi a$. We multiply by the height of the cylinder to obtain the surface area as $2 \pi a h$ as expected. 
+\ea
+\end{exerciseSolution}
+

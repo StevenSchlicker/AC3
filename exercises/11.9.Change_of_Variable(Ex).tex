@@ -1,0 +1,91 @@
+\begin{exercises} 
+
+\item Let $D'$ be the region in the $xy$ plane that is the parallelogram with vertices $(3,3)$, $(4,5)$, $(5,4)$, and $(6,6)$.
+	\ba
+	 	\item Sketch and label the region $D'$ in the $xy$ plane. 
+		\item Consider the integral $\iint_{D'} (x+y) \, dA$.  Explain why this integral would be difficult to set up as an iterated integral.
+		\item Let a change of variables be given by $x = 2u + v$, $y = u + 2v$.  Using substitution or elimination, solve this system of equations for $u$ and $v$ in terms of $x$ and $y$.
+		\item Use your work in (c) to find the pre-image, $D$, which lies in the $uv$ plane, of the originally given region $D'$, which lies in the $xy$ plane.  For instance, what $uv$ point corresponds to $(3,3)$ in the $xy$ plane?
+		\item Use the change of variables in (c) and your other work to write a new iterated integral in $u$ and $v$ that is equivalent to the original $xy$ integral $\iint_{D'} (x+y) \, dA$.
+		\item Finally, evaluate the $uv$ integral, and write a sentence to explain why the change of variables made the integration easier.
+	\ea
+
+%	\item Find the $z$-coordinate of the center of mass of the solid that lies between the hemisphere of radius 2 and the hemisphere of radius 1, each of which are bounded below by the plane $z=0$.  Assume that the density of the solid is given by the function $d(x,y,z)=x^2+y^2+z^2$.  Can you find $\overline{x}$ and $\overline{y}$ without integrating?
+
+\begin{exerciseSolution}
+	\ba
+	 	\item The region $D'$ is a parallelogram. 
+		\item Since the boundaries of $D'$ change in both the $x$ and $y$ directions, integrating with respect to either $x$ or $y$ would require multiple integrals. 
+		\item Multiplying both sides of $y=u+2v$ and subtracting corresponding sides of $x = 2u + v$ leaves us with $2y-x = 3v$. So $v = \frac{1}{3}(2y-x)$. Multiplying both sides of $x = 2u + v$ and subtracting corresponding sides of $y=u+2v$ leaves us with $2x-y = 3v$. So $u = \frac{1}{3}(2x-y)$.
+		\item The vertex $(3,3)$ of the region $D'$ corresponds to the point $\left(\frac{1}{3}(2(3)-3), \frac{1}{3}(2(3)-3)\right) = (1,1)$ in $D$. Similarly, the points $(4,5)$, $(5,4)$, and $(6,6)$ in $D'$ correspond to the points $(1,2)$, $(2,1)$, and $(2,2)$, respectively, in $D$. So the pre-image $D$ is the square with vertices $(1,1)$, $(1,2)$, $(2,1)$, and $(2,2)$. 
+		\item For our change of variables we have 
+\[\left|\frac{\partial (x,y)}{\partial (u,v)}\right| = \left| \frac{\partial x}{\partial u} \frac{\partial y}{\partial v} - \frac{\partial y}{\partial u} \frac{\partial x}{\partial v} \right| = \left|(2)(2) - (1)(1) \right| = 3.\]
+Using the change of variables in (c) we have that  
+\[\iint_{D'} (x+y) \, dA = \iint_{D} (3u+3v) \left|\frac{\partial (x,y)}{\partial (u,v)}\right| \, dA = \int_{1}^{2} \int_{1}^{2} 3(3u+3v) \, dv \, du.\]
+		\item The $uv$ integral evaluates to 
+\begin{align*}
+\int_{1}^{2} \int_{1}^{2} 3(3u+3v) \, dv \, du &= 9\int_{1}^{2}  \left(uv+\frac{1}{2}v^2\right)\biggm|_{1}^{2}  \, du \\
+	&= 9\int_{1}^{2}  \left(u+\frac{3}{2}\right)  \, du \\
+	&= 9\left(\frac{1}{2}u^2+\frac{3}{2}u\right)\biggm|_{1}^{2} \\
+	&= 9\left(\frac{1}{2}u^2+\frac{3}{2}u\right)\biggm|_{1}^{2} \\
+	&= 27.
+\end{align*}
+	\ea
+\end{exerciseSolution}
+
+\item Consider the change of variables
+\[x(\rho, \theta, \phi) = \rho \sin(\phi) \cos(\theta) \ \ \ \ \ y(\rho, \theta, \phi) = \rho \sin(\phi) \sin(\theta) \ \ \ \ \ z(\rho, \theta, \phi) = \rho \cos(\phi),\]
+which is the transformation from spherical coordinates to rectangular coordinates.  Determine the Jacobian of the transformation.  How is the result connected to our earlier work with iterated integrals in spherical coordinates?
+
+\begin{exerciseSolution}
+Here we have 
+\begin{align*}
+\left|\frac{\partial(x,y,z)}{\partial(\rho,\theta,\phi)}\right| &= \left|\frac{\partial x}{\partial \rho}\left[\frac{\partial y}{\partial \theta}\frac{\partial z}{\partial \phi} - \frac{\partial y}{\partial \phi}\frac{\partial z}{\partial \theta}\right] - \frac{\partial x}{\partial \theta}\left[\frac{\partial y}{\partial \rho}\frac{\partial z}{\partial \phi} - \frac{\partial y}{\partial \phi}\frac{\partial z}{\partial \rho}\right] + \frac{\partial x}{\partial \phi}\left[\frac{\partial y}{\partial \rho}\frac{\partial z}{\partial \theta} - \frac{\partial y}{\partial \theta}\frac{\partial z}{\partial \rho}\right]\right| \\
+	&= \left|\sin(\phi)\cos(\theta)[(\rho\sin(\phi)\cos(\theta))(-\rho \sin(\phi)) - (\rho \cos(\phi) \sin(\theta))(0)] \right. \\
+	& \qquad + \rho \sin(\phi) \sin(\theta)[(\sin(\phi)\sin(\theta))(-\rho \sin(\phi)) - (\rho \cos(\phi) \sin(\theta))(\cos(\phi))] \\
+	& \qquad + \left. \rho \cos(\phi) \cos(\theta)[(\sin(\phi)\sin(\theta))(0) - (\rho \sin(\phi) \cos(\theta))(\cos(\phi))]\right| \\
+	&= \left|-\rho^2 \sin^3(\phi) \cos^2(\theta) - \rho^2 \sin^3(\phi) \sin^2(\theta) \right.\\
+	& \qquad - \left. \rho^2 \sin(\phi)\cos^2(\phi) \sin^2(\theta) - \rho^2 \sin(\phi) \cos^2(\phi) \cos^2(\theta) \right| \\
+	&= \left| -\rho^2 [ \sin^3(\phi) + \sin(\phi) \cos^2(\phi)] \right| \\
+	&= \left|-\rho^2 [ \sin^3(\phi) + \sin(\phi) (1-\sin^2(\phi))] \right| \\
+	&= \rho^2 \sin(\phi).
+\end{align*}
+This is exactly the volume element in spherical coordinates that we derived earlier. 
+\end{exerciseSolution}
+
+	\item In this problem, our goal is to find the volume of the ellipsoid $\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1$.  
+	\ba
+		\item Set up an iterated integral in rectangular coordinates whose value is the volume of the ellipsoid.  Do so by using symmetry and taking 8 times the volume of the ellipsoid in the first octant where $x$, $y$, and $z$ are all nonnegative.
+		\item Explain why it makes sense to use the substitution $x = as$, $y = bt$, and $z = cu$ in order to make the region of integration simpler.
+		\item Compute the Jacobian of the transformation given in (b).
+		\item Execute the given change of variables and set up the corresponding new iterated integral in $s$, $t$, and $u$.
+		\item Explain why this new integral is better, but is still difficult to evaluate.  What additional change of variables would make the resulting integral easier to evaluate?
+		\item Convert the integral from (d) to a new integral in spherical coordinates.
+		\item Finally, evaluate the iterated integral in (f) and hence determine the volume of the ellipsoid.
+	\ea
+	
+\begin{exerciseSolution}
+	\ba
+		\item Calculating the volume of the first octant portion of the ellipsoid and multiplying by 8, we find that the volume of the ellipsoid is given by 
+\[8\int_{0}^{a} \int_{0}^{\sqrt{b^2(1-x^2/a^2)}} \sqrt{c^2\left(1-\frac{x^2}{a^2}-\frac{y^2}{b^2}\right)}  \, dy \, dx.\]
+		\item The substitution $x = as$, $y = bt$, and $z = cu$ transforms the ellipsoid into 
+\[1 = \frac{a^2s^2}{a^2} + \frac{b^2t^2}{b^2} + \frac{c^2u^2}{c^2} = s^2+t^2+u^2,\]
+which is the unit sphere. 
+		\item The Jacobian of the transformation given in (b) is
+\begin{align*}
+\frac{\partial (x,y,z)}{\partial (s,t,u)}| &= \left| \begin{array}{ccc} \frac{\partial x}{\partial s} & \frac{\partial x}{\partial t} & \frac{\partial x}{\partial u} \\ \frac{\partial y}{\partial s} & \frac{\partial y}{\partial t} & \frac{\partial y}{\partial u} \\ \frac{\partial z}{\partial s} & \frac{\partial z}{\partial t} & \frac{\partial z}{\partial u} \end{array} \right| \\
+	&= \left| \begin{array}{ccc} a & 0 & 0 \\ 0 & b & 0 \\ 0 & 0 & c \end{array} \right| \\
+	&= abc.
+\end{align*}
+
+		\item The change of variables transforms the integral in part (a) into
+\[8\int_{0}^{1} \int_{0}^{\sqrt{1-s^2}} abc\sqrt{1-s^2-t^2}  \, dt \, ds.\]
+		\item The square roots make this new integral difficult to evaluate, but if we convert to spherical coordinates we can make an integral that is easier to evaluate. 
+		\item In spherical coordinates our integral becomes
+\[8 \int_{0}^{\pi/2} \int_{0}^{\pi/2} \int_{0}^{1} abc \rho^2 \sin(\phi) \, d\rho \, d\phi \, d\theta.\]
+		\item The integral just gives the volume of the unit sphere, which we have previously calculated to be $\frac{4}{3} \pi$. So the volume of the ellipsoid is $\frac{4}{3}\pi abc$. 
+	\ea
+\end{exerciseSolution}
+
+\end{exercises}
+\afterexercises

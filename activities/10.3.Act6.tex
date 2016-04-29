@@ -1,0 +1,121 @@
+\begin{activity} \label{A:10.3.6}  As we saw in Activity
+  \ref{A:10.2.12}, the wind chill $w(v,T)$, in degrees Fahrenheit, is
+  a function of the
+  wind speed, in miles per hour, and the air temperature, in degrees Fahrenheit.  Some values of the wind chill are
+  recorded in Table \ref{T:10.2.wind.chill}.
+
+\begin{table}[ht] 
+  \begin{center}
+    \begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|c|}
+      \hline
+      $v \backslash T$  
+         &-30  &-25 &-20 &-15 &-10 &-5  &0   &5   &10  &15  &20  \\
+      \hhline{|=|=|=|=|=|=|=|=|=|=|=|=|}
+      5  &-46	&-40 &-34 &-28 &-22 &-16 &-11 &-5 &1 &7 &13  \\
+      \hline
+      10 &-53	&-47 &-41 &-35 &-28 &-22 &-16 &-10 &-4 &3 &9   \\
+      \hline
+      15 &-58	&-51 &-45 &-39 &-32 &-26 &-19 &-13 &-7 &0 &6  \\
+      \hline
+      20 &-61	&-55 &-48 &-42 &-35 &-29 &-22 &-15 &-9 &-2 &4  \\
+      \hline
+      25 &-64	&-58 &-51 &-44 &-37 &-31 &-24 &-17 &-11 &-4 &3 \\
+      \hline
+      30 &-67	&-60 &-53 &-46 &-39 &-33 &-26 &-19 &-12 &-5 &1 \\
+      \hline
+      35 &-69	&-62 &-55 &-48 &-41 &-34 &-27 &-21 &-14 &-7 &0 \\
+      \hline
+      40 &-71	&-64 &-57 &-50 &-43 &-36 &-29 &-22 &-15 &-8 &-1 \\
+      \hline
+    \end{tabular}
+    \caption{Wind chill as a function of wind speed and temperature.}
+    \label{T:10.2.wind.chill}
+  \end{center}
+\end{table}
+%\begin{table}[ht]
+%  \begin{center}
+%    \begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|c|}
+%      \hline
+%      $v \backslash T$  
+%         &-30  &-25 &-20 &-15 &-10 &-5  &0   &5   &10  &15  &20  \\
+%      \hhline{|=|=|=|=|=|=|=|=|=|=|=|=|}
+%      5  &-35  &-31 &-26 &-20 &-15 &-11 &-6  &1   &7   &12  &16  \\
+%      \hline
+%      10 &-58  &-52 &-45 &-38 &-31 &-27 &-22 &-15 &-9  &-2  &2   \\
+%      \hline
+%      15 &-70  &-65 &-60 &-51 &-45 &-40 &-33 &-25 &-18 &-11 &-6  \\
+%      \hline
+%      20 &-81  &-76 &-68 &-60 &-52 &-46 &-40 &-32 &-24 &-17 &-9  \\
+%      \hline
+%      25 &-89  &-83 &-75 &-67 &-58 &-52 &-45 &-37 &-29 &-22 &-15 \\
+%      \hline
+%      30 &-94  &-87 &-78 &-70 &-63 &-56 &-49 &-41 &-33 &-26 &-18 \\
+%      \hline
+%      35 &-98  &-90 &-83 &-72 &-67 &-60 &-52 &-43 &-35 &-27 &-20 \\
+%      \hline
+%      40 &-101 &-94 &-87 &-76 &-69 &-62 &-54 &-45 &-36 &-29 &-22 \\
+%      \hline
+%    \end{tabular}
+%    \caption{Wind chill as a function of temperature and wind speed}
+%    \label{T:10.2.wind.chill}
+%  \end{center}
+%\end{table}
+
+\ba
+\item Estimate the partial derivatives $w_{T}(20,-15)$, $w_{T}(20,-10)$, and $w_T(20,-5)$.  Use these results to estimate the second-order partial
+  $w_{TT}(20, -10)$.
+
+\item In a similar way, estimate the second-order partial $w_{vv}(20,-10)$.  
+
+\item Estimate the partial derivatives $w_T(20,-10)$, $w_T(25,-10)$, and $w_T(15,-10)$, and use your results to
+  estimate the partial $w_{Tv}(20,-10)$.
+
+\item In a similar way, estimate the partial derivative $w_{vT}(20,-10)$.
+
+\item Write several sentences that explain what the values $w_{TT}(20, -10)$,  $w_{vv}(20,-10)$, and $w_{Tv}(20,-10)$ indicate regarding the behavior of $w(v,T)$.
+
+\ea
+\end{activity}
+
+\begin{activitySolution}
+\ba
+\item We approximate $w_T(20,-15)$ using a symmetric difference quotient: 
+\[w_T(20,-15) \approx \frac{w(20,-10)-w(20,-20)}{10} = \frac{-35-(-45)}{10} = 1.\]
+Similarly,
+\[w_T(20,-10) \approx \frac{w(20,-5)-w(20,-15)}{10} = \frac{-29-(-42)}{10} = 1.3\]
+and
+\[w_T(20,-5) \approx \frac{w(20,0)-w(20,-10)}{10} = \frac{-22-(-35)}{10} = 1.3.\]
+Now $w_{TT}(20,-10)$ can also be approximated with a symmetric difference quotient as
+\[w_{TT}(20,-10) \approx \frac{w_T(20,-5) - w_T(20,-15)}{10} \approx \frac{1.3-1}{10} = 0.03.\]
+
+\item To approximate $w_{vv}(20,-10)$ we will use a symmetric difference quotient with $w_v(25,-10)$ and $w_v(15,-10)$. Now
+\begin{align*}
+w_v(25,-10) \approx \frac{w(30,-10) - w(20,-10)}{10} = \frac{-39-(-35)}{10} = -0.4 \\
+w_v(15,-10) \approx \frac{w(20,-10) - w(10,-10)}{10} = \frac{-35-(-32)}{10} = -0.3,
+\end{align*}
+so
+\[w_{vv}(20,-10) \approx \frac{w_v(25,-10) - w_v(15,-10)}{10} = \frac{-0.4-(-0.3)}{10} = -0.01.\]
+
+
+\item We already have $w_T(20,-10) \approx 1.3$, and similar calculations show that 
+\begin{align*}
+w_T(15,-10) \approx \frac{w(15,-5)-w(15,-15)}{10} = \frac{-26-(-39)}{10} = 1.3 \\
+w_T(25,-10) \approx \frac{w(25,-5)-w(25,-15)}{10} = \frac{-31-(-44)}{10} = 1.3.
+\end{align*}
+So 
+\[w_{Tv}(20,-10) \approx \frac{w_T(25,-10) - w_T(15,-10)}{10} \approx 0.\]
+
+\item To estimate $w_{vT}(20,-10)$ we use a symmetric difference quotient with $w_v(20,-15)$ and $w_v(20,-5)$. Now
+\begin{align*}
+w_v(20,-15) \approx \frac{w(25,-15)-w(15,-15)}{10} = \frac{-44-(-39)}{10} = -0.5 \\
+w_v(20,-5) \approx \frac{w(25,-5)-w(15,-5)}{10} = \frac{-31-(-26)}{10} = -0.5.
+\end{align*}
+So 
+\[w_{vT}(20,-10) \approx \frac{w_v(20,-5) - w_v(20,-15)}{10} \approx 0.\]
+
+\item The fact that $w_{TT}(20, -10) \approx 0.03$ means that for every one $^{\circ}F$ increase from $-10$ degrees, the rate at which the wind chill changes as the temperature increases grows by approximately 0.03 $\frac{^{\circ}F}{^{\circ}F}$ if the wind speed is 20 miles per hour.  The fact that $w_{vv}(20, -10) \approx -0.01$ means that for every one mile per hour increase in the wind speed from 20 miles per hour, at a temperature of $-10^{\circ}F$, the rate at which the wind chill changes as the wind speed increases declines by approximately 0.01 $\frac{^{\circ}F}{\text{mile/hour}}$. The fact that $w_{Tv}(20, -10) \approx 0$ means that there is no change in the rate at which the wind chill changes as the temperature increases if the wind speed increases from 20 miles per hour and the temperature is $-10^{\circ}F$. 
+\ea
+\end{activitySolution}
+
+
+\aftera

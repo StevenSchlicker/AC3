@@ -1,0 +1,37 @@
+\begin{activity} \label{A:9.3.5}  We investigate the situation when two nonzero vectors in $\R^n$ are perpendicular in this activity.%\footnote{There are situations (which we won't encounter in this class) where objects other than vectors in $\R^n$ can be considered to be perpendicular. We introduce the word \emph{orthogonal} in these cases to be a word that also means perpendicular.}
+    \ba
+    \item Consider the vectors $\vx = \langle 1,1 \rangle$ and $\vy = \langle -2, 2 \rangle$.  Sketch these two vectors in the plane and compute $\vx \cdot \vy$.  What do you observe?
+    
+    \item  Recall the original definition of the dot product of two vectors: $\vu \cdot \vv = |\vu| |\vv| \cos(\theta)$.   Suppose the angle between two vectors nonzero vectors $\vu$ and $\vv$ in $\R^n$ is $90^{\circ}$. What is the value of $\vu \cdot \vv$?
+
+    \item Now suppose again that $\vu$ and $\vv$ are nonzero vectors in $\R^n$, and also that $\vu \cdot \vv = 0$. What is the angle between $\vu$ and $\vv$? Why?
+
+    \item Use the results from (b) and (c) to explain why two nonzero vectors $\vu$ and $\vv$ are perpendicular to one another if and only if $\vu \cdot \vv = 0$.
+
+    \ea
+\end{activity}
+\begin{smallhint}
+\ba
+\item Use the formula for the dot product. 
+\item What is $\cos(90^{\circ})$? 
+\item How can $|\vu| |\vv| \cos(\theta) = 0$?
+\item Compare the results of (b) and (c). 
+\ea
+\end{smallhint}
+\begin{bighint}
+\ba
+\item $\langle u_1, u_2 \rangle \cdot \langle v_1, v_2 \rangle = u_1v_1 + u_2v_2$
+\item $\cos(90^{\circ}) = 0$ 
+\item If $vu$ and $\vv$ are nonzero, then what must be zero for $|\vu| |\vv| \cos(\theta)$ to be 0? 
+\item Compare the results of (b) and (c). 
+\ea
+\end{bighint}
+\begin{activitySolution}
+\ba
+\item Notice that $\langle 1,1 \rangle \cdot \langle -2, 2 \rangle = 0$. A sketch of these vectors seems to indicate that they are perpendicular to each other. 
+\item If the angle $\theta$ between vectors $\vu$ and $\vv$ is $90^{\circ}$, then $\cos(\theta) = 0$. So $\vu \cdot \vv = 0$ in this situation.  
+\item If $\vu \cdot \vv = 0$, then $0 = |\vu| |\vv| \cos(\theta)$. If $\vu$ and $\vv$ are not zero, then we must have $\cos(\theta) = 0$. But this implies that $\theta = 90^{\circ}$ and the angle between $\vu$ and $\vv$ is $90^{\circ}$.
+\item We argued in (b) and (c) that if $\theta$ is the angle between nonzero vectors $\vu$ and $\vv$, then if $\vu \cdot \vv = 0$, we have $\theta = 90^{\circ}$ and if $\theta = 90^{\circ}$ then $\vu \cdot \vv = 0$. So each of $\vu \cdot \vv = 0$ and $\theta = 90^{\circ}$ implies the other. 
+\ea
+\end{activitySolution}
+\aftera

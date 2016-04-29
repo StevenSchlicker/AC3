@@ -1,0 +1,177 @@
+\section{Double Riemann Sums and Double Integrals over Rectangles} \label{S:11.1.Double_Integrals_Rectangles}
+
+\vspace*{-14 pt}
+\framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{goals}
+\item What is a double Riemann sum?
+\item How is the double integral of a continuous function $f = f(x,y)$ defined?
+\item What are two things the double integral of a function can tell us?
+\end{goals}} \hspace*{3 pt}}
+
+
+\subsection*{Introduction}
+
+In single-variable calculus, recall that we approximated the area under the graph of a positive function $f$ on an interval $[a,b]$ by adding areas of rectangles whose heights are determined by the curve. The general process involved subdividing the interval $[a,b]$ into smaller subintervals, constructing rectangles on each of these smaller intervals to approximate the region under the curve on that subinterval, then summing  the areas of these rectangles to approximate the area under the curve. We will extend this process in this section to its three-dimensional analogs, double Riemann sums and double integrals over rectangles.
+
+\input{previews/11.1.PA1}
+
+\subsection*{Double Riemann Sums over Rectangles}
+
+For the definite integral in single-variable calculus, we considered a continuous function over a closed, bounded interval $[a,b]$.  In multivariable calculus, we will eventually develop the idea of a definite integral over a closed, bounded region (such as the interior of a circle).  We begin with a simpler situation by thinking only about rectangular domains, and will address more complicated domains in the following section.
+
+Let $f = f(x,y)$ be a continuous function defined on a rectangular domain $R = \{(x,y) : a \leq x \leq b, c \leq y \leq d\}$.  As we saw in Preview Activity~\ref{PA:11.1}, the domain is a rectangle $R$ and we want to partition $R$ into subrectangles.  We do this by partitioning each of the intervals $[a,b]$ and $[c,d]$ into subintervals and using those subintervals to create a partition of $R$ into subrectangles.  In the first activity, we address the quantities and notations we will use in order to define double Riemann sums and double integrals.
+
+\input{activities/11.1.Act1}
+
+
+\subsection*{Double Riemann Sums and Double Integrals}
+
+Now we use the process from the most recent activity to formally define double Riemann sums and double integrals.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\begin{definition} Let $f$ be a continuous function on a rectangle $R = \{(x,y) : a \leq x \leq b, c \leq y \leq d\}$. A \textbf{double Riemann sum for $f$ over $R$}\index{double Riemann sum} is created as follows.
+\begin{itemize}
+\item Partition the interval $[a, b]$ into $m$ subintervals of equal length $\Delta x = \frac{b-a}{m}$. Let $x_0$, $x_1$, $\ldots$, $x_m$ be the endpoints of these subintervals, where $a = x_0<x_1<x_2 < \cdots < x_m = b$.
+\item Partition the interval $[c, d]$ into $n$ subintervals of equal length $\Delta y = \frac{d-c}{n}$. Let $y_0$, $y_1$, $\ldots$, $y_n$ be the endpoints of these subintervals, where $c = y_0<y_1<y_2 < \cdots < y_n = d$.
+\item These two partitions create a partition of the rectangle $R$ into $mn$ subrectangles $R_{ij}$ with opposite vertices $(x_{i-1},y_{j-1})$ and $(x_i, y_j)$ for $i$ between $1$ and $m$ and $j$ between $1$ and $n$. These rectangles all have equal area $\Delta A = \Delta x \cdot \Delta y$.
+\item Choose a point $(x_{ij}^*, y_{ij}^*)$ in each rectangle $R_{ij}$. Then, a double Riemann sum for $f$ over $R$ is given by
+\[\sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \cdot \Delta A.\]
+\end{itemize}
+\end{definition}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+If $f(x,y) \geq 0$ on the rectangle $R$, we may ask to find the volume 
+of the solid bounded above by $f$ over
+$R$, as illustrated on the left of Figure \ref{F:11.1.volume}.  
+This volume is approximated by a
+Riemann sum, which sums the volumes of the rectangular
+boxes shown on the right of Figure \ref{F:11.1.volume}.  
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_11_1_volume.eps}
+    \hspace*{20pt}
+    \includegraphics{figures/fig_11_1_riemann_3_2.eps}
+  \end{center}
+  \caption{The volume under a graph approximated by a Riemann Sum}
+  \label{F:11.1.volume}
+\end{figure}
+
+As we let the number of
+subrectangles increase without bound (in other words, as both $m$ and
+$n$ in a double Riemann sum go to infinity), as illustrated in
+Figure \ref{F:11.1.rs}, the sum of the volumes of the rectangular boxes
+approaches the volume of the solid bounded above by $f$ over
+$R$. The value of this limit, provided it exists, is the double integral.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_11_1_riemann_4_4.eps}
+    \hspace*{20pt}
+    \includegraphics{figures/fig_11_1_riemann_8_8.eps}
+  \end{center}
+  \caption{Finding better approximations by using smaller subrectangles.}
+  \label{F:11.1.rs}
+\end{figure}
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{ \begin{definition}  Let $R$ be a rectangular region in the $x$-$y$ plane and $f$ a continuous function over $R$. With terms defined as in a double Riemann sum, the \textbf{double integral of $f$ over $R$}\index{double integral!definition} is
+\[\iint_R f(x,y) \, dA = \lim_{m,n \to \infty} \sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \cdot \Delta A.\]
+\end{definition}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+
+\subsection*{Interpretation of Double Riemann Sums and Double integrals.}
+
+At the moment, there are two ways we can interpret the value of the double integral.
+
+\begin{itemize}
+\item Suppose that $f(x,y)$ assumes both positive and negatives
+  values on the rectangle $R$, as shown on the left of Figure
+  \ref{F:11.1.signed}.  When constructing a Riemann sum, for each $i$ and $j$, the product $f(x_{ij}^*, y_{ij}^*) \cdot \Delta A$
+can be interpreted as a ``signed" volume of a box with base area $\Delta A$ and ``signed" height $f(x_{ij}^*, y_{ij}^*)$. Since $f$ can have negative values, this ``height" could be negative. The sum
+\[\sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \cdot \Delta A\]
+can then be interpreted as a sum of ``signed" volumes of boxes, with a
+negative sign attached to those boxes whose heights are below the
+$xy$-plane. 
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{figures/fig_11_1_signed_graph.eps}
+    \hspace*{20pt}
+    \includegraphics{figures/fig_11_1_signed_volume.eps}
+  \end{center}
+  \caption{The integral measures signed volume.}
+  \label{F:11.1.signed}
+\end{figure}
+We can then realize the double integral $\iint_R
+f(x,y) \, dA$ as a difference in volumes\index{double
+  integral!difference in volumes}: $\iint_R f(x,y) \, dA$ tells us
+the volume of the solids the graph of $f$ bounds above the $xy$-plane
+over the rectangle $R$ minus the volume of the solids the graph of $f$
+bounds below the $xy$-plane under the rectangle $R$.  This is shown on
+the right of Figure \ref{F:11.1.signed}.
+
+
+
+\item The average of the finitely many $mn$ values $f(x_{ij}^*, y_{ij}^*)$ that we take in a double Riemann sum is given by
+\[\mbox{Avg}_{mn} = \frac{1}{mn} \sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*).\]
+If we take the limit as $m$ and $n$ go to infinity, we obtain what we define as the average value\index{double integral!average value} of $f$ over the region $R$, which is connected to the value of the double integral. First, to view $\text{Avg}_{mn}$ as a double Riemann sum, note that
+\[\Delta x = \frac{b-a}{m} \ \ \ \ \ \text{ and } \ \ \ \ \ \Delta y = \frac{d-c}{n}.\]
+Thus,
+\[\frac{1}{mn} = \frac{\Delta x \cdot \Delta y}{(b-a)(d-c)} = \frac{\Delta A}{A(R)},\]
+where $A(R)$ denotes the area of the rectangle $R$. Then, the average value of the function $f$ over $R$, $f_{\mbox{\tiny{AVG}(R)}}$, is given by
+\begin{align*}
+f_{\mbox{\tiny{AVG}(R)}} & = \lim_{m,n \to \infty} \frac{1}{mn} \sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \\
+				    & = \lim_{m,n \to \infty} \frac{1}{A(R)} \sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \cdot \Delta A \\
+				    & = \frac{1}{A(R)} \iint_R f(x,y) \, dA.
+\end{align*}
+Therefore, the double integral of $f$ over $R$ divided by the area of $R$ gives us the average value of the function $f$ on $R$. Finally, if $f(x, y) \geq  0$ on $R$, we can interpret this average value of $f$ on $R$ as the height of the box with base $R$ that has the same volume as the volume of the surface defined by $f$ over $R$.
+\end{itemize}
+
+\input{activities/11.1.Act2}
+
+
+\input{activities/11.1.Act3}
+
+
+We conclude this section with a list of properties of double integrals. Since similar properties are satisfied by single-variable integrals and the arguments for double integrals are essentially the same, we omit their justification.
+
+\vspace*{5pt}
+\nin \framebox{\hspace*{3 pt}
+\parbox{6.25 in}{\textbf{Properties of Double Integrals.} Let $f$ and $g$ be continuous functions on a rectangle $R = \{(x,y) : a \leq x \leq b, c \leq y \leq d\}$, and let $k$ be a constant. Then
+\begin{enumerate}
+\item $\iint_R (f(x,y) + g(x,y)) \, dA = \iint_R f(x,y) \, dA + \iint_R g(x,y) \, dA$.
+\item $\iint_R kf(x,y) \, dA = k \iint_R f(x,y) \, dA$.
+\item If $f(x,y) \geq g(x,y)$ on $R$, then $\iint_R f(x,y) \, dA \geq \iint_R g(x,y) \, dA$.
+\end{enumerate}
+} \hspace*{3 pt}}
+\vspace*{5pt}
+
+\begin{summary}
+\item Let $f$ be a continuous function on a rectangle $R = \{(x,y) : a \leq x \leq b, c \leq y \leq d\}$. The double Riemann sum for $f$ over $R$ is created as follows.
+    \begin{itemize}
+    \item[-] Partition the interval $[a, b]$ into $m$ subintervals of equal length $\Delta x = \frac{b-a}{m}$. Let $x_0$, $x_1$, $\ldots$, $x_m$ be the endpoints of these subintervals, where $a = x_0<x_1<x_2 < \cdots < x_m = b$.
+    \item[-] Partition the interval $[c, d]$ into $n$ subintervals of equal length $\Delta y = \frac{d-c}{n}$. Let $y_0$, $y_1$, $\ldots$, $y_n$ be the endpoints of these subintervals, where $c = y_0<y_1<y_2 < \cdots < y_n = d$.
+    \item[-] These two partitions create a partition of the rectangle $R$ into $mn$ subrectangles $R_{ij}$ with opposite vertices $(x_{i-1},y_{j-1})$ and $(x_i, y_j)$ for $i$ between $1$ and $m$ and $j$ between $1$ and $n$. These rectangles all have equal area $\Delta A = \Delta x \cdot \Delta y$.
+    \item[-] Choose a point $(x_{ij}^*, y_{ij}^*)$ in each rectangle $R_{ij}$. Then a double Riemann sum for $f$ over $R$ is given by
+    \[\sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \cdot \Delta A.\]
+    \end{itemize}
+\item With terms defined as in the Double Riemann Sum, the double integral of $f$ over $R$ is
+\[\iint_R f(x,y) \, dA = \lim_{m,n \to \infty} \sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \cdot \Delta A.\]
+\item Two interpretations of the double integral $\ds \iint_R f(x,y) \, dA$ are:
+    \begin{itemize}
+    \item[-] The volume of the solids the graph of $f$ bounds above the $xy$-plane over the rectangle $R$ minus the volume of the solids the graph of $f$ bounds below the $xy$-plane under the rectangle $R$;
+    \item[-] Dividing the double integral of $f$ over $R$ by the area of $R$ gives us the average value of the function $f$ on $R$. If $f(x, y) \geq  0$ on $R$, we can interpret this average value of $f$ on $R$ as the height of the box with base $R$ that has the same volume as the volume of the surface defined by $f$ over $R$.
+    \end{itemize}
+\end{summary}
+
+
+\nin \hrulefill
+
+\input{exercises/11.1.Double_Integrals_Rectangles(Ex)}
+
+\clearpage
